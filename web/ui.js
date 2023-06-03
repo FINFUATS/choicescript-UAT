@@ -253,10 +253,6 @@ function setButtonTitles() {
   if (button) {
     button.innerHTML = "Show Stats";
     }
-    button = document.getElementById("codexButton");
-    if (button) {
-        button.innerHTML = '<img src="images/bookButton.png"/>';
-    }
   button = document.getElementById("achievementsButton");
   if (button) {
     if (nav.achievementList.length) {
