@@ -193,6 +193,7 @@ function showMenu() {
         return clearScreen(function() {
           var text = document.getElementById('text');
           text.innerHTML = "Start over from the beginning?";
+          text.innerHTML = "Start over from the beginning?";
           var options = [
             {name: "Restart the game.", group:"choice", restart: true},
             {name: "Cancel.", group: "choice", restart: false },
@@ -210,6 +211,7 @@ function showMenu() {
               })
             }
           })
+          curl();
           curl();
         });
       } else if (option.settings) {
@@ -240,6 +242,7 @@ function showMenu() {
   clearScreen(menu);
 }
 
+
 function setButtonTitles() {
   var button;
   button = document.getElementById("menuButton");
@@ -249,7 +252,11 @@ function setButtonTitles() {
   button = document.getElementById("statsButton");
   if (button) {
     button.innerHTML = "Show Stats";
-  }
+    }
+    button = document.getElementById("codexButton");
+    if (button) {
+        button.innerHTML = '<img src="images/bookButton.png"/>';
+    }
   button = document.getElementById("achievementsButton");
   if (button) {
     if (nav.achievementList.length) {
