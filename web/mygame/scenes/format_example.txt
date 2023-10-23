@@ -1,0 +1,106 @@
+[head]Chapter 1Q84: Format Example[/head]
+*label CH_BGN
+Your name… it’s ${name}, isn’t it? Well, of course it is. ${name}’s an interesting name, wouldn’t you say?
+
+This is not a page break, however…
+
+*page_break
+This should be a page break. Is it? Well, we don’t know.
+I wonder, what’s your preference between skills… Do you like [b][color=${bcolor}](Brawn)[/color][/b]? Or, perhaps, [b][color=${ccolor}](Cunning)[/color][/b]. Maybe you like to bounce all along the walls, and favor [b][color=${acolor}](Agility)[/color][/b]?
+*fake_choice
+    #I favor [b][color=${bcolor}](Brawn)[/color][/b]...
+        Oh? You favor brawn?
+    #I favor [b][color=${acolor}](Agility)[/color][/b]...
+        Oh? Do you favor agility?
+    #I favor [b][color=${ccolor}](Cunning)[/color][/b]...
+        Oh? You favor cunning?
+I see… I think I’m really getting to know you.
+
+Alright, well, here, how about you ask me some questions?
+*temp X 1
+*temp Y 1
+*temp Z 1
+*temp Q 0
+*label Q_Loop
+What have you? (Branches to Q_Loop, SC2, and finish)
+*fake_choice
+    *selectable_if (X=1) #Who are you?
+        Well, the better question is, who are you, (player_name)?
+        *set X 0
+        *set Q Q + 1
+        *goto Q_LOOP
+    *selectable_if (Y=1) #Why are you?
+        Well, the better question is, who are you, (player_name)?
+        *set Y 0
+        *set Q Q + 1
+        *goto Q_LOOP
+    *selectable_if (Z=1) #What are you?
+        Well, the better question is, who are you, (player_name)?
+        *set Z 0
+        *set Q Q + 1
+        *goto Q_LOOP
+    *selectable_if (Q=3) #I’m out of questions.
+        Well, then, let’s continue. You have a battle ahead.
+        *goto SC2
+    #I’d rather not speak to you.
+        Well, I’d rather not speak to you either, then.
+        *finish
+    #Can I just play the game?
+        *goto_scene chapter1
+        
+*label SC2
+Well, that sure was a riveting conversation.
+
+*page_break
+This is split into multiple pages.
+
+That’s not an accident.
+
+It’s to prove that it’s possible!
+
+So, I have a new question for you now.
+
+Would you rather fight, or prove your skills?
+*fake_choice
+    #I want a fight!
+        *goto CMB
+    #I want skills!
+        *goto SKL
+        
+*label SKL
+Oh. Well, that sure is boring. Well, fine, then. I’ll be checking your skills. You get to pick which one.
+Choose wisely; if it’s out of shape, you’re done here.
+*fake_choice
+    #Strength
+                *if (strength = 2)
+                  *goto SKL_W
+        *goto SKL_L
+    #Stealth
+                *if (stealth = 2)
+                  *goto SKL_W
+        *goto SKL_L
+    #Knowledge
+                *if (knowledge = 2)
+                  *goto SKL_W
+        *goto SKL_L
+
+*label SKL_L
+Loser
+*finish
+
+*label SKL_W
+Winner!
+*finish
+
+*label CMB
+Ah, so you’ve picked the fun option, then? Good, good…
+*temp fight 
+*rand fight 1 100
+
+*if (fight > 50)
+    This is what happens when you win
+    *finish
+
+*else
+    This is what happens when you lose
+    *finish

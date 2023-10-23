@@ -28,6 +28,7 @@
     merc-chapter9-5
     merc-chapter10
     combat_test
+    format_example
     general
 
 *comment ------------------------------ GLOBALS --------------------------------
@@ -174,6 +175,8 @@ What chapter?
 
   #TEMP: Combat Test
       *goto_scene combat_test
+  #CH1Q84: Format Example
+      *goto_scene format_example
   #New Chapters
       *fake_choice
           #Chapter 5 D
