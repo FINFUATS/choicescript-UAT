@@ -102,38 +102,42 @@ The journey begins as soon as the two of you reach the end of town. You begin to
 
 Once you’ve boarded the carriage, you…
 
-*if CH3_ending = "good"
-    You asked Cel if you could visit some old friends.
-    
-    Yes, that’s right; all those years ago, you helped out a druid enclave in this forest. Throughout the rest of your childhood, you tried to keep a habit of talking to them, though you’ve seen them less and less as you’ve gotten older…
-    
-    It seems that they’re the only ones you’ll be able to say goodbye to now, so you decide to make yourself heard.
-    
-    *page_break
-    
-    “Cel? Would it be possible for us to make a stop somewhere?” you ask.
-    
-    She looks up from her text and raises an eyebrow.
-    
-    “Well, I don’t see why we wouldn’t be able to, but… Is there a reason?”
-    
-    “I have some history with a druid enclave further down the road; figured I ought to say goodbye while I can” you explain.
-    
-    Cel ponders for a moment, but only a moment, before giving you a smile.
-    
-    “Well, I don’t see why not; just don’t be too long.”
-    
-    *page_break
-    
-    She relays your directions to the carriage drive for a while, before you, through the carriage window, see the familiar trail. You walk out, finding your way to the same spring from all those years ago.
-    
-    *page_break
-    
-    Milva and the others swarm you as soon as the news has been broken. You have a tough time keeping your promise to Cel about not taking too long, but you try to be out of there sooner than later.
-    
-    The last thing Milva tells you is to try to come back some day. These druids have all but accepted you as one of them, which is quite the honor with them. You tell them that you’ll try your best.
-    
-    As you get back into the carriage, you feel glad that you got the chance to say goodbye to Milva and the others.
+*fake_choice
+    #Quietly await your destination….
+        
+    *selectable_if (CH3_ending = "good") # Ask Cel if it would be at all possible to check in on some old friends
+        
+        You asked Cel if you could visit some old friends.
+        
+        Yes, that’s right; all those years ago, you helped out a druid enclave in this forest. Throughout the rest of your childhood, you tried to keep a habit of talking to them, though you’ve seen them less and less as you’ve gotten older…
+        
+        It seems that they’re the only ones you’ll be able to say goodbye to now, so you decide to make yourself heard.
+        
+        *page_break
+        
+        “Cel? Would it be possible for us to make a stop somewhere?” you ask.
+        
+        She looks up from her text and raises an eyebrow.
+        
+        “Well, I don’t see why we wouldn’t be able to, but… Is there a reason?”
+        
+        “I have some history with a druid enclave further down the road; figured I ought to say goodbye while I can” you explain.
+        
+        Cel ponders for a moment, but only a moment, before giving you a smile.
+        
+        “Well, I don’t see why not; just don’t be too long.”
+        
+        *page_break
+        
+        She relays your directions to the carriage drive for a while, before you, through the carriage window, see the familiar trail. You walk out, finding your way to the same spring from all those years ago.
+        
+        *page_break
+        
+        Milva and the others swarm you as soon as the news has been broken. You have a tough time keeping your promise to Cel about not taking too long, but you try to be out of there sooner than later.
+        
+        The last thing Milva tells you is to try to come back some day. These druids have all but accepted you as one of them, which is quite the honor with them. You tell them that you’ll try your best.
+        
+        As you get back into the carriage, you feel glad that you got the chance to say goodbye to Milva and the others.
 
 There’s something of a silence that seems to pervade in the carriage. There seems to be something on her mind and, evidently, you must look rather deep in thought too.
 

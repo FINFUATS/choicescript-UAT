@@ -91,7 +91,7 @@
 *comment ///////// Phase Globals /////////
 *comment Phase1
 *create CH2_followed_voice false
-*create CH3_ending "good"
+*create CH3_ending "bad"
 *create CH4_visited_reese_grave false 
 *create CH4_murderer "lost"
 *comment Phase2

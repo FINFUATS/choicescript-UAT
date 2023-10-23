@@ -34,7 +34,7 @@ Before you head to sleep you open your bag and look at your item.
 
 *if item = "bread" 
     You take your bread out of your bag. It is a little smashed, but still good.
-    (Option 1, Generous) Share with Rip
+    *comment (Option 1, Generous) Share with Rip
 
     *fake_choice
         # Share with Rip
@@ -98,7 +98,7 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
 “So… You said a little bit about what had happened, what is the full story?” Rip turns to look over his shoulder at you while he asks.
 
 *comment /// I have legit no idea how to implement this... ///
-TODO: use the reputation system here…
+*comment TODO: use the reputation system here…
 *if CH4_murderer =  "chased"
 
 “I heard a scream while I was walking home. Not very much happens here, so I decided to go check it out. You never know if it is something as simple as a mouse, or if someone has fallen. When I walked into the house, there was a body on the floor, I… I walked up to the body to see who it was… It was Lord Odel… I-I should have called the guards right then and there.” You look at the ground as you talk.
@@ -118,7 +118,7 @@ TODO: use the reputation system here…
 
 *if CH4_murderer =  "leave"
 
-“I heard a scream coming from a house, so I… decided to leave the area. Nothing good ever happens when you get involved with something you don’t have anything to do with. I was walking away from the scream, keeping a look out for a guard, when someone bumped into me. I didn’t realize at the time it was the murderer. He took my (ITEM) and gave me the murder weapon. While I was confused, the guards grabbed me.”
+“I heard a scream coming from a house, so I… decided to leave the area. Nothing good ever happens when you get involved with something you don’t have anything to do with. I was walking away from the scream, keeping a look out for a guard, when someone bumped into me. I didn’t realize at the time it was the murderer. He took my ${item} and gave me the murder weapon. While I was confused, the guards grabbed me.”
 
 Rip hums in disapproval.
 *page_break

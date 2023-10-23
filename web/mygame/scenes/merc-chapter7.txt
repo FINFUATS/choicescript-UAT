@@ -30,10 +30,22 @@ The camp exudes a rugged charm, a place where warriors find solace and temporary
 
 During the downtime at the mercenary camp, you have a rare opportunity to rest and recharge after the intense battles against the mogfish and The Rot infection.
 
+*temp train "no"
+*temp archery "no"
+*temp race "no"
+*temp food "no"
+*temp weapons "no"
+*temp explore "no"
+*temp assist "no"
+
 *label CH7M_dayone
 What will you do with your free time?
 *fake_choice
-    # Train with Rip Daring
+    
+    *selectable_if (train = "no") #Train with Rip Daring
+        
+        *set train "yes"
+        
         In the early mornings, before the sun has fully risen, you join Rip Daring for rigorous training sessions. He makes you take laps around the camp, after he gives you a wooden sword.
 
         “Attack this dummy.” He points at a straw dummy in the training grounds.
@@ -48,8 +60,7 @@ What will you do with your free time?
         He first teaches you how to anticipate an opponent's moves, and how to exploit weaknesses in their defenses. After he is satisfied, he walks to the side of the ring.
 
         *temp ch7m_has_won_training true
-        *bug_continue Fight not implemented, assuming player has won
-        TODO: (FIGHT HERE)
+        *comment TODO: (FIGHT HERE)
         *page_break
 
         *if ch7m_has_won_training
@@ -63,7 +74,9 @@ What will you do with your free time?
 
         By the end of the lesson, you’ve learned a lot more about how to handle yourself in battle. You hope to never have to use this knowledge, but will likely have too in this line of work.
         
-    # Archery Contest
+    *selectable_if (archery = "no") #Archery Contest
+        
+        *set archery "yes"
         During the leisure hours, the camp came alive with friendly sparring matches and competitions that brought out the playful spirit of the Wolves of Davenport. 
 
         You eagerly joined in on these activities, feeling the rush of adrenaline as they squared off against their fellow mercenaries.
@@ -95,7 +108,9 @@ What will you do with your free time?
     
             “Better luck next time.” A voice calls out. You turn around and see Anwen. “The next time we have time to rest I’ll give you some pointers.”
 
-    # Foot Race
+    *selectable_if (race = "no") #Foot Race
+        
+        *set race "yes"
         *set GP_arg0 Endurance
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
@@ -144,7 +159,9 @@ What will you do with your free time?
 *label CH7M_daytwo
 Where do you go?
 *fake_choice
-    # Get food for the camp
+    *selectable_if (food = "no") #Get food for the camp
+    
+        *set food "yes"
         *set GP_arg0 Endurance
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
@@ -179,7 +196,9 @@ Where do you go?
 
         You feel the eyes of your companions and accept the challenge with a smirk. It was an epic clash of strength, with the smith's bulging muscles against your determination.
 
-    # Get weapons for the camp
+    *selectable_if (weapons = "no") #Get weapons for the camp
+        
+        *set weapons "yes"
         *set GP_arg0 Endurance
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
@@ -199,6 +218,9 @@ Where do you go?
 
     # Return to camp
         As the group settles around the campfire that night, sharing stories and laughter, you realize the true impact the Wolves of Davenport had on the lives of those they encountered - not just as fearsome warriors, but as quirky, humorous, and lovable characters in this grand tale of adventure.
+        
+        *page_break
+        *goto CH7M_daythree
 *page_break
 *goto CH7M_daytwo
 
@@ -206,7 +228,10 @@ Where do you go?
 It’s the next day, you look for other ways to help the camp,
 
 *fake_choice
-    # Explore
+    *selectable_if (explore = "no") #Explore
+        
+        *set explore "yes"
+        
         Rip Daring recognizes the value of knowing the lay of the land. He assigns you the job to explore the nearby forest, mapping out potential dangers, hidden resources, and possible routes for future missions.
 
         This exploration not only allows you to contribute to the camp's safety but also a chance to connect with the natural beauty of the wilderness.
@@ -237,7 +262,10 @@ It’s the next day, you look for other ways to help the camp,
 
         You are scared yet excited for the discoveries future expeditions will bring.
 
-    # Assist
+    *selectable_if (assist = "no") #Assist
+        
+        *set assist "yes"
+        
         The infirmary in the camp is always busy with injured mercenaries. You decide to lend a hand to the healers, learn basic first aid and herbal remedies. 
 
         As you tend to the wounded, you gain a deeper understanding of the sacrifices and risks involved in the life of a mercenary.

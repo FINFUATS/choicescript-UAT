@@ -15,12 +15,21 @@ Cel has called a meeting in the main room. Everyone has gathered around the stan
         
 “The yearly gathering of all the high priests is coming up and we are hosting it this year. We have to make sure everything is perfect for their arrival.” Cel explained to the crowd. “Everyone should know their chores, if you do not, come find me and I’ll assign you something to do.”
 
+*temp cel_Clean "no"
+*temp riva_Clean "no"
+*temp winfred_Clean "no"
+*temp ivy_Clean "no"
+*temp bertold_Clean "no"
+
 *label clean
 
 With that, everyone left the main room, leaving you and a handful of new people standing around. You can see all of your friends leaving in opposite directions.
 
+
 *fake_choice
-    #Cel (Knowledge)
+    *selectable_if (cel_Clean = "no") #Cel (Knowledge)
+        
+        *set cel_Clean "yes"
         
         After the new people finished asking Cel their questions, you find her walking up the stairs to the library.
 
@@ -63,7 +72,9 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
         *page_break
 
-    #Riva (Reaction)
+    *selectable_if (riva_Clean = "no") #Riva (Reaction)
+        
+        *set riva_Clean "yes"
         
         You see Riva going out into the garden and decide to follow her. She walks over to the gazebo and looks over a list.
 
@@ -100,7 +111,9 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             “Riva, look out!” You shout. Riva looks up from the paper and sees that she is about to step into a mockguarden. Everyone is also looking at her and she hides behind her paper. You have a feeling she didn’t want everyone to see her almost walk into a natural trap.
         
-    #Winfred (Strength)
+    *selectable_if (winfred_Clean = "no") #Winfred (Strength)
+        
+        *set winfred_Clean "yes"
         
         You find Winfred moving boxes in the storage room. He is moving the food to the kitchen so the chefs can prepare for the feast. Many of the boxes look heavy, full of more ingredients than you know the name of. You wonder just how many people are showing up.
 
@@ -127,7 +140,9 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *else
             You try to pick up one of the bigger boxes, only to drop it immediately. Winfred laughs and points you in the direction of some smaller boxes. You hope there was nothing fragile in there.
         
-    #Ivy (Improvisation)
+    *selectable_if (ivy_Clean = "no") #Ivy (Improvisation)
+        
+        *set ivy_Clean "yes"
         
         You spot Ivy poking around the old library. The old library is in a separate building. It used to  store the old books that no one reads anymore.That is, until one of the supports fell from because no one was upkeeping the building. Now it is off limits and all of the books have been moved to a new location.
         
@@ -194,7 +209,9 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             When you next see Ivy, you send her an apologetic look. She ignores you, having to do her own cleaning.
             
-    #Bertold (Motor Skill)
+    *selectable_if (bertold_Clean = "no") #Bertold (Motor Skill)
+        
+        *set bertold_Clean "yes"
         
         You find Berhold in the meditation room. He is cleaning the statues. You look around and see that the room is not as clean as it usually is. Most of the people who usually keep the room clean must be working on the other rooms, leaving Berthold to work on it by himself.
         
@@ -325,15 +342,22 @@ Cel is constantly in meetings and making sure everyone is well suited. Riva is k
 
 You are helping out where you can, but you feel like you constantly are in the way. You try to keep the statues well dusted and the library looking neat. You now have a better idea of where the books go at least.
 
+*temp cel_Find "no"
+*temp riva_Find "no"
+*temp winfred_Find "no"
+*temp ivy_Find "no"
+
 *label search
 
 The big meeting is soon. Cel is with the other high priests seemingly getting prepared for the speech. You go find one of your friends from the temple to hang out with while you wait.
 
 *fake_choice
-    #Riva (Strength)
+    *selectable_if (riva_Find = "no") #Riva (Strength)
+        *set riva_Find "yes"
+        
         You find her tending to the plants in the greenhouse. You walk up beside her and she looks up at you.
 
-        “Hey (Player_Name),” she gives you a small smile. “Could you help me transport these vegetables to the kitchen?”
+        “Hey ${name},” she gives you a small smile. “Could you help me transport these vegetables to the kitchen?”
 
         You nod and walk over to one of the baskets of vegetables.
         
@@ -357,7 +381,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
             
             You turn back towards the greenhouse and see Riva struggling to carry the last basket. You run on over to her and take the basket out of her hands.
 
-            “Th-thank you (Player_Name),” Riva says, out of breath.
+            “Th-thank you ${name},” Riva says, out of breath.
 
             “Usually…” She lets out a big sigh, still trying to catch her breath. “Usually Winfred helps me, but he is busy elsewhere.”
 
@@ -368,7 +392,9 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “I’ll call Winfred or Barthold to come grab them, don’t strain yourself before the big meeting. We have to clean up afterwards.” She says. You nod, disappointed in your own strength.
 
-    #Winfred
+    *selectable_if (winfred_Find = "no") #Winfred (Medical)
+    
+        *set winfred_Find "yes"
         
         You find Winfred with a crowd of people. When you walk over to see what had happened, you see that they are surrounding a person on the ground. They seemed to have injured themselves somehow.
 
@@ -386,24 +412,22 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
             
-           You look down at the injured person and notice that his leg is starting to swell.
-           
-           “He broke his leg, could one of you get me two long sticks and some cloth? And possibly some pillows?” You ask the group as you help the guy lay down so as to not agitate the injury.
+            You look down at the injured person and notice that his leg is starting to swell.
+            
+            “He broke his leg, could one of you get me two long sticks and some cloth? And possibly some pillows?” You ask the group as you help the guy lay down so as to not agitate the injury.
+            
+            Not long later you are given the resources you asked for. You gently straighten out his leg and put the sticks beside it. You tie the top of the sticks to the guy’s knee and the bottom close to his ankle.
             
             *page_break
             
-            Not long later you are given the resources you asked for. You gently straighten out his leg and put the sticks beside it. You tie the top of the sticks to the guy’s knee and the bottom close to his ankle.
-
-            After making sure the sticks aren’t going anywhere you look back up at the crowd
-
-            “Could one of you either help me move him or grab the pillows?” You ask.
+            After making sure the sticks aren’t going anywhere you look back up at the crowd. “Could one of you either help me move him or grab the pillows?” You ask.
             
-            Winfred goes to the other side of the injured priest and helps you move him to his room. The person carrying the pillows follows close behind.
-
-            Once in the room, you lay him on his bed and prop up his leg with the pillow and leave him be.
-
+            Winfred goes to the other side of the injured priest and helps you move him to his room. The person carrying the pillows follows close behind
+            
+            in the room, you lay him on his bed and prop up his leg with the pillow and leave him be.
+            
             “Where did you learn how to do that?” Winfred asks you.
-
+            
             “I was very adventurous as a child. Everyone I knew has broken at least one bone at that time and I learned how to temporarily keep it in place while we waited for the healer.” You explained
 
         *else
@@ -420,7 +444,9 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “That could have been so much worse if he fell. Thank you for helping.” Winfred gives a slight smile. You nod and return it.
             
-    #Ivy
+    *selectable_if (ivy_Find = "no") #Ivy (Acrobatics)
+        
+        *set ivy_Find "yes"
         
         You go searching for Ivy. You start with all of her usual hiding spots, the library, her room, the cove in the garden, though you can’t find her. Cel asked you to get her for the meeting coming up soon, but didn’t give any suggestions on where to look.
 
@@ -628,7 +654,7 @@ The priest from the meeting walks into the room. You can see that everyone is tr
         *page_break
         
         *comment (Sneak: Moderate(60%))
-        *set GP_arg0 Sneak
+        *set GP_arg0 Stealth
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
