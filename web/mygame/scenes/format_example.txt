@@ -1,8 +1,9 @@
-[head]Chapter 1Q84: Format Example[/head]
-*label CH_BGN
 *temp bcolor "#d60d0d"
 *temp acolor "#FF9900"
 *temp ccolor "#4A86E8"
+
+[head]Chapter 1Q84: Format Example[/head]
+*label CH_BGN
 Your name… it’s ${name}, isn’t it? Well, of course it is. ${name}’s an interesting name, wouldn’t you say?
 
 This is not a page break, however…
