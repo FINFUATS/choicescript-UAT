@@ -54,7 +54,7 @@ Who do you want to know about?
         
         She may have a quick temper and is heavily sarcastic, but she is immensely loyal. Saving the Wolves on multiple accounts and requesting that they went back to her village to save them from an attack. She is a valued member of the Wolves of Davenport.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Cel Storm
         [head]Cel Storm[/head]
@@ -65,7 +65,7 @@ Who do you want to know about?
         
         When her mentor Dustin was killed because some direwolves were forced out of their territory. Cel did some research on direwolves and partitioned a new branch in the order. One that patrolled towns near direwolf territories. She didn’t want these wolves to hurt anyone else.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Dustin
         [head]Dustin[/head]
@@ -77,7 +77,7 @@ Who do you want to know about?
         
         Dustin died to a direwolf attack when he was patrolling the towns along the rot border. The direwolves got pushed out of their territory by the rot and attacked a nearby town. From what Cel said, he was protecting a family when the direwolves got him.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Elena
         [head]Elena[/head]
@@ -86,7 +86,7 @@ Who do you want to know about?
         
         The little that is known about her past is that she used to travel with someone before they left her. It is unknown what had happened, but it clearly hurt Elena. She spends long periods alone on the edge of town, or camp, engrossed in meditative thought. There are also cities that she refuses to go into as she has many unseen enemies within them.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Gwyn
         [head]Gwyn[/head]
@@ -95,7 +95,7 @@ Who do you want to know about?
         
         This did not deter him and he became a traveling medic, helping those who needed it. Although he never changed in his ways, he knew how to cure poisons that many gave up on. When he ran into the Wolves, one of them was injured. They got hit by a poisoned dart from a particularly crafty brigand. Gwyn managed to cure them and the Wolves asked him to join. Gwyn was reluctant at first, but after discovering he was free to run his experiments, he willingly joined. He became the poisons expert along with one of the top healers. Sharing his knowledge and having the freedom to experiment as he feels fit helped him grow and save many lives.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Leediel Esheer
         [head]Leediel Esheer[/head]
@@ -106,7 +106,7 @@ Who do you want to know about?
             
             He got the scar across his face from a botched assassination in his early years and now wears it with pride to show how no one can stop him.  His last hit was lord Odel, a politician he had been hunting down for years and he finally got an opening. However, he was betrayed and had to pin the murder on an unsuspecting local. Now he is hunting down his betrayer to prove that no one messes with him and lives.
             *line_break
-            *label Characters
+            *goto Characters
             
 
     #Leon
@@ -116,13 +116,13 @@ Who do you want to know about?
         
         It is unknown how he got the skills he has. Leon is one of the most dangerous members of the Wolves. His skills with the blade is unmatched even with the most skilled swordsman. He seems to know how to sneak himself into any location, no matter how well guarded. Whenever his background is brought up he will either talk about the nomadic storytellers who raised him or completely deflect the question all together. Only a select few know his full story.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Glador
         [head]Glador[/head]
         TODO:!!!
         *line_break
-        *label Characters
+        *goto Characters
 
     #Lord Odel
         [head]Lord Odel[/head]
@@ -130,7 +130,7 @@ Who do you want to know about?
         
         Having been recently murdered by an unknown local in Summerlight, the title of lord has been given to his son, Lord Aldin. Until he is old enough to rule, his advisors will be making watching over his land.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Reese
         [head]Reese[/head]
@@ -152,7 +152,7 @@ Who do you want to know about?
         *else
             When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Rip Daring
         [head]Rip Daring[/head]
@@ -164,13 +164,13 @@ Who do you want to know about?
         With a dry sense of humor and keen intellect, Rip navigates challenges with wit and resolve. His unwavering commitment to protecting the realm and upholding the ideals of honor and integrity makes him an invaluable asset to The Wolves of Davenport. Rip Daring's legacy as a fearless warrior who led the Wolves and defended Teren from darkness is forever etched in the annals of history.
         
         *line_break
-        *label Characters
+        *goto Characters
 
     #Sigel
         [head]Sigel[/head]
         TODO:!!!
         *line_break
-        *label Characters
+        *goto Characters
 
     #Skadon
         [head]Skadon[/head]
@@ -181,14 +181,14 @@ Who do you want to know about?
         
         Skadon, as the God of Darkness and The Void, represents the ever-present threat of oblivion. His eternal conflict with Sigel shapes the world of Teren, while Tera nurtures life and Galdor tames the forces of magic. Within this delicate equilibrium, Lune, the goddess of the moon, and other deities emerged. The struggle between light and darkness remains an enduring theme, influencing the destiny of Teren and its inhabitants throughout time.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Tera
         [head]Tera[/head]
         
         Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
         *line_break
-        *label Characters
+        *goto Characters
 
     #Back
         *page_break
@@ -213,7 +213,7 @@ Which Faction?
         
         While there are many exceptional members, Cel Storm stands out as a pillar of the Flames of Sigel. Her grace and power leaves an impression as she travels with her entourage as she is known for offering aid to any who ask. A true example of the goodness the Flames of Sigel are determined to spread. With Cel’s name beginning to spread far and wide, The Flames of Sigel are only growing in renown. With each new town or city they pass through, they continue  to spread the word of Sigel and protect the people from evil.
         *line_break
-        *label Factions
+        *goto Factions
 
     #Wolves of Davenport
         [head]Wolves of Davenport[/head]
@@ -224,7 +224,7 @@ Which Faction?
         
         Though Alistair Blackthorn's fall in battle was a devastating loss, it paved the way for Rip Daring, his trusted protege, to step up and assume leadership. Under Rip's guidance, The Wolves of Davenport continue to stand as a beacon of hope, defending Teren against the rising tide of darkness. Their saga of courage, unity, and unwavering resolve has etched their name into the annals of Teren's history, leaving a lasting legacy that will inspire generations to come.
         *line_break
-        *label Factions
+        *goto Factions
 
     #Back
         *page_break
@@ -238,14 +238,14 @@ What item?
         [head]Flames of Sigel Amulet[/head]
         An amulet that all members of the Flames of Sigel have. It lets the members of the order recognize each other across the land of Teville. 
         *line_break
-        *label Items
+        *goto Items
 
     #Knife with strange design
         [head]Knife with strange design[/head]
         *image images/knife_no_background.webp
         The knife the murderer used to kill Lord Odel. He planted it on you to pin the murder on you and get away. It has some strange designs on it that no one seems to recognize, but seem familiar. From a far off memory that you can’t seem to catch.
         *line_break
-        *label Items
+        *goto Items
 
     #Back
         *page_break
@@ -259,13 +259,13 @@ What form of magic do you want to know about?
         [head]Divine Magic[/head]
         Divine magic is used by those blessed by the gods for harmony with the natural world. It is most common for a priest and priestess to have the blessing of their chosen god. The Flames of Sigel get their blessings from Sigel and use it to defeat the rot.
         *line_break
-        *label Magic
+        *goto Magic
 
     #Arcane Magic
         [head]Arcane Magic[/head]
         Arcane magic is either studied for or the person must be born with the ability to use it. It is unknown who was the first person to be born with the innate ability for magic, but many of their descendants walk among us. They are hard to spot, but those who use their magic for good has been seen assisting divine users against the rot. 
         *line_break
-        *label Magic
+        *goto Magic
 
     #Rot
         [head]Rot[/head]
@@ -273,7 +273,7 @@ What form of magic do you want to know about?
         
         Rot has also been seen in places where the Cult of Skadon were performing rituals and practicing magic. This makes the cultists enemies of the King and the Flames of Sigel and must be caught no matter what.
         *line_break
-        *label Magic
+        *goto Magic
     #back
         *page_break
         *goto CodexStart
@@ -297,7 +297,7 @@ What monsters do you want to learn about?
         
         The Direwolf, a creature of immense power, intelligence, and strategic prowess, commands respect and captivates the imagination. Their imposing presence in the natural world serves as a reminder of the delicate balance between fear and admiration. Whether viewed as formidable adversaries or as potential allies, the Direwolf continues to inspire awe and reverence in those who encounter them, forever etching their legacy in the annals of folklore and exploration.
         *line_break
-        *label Monsters
+        *goto Monsters
     *selectable_if (isIchorSwogDiscovered) #Ichor Swog
         [head]Ichor-Swog[/head]
         *image images/Ichor-Swog.webp
@@ -308,7 +308,7 @@ What monsters do you want to learn about?
         
         Caution must be exercised when dealing with these creatures and their originating blights. The Ichor-Swag, born from the decay and maleficence of the natural world, serves as a haunting reminder of the relentless struggle between light and darkness, and the delicate balance upon which the harmony of existence hangs
         *line_break
-        *label Monsters
+        *goto Monsters
 
     *selectable_if (isJackaloidDiscovered) #Jackaloid
         [head]Jackaloids[/head]
@@ -321,7 +321,7 @@ What monsters do you want to learn about?
         
         The presence of Maned Jackaloids serves as a grim reminder of the perils lurking in the untamed corners of the world. Their unique affliction, contagious nature, and predatory behavior make them a formidable and unsettling force. Knowledge and vigilance are key to protecting oneself and the communities at risk from these enigmatic and dangerous creatures
         *line_break
-        *label Monsters
+        *goto Monsters
 
     *selectable_if (isMockguardenDiscovered) #Mockguarden
         [head]Mockguarden[/head]
@@ -338,7 +338,7 @@ What monsters do you want to learn about?
         
         The Mockguarden stands as a testament to the marvels and perils that exist within the natural world. Its ability to adapt, ensnare, and utilize acidic spores showcases its formidable nature. While it presents a formidable challenge to those who cross its path, it also offers intriguing opportunities for those who dare to explore its enigmatic properties and continues to intrigue and captivate the minds of scholars, adventurers, and craftsmen alike.
         *line_break
-        *label Monsters
+        *goto Monsters
     *selectable_if (isMogfishDiscovered) #Mogfish
         [head]Mogfish[/head]
         *image images/Mogfish.webp
@@ -348,7 +348,7 @@ What monsters do you want to learn about?
         
         If you manage to get away, they will climb out of the mud and chase you down. They move really slow, but they can jump far distances. The best way to out run them is to keep something tall between you and it. They will have to get around the object as they can not jump high enough to get over most trees. If you manage to kill one, the orb can be used to create a magical ointment to make whatever it is applied to have a temporary glow.
         *line_break
-        *label Monsters
+        *goto Monsters
 
     *selectable_if (isWOWDiscovered) #Will-O-Wisps
         [head]Will-O-Wisps[/head]
@@ -359,7 +359,7 @@ What monsters do you want to learn about?
         
         There have been rumored sightings of wisps right before the rot invades the town. As of yet, there has been no confirmed relationship between the two. 
         *line_break
-        *label Monsters
+        *goto Monsters
         
     #Back
         *page_break
@@ -383,19 +383,19 @@ Where do you want to learn about?
         
         To visit Davenport is to immerse oneself in a vibrant tapestry of life, to witness the ebb and flow of ambition and inspiration that weaves the very fabric of this remarkable city. Whether you seek treasures, knowledge, or a chance encounter that may shape the course of your journey, Davenport awaits, ready to unveil its secrets and welcome you into its embrace.
         *line_break
-        *label Places
+        *goto Places
 
     #Elvenport
         [head]Elvenport[/head]
         TODO:!!!
         *line_break
-        *label Places
+        *goto Places
 
     #Krigania
         [head]Krigania[/head]
         TODO:!!!
         *line_break
-        *label Places
+        *goto Places
 
     #Teville (City)
         )[head]Teville (City)[/head]
@@ -411,13 +411,13 @@ Where do you want to learn about?
         
         Next is Woolrock, the second nicest slum. Here you will find a lot more elves, dwarves, and gnomes roaming the streets. With many shrines dedicated to their gods and some of the nicer buildings in the area. The worst place in the city is Ratbowl. Ratbowl has the highest crime rate and the worst people. A thieve’s guild has a heavy presence here, and not much attention is paid to crimes that occur within its streets. Not a place you would want to visit on your next trip to Teville.
         *line_break
-        *label Places
+        *goto Places
 
     #Teville (Country)
         [head]Teville (Country)[/head]
         TODO:!!!
         *line_break
-        *label Places
+        *goto Places
 
     #Summerlight
         [head]Summerlight[/head]
@@ -425,7 +425,7 @@ Where do you want to learn about?
         
         In recent history, the biggest thing to happen was a jackaloid attack. A loose jackaloid found its way to the forest of Frontierwood, where two little kids were playing. One of the kids was bit and the other tried to save them. It is unknown what happened to the one who lived as they disappeared a few years later.
         *line_break
-        *label Places
+        *goto Places
     #back
         *page_break
         *goto CodexStart
@@ -440,23 +440,25 @@ What Specie do you want to learn about?
         
         Unexpectedly, they are known for having the best baked goods. Many people come from all around Teville to try it. They also travel through nearby villages to sell their baked goods. It’s often joked that you have a 50/50 chance of a dwarven caravan carrying world class artisanal crafts, or weapons.
         *line_break
-        *label Species
+        *goto Species
         
     #Elves
         [head]Elves[/head]
         Elves are a tall and lithe race known for their love of nature. Their height varies along similar lines to humans. Many of them become druids or farmers. Others are known for their intelligence and magical prowess. In Teville they are mainly seen in Elvenport or the city of Teville, trading knowledge or goods. 
         *line_break
-        *label Species
+        *goto Species
 
     #Gnomes
         [head]Gnomes[/head]
         Gnomes are the shortest of the races, and the most intelligent. Many gnomes have been seen using arcane magic after years of practicing. They have no known head location, instead they stay in the cities and towns built by the other races. Seemingly because it let’s them have more time to study their chosen craft. Whatever their craft, they are known to dedicate their entire lives to it. From clockmaking to shoemaking to studying the arcane.
+        *line_break
+        *goto Species
 
     #Humans
         [head]Humans[/head]
         Humans are taller than dwarves and gnomes. Some of them are as bulky as a dwarf and others are as thin as an elf. They’re seen all across Teville and are one of the more resilient races. They aren’t immune to anything, they have been seen surviving seemingly impossible things that confuse the other races. They are also the most common race across the land and are the leaders of many kingdoms.
         *line_break
-        *label Species
+        *goto Species
         
     #Back
         *page_break
