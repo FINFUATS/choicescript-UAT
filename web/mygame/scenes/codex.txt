@@ -156,7 +156,7 @@ Who do you want to know about?
 
     #Rip Daring
         [head]Rip Daring[/head]
-        *image images/mercenary-transparent background.webp
+        *image images/mercenary_transparent_background.webp
         Rip Daring, known as "The Fearless Blade," is a renowned mercenary and key member of The Wolves of Davenport, a legendary band of mercenaries. Standing at six feet tall with a muscular build, Rip's rugged countenance and piercing green eyes reflect his unwavering determination and prowess on the battlefield.
         
         Skilled in various combat techniques, Rip is a master of swordsmanship and hand-to-hand combat. His agility, speed, and acrobatic prowess make him a lethal opponent, while his custom-crafted dual-bladed longsword, "Shadowfang," grants him versatility and power. Rip's leadership qualities and loyalty to his comrades have been forged through past experiences and the mentorship of the fallen leader, Alistair Blackthorn.
