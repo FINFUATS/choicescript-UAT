@@ -168,6 +168,7 @@ Who do you want to know about?
 
     #Sigel
         [head]Sigel[/head]
+        *image images/Sigel_-_touch_up.webp
         TODO:!!!
         *line_break
         *goto Characters

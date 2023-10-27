@@ -594,6 +594,7 @@ Do you want to help Riva with her herbs?
 
 *fake_choice
     #Yes. Yes you will.
+        *set CH5d_injured "Riva"
         
         You decide to help Riva with her herbs. As obvious as it is that Cel is intentionally trying to keep you out of that ogre situation, you’d really like to avoid violence for the week anyways. It would seem that you and Cel’s interests are aligned.
         
@@ -662,6 +663,7 @@ Do you want to help Riva with her herbs?
         *goto CLC
 
     #You’ll fight the ogre too. You can’t just sit back, can you?
+        *set CH5d_injured "Cel"
         As soon as the four of you arrive at the town, it becomes clear that something just isn’t right. Everything’s so silent. Of course, you quickly realize that the silence is more a symptom of the people hiding than the ogres themselves. Actually…
         
         “How many are there…?” you ask.
@@ -693,6 +695,7 @@ Do you want to help Riva with her herbs?
         *goto IVC
 
     *if (item = "book") #You’ll fight the ogre too.
+        *set CH5d_injured "Ivy"
         
         You decide to read the ogre chapter of “The Flora and Fauna of Teren” on the way to be ready.
         
