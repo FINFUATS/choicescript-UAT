@@ -468,9 +468,9 @@ What Specie do you want to learn about?
         *page_break
         *goto CodexStart
 *label Map
-    *image images/Teville.webp
-    *page_break
-    *goto CodexStart
+*image images/Teville.webp
+*page_break
+*goto CodexStart
 
 
 *comment -----------------------------------------------------------------------
