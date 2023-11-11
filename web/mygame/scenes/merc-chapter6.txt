@@ -5,6 +5,8 @@ The tent is warm when ${P2M_ROOMMATE} shakes you awake.
 
 “C’mon. Time to pack up.” You look to see ${P2M_ROOMMATE} is nearly done with packing away all their gear. You rub the sleep from your eyes and begin rolling up your bedroll.
 
+*page_break
+
 Outside is abuzz as the rest of the Wolves of Davenport are busy taking down tents and tarps, smothering the lingering hot coals from last night's fire and filling canteens with water from the nearby stream. Everyone seems to work together smoothly with little to no direction. It’s clear just from watching that this group has been traveling together a long time. 
 
 You help ${P2M_ROOMMATE} take down the tent, only getting tangled in the ropes once, and then are tasked with filling up both your canteens. On your way back, you spot Rip securing the last of his gear on the back of his horse. 
@@ -19,6 +21,8 @@ You help ${P2M_ROOMMATE} take down the tent, only getting tangled in the ropes o
 *else
     *comment If your roommate is ELENA 
     “Elena can be a bit of an insomniac when something catches her attention. I’ve caught her researching the most random things in the middle of the night more than once.” Rip gives an amused smile.
+    
+*page_break
 
 You stifle a chuckle and shake your head. “No, nothing like that. I think I was too tired to notice anything. Um, by the way, where are we going exactly?” 
 
@@ -36,6 +40,8 @@ With all the gear packed and ready to go, you head out on the road with the Wolv
 You always thought that when you left home, it would be for some grand adventure or after you gained a great fortune. Reality is so much different. Instead, you're running away from a false accusation and a prison sentence. Still, meeting Rip and everyone else gives you a little hope. Maybe you will have that adventure you always dreamed of. 
 
 As you get further and further away from town, you find yourself murmuring a little goodbye to the life you had there. It wasn’t much, nothing that made it in the storybooks, but it was a good life filled with possibilities. You turn back to the road before homesickness can creep up on you. 
+
+*page_break
 
 The road to Stormdenn is an easy one. It's well traveled enough that getting lost would truly take some skill and the consistent flow of people means the guards keep it safe from bandits and wildlife alike. It's also a long road, just about two weeks of travel. You’re incredibly grateful that there was a spare horse to ride.
 

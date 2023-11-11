@@ -127,6 +127,7 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
         When you realize what you were holding, a guard walks up to you and aggressively grabs your arm.
 
         “You are under arrest for the murder of Lord Odel!”
+        *page_break
         *set item "bloody dagger"
         *set option "leave"
         *goto guard
@@ -137,12 +138,12 @@ When you look up you see a shadowed figure running through the back door.
 *fake_choice
     #Cut him off
        Your body reacts before your mind can catch up. You go back through the front door and start sprinting in the direction you saw them go. Even though you took off with the speed of a cat, you don’t see the shadow anywhere. As you run, your eyes dart to and fro, slowing for a moment at each alley, trying to catch a glimpse of the murderer. However, there is no sign of them.The mysterious figure seems to have vanished into thin air..
-
-        You slow your frantic sprint, eventually coming to a stop at the mouth of another alley. Your throat begins to burn a little as you try to catch your breath. You're no stranger to running, but taking off in a dead sprint for so long isn’t really your strong suit.As you are finally starting to breathe normally, a guard suddenly walks up to you and harshly grabs your arm.
-
-        “You are under arrest for the murder of Lord Odel and fleeing the scene of the crime!”
-        
-        *set CH4_murderer "cutOff"
+       
+       You slow your frantic sprint, eventually coming to a stop at the mouth of another alley. Your throat begins to burn a little as you try to catch your breath. You're no stranger to running, but taking off in a dead sprint for so long isn’t really your strong suit.As you are finally starting to breathe normally, a guard suddenly walks up to you and harshly grabs your arm.
+       
+       “You are under arrest for the murder of Lord Odel and fleeing the scene of the crime!”
+       
+       *set CH4_murderer "cutOff"
         
     #Chase after him
        You run through the building, not noticing as one of your boots splash into the pool of blood.

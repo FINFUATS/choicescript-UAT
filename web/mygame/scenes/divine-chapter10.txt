@@ -5,6 +5,8 @@ After leaving the temple, you found a group of traveling scholars you recognize 
 
 They are traveling to Cavecross and through to the east side of Teville. You figure getting as far away from Summerlight and Davenport would make less people know who you are and you’ll be able to completely start anew. Maybe you’ll be a farmer like your mother or a fisher like your father.
 
+*page_break
+
 You are walking near the back of the caravan, there are a few scholars ahead of you along with their wagons. You can’t hear what the merchants are saying, but they seem to be in deep conversation about something. Possibly something to do with a conflict in ideology between the temples they have visited.
 
 As you are looking around, keeping an eye on the forest, you see a deep cut in a tree. It looks like something was embedded in the tree for a period of time, the mark is deep enough that the new growth hasn’t erased the mark yet. It reminds you of the time a salesman came to Summerlight and told everyone that he hid an axe in the forest and the first person to find it gets a free weapon.
@@ -12,6 +14,9 @@ As you are looking around, keeping an eye on the forest, you see a deep cut in a
 You weren’t the one to find it, but you remember  the person who did. You asked them later where it was and they took you into the forest and showed you. It wasn’t that far off the beaten path, just enough that it wasn’t visible to the unaware. You’re surprised that you noticed the tree, but you shook it off. No need to worry about it now.
 
 *page_break
+
+*image images/Mockgarden_Cluster.webp
+
 As you were pondering over the tree, you run into one of the scholars ahead of you.
 
 “Careful, there is a mockguarden to the left of us.” The scholar says as the entire group moves to the right side of the road.
