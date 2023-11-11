@@ -6,15 +6,23 @@ You are not quite sure where they are heading, but you know that you’re still 
 
 You are walking near the back of the caravan, there are a few merchants ahead of you along with their wagons. You can’t hear what the merchants are saying, but they seem to be in deep conversation about something. 
 
+*page_break
+
 As you are looking around, keeping an eye on the forest, you see a deep cut in a tree. It looks like something was embedded in the tree for a period of time, the mark is deep enough that the new growth hasn’t erased the mark yet. It reminds you of the time a salesman came to Summerlight and told everyone that he hid an axe in the forest and the first person to find it gets a free weapon.
 
 You weren’t the one to find it, but you remember  the person who did. You asked them later where it was and they took you into the forest and showed you. It wasn’t that far off the beaten path, just enough that it wasn’t visible to the unaware. You’re surprised that you noticed the tree, but you shook it off. No need to worry about it now.
+
 *page_break
+
+*image images/Mockgarden_Cluster.webp
+
 “Mockguarden, right!” One of the merchants cried  and everyone moved to the left side of the road.
 
 You admire the group's way of keeping everyone safe. Whenever a mockguarden was spotted, someone would shout where it was and everyone moved away from it. If there was no way around it, then they’d look for a side path to go down.
 
 Taking a closer look at the mockguarden hole, you notice that it looks vaguely familiar. Bigger than you remembered, but there are markings around the hole that remind you of something. You can’t place what exactly, but you feel as though you’ve been here before.
+
+*page_break
 
 As you are pondering where you may have seen those mockguardens from, you see something in the distance. It’s a mossy hollowed out log that looks like it’s been there for a long time. The sight of it makes your blood go cold. You know exactly where you are.
 

@@ -678,6 +678,8 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
+        *image images/Ogre-Encounter.webp
+        
         **(Fight scene)**
 
         **(Cel gets injured)**
@@ -712,6 +714,8 @@ Do you want to help Riva with her herbs?
         You put your arms out to stop Cel and Ivy; they’re going too fast… Ogre’s are hunting creatures, but not smart ones. It’s best to get the drop on them, rather than the other way around.
         
         *page_break
+        
+        *image images/Ogre-Encounter.webp
         
         Ivy doesn’t seem to understand, though, because she shoves your arm away and keeps going.
         

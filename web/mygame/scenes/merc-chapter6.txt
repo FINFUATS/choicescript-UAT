@@ -262,7 +262,7 @@ After delivering the drinks, you:
 
         You talk a little more, trying to gain an understanding of what's going on. They man and elf share what little information they have. You thank them, finish your drink, and head back to your table. 
 
-Night comes and Rip leads the group to a set of rooms in the tavern. It feels good to sleep in a reaal bed, but the anticipation of the coming battle makes you restless. 
+Night comes and Rip leads the group to a set of rooms in the tavern. It feels good to sleep in a real bed, but the anticipation of the coming battle makes you restless. 
 
 In the morning, the tavern is buzzing once again, but this time the energy is much more serious. No one is laughing and joking anymore. Anwen tells you to layer up, even suggesting wearing two pairs of pants. Elena hands you a pair of worn gloves.Gwyn passes around masks to cover your nose and mouth. He makes sure it’s tied tightly in two spots, one on the tip of your head and the other near your neck. You glance around and see others getting ready in a similar way. 
 
@@ -299,12 +299,15 @@ Off in the distance, you can just barely see sparks of magic lighting up the tre
 
 Anwen aims her bow and begins firing her arrows at the monsters. They charge towards the magic without even caring. 
 
+*page_break
+
 Before the jackaloids can get close, a large steel sword cuts through one of the monsters. The small, sickly body falls to the ground in pieces. You catch a glimpse of golden armor rushing deeper into the forest before Gwyn pulls you over to help him with an injured warrior. 
 
 The battle continues, and the jackaloids are getting closer. Gwyn has you helping patch up the injured, occasionally tossing a vial of combustion liquid into the fray for Anwen to fire at. The explosions are small, but powerful. You flinch as one such attack blows a leg off a jackaloid in the blink of an eye. 
-*page_break
 
 Closer and closer, the monsters have broken through the front line. You catch glimpses of Leon, Felix and Thebeda, all fighting for their lives. Weren’t they supposed to be much farther away? Were there really that many jackaloids, brought here by the rot?
+
+*page_break
 
 Suddenly, all you can see is Reese. The monster that attacked them that day. You remember the terror of that moment. The pain of losing them that day. The memories are too much and they consume you. 
 

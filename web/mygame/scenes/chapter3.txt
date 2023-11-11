@@ -84,6 +84,10 @@ You…
         You wander in a perpendicular direction, deeper into the forest. The thick canopy of leaves and branches cast wide shadows, but it almost seems too dark for the time of day. If it gets too dark, you think, you’ll turn back. It’s still mid-day , so you don’t take this as a sign of danger.
 
         The earthy notes of the forest slowly become stronger; quite the plague on your nostrils. That doesn’t strike you as an oddity, at first. There are more trees here, more moss growing on the ground and less interference from the nearby village. It just made sense that it smelled different here.  You see movement in the pitch blackness up ahead; somehow, you manage to discount it as mere imagination.
+        
+        *page_break
+        
+        *image images/Mockgarden_Closeup.webp
 
         Suddenly, you see something whip toward you. It would’ve hit you, had you not felt a force pull you down from behind.
 

@@ -5,7 +5,11 @@
 *goto PI_GetName
 
 *label StartChapterOne
+
+*image images/tera_copyfin.webp
 Sitting amid the vast expanse of the universe, amidst the swirling tapestry of stars and cosmic wonders, there exists a small blue jewel of a world. This celestial sphere, lovingly tended by the ethereal Goddess Tera, holds within its embrace the essence of life itself. Teeming with vibrant ecosystems, majestic landscapes, and diverse creatures, this world is a testament to the boundless creativity and beauty of its divine caretaker.
+
+*page_break
 
 Amidst the verdant splendor of the Broken Fields, nestled within the bosom of ancient forests, lies a sprawling metropolis known as Davenport. This city, a testament to dwarven ingenuity and ambition, stands as a beacon of civilization amidst the untamed wilderness. Its strategic location, nestled against the meandering river that effortlessly flows into the great seas beyond, grants it access to vast trade routes and resources from distant lands. Many neighboring towns rely on this port and it has become the trade center of Eastern Teville. 
 

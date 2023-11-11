@@ -127,6 +127,8 @@ Rip hums in disapproval.
 
 “Don’t worry too much about this. We’ll figure out who did this and get your name cleared, but it’s going to take a bit. I’m going to send some people out to get some information and I’ll let you know as soon as we find anything. Until then you can help out around the camp.” Rip pats you on the back and you continue walking.
 
+*page_break
+
 Keeping an eye on the ground, you spot some mockgardens on the ground. You avoid them, remembering running through the forest and learning where all of the mockgardens hide. Lost in thought you didn’t notice when Rip stopped and ran into his back.
 
 “We’re here, welcome to the Wolves of Davenport.” Rip steps out of the way so you can see the camp.
@@ -138,11 +140,15 @@ While the two of you are standing at the edge of camp, a giant wolf comes runnin
 You take a couple of steps back, but notice that Rip hasn’t moved at all. Actually, no one seems concerned about the direwolf. The people sitting at the fire stood up, but no one was going after their weapons.
 *page_break
 
+*image images/Dire_Wolf_adult.webp
+
 “Tyr!” Rip shouted as the direwolf ran at him. When the direwolf, Tyr, notices you, he stops and stares at you. He tilts his head and sniffs the air before seemingly coming to a conclusion of something and walks to Rip. Tyr sits next to Rip’s feet and accepts the pets given to him.
 
 “This is Tyr, my direwolf.” Rip explains while petting the wolf. “I saved him from an enemy faction and ever since then he’s been by my side.”
 
 “Don’t worry about him. He may be big, but he knows not to attack guests. Now let’s introduce you to the rest of the gang.” Rip walks over to the fire. 
+
+*page_break
 
 “The crazy one over there is Leon. Stay on his good side and he’ll tell you some of the best stories. Get on his bad side and no one will find your body. The girl beside him is Elena. She knows the most about the creatures we find. Ask her any question about a creature and she may have an answer.  The dwarf next to her is Gwyn. He is the local medical expert, come to him with most injuries or illnesses and he’ll find something that helps. Lastly, the elf by the horse is Anwen. She is our weapons expert. Need something fixed and she’ll get it done.” Rip introduces the group.
 
@@ -188,6 +194,7 @@ Leon looks at you expectantly and you glance over everyone at the fire.
 *label MC5StoryLoop
 *fake_choice
     #“Let’s hear your story.”
+        *image images/Leon_finally.webp
         “Oh! You want to hear my story! Hmm…. Where do I start?”
 
         “When I was a just a baby, I was handed a knife. With this knife I threw it at a tree and hit a squirrel!” Leon moves his arm like he was throwing a knife.
@@ -201,6 +208,7 @@ Leon looks at you expectantly and you glance over everyone at the fire.
         “Fine, here is a story that actually happened. I stopped a robbery before joining the Wolves. There were four men stealing a cart of grains from the local baker. I was all by myself, but I was able to put a stop to the robbery. I took out the driver and the passenger. After the cart stopped, I got the other two men out and beat them in combat. After I got the cart back to the baker, she gave me some bread for my troubles.” Leon acted out some of the fight scenes and was overly expressive during his whole story.
 
     # “I’m curious about Elena.”
+        *image images/elena.webp
         “Really? Okay, umm… Where should I start?”
 
         “Before joining the Wolves, I was… The intelligence expert in my previous group. One of my jobs was to learn everything I could about an area and their monsters before we go to the location. Which is why I’m reading about the mogfish.” Elena motions to her book.
@@ -208,7 +216,7 @@ Leon looks at you expectantly and you glance over everyone at the fire.
         “During one of my jobs, we had to go visit a town close to the beach. I did all the research I could on the area and we left. However, when we got there, it was invaded by a monster I have never seen before. It was in none of my books and not a single person we asked knew what it was. It was a fish-like creature, but it was roaming on land like a person. We killed it in the end, but we still don’t know what it was.” Elena looks off at the forest.
 
     # “What is Gwyn’s story?”
-
+        *image images/gwyn.webp
         “You want my story? Okay, let’s see here…”
 
         “I have been studying the different types of medicine my entire life, much to the dismay of others. Before joining the Wolves, no one appreciated my extensive knowledge of medicines and poisons.” Gwyn explained before faking a expression of offense. “They all thought I was mad, when all I was doing was learning the best methods to help someone.”
@@ -216,6 +224,7 @@ Leon looks at you expectantly and you glance over everyone at the fire.
         “My methodologies worked wonders and nobody who has used them has complained. My potions work wonders to heal a wound or take care of a cold. A few years back I was asked to create a potion to save a lord who caught a nasty cold. They feared the worst, but my potions helped bring him back from the brink and he was better within a week!” Gwyn exclaimed
 
     # “What was Anwen’s story?”
+        *image images/Anwen.webp
         “Why do you want my story? Fine. Hmmm…”
 
         “The Wolves saved me from a group of bandits. There, that’s my story.” Anwen huffed out.
@@ -430,6 +439,8 @@ Before you know it, Leon’s stick was sucked into the ground. Leon was almost s
 The mogfish slowly pulled itself up from the ground. It is bigger than you expected, big enough to eat a dwarf or a small human. You knew the creature was going to be terrifying, but seeing one up close. It was like nothing you have seen before.
 *page_break
 
+*image images/Mogfish.webp
+
 Rip and Leon brought out their swords and Anwen grabbed her bow. Elena stayed back, but kept an eye on them. You move towards a tree to lean your stick against a tree, when another mogfish tries to eat it. Jumping back, you let go of the stick and take out your dagger. 
 
 The creature looks worse up close, with a huge mouth and emotionless eyes. This creature is nothing like what you had expected.
@@ -518,6 +529,8 @@ You hum in response and throw another, bigger stone, this stone hits a small tre
 
 “Uh oh, we need to run!” Gwyn says before grabbing your arm and running back to camp.
 *page_break
+
+*image images/Mogfish.webp
 
 You turn around and see what you assume is a mogfish climbing out of the ground. It is much bigger than you expected, bigger than Gwyn.
 

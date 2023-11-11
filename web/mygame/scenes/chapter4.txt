@@ -120,6 +120,8 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
     
     #You ignore it, many things happen in this town, you don’t need to be a part of it.
         
+        *image images/knife_no_background.webp
+        
         As you continue walking towards your house, someone bumps into you. They have a hood on and you can’t see their face. You check your pockets, only to find your ${item} missing, replaced with a bloody iron knife.
 
         When you realize what you were holding, a guard walks up to you and aggressively grabs your arm.
@@ -221,6 +223,8 @@ Using your sleeve, you clean the dirt and grime from the headstone. Your fingers
 
 *page_break
 
+*image images/Cel_Storm.webp
+
 As you stand you hear the crunching of leaves behind you. You whip around and stare at the priestess. 
 
 “I’m sorry, I just happened to see you out here. Why are you here so late? You know how dangerous it is to be out at night?” She asks you while walking closer.
@@ -240,6 +244,8 @@ As you stand you hear the crunching of leaves behind you. You whip around and st
 “Nothing can be bad enough to go into certain death. If you are so worried, why don’t you come to the local temple and stay there?” 
 
 *page_break
+
+*image images/mercenary_transparent_background.webp
 
 A new voice cuts through the darkness.
 
@@ -293,6 +299,8 @@ You leave your house through the back window and begin using all of the back all
 
 *page_break
 
+*image images/mercenary_transparent_background.webp
+
 “The crate will hide you better. I’d move fast if I were you.” You quickly follow the voice’s advice and move to the crate, just as the guard walks by. The lamp light moves over the barrel, illuminating  the spot you were just hiding in.
 
 After the guard passes you hear a thump behind you. You turn and see a man in a cloak with a sword on his back. He doesn’t look like a guard so he must be a mercenary.
@@ -330,6 +338,8 @@ You take a step back and sigh.
     “Yes, but I had nothing to do with the murder, I didn’t even know something happened. I was walking home when I heard a scream and a random person bumped into me.”
 *page_break
 
+*image images/Cel_Storm.webp
+
 “You would have packed your bags and left a long time ago if you were truly responsible for the murder.” The priestess walks to the other wall in the alley, pulling her dark colored cloak closer.
 
 “The murder seemed to be too well planned for an amature. If you knew what you were doing, you would have heard me sneak up on you.” The mercenary looks up as if he is thinking.
@@ -366,16 +376,6 @@ A loud shout freezes you in your place.  You turn to see a guard, their bow draw
 
 “Put your stuff on the ground and put your hands up!”
 
-You complied and when he got to you he put your arm on your back and led you to a carriage.
-
-*page_break
-
-A guard caught you. He held up a bow and walked up towards you.
-
-“Put your stuff on the ground and put your hands up!”
-
-You complied and when he got to you he put your arm on your back and lead you to a carriage.
-
 *page_break
 
 Once you were at the prison, they threw you into a cell. There are only three cells in this prison. Crime isn't much of a problem here. The main criminals are just disputes between neighbors that don't like each other or an out of town person thinking they could get away with something Murder is for the big cities, not roadside towns
@@ -385,6 +385,8 @@ The room you are in is made of stone and you were lucky enough to be thrown into
 You found the best looking  corner and sat in it, questioning how this all happened. All you were trying to do is go home, you had nothing to do with this.
 
 *page_break
+
+*image images/mercenary_transparent_background.webp
 
 “Hey, what are you in for?” A man  you didn’t notice walks up to the bars from a doorway. It sort of  looks like an office. He doesn’t look like any guard you know. He has a dark green cloak on, none of the guards wear a cloak like that. As he walks closer you can see that he has a sword on his back and a dagger in his belt, along with some other shiny things across his clothing. None of the guards look like this, he must be a mercenary passing though.
 
@@ -407,6 +409,8 @@ You found the best looking  corner and sat in it, questioning how this all happe
 “You’d think he’d be quieter if he didn’t want to be caught.” A female’s voice calls out from the door this time. You blink, even more confused as a priestess walks in.
 
 *page_break
+
+*image images/Cel_Storm.webp
 
 “I happened to overhear you two talking and I’ve heard that you managed to get yourself into a bit of trouble.” The priestess walks over to the bars. Her light colored dress and shining jewelry was completely at odds with the dingy prison walls.
 

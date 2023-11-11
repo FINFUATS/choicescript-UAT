@@ -188,10 +188,15 @@ Who do you want to know about?
 
     #Tera
         [head]Tera[/head]
-        
+        *image images/tera_copyfin.webp
         Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
         *line_break
         *goto Characters
+    #${puppy_name}
+        [head]${puppy_name}[/head]
+        *image images/Direwolf_puppy_copy.webp
+        
+        Your pup that you found in the ruins of a village.
 
     #Back
         *page_break

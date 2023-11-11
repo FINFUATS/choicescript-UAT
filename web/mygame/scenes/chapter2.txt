@@ -1,5 +1,6 @@
 *comment Start of Chapter 2 ----------------------------------------------------
 [head]Chapter 2: The Encounter[/head]
+*image images/reese_torn_paper_finished.webp
 The sun was high in the sky, the dappling of clouds providing cool shade as you walk along the fields. A warm breeze ruffles your loose shirt, the sweat on the back of your neck drying slowly. A few yards ahead of you, your friend Reese is batting the tall grass with a thin branch they found on their way from their house to yours. They poked and teased you with it until you chased them out of your yard. The chase continued through town until you both began to tire. As it turns out, this was their plan all along. 
 
 “I’ve got nothing to do today, and you haven’t either. Let’s go play in the forest! We can gather flowers on the way!” they exclaimed.
@@ -40,6 +41,10 @@ The trees had become taller, their trunks growing nearly side by side. The thick
     “Ha! I won! I’m the best swordsman this town has ever seen!”
 
 You roll your eyes in a big dramatic way. It's enough to miss what happened next. 
+
+*page_break
+
+*image images/Jackaloid.webp
 
 Reese’s haughty laughter turns into a deafening scream. You look up to see your friend gone from their place of glory. A blur of brown quickly vanished behind a nearby tree. You drop the flowers in your hand and grab the branch that had been knocked from your grasp mere moments ago.  You hurry behind the tree, freezing in fright at the sight of a sickly looking beast tearing at your friend’s leg. Their wide eyes turn to you, tears streaming down their cheeks. They reach out to you, “HELP!”
 *set isJackaloidDiscovered true
@@ -510,7 +515,7 @@ Reese suddenly fell to the ground, exhausted. The mercenary quickly knelt down, 
         
         *page_break
         
-        “W-wait!” you reachout, not really knowing why you need them to stay, why you need to see your friend so desperately at this moment.
+        “W-wait!” you reach out, not really knowing why you need them to stay, why you need to see your friend so desperately at this moment.
         
         “No! I need to go with them!” you shout. 
         
