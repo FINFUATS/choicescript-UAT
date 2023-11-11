@@ -5,7 +5,7 @@
 
 .codexButton {
     border: none !important;
-    background: none !important;
+    background: local;
     align-self: center;
     margin-bottom: 0;
     color: white !important;
@@ -13,6 +13,10 @@
 
 :root {
     --codex-button-image-width: 100%;
+}
+.codexButton:hover {
+    background-color: black;
+    transition: 0.7s;
 }
 
 img#codexButtonImg {
