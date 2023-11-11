@@ -122,6 +122,9 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
     “I heard a scream coming from a house, so I… decided to leave the area. Nothing good ever happens when you get involved with something you don’t have anything to do with. I was walking away from the scream, keeping a look out for a guard, when someone bumped into me. I didn’t realize at the time it was the murderer. He took my ${item} and gave me the murder weapon. While I was confused, the guards grabbed me.”
     
     Rip hums in disapproval.
+    
+*elseif CH4_murderer =  "lost"
+    
 *else
     ***Bug*** Player should have done something in chapter 4
 *page_break

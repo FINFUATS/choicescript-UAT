@@ -94,7 +94,7 @@
 *create CH2_followed_voice false
 *create CH3_ending "bad"
 *create CH4_visited_reese_grave false 
-*create CH4_murderer "lost"
+*create CH4_murderer "cutOff"
 *create CH5d_injured "Ivy"
 *comment Phase2
 *create P2_branch 0

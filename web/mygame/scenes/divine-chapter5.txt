@@ -194,7 +194,7 @@ Would you like to talk about it? Well…
             
             The two of you sit in an awkward silence for the rest of the trip as you let that order set in.
 
-        *if CH4_murderer = "lost"
+        *if CH4_murderer = "cutOff"
             “Well… there isn’t much to say. I heard a scream, I went inside, and I chased the man responsible.” you tell her
             
             “Chased? You mean…” she trails.
