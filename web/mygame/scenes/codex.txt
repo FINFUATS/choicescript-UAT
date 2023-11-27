@@ -430,6 +430,7 @@ Where do you want to learn about?
 
     #Summerlight
         [head]Summerlight[/head]
+        *image images/Summerlight_finished.webp
         Summerlight is a small farming village east of Davenport. It is placed right at an intersection between Frountierwood, Cavecross, and the road to Davenport. This makes it a popular location for travelers to stay during their travels. Surprisingly, not a lot happens in this small town. The most exciting thing is when the traveling dwarven bakers come to visit.
         
         In recent history, the biggest thing to happen was a jackaloid attack. A loose jackaloid found its way to the forest of Frontierwood, where two little kids were playing. One of the kids was bit and the other tried to save them. It is unknown what happened to the one who lived as they disappeared a few years later.

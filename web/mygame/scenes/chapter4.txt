@@ -10,6 +10,8 @@ Along your way through the market, you see two people arguing. It’s impossible
 
 *page_break
 
+*image images/Summerlight_finished.webp
+
 Deciding that it is none of your business, you continue your way into the market. It is a lot busier than normal at this time of day, but not unexpected. The dwarves are in town. Their special brand of gruff conversation and large stock of unique wares draws many out from their houses and into the streets, eager to see what new wonders the dwarves might bring. 
 
 Once you get there, you walk over to the,
