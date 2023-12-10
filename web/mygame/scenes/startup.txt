@@ -180,6 +180,12 @@ What chapter?
                   #Back
                       *goto GAMESTART
   #Phase 3
+      *choice
+          #Chapter 11
+              *set faction "divine"
+              *goto_scene chapter11
+          #Back
+              *goto GAMESTART
       
 
   #TEMP: Combat Test
@@ -200,6 +206,9 @@ What chapter?
           #Chapter 10 D
                       *set faction "divine"
                       *goto_scene chapter10
+          #Chapter 11
+              *set faction "divine"
+              *goto_scene chapter11
           #Back
               *goto GAMESTART
       
