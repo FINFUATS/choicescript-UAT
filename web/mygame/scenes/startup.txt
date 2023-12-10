@@ -179,6 +179,8 @@ What chapter?
                       *goto_scene chapter10
                   #Back
                       *goto GAMESTART
+  #Phase 3
+      
 
   #TEMP: Combat Test
       *goto_scene combat_test
@@ -195,6 +197,9 @@ What chapter?
           #Chapter 7 D
               *set faction "divine"
               *goto_scene chapter7
+          #Chapter 10 D
+                      *set faction "divine"
+                      *goto_scene chapter10
           #Back
               *goto GAMESTART
       
