@@ -1,4 +1,463 @@
 *label StartChapter9
 
-TESTING DIVINE CHAP9
+It’s been a few days since Cel visited her old village. She has been studying in the library more often, trying to process what happened.
+
+You walk into the library looking for her. The library doesn’t look like it has been used much since the Zealot came to visit. All of the books are in their places aside from the ones Cel has piled up at a table. 
+
+She has three books stacked up at one of the far tables and she is currently reading a fourth. “Ichor-swogs and what causes them.” The other books are related to jackaloids and other rot creatures.
+
+*page_break
+
+*if CH8d_CelPath = "went"
+    
+    “Reading up on the rot I see.” You comment as you walk towards Cel.
+    
+    You seemed to have startled her as the book slips from her hands slightly before she manages to catch it.
+    
+    “You can never be too prepared with the increased rot activity.” She sighs, placing her book at the top of the pile. “Is there something you wanted?”
+    
+    “How are you doing?” You ask, taking a seat at a nearby table.
+    
+    “I’m still processing what happened, I can’t believe I forgot so much…” She stares at the books. “You know, my father would try to teach me how to hunt. Told me that just because I am a girl, that doesn’t mean I should go hungry if something were to happen.”
+    
+    You look at her with a solemn expression when-
+
+*elseif CH8d_CelPath = "didNot"
+    
+    “Reading up on the rot I see.” You comment as you walk towards Cel.
+    
+    You seemed to have startled her as the book slips from her hands slightly before she manages to catch it.
+    
+    “You can never be too prepared with the increased rot activity.” She sighs, placing her book at the top of the pile. “Is there something you wanted?”
+    
+    “Just checking up on you, you’ve been distant since you visited your old village.” You explain as you sit at a nearby table.
+    
+    “I’m just… thinking about what I discovered. I’m sorry I don’t really want to talk about it…” She says as she stares at the books.
+    
+    “That’s al-” You start when…
+*else
+    BUG
+    
+*page_break
+
+“Cel! ${name}! The Silvermines have been overrun with rot! They are calling all nearby temples to come help.” One of the priests ran in.
+
+“Gather everyone at the front of the temple, we don’t have time to pack.” Cel ordered.
+
+You and Cel are the first to make it there. You look around and stablemen are getting the horses ready to transport carriages and those carriages are being filled with emergency supplies.
+
+Riva and Winfred are the next to show up, each bringing a small bag of stuff. Riva has her druid staff with her.
+
+Ivy is the next one, carrying a bigger bag and you can see the glint of a dagger in her belt.
+
+Berthold is the last to show up bringing a bag of medical supplies.
+
+*page_break
+
+“Alright, everyone into your carriage! We have no time to stand around!” Cel shouts as she enters her carriage. You follow behind her.
+
+The ride is long and when you reach the mines, the fight has already started.
+
+High priests from neighboring temples have started their push against the rot near the edge of the mines. Nearby, there are mercenaries and soldiers fighting against the jackaoids and Ichor-swogs. Tents have already been set up for the injured and the equipment at the outskirts of the battle.
+
+You look away from the mines and see how much damage there has been. Trees have scorch marks across their trunks, grass has been burnt, and there are piles of burnt sticks that were once bushes. The huts that the miners stayed in are missing their roofs and have begun to crumble. 
+
+*page_break
+*label CH9d_fight
+
+You then search for your allies,
+
+*create Riva 0
+*create Winfred 0
+*create Ivy 0
+*create Berthold 0
+*create Cel 0
+*create total 0
+
+
+*choice
+    *selectable_if [Riva = 0] #Riva
+        You run towards the mines where you saw Riva go. When you get there you see her fighting jackaloids and ichor-swog creatures. 
+        
+        The mines themselves have been overrun by these creatures. The metal gate at the entrance has been shut and you can hear banging from inside. The miners are hiding in a nearby hut surrounded by vines that you assume came from Riva.
+        
+        Riva is using these vines to keep the rot creatures away from the miners, but they start to overwhelm her.
+        
+        “Help me clear a path!” She shouts as she hits a jackaloid with her staff and uses a vine to carry it away.
+        
+        You run over with your dagger and slash at the first jackaloid you see.
+        
+        TEMP CHOICES
+        
+        *choice
+            #win
+                You stab another one of the ichor-swog creatures and shout at the miners. “It’s clear! Go! Go!”
+                
+                The miners all run from the hut towards the makeshift camp.
+                
+                “Thank you (player_name), I’m not sure if I would have been able to save everyone without you.” Riva thirdly says with a smile on her face.
+
+            #loose
+                A jackaloid overwhelms you and you stumble to the ground. Right when you think it’s all over, Riva sends a vine to save you.
+                
+                You nod to her your thanks before getting back up and looking towards the hut. In that small moment, a jackaloid managed to slash at one of the miners.
+                
+                “We need to go!” You shout as you run towards the door. You rush everyone out and do your best to keep the rot creatures away from them. Riva moves her vines to keep up with the miners.
+                
+                However, no matter how many creatures you cut down, some of the miners got hit by one of them. By the time you made it to the camp, only half of them made it.
+        *set Riva = 1
+        *goto CH9d_fight
+    *selectable_if [Winfred = 0] #Winfred
+        
+        You run towards the center of the mines where Winfred is. He is fighting the ichor-swog creatures that are surrounding the priests. They look like humans, but their skin has grayed and they stumble around.
+        
+        These priests are working to keep a ward around the tents and keep the creatures out.
+        
+        You rush in with your dagger out and stab one of the creatures that was about to swipe Winfred. He gives you a small smile before returning to the task at hand.
+        
+        TEMP CHOICES
+        
+        *choice
+            #win
+                With one last slash, you manage to help bring down a good portion of the creatures. Winfred walks up to you and gives you a big pat on the back, that makes you stumble slightly.
+                
+                “Good job! You were a great help, now come on, the others need help.” He booms before searching for someone to help.
+
+            #loose
+                One of the creatures rushes you and you stumble backwards. You hold your dagger out in a way that if the creature tried that again, it would stab itself.
+                
+                Before it had a chance to try again, Winfred uses his sword and slashes the head off of the creature.
+                
+                “Woah there! That was close! I think I’ve got it from here, how about you go help one of the others.” Winfred tells you before returning to his fight.
+
+        *set Winfred = 1
+        *goto CH9d_fight
+    *selectable_if [Ivy = 0] #Ivy
+        
+        You are running towards the medical tents when you see Ivy running back and forth with the medics. She is trying to help them get everyone into the tent, but there are too many creatures to grab everyone.
+        
+        You run over to help, but more and more of them keep coming. As time goes by, Ivy looks more and more worried.
+        
+        “We need to get them one group at a time, we don’t have enough manpower to continue like this.” One of the medics says to Ivy.
+        
+        *page_break
+        
+        She suddenly freezes and looks between the two groups. The nobles took shelter in one of the bigger houses and the townsmen took shelter in the tavern. The more she looks between the two groups, the more worried and stressed her expression becomes. She has never had to make a decision like this before.
+        
+        You walk up to her,
+        
+        *choice
+            
+            #Save the townsmen first
+                “Ivy, let’s save the townsmen first, the house the nobles are in looks sturdy enough to hold out a little longer.” You say and she lets out a sigh before nodding.
+                
+                You, Ivy, and one of the medics run towards the tavern and manage to avoid the creatures.
+                
+                The medic runs into the building first before all of the townsmen begin running from the building. Ivy leads the group towards the medical tents. You stay in the middle of the group, fighting off anything that tries to get close with the medic protecting the rear.
+                
+                *page_break
+                
+                By the time you reach the tents, you hear a loud scream coming from the noble’s house. You look over and see them all running out screaming that one of the creatures got in.
+                
+                You change course to help, but it is too late. One by one they flee the building and one by one, a jackaloid or ichor-swog creature gets them.
+                
+                You freeze before turning to Ivy who has a shock and horrified expression on her face for a second before it turns unreadable. 
+                
+                You walk up to her and try to put a hand on her shoulder, but she shrugs it off. 
+                
+                “You can’t save everyone, no matter how hard you try.” You try to explain.
+                
+                “Come on, we have other people to help. There is no time to mourn.” She explains before walking back towards the medical tent.
+
+            #Save the nobles first
+                “Ivy, let’s save nobles first. That tavern has held up to worse than these conditions, I’m not sure how much longer the house can hold” You say and she lets out a sigh before nodding.
+                
+                You, Ivy, and one of the medics run towards the noble’s house and manage to avoid the creatures.
+                
+                The medic runs into the building first before all of the nobles begin running from the building. Ivy leads the group towards the medical tents. You stay in the middle of the group, fighting off anything that tries to get close with the medic protecting the rear.
+                
+                *page_break
+                
+                By the time you reach the tents, you hear a loud scream coming from the tavern. You look over and see them all running out screaming that one of the creatures got in.
+                
+                You change course to help, but it is too late. One by one they flee the building and one by one, a jackaloid or ichor-swog creature gets them.
+                
+                You freeze before turning to Ivy who has a shock and horrified expression on her face for a second before it turns unreadable. 
+                
+                You walk up to her and try to put a hand on her shoulder, but she shrugs it off. 
+                
+                “You can’t save everyone, no matter how hard you try.” You try to explain.
+                
+                “Come on, we have other people to help. There is no time to mourn.” She explains before walking back towards the medical tent.
+         *page_break
+         *set Ivy = 1
+         *goto CH9d_fight
+    *selectable_if [Berthold = 0] #Berthold
+        
+        You walk into the medical tent to check up on everyone and to take a break from the battle. Inside you find many beds along the wall with people both laying on them and on the floor. You also see Berthold watching over them.
+        
+        You walk up to him, careful not to disturb anyone.
+        
+        “How are you holding up?” He asks you.
+        
+        *choice
+            #Not so well
+                “I’ve never seen so much death and destruction before…” You mumble out a response and look at all of the injured people around you. “It’s too much.”
+                
+                “Then come with me.” Berthold stands up and leads you to a smaller tent nearby.
+                
+                “Sometimes we all need a break from what is going on around us.” Berthold explains as he opens the tent. It is full of crates and supplies. “If you don’t take a break when you need it, you have the chance of falling apart when you are most needed. Come help me transport these items to the medical tent and I can show you how to dress a wound.”
+
+            #As well as I can be
+                “As well as I can be with everything going on.” You sigh.
+                
+                Berthold hums before standing up. “Not very many people could handle this kind of battle, you’re taking it better than most.” He begins walking towards one of the smaller tents.
+                
+                You shrug and follow. He leads you to a small tent full of crates and supplies. 
+                
+                “Everyone needs a break from hardship every once and awhile,” Berthold explains. “Come help me transport these items to the medical tent and I can show you how to dress a wound.”
+                
+        *page_break
+        
+        Berthold picks up one of the small crates of bandages and starts walking back towards the tent. You pick up another small crate with herbs and ointments.
+        
+        When you get to the tent, you find Berthold cleaning the leg of one of the injured.
+        
+        “Give me the clear liquid in that crate you have there.” He requests.
+        
+        You set the crate down nearby and search for the clear liquid. It doesn’t take you long to find and hand it to Berthold.
+        
+        Berthold opens the container and pours some onto a cloth. He then lightly dabs the cloth against the injury.
+        
+        “He tripped on the way here and bumped his head. I don’t see any bite marks or scratches caused by one of the creatures, only injuries caused by the fall.” Berthold explains. “He should be fine within a few weeks.”
+        
+        You nod and look down at the injured miner.
+        
+        “How can you be so calm about this when there is so much going on around you?” You ask.
+        
+        “It’s about understanding that there is only so much you can do. You can’t save everyone, but if you can save one person, that is one more person saved then there would have been if you were not here.” Berthold explains. “It doesn’t make you feel better when you see someone die in front of you, but it does help you keep the motivation to continue to help others.”
+        
+        You nod before standing up. “Thank you Berthold, I’m going back out to help.”
+        
+        *page_break
+        *set Berthold = 1
+        *goto CH9d_fight
+
+    *selectable_if [Cel = 0] #Cel
+        
+        You run towards the entrance of the mine where the high priests are fighting against the rot. When you get there you can see five priests creating a half circle around the rot and when you look down, you can see the fungus slowly fading away.
+        
+        Cel is at the center of the half circle putting all of her effort into fighting against the rot.
+        
+        You are about to leave when you see a jackaloid running towards her. You run as fast as you ever had to intercept it. You pick up a rock from the floor and throw it at the jackaloid.
+        
+        It misses, but the noise distracted it enough to notice you, along with a couple of its buddies.
+        
+        TEMP CHOICES
+        
+        *choice
+            #win
+                You use your wit to cut down each of the creatures. By grabbing a few rocks before battle, you throw them at the jackaloids and manage to hit some in the head. This lessened the amount you needed to fight when they reached you.
+                
+                That made it so you only had to fight two jackaloids. Both of which you manage to take down.
+
+            #loose
+                You get overwhelmed, there are so many of them. You manage to kill the first jackaloid that attacks you, but since you’ve been on the defensive.
+                
+                You are trying to think up a plan when they get pushed away. You look over and you see Cel using her divine powers to keep them away from you. You use this moment to finish off the creatures.
+                
+        *page_break
+        *set Riva = 1
+        *goto CH9d_fight
+        
+    *selectable_if [total = 5] #continue
+        You look across the battlefield, there are bodies scattered about of all different kinds. Elves, Dwarves, Humans… However, if you look up you can also see unlikely allies working together. The local mercenary group, the Wolves of Davenport if you recall correctly, is working with the priests to stop the spread of the rot.
+
+That is, until you spot three figures in the distance, a mercenary, a priest, and a small child. You don’t recognize the mercenary, but the priest looks familiar. Like one of the priests during the temple meeting.
+
+You,
+
+*choice
+    #See what’s going on.
+        
+        Despite your better judgment, you walk close enough to the three to over hear their conversation.
+        
+        “He got bit by a jackaloid! Aren’t you priests supposed to help him?!” The mercenary asks. She has a long cloak and two daggers at her side. Despite being shorter than the priest, she holds herself as if she were taller than him.
+        
+        “He is an outsider from the forest, we have our own people to think about before we start helping… Others.” The priest replies while waving his hand nonchalantly. He wears a long red and white robe. He is holding himself as if everyone around is below him.
+        
+        “But he’s a child! He’s done nothing other than be born inside of the forest. How could you be so cruel to a child?” She stands up straighter and glares up at the priest.
+        
+        *page_break
+        
+        “Anyone who is not from Treville or is an outsider within the kingdom is not the responsibility of the Flames of Sigel.” The priest huffs.
+        
+        “${name}! What’s going on?” A voice calls out from behind you. You turn around to see Cel walking up towards you.
+        
+        “The priest is refusing to help the child.” You respond.
+        
+        “What? Why? What happened?” Cel looks towards the group.
+        
+        Before you get a chance to respond, the mercenary moves in front of the child before stabbing them in the chest. “If you aren’t going to save him, I will make sure that he does not suffer!”
+        
+        *set cel_path "good"
+        
+    #You are needed elsewhere.
+        
+        It looks like a small argument, probably over who actually saved the child. You need to return to camp and help tend to the wounded.
+        
+        You begin walking back towards camp when you hear a female shout.
+        
+        “Aren’t you priests supposed to help him?!”
+        
+        You turn back towards the group and see the female mercenary standing up against the priest.
+        
+        You,
+        
+        *choice
+            #Investigate what is going on.
+                
+                You take a few steps forward, close enough to overhear what is going on.
+                
+                “-He’s done nothing other than be born inside of the forest. How could you be so cruel to a child?” She stands up straighter and glares up at the priest.
+                
+                “Anyone who is not from Treville or is an outsider within the kingdom is not the responsibility of the Flames of Sigel.” The priest huffs.
+                
+                “${name}! What’s going on?” A voice calls out from behind you. You turn around to see Cel walking up towards you.
+                
+                “The priest is refusing to help the child.” You respond.
+                
+                “What? Why? What happened?” Cel looks towards the group.
+                
+                Before you get a chance to respond, the mercenary moves in front of the child before stabbing them in the chest. “If you aren’t going to save him, I will make sure that he does not suffer!”
+                
+                *set cel_path "good"
+
+            #Stare.
+                
+                You have never been big on confrontation and while you are curious on what is going on, you just stand there.
+                
+                You can’t hear much from where you stand, just some shouting. 
+                
+                Before long you hear a voice call out from behind you. 
+                
+                “${name}! What’s going on?” You turn around to see Cel walking up towards you.
+                
+                “Not sure, they are arguing over the child from what I’ve heard.” You respond.
+                
+                “We should check it out.” Cel says as she begins to walk past you.
+                
+                She doesn’t get far before the mercenary stabs the child in the chest. “If you aren’t going to save him, I will make sure that he does not suffer!”
+                
+                *set cel_path "bad"
+
+You turn your head away and look at Cel’s horrified expression. You quickly start guiding her away from the area.
+
+“Guards! This woman just killed a child in cold blood!” You hear the priest shout as you take Cel to one of the nearby tents.
+
+Before you get far, another priest walks in front of you. “I’ll take care of her, how about you go run along.”
+You stop and open your mouth to argue, but one look from Cel shuts you up. She follows the priest into one of the tents.
+
+You watch as Cel leaves, dumbfounded in what had just happened. Everything happened so fast, that you haven’t got a chance to process it.
+
+“Saw all that, did you?” A deep voice asks.
+
+*page_break
+
+You turn and see a familiar looking face. The mercenary who offered you a place among them.
+
+“The divines aren’t as good of people as they make out to be. Viper over there found the child alive, but laying amongst the bodies. She was dragging him back when a jackaloid got the jump on her and bit the child. She had hoped one of the priests would help her save the kid, but all of them turned her away because he is not from Teville. She must have gotten fed up and made sure that he didn’t suffer before he turned.” He explained.
+
+“Why didn’t they help?” You ask.
+
+“Because the Flames of Sigel don’t help anyone who isn’t from Teville, at least not on purpose. If they just so happen to be in the area they may, but they won’t go out of their way to help.” He explained.
+
+*page_break
+
+You shake your head, “How could they just let an innocent child die?”
+
+“I don’t know, kid. I don’t know.” He shakes his head before giving you a few pats on the shoulder and leaving.
+
+You return to the tents and help the injured late into the night before heading to bed. 
+
+The next morning everyone packs their bags and leaves for their temples. You don’t see Cel for the entire ride home. You make up your mind to find her after the ride and explain what had actually happened.
+
+When you get there, Cel takes her bags and walks straight into the library, ignoring everyone along the way.
+
+*page_break
+
+You quickly follow after her, hoping that she will listen.
+
+“Cel?” You ask as you open the library door. “Are you in here?”
+
+“I’m over here.” You hear her call out from a table in the corner. She has even more books out than the last time you were here. This time you see a book labeled “Jackaloids and where they come from.”
+
+“One of the mercenaries found me and told me the entire story. Why she did what she did.” You explain.
+
+*if cel_path = "good"
+    
+    Cel stares at the book for a long while before asking “What happened?”
+    
+    “The child got bit by a jackaloid and none of the priests were helping him because he’s not from Teville.” You start, Cel looks up ready to object before closing her mouth and letting you continue. “She didn’t want the child to suffer a long agonizing death, so she ended him quickly.”
+    
+    *page_break
+    
+    Cel nods and then explains in a monotone voice. “They told me that the priest found the child amongst the bodies and was bringing him to the tents when the mercenary saw the bite. Said that she panicked and stabbed the kid before anyone could explain anything. However, that’s not what we saw, was it?”
+    
+    “No. The mercenary begged them to save the child, but no one would do anything. She felt like it was better to end his suffering than to make him suffer more as she searched for anyone to help.” You let out a sigh.
+    
+    Cel returns to staring at the books. “Do you mind leaving me alone for a bit? I need to think.”
+    
+    You nod and leave the room. You see Ivy outside and she sends you a questioning look. You shake your head and walk down the hall.
+    
+*elseif cel_path = "bad"
+    
+    Cel stares at the book for a long while before asking “They’re lying?”
+    
+    “What?” You ask, taken aback.
+    
+    “Whatever they told you is a lie. The priests found the child and she stabbed him because he was bit. She never asked if there was something that could be done about it.” Cel explained.
+    
+    You look at her in confusion. “I was told that the mercenary found the child and the priests refused to help.”
+    
+    “Why would the priests refuse to help? That is what we are here for.” Cel explained before picking up a book.
+    
+    *page_break
+    
+    You are about to retort when Cel glares at you. She does not want to hear any of it.
+    
+    You leave the room and see Ivy in the hall. She gives you a questioning stare, you aren’t sure how much she heard.
+    
+    You shrug your shoulders and walk down the hall, Ivy follows you.
+    
+    “What happened?” She asks.
+    
+    “The priests lied to Cel and she believes them.” You mumble.
+    
+    “What did they say?” Ivy prodes.
+    
+    *page_break
+    
+    “That the mercenary killed the child for no reason when the priests were refusing to help. He was an outsider who got bit by a jackaloid and the merc- she tried to ask the priests for help. However, no one would.” You explained.
+    
+    You don’t see Ivy’s face, but you can feel her rage. 
+    
+    “Typical. They’ve always hated outsiders.” Ivy grumbles out. “I’ll talk with her, maybe I can show her some reason.”
+    
+    With that Ivy leaves.
+
+You head up to your room and begin packing. You can’t stay in a place that doesn’t care for children.
+
+Before you leave, you write a note.
+
+“To whoever finds this first
+
+I’m sorry for leaving so abruptly, but I can’t stay any longer. I can’t stay in an organization who doesn’t care for people in need and will lie to get everyone to believe anything they want. I know not all of you believe the same as others, but I can’t stay.
+
+I hope all of you the very best.
+
+${name}”
+
+With that you set out. There was a group of scholars heading west that stayed a couple days ago. If you head out now, you might be able to catch them in the next town.
+
 *return

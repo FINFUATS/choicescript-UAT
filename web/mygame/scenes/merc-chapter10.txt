@@ -115,6 +115,8 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         You don’t bother following the path and run straight through the forest. You’ve run down this way many times and know your way around the forest. Rip is staggering behind slightly, but that doesn’t matter.
 
         When you reach the town you can see familiar buildings up in flames.
+        
+        *set CH10_ending = "shack"
 
     # You go to Summerlight
         You want to see your old town, even if you can never live that life again. It’s comforting to remember the good times and not always think about the bad.
@@ -293,6 +295,9 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         [b]You go with,[/b]
         *fake_choice
             # Cel
+                
+                *set CH10_ending = "graveyard"
+                
                 You look up at Rip. ” I need some time to think Rip. Where are you going? I’ll catch up after I get my thoughts straight.”
 
                 “Stormdenn, but we won’t be there long. Head to Davenport, find the dwarven tavern with a wolf on it and tell them you a black martini with extra gin and blackberry. The bartender will give you a paper with the drink. Go around back and hand the paper to the elf smoking, tell him you were sent by Rip Daring and he’ll let you in.” Rip explains.
@@ -306,6 +311,9 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
                 You stare at the two wolves and begin to walk over towards Cel when there is an explosion. You look towards the town when there is another explosion. You look over at Cel then Rip and begin running towards town. They follow suit.
 
             # Rip
+                
+                *set CH10_ending = "graveyard"
+                
                 “Thank you Cel, but I think I will stay with the Wolves.” You look at her with an apologetic expression.
 
                 “The offer is always up if you decide to change your mind. May Sigel watch over you.” She gives you a small smile before turning around.

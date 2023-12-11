@@ -96,6 +96,9 @@
 *create CH4_visited_reese_grave false 
 *create CH4_murderer "cutOff"
 *create CH5d_injured "Ivy"
+*create CH8d_CelPath "went"
+*create CH10_ending "shack"
+*create cel_path "good"
 *comment Phase2
 *create P2_branch 0
 *create P2M_roommate 0
