@@ -124,8 +124,7 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
     Rip hums in disapproval.
     
 *elseif CH4_murderer =  "lost"
-    Needs to be written.
-    
+    *comment Needs to be written.
     "Placeholder Text"
     
 *else
