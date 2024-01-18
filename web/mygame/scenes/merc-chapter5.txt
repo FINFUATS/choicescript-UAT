@@ -124,6 +124,7 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
     Rip hums in disapproval.
     
 *elseif CH4_murderer =  "lost"
+    Needs to be written.
     
 *else
     ***Bug*** Player should have done something in chapter 4
