@@ -1,5 +1,5 @@
 *label chapter11
-*if faction = "merc" and if CH10_ending = "shack"
+*if (faction = "merc") and (CH10_ending = "shack")
     You and Rip reach the walls of the town. You can see the taller buildings on fire and falling apart. The roof of the tower closest to the wall looks like it is about to cave in.
     
     The front of the wall isn’t doing much better. Half of the gate has fallen over as if someone barged through it. You can even see muddy footprints across the top of the gate.
@@ -42,7 +42,7 @@
     
     “On patrol, but that doesn’t matter. I need to stop the source of all this.” Cel returns to running towards the center of town. You and Rip follow her.
     
-*elseif faction = "merc" and if CH10_ending = "graveyard"
+*elseif (faction = "merc") and (CH10_ending = "graveyard")
     
     You run by the graveyard gate and see another explosion towards the center of town. You take a frantic look around before recognizing exactly where you are. 
     
@@ -70,7 +70,7 @@
     
     You and Cel follow him. You bring out your dagger and hope that it’ll be enough.
     
-*if faction = "divine" and if CH10_ending = "shack" and cel_path = "good"
+*if ((faction = "divine") and (CH10_ending = "shack") and (cel_path = "good"))
     
     You and Cel reach the walls of the town. You can see the taller buildings on fire and falling apart. The roof of the tower closest to the wall looks like it is about to cave in.
     

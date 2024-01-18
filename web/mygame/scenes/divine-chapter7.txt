@@ -262,11 +262,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
             
-           You clean up every statue that was being reclaimed by nature. You managed to remove all of the vines and all of the webs from the statues. Some of them are cracked or missing pieces, but none of it was because of you.
+            You clean up every statue that was being reclaimed by nature. You managed to remove all of the vines and all of the webs from the statues. Some of them are cracked or missing pieces, but none of it was because of you.
            
-           “Oh, that’s where that statue went.” Cel walking up behind you. “I remembered we left it outside, but then we lost it many years ago. Never thought I’d see it again. Good job (Player_Name).”
+            “Oh, that’s where that statue went.” Cel walking up behind you. “I remembered we left it outside, but then we lost it many years ago. Never thought I’d see it again. Good job (Player_Name).”
            
-           You smile as the rest of your friends come up to admire you work.
+            You smile as the rest of your friends come up to admire you work.
 
 
 

@@ -172,44 +172,44 @@ You continue walking down the alleys, you decide to-
         
         *if CH5d_injured = "Riva"
             
-        “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then one of them got hurt.” You look down at the grass.
-        
-        “There was nothing I could do. The monster came out of nowhere and attacked Riva. I didn’t know what to do, so I got her out of there. I have never seen that monster before, maybe if I noticed the movement in the dirt or something, things could have ended differently…”
-        
+            “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then one of them got hurt.” You look down at the grass.
+            
+            “There was nothing I could do. The monster came out of nowhere and attacked Riva. I didn’t know what to do, so I got her out of there. I have never seen that monster before, maybe if I noticed the movement in the dirt or something, things could have ended differently…”
+            
         *elseif CH5d_injured = "Ivy"
         
-        “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then one of them got hurt.” You look down at the grass.
-        
-        “There was nothing I could do. The ogre came out of nowhere and attacked Ivy. I tried to warn her, tried to get her to slow down, but she wouldn’t listen. Maybe if I didn’t say anything, she wouldn’t have been standing in the place the club landed in. She made a full recovery, but maybe she would have never gotten hurt…”
-        
+            “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then one of them got hurt.” You look down at the grass.
+            
+            “There was nothing I could do. The ogre came out of nowhere and attacked Ivy. I tried to warn her, tried to get her to slow down, but she wouldn’t listen. Maybe if I didn’t say anything, she wouldn’t have been standing in the place the club landed in. She made a full recovery, but maybe she would have never gotten hurt…”
+            
         *elseif CH5d_injured = "Cel"
-        “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then the person who took me in got hurt.” You look down at the grass.
-        
-        “I went to help them fight an ogre and she got hit with a club before anyone even noticed the ogre was there. I got her out of there as quickly as I could and she made a full recovery. Though… I feel like if I was paying attention or read my monster's book, then I could have prevented it from happening…”
-        (Chapter 6)
-        “Then we had a giant gathering of all the priests and priestesses. They were visiting from all over Teren to hear a speech from the Zealot. However, something happened. He never came out to do the speech, Cel did the speech for him.” You look at the tombstone.
-        
-        “Then when Cel was answering questions, someone accused the Zealot of burning down a small town. Cel froze up and Priest answered the question for her. Then everyone broke off into our individual groups. Cel later tried to explain what had happened, but the priest came back to check on us. I don’t think he wants the news of what happened to the Zealot to be public.”
-        (Chapter 8)
-        (Chapter 9)
-        “Then me and Cel got into a massive argument. I was trying to show her evidence of what the other high priests have been doing behind her back, but she didn’t believe me. She couldn’t believe that they were doing such horrible crimes.” You sigh. “I had to leave. I couldn’t stay there knowing what happened and knowing that Cel doesn’t believe me.”
-        
-        “Sometimes trust and beliefs cloud one’s judgment.” A voice called out from behind you.
-        
-        It is a familiar looking figure. He wears a green cloak, has dark brown hair, and a dagger strapped to his side. He reminds you of that mercenary you saw many months ago.
-        
-        “Who are you?” You stand up and ask him.
-        
-        “Rip Daring and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
-        
-        You take a step back. “What do you want from me?”
-        
-        “You, nothing. You were framed for a murder you didn’t commit. Though, I would suggest leaving soon. The guards don’t think the same.” He explains.
-        
-        You look around, “were you the one who made sure that no one was here?”
-        
-        “Yep, and I made sure you never got caught in the city. I don’t know what you were thinking about coming back to town and all.” Rip scolds slightly. “I thought you left for the Flames of Sigel?”
-        
+            “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then the person who took me in got hurt.” You look down at the grass.
+            
+            “I went to help them fight an ogre and she got hit with a club before anyone even noticed the ogre was there. I got her out of there as quickly as I could and she made a full recovery. Though… I feel like if I was paying attention or read my monster's book, then I could have prevented it from happening…”
+            (Chapter 6)
+            “Then we had a giant gathering of all the priests and priestesses. They were visiting from all over Teren to hear a speech from the Zealot. However, something happened. He never came out to do the speech, Cel did the speech for him.” You look at the tombstone.
+            
+            “Then when Cel was answering questions, someone accused the Zealot of burning down a small town. Cel froze up and Priest answered the question for her. Then everyone broke off into our individual groups. Cel later tried to explain what had happened, but the priest came back to check on us. I don’t think he wants the news of what happened to the Zealot to be public.”
+            (Chapter 8)
+            (Chapter 9)
+            “Then me and Cel got into a massive argument. I was trying to show her evidence of what the other high priests have been doing behind her back, but she didn’t believe me. She couldn’t believe that they were doing such horrible crimes.” You sigh. “I had to leave. I couldn’t stay there knowing what happened and knowing that Cel doesn’t believe me.”
+            
+            “Sometimes trust and beliefs cloud one’s judgment.” A voice called out from behind you.
+            
+            It is a familiar looking figure. He wears a green cloak, has dark brown hair, and a dagger strapped to his side. He reminds you of that mercenary you saw many months ago.
+            
+            “Who are you?” You stand up and ask him.
+            
+            “Rip Daring and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
+            
+            You take a step back. “What do you want from me?”
+            
+            “You, nothing. You were framed for a murder you didn’t commit. Though, I would suggest leaving soon. The guards don’t think the same.” He explains.
+            
+            You look around, “were you the one who made sure that no one was here?”
+            
+            “Yep, and I made sure you never got caught in the city. I don’t know what you were thinking about coming back to town and all.” Rip scolds slightly. “I thought you left for the Flames of Sigel?”
+            
         *page_break
         “Things didn’t work out and I left. I didn’t know that the scholars I was traveling with were going to stop here and split up with them.” You explain. “I’ll be leaving soon, I just wanted to say my last goodbyes before leaving.”
         
@@ -249,7 +249,7 @@ You,
 
     #Agree to follow her
         
-        *set CH10_ending = "shack"
+        *set CH10_ending "shack"
         
         “Alright, I’ll join you guys. I don’t have anything planned once I leave anyways and it will be nice to be with friends.” You reply. “I can’t go into the village and will have to meet you outside.”
         
@@ -263,7 +263,7 @@ You,
         *finish
     #Decline her invitation
         
-        *set CH10_ending = "shack"
+        *set CH10_ending "shack"
         
         “I’m sorry Cel, but that’s not the life for me. I’m heading to the east side of Teren, maybe we’ll see each other again in our travels.”
         
@@ -306,7 +306,7 @@ You look at Ivy’s solemn expression and decide to,
 
     #Follow her
         
-        *set CH10_ending = "shack"
+        *set CH10_ending "shack"
         
         “Okay, come first thing tomorrow morning and I’ll help.” You tell her.
         
@@ -318,7 +318,7 @@ You look at Ivy’s solemn expression and decide to,
         *finish
     #Stay
         
-        *set CH10_ending = "shack"
+        *set CH10_ending "shack"
         
         “I’m sorry Ivy, but I can’t. If she won’t listen to you, then why would she listen to me?” You ask.
         
@@ -353,7 +353,7 @@ You look between the both of them and decide,
 
     #To follow Cel
         
-        *set CH10_ending = "graveyard"
+        *set CH10_ending "graveyard"
         
         “I’m sorry Rip, but I can’t leave my friends behind.” You explain as you start walking towards Cel.
         
@@ -370,7 +370,7 @@ You look between the both of them and decide,
 
     #To follow Rip
         
-        *set CH10_ending = "graveyard"
+        *set CH10_ending "graveyard"
 
         You look between Rip and Cel before saying, “I’m sorry Cel.”
         
@@ -413,7 +413,7 @@ Ivy glares at him. “Cel almost never snaps at us, least of all Riva. Not only 
 You look between the two of them,
 *fake_choice
     #You follow Ivy
-        *set CH10_ending = "graveyard"
+        *set CH10_ending "graveyard"
         “Even so, there is a moment when it becomes too much.” You explain to Rip and walk towards Ivy.
         
         Rip lets out a sigh before looking towards the town.
@@ -440,5 +440,5 @@ You look between the two of them,
         
         You pass Ivy and see her confused expression before she follows you and you notice Rip not that far behind you. The three of you just pass the gate before another explosion is heard.
         
-        *set CH10_ending = "graveyard"
+        *set CH10_ending "graveyard"
         *finish

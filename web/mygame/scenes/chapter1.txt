@@ -230,7 +230,7 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                 “This is my task, just help me not bump into anything.” You request. Reese runs ahead and tells you where some obstacles are.
 
                 When the two of you get back, the Elf imparts their knowledge of combat tactics and strategic thinking, honing both your brawn and cunning skills.
-                *goto SC1_Home
+
                 
             # The Agile Pursuit ([color=${agility_color}]Agility++[/color] [color=${cunning_color}]Cunning++[/color])
                 *set agility +1
@@ -249,9 +249,9 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                 With a final burst of speed and a well-placed trap, you apprehend the pickpocket, returning the stolen goods to their rightful owners. The Elf commends your agile and cunning pursuit, impressed by your ability to think on your feet and adapt to the ever-changing circumstances.
 
                 In recognition of your accomplishment, the Elf imparts their knowledge of stealth techniques and cunning strategies, enhancing your agility and cunning.
-                *goto SC1_Home
+
                 
-        
+        *goto SC1_Home
         *page_break
         Once you've fulfilled their request, you return to the friendly Elf vendor in the marketplace, who now has the rest of the food items you need for dinner. Grateful for your efforts, the Elf vendor hands you the completed package. "Here you go," they say with a smile. "You've proven yourself resourceful and capable and I thank you."
 
@@ -268,13 +268,13 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
         *fake_choice
             # Strength [color=${brawn_color}]Brawn++[/color]
                 *set brawn +1
-                *goto SC1_Home
+
             # Agility  [color=${agility_color}]Agility++[/color]
                 *set agility +1
-                *goto SC1_Home
+
             # Cunning  [color=${cunning_color}]Cunning++[/color]
                 *set cunning +1
-                *goto SC1_Home
+        *goto SC1_Home
 
     #“Trading Crops and Items” ([color=${brawn_color}]Brawn++[/color])
         *set brawn +1
@@ -309,7 +309,7 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                 Along the way, you encounter various obstacles,crates and people in your way. You and Reese work together to get the food back to Master Remus. 
 
                 Climbing over crates and dodging through people you two manage to collect all the necessary ingredients. Master Remus is impressed by your culinary prowess and rewards you with a lesson in both agility and brawn. He teaches you techniques that will enhance your physical prowess and quick reflexes.
-                *goto SC1_Home
+
                 
            # The Elusive Secrets ([color=${brawn_color}]Brawn++[/color] [color=${cunning_color}]Agility++[/color])
                
@@ -334,7 +334,7 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                Many times you and Reese have to find creative hiding spots. A few times even creating some. The two of you will push a barrel into a better location or climb a difficult wall.
 
                With your natural gift for cunning and strength, you successfully gather the information Whisper seeks, impressing them with your cleverness and resourcefulness. In return, Whisper imparts invaluable knowledge of covert operations and cunning strategies.
-               *goto SC1_Home
+        *goto SC1_Home
 
 *label SC1_Home
 *page_break

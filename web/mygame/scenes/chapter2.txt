@@ -35,11 +35,15 @@ The trees had become taller, their trunks growing nearly side by side. The thick
     Reese runs at you with their stick and swings at your arm. You take a step back and dodge the attack. WIth them off balance, you swing at their stick and it flies out of their hand.
     
     Reese drags you over to a stump on the ground and proclaims “You win! You get to stand on the stump of victory!”
+    *goto CH2_SKL_Check1
 *else
     Just as your dramatic sword fight was nearing its end, Reese managed to knock your branch out of your hand with a quick strike of their trusty weapon. They leaped up on a nearby stump, raising their branch to the sky with a wide smile on their face. 
     
     “Ha! I won! I’m the best swordsman this town has ever seen!”
+    *goto CH2_SKL_Check1
 
+*comment Improve naming convention
+*label CH2_SKL_Check1
 You roll your eyes in a big dramatic way. It's enough to miss what happened next. 
 
 *page_break
