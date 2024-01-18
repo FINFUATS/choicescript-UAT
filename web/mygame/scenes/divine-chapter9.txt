@@ -67,16 +67,8 @@ You look away from the mines and see how much damage there has been. Trees have 
 
 You then search for your allies,
 
-*create Riva 0
-*create Winfred 0
-*create Ivy 0
-*create Berthold 0
-*create Cel 0
-*create total 0
-
-
 *choice
-    *selectable_if [Riva = 0] #Riva
+    *selectable_if (Riva = 0) #Riva
         You run towards the mines where you saw Riva go. When you get there you see her fighting jackaloids and ichor-swog creatures. 
         
         The mines themselves have been overrun by these creatures. The metal gate at the entrance has been shut and you can hear banging from inside. The miners are hiding in a nearby hut surrounded by vines that you assume came from Riva.
@@ -105,9 +97,9 @@ You then search for your allies,
                 “We need to go!” You shout as you run towards the door. You rush everyone out and do your best to keep the rot creatures away from them. Riva moves her vines to keep up with the miners.
                 
                 However, no matter how many creatures you cut down, some of the miners got hit by one of them. By the time you made it to the camp, only half of them made it.
-        *set Riva = 1
+        *set Riva 1
         *goto CH9d_fight
-    *selectable_if [Winfred = 0] #Winfred
+    *selectable_if (Winfred = 0) #Winfred
         
         You run towards the center of the mines where Winfred is. He is fighting the ichor-swog creatures that are surrounding the priests. They look like humans, but their skin has grayed and they stumble around.
         
@@ -130,9 +122,9 @@ You then search for your allies,
                 
                 “Woah there! That was close! I think I’ve got it from here, how about you go help one of the others.” Winfred tells you before returning to his fight.
 
-        *set Winfred = 1
+        *set Winfred 1
         *goto CH9d_fight
-    *selectable_if [Ivy = 0] #Ivy
+    *selectable_if (Ivy = 0) #Ivy
         
         You are running towards the medical tents when you see Ivy running back and forth with the medics. She is trying to help them get everyone into the tent, but there are too many creatures to grab everyone.
         
@@ -189,10 +181,10 @@ You then search for your allies,
                 “You can’t save everyone, no matter how hard you try.” You try to explain.
                 
                 “Come on, we have other people to help. There is no time to mourn.” She explains before walking back towards the medical tent.
-         *page_break
-         *set Ivy = 1
-         *goto CH9d_fight
-    *selectable_if [Berthold = 0] #Berthold
+        *page_break
+        *set Ivy 1
+        *goto CH9d_fight
+    *selectable_if (Berthold = 0) #Berthold
         
         You walk into the medical tent to check up on everyone and to take a break from the battle. Inside you find many beds along the wall with people both laying on them and on the floor. You also see Berthold watching over them.
         
@@ -240,10 +232,10 @@ You then search for your allies,
         You nod before standing up. “Thank you Berthold, I’m going back out to help.”
         
         *page_break
-        *set Berthold = 1
+        *set Berthold 1
         *goto CH9d_fight
 
-    *selectable_if [Cel = 0] #Cel
+    *selectable_if (Cel = 0) #Cel
         
         You run towards the entrance of the mine where the high priests are fighting against the rot. When you get there you can see five priests creating a half circle around the rot and when you look down, you can see the fungus slowly fading away.
         
@@ -267,10 +259,10 @@ You then search for your allies,
                 You are trying to think up a plan when they get pushed away. You look over and you see Cel using her divine powers to keep them away from you. You use this moment to finish off the creatures.
                 
         *page_break
-        *set Riva = 1
+        *set Riva 1
         *goto CH9d_fight
         
-    *selectable_if [total = 5] #continue
+    *selectable_if (total = 5) #continue
         You look across the battlefield, there are bodies scattered about of all different kinds. Elves, Dwarves, Humans… However, if you look up you can also see unlikely allies working together. The local mercenary group, the Wolves of Davenport if you recall correctly, is working with the priests to stop the spread of the rot.
 
 That is, until you spot three figures in the distance, a mercenary, a priest, and a small child. You don’t recognize the mercenary, but the priest looks familiar. Like one of the priests during the temple meeting.

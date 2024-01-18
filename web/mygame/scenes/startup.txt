@@ -114,6 +114,14 @@
 *create isMogfishDiscovered     false
 *create isWOWDiscovered         false
 *create murdererKnown         false
+
+*comment Character Globals
+*create Riva 0
+*create Winfred 0
+*create Ivy 0
+*create Berthold 0
+*create Cel 0
+*create total 0
 *comment -----------------------------------------------------------------------
 
 *comment *set GP_arg0 6
