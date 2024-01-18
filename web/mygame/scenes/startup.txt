@@ -13,7 +13,7 @@
     chapter8
     chapter9
     chapter10
-    chapter11
+    Chapter11
     divine-chapter5
     divine-chapter6
     divine-chapter7
