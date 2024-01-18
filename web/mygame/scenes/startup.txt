@@ -135,7 +135,7 @@ What chapter?
           *goto_scene chapter3
        #Chapter 4
           *goto_scene chapter4
-      #Back
+       #Back
           *goto GAMESTART
   #Phase 2
       These chapters are in an alpha state, Some systems may not be implemented

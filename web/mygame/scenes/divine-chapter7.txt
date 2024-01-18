@@ -327,7 +327,7 @@ You walk up to her and ask the question that’s been on your mind since the mee
 *page_break
 
 You nod. It makes sense why they have the meeting, but you can only wonder how nothing has happened during these times.
-	
+    
 “The Zealot is also going to be there. You’ve probably heard of him, he’s the knight who saved a town from the rot by himself.” Cel continues her explanation. “He’s coming to give a speech and prepare us for future dealing with the rot. Rot patches have been appearing lately and he wants to make sure we are ready.”
 
 You remember seeing the Zealot. He was at the town that you and the temple saved from the rot.

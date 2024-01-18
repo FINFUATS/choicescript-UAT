@@ -125,6 +125,8 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
     
 *elseif CH4_murderer =  "lost"
     
+    "Placeholder Text"
+    
 *else
     ***Bug*** Player should have done something in chapter 4
 *page_break

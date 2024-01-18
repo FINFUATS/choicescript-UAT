@@ -46,9 +46,9 @@
 *comment    None
 *label UpdateAttributes
 
-*set Brawn (((Endurance + Strength) + Presence) + Courage) / 4
-*set Agility (((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics) / 4
-*set Cunning (((Improvisation + Knowledge) + Medical) + Speechcraft) / 4
+*set Brawn Brawn + ((((Endurance + Strength) + Presence) + Courage) / 4)
+*set Agility Agility + ((((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics) / 4)
+*set Cunning Cunning + ((((Improvisation + Knowledge) + Medical) + Speechcraft) / 4)
 
 *comment TODO: Add magic attribute
 
