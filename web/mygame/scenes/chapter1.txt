@@ -306,7 +306,8 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                 
            # The Elusive Secrets ([color=${brawn_color}]Brawn++[/color] [color=${cunning_color}]Agility++[/color])
                
-               *set brawn +1*set agility +1
+               *set brawn +1
+               *set agility +1
                The Elf sends the two of you to get some cloth from the merchant on the other side of town. However, before you leave, he gives a warning.
                
                “Be careful of the people called the Whisper. They may be known for having some good information, but they can’t be trusted.” The Elf tells you before sending you both off.
