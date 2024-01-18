@@ -13,6 +13,7 @@
     chapter8
     chapter9
     chapter10
+    Chapter11
     divine-chapter5
     divine-chapter6
     divine-chapter7
@@ -174,6 +175,9 @@ What chapter?
                   #Chapter 6 D
                       *set faction "divine"
                       *goto_scene chapter6
+                  #Chapter 9 D
+                      *set faction "divine"
+                      *goto_scene chapter9
                   #Chapter 7 D
                       *set faction "divine"
                       *goto_scene chapter7
@@ -197,18 +201,12 @@ What chapter?
       *goto_scene format_example
   #New Chapters
       *fake_choice
-          #Chapter 5 D
+          #Chapter 9 D
               *set faction "divine"
-              *goto_scene chapter5
-          #Chapter 6 D
-                      *set faction "divine"
-                      *goto_scene chapter6
-          #Chapter 7 D
-              *set faction "divine"
-              *goto_scene chapter7
+              *goto_scene chapter9
           #Chapter 10 D
-                      *set faction "divine"
-                      *goto_scene chapter10
+              *set faction "divine"
+              *goto_scene chapter10
           #Chapter 11
               *set faction "divine"
               *goto_scene chapter11
