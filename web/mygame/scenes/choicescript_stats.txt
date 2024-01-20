@@ -10,3 +10,6 @@ This is a stats screen!
   text item
   text bought
   text coin 
+  text Brawn_SKL_Total
+  text Agility_SKL_Total
+  text Cunning_SKL_Total

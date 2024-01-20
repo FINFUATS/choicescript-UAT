@@ -2,6 +2,9 @@
 *comment temporary variables
 *temp option
 *temp bought
+*temp Attr_PNT_Total 0
+*temp Stored_Attr_Total 0
+*temp Increase_Attr false
 
 [head]Chapter 4: The Mix-up[/head]
 The charming hustle and bustle of the town market reaches your ears long before you enter the busy street. There are multiple shops around you, each bursting with different items for sale and customers hovering in and out of open doorways.. Your job has just finished a huge order and the coin just came in. With your pockets now heavy with silver, You decided that you were going to spoil yourself today for all of your hard work. There have been some items you have had your eye on and now is a better time than any to purchase something new.. 
@@ -293,6 +296,11 @@ The mercenary and priestess glare at each other before suddenly turning their at
         *set faction "merc"
         *finish
 
+    #Think about decision. (Reallocate Attribute Points)
+        *set Stored_Attr_Total (Attr_PNT_Total + Brawn) + (Agility + Cunning)
+        *page_break
+        *goto CH4_Reallocate_Menu
+
 *label C4_Leave
 You need to get out of town as soon as possible. The watch is on high alert and if you use the cover of night you could get out of here.
 
@@ -365,6 +373,10 @@ You take a step back and sigh.
         *set faction "merc"
         *finish
 
+    #Think about decision. (Reallocate Attribute Points)
+        *set Stored_Attr_Total (Attr_PNT_Total + Brawn) + (Agility + Cunning)
+        *page_break
+        *goto CH4_Reallocate_Menu
 *label C4_Caught
 
 You remember seeing a path to the forest a few weeks ago. It’s risky, but not many people seem to take it. You gather all your belongings and start heading that way.
@@ -434,6 +446,7 @@ Later that same night the priestess walks in through the main door and the merce
 “Now, have you made your choice?”
 
 
+*label CH4_Final_Choice
 *choice
     #"I choose to go with the priestess and stay at the temple."
         "I'll talk with the captain and get you released into my custody." The priestess walks out of the room. When you look over at the mercenary, he is gone.
@@ -452,3 +465,77 @@ Later that same night the priestess walks in through the main door and the merce
         *set faction "divine"
         *finish
         *comment *goto_scene Mercenary
+    
+    #Think about decision. (Reallocate Attribute Points)
+        *page_break
+        *goto CH4_Reallocate_Menu
+
+*label CH4_Reallocate_Menu
+
+*comment Display current skill points in total | This total should be taken after collecting all skill points after clicking reallocate with a confirmation prompt
+You currently have ${Attr_PNT_Total} unused attribute points.
+
+*choice
+    *selectable_if (((Brawn != 0) or (Agility != 0)) or (Cunning != 0)) #Reset All Attribute Points
+        You have reset all your attribute points to 0.
+        *set Attr_PNT_Total (Attr_PNT_Total + Brawn) + (Agility + Cunning)
+        *set Stored_Attr_Total Attr_PNT_Total
+        *set Brawn 0
+        *set Agility 0
+        *set Cunning 0
+        *goto CH4_Reallocate_Menu
+    *selectable_if ((Increase_Attr = false) and (Attr_PNT_Total > 0)) #Increase Attributes by +1
+        Increase attribute mode enabled.
+        *set Increase_Attr true
+        *goto CH4_Reallocate_Menu
+    *selectable_if ((Increase_Attr = true) and (Stored_Attr_Total > Attr_PNT_Total)) #Decrease Attributes by -1
+        Decrease attribute mode enabled.
+        *set Increase_Attr false
+        *goto CH4_Reallocate_Menu
+
+    *selectable_if (((Brawn > 0) and (Increase_Attr = false)) or (((Brawn < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Brawn
+        *if (Increase_Attr = false)
+            You are currently decreasing attributes and have decreased your Brawn by -1.
+            *set Attr_PNT_Total Attr_PNT_Total + 1
+            *set Brawn Brawn - 1
+            *goto CH4_Reallocate_Menu
+        *else
+            You are currently increasing attributes and have increased Brawn by +1.
+            *set Attr_PNT_Total Attr_PNT_Total - 1
+            *set Brawn Brawn + 1
+            *goto CH4_Reallocate_Menu
+
+    *selectable_if (((Agility > 0) and (Increase_Attr = false)) or (((Agility < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Agility
+        *if (Increase_Attr = false)
+            You are currently decreasing attributes and have decreased your Agility by -1.
+            *set Attr_PNT_Total Attr_PNT_Total + 1
+            *set Agility Agility - 1
+            *goto CH4_Reallocate_Menu
+        *else
+            You are currently increasing attributes and have increased Agility by +1.
+            *set Attr_PNT_Total Attr_PNT_Total - 1
+            *set Agility Agility + 1
+            *goto CH4_Reallocate_Menu
+
+    *selectable_if (((Cunning > 0) and (Increase_Attr = false)) or (((Cunning < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Cunning
+        *if (Increase_Attr = false)
+            You are currently decreasing attributes and have decreased your Cunning by -1.
+            *set Attr_PNT_Total Attr_PNT_Total + 1
+            *set Cunning Cunning - 1
+            *goto CH4_Reallocate_Menu
+        *else
+            You are currently increasing attributes and have increased Cunning by +1.
+            *set Attr_PNT_Total Attr_PNT_Total - 1
+            *set Cunning Cunning + 1
+            *goto CH4_Reallocate_Menu
+
+    #Finish Reallocation
+        *if Attr_PNT_Total > 0
+            You have unallocated attribute points. This is your last chance to use them.
+            *choice
+                #Use Remaining Points
+                    *goto CH4_Reallocate_Menu
+                #Continue
+                    *goto CH4_Final_Choice
+        *else
+            *goto CH4_Final_Choice

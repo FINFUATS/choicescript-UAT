@@ -72,6 +72,8 @@
 *create Strength 0
 *create Presence 0
 *create Courage 0
+*comment attribute value with skills
+*create Brawn_SKL_Total 0
 
 *create Agility 0
 *comment agility skills
@@ -79,6 +81,8 @@
 *create Stealth 0
 *create MotorSkill 0
 *create Acrobatics 0
+*comment attribute value with skills
+*create Agility_SKL_Total 0
 
 *create Cunning 0
 *comment cunning skills
@@ -86,6 +90,8 @@
 *create Knowledge 0
 *create Medical 0
 *create Speechcraft 0
+*comment attribute value with skills
+*create Cunning_SKL_Total 0
 
 *create Divine 0
 *create Arcane 0
@@ -115,7 +121,7 @@
 *create isWOWDiscovered         false
 *create murdererKnown         false
 
-*comment Character Globals
+*comment Divine Chapter 9 Character Total Globals
 *create Riva 0
 *create Winfred 0
 *create Ivy 0

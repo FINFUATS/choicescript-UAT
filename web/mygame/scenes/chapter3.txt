@@ -17,6 +17,9 @@ In spite of any…
 , your adventurous side could only be held down for so long; besides, this isn’t even the same forest. The other difference now is that you refuse to drag anyone along with you; not again.
 
 Once upon a time, you hadn’t known better. You had that invincibility that youth granted you, the belief that nothing bad could touch you or the ones you loved. Now, you’ll make better choices. You’re sure of it. You’ve seen what terrible things could happen when you're underprepared. From this moment onward, and for the rest of your life, you will make better choices.
+
+Walking alongside the rushing river, there happens to be a doe walking ahead of you, which you’ve been following… 
+
 *fake_choice
     # To observe its behavior! The way each creature goes about its own routine in the forest is absolutely fascinating!
         *comment TODO: Cunning++
