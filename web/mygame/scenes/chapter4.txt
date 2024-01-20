@@ -6,6 +6,7 @@
 *temp Stored_Attr_Total 0
 *temp Increase_Attr false
 
+*set coin 5
 [head]Chapter 4: The Mix-up[/head]
 The charming hustle and bustle of the town market reaches your ears long before you enter the busy street. There are multiple shops around you, each bursting with different items for sale and customers hovering in and out of open doorways.. Your job has just finished a huge order and the coin just came in. With your pockets now heavy with silver, You decided that you were going to spoil yourself today for all of your hard work. There have been some items you have had your eye on and now is a better time than any to purchase something new.. 
 
@@ -38,8 +39,6 @@ Once you get there, you walk over to the,
         *set faction "guards"
         *set item "bread"
         *set bought "bread"
-        *comment FIXME: Base attributes should not be mutated outside certain circumstances.
-        *set Brawn +2
         *set coin -2
         
     # Bookstore. You have been looking at a book for weeks and you finally have the money to get it.
@@ -61,8 +60,6 @@ Once you get there, you walk over to the,
         *set faction "priests"
         *set item "book"
         *set bought "book"
-        *comment FIXME: Base attributes should not be mutated outside certain circumstances.
-        *set Cunning +2
         *set coin -3
         
     #Blacksmith. Your dagger is old and falling apart. You have been meaning to replace it.
@@ -96,8 +93,6 @@ Once you get there, you walk over to the,
         *set faction "mercenaries"
         *set item "dagger"
         *set bought "dagger"
-        *comment FIXME: Base attributes should not be mutated outside certain circumstances.
-        *set Agility +2
         *set coin -5
 *page_break
 
@@ -437,11 +432,11 @@ You give her a questioning look.
 
 *page_break
 
-Later that same night the priestess walks in through the main door and the mercenary walks through the office. THe entire time you’ve seen guards walk in and out of that room, but you never saw him leave it. He doesn’t seem particularly welcome here either, or else why would he sneak around so much?
+Later that same night the priestess walks in through the main door and the mercenary walks through the office. The entire time you’ve seen guards walk in and out of that room, but you never saw him leave it. He doesn’t seem particularly welcome here either, or else why would he sneak around so much?
 
 “I shouldn’t be surprised that you showed up. I heard you walking through the halls.” The mercenary says, looking at the priestess.
 
-“Yes, well, I can’t just let (him/her/them) be hanged if there is a chance they are innocent.” The priestess responds. They almost seem to be familiar with each other, but you don’t have time to really think about that. Both of them are looking at you, expectantly.
+“Yes, well, I can’t just let ${pronoun_them} be hanged if there is a chance they're innocent.” The priestess responds. They almost seem to be familiar with each other, but you don’t have time to really think about that. Both of them are looking at you, expectantly.
 
 “Now, have you made your choice?”
 
@@ -454,7 +449,7 @@ Later that same night the priestess walks in through the main door and the merce
         She comes back with the captain and he unlocks the gate.
         
         "Don't come back. I'm already going to be in a rot full of trouble because of this."
-        *set faction "merc"
+        *set faction "divine"
         *finish
         *comment *goto_scene Divine
         
@@ -462,7 +457,7 @@ Later that same night the priestess walks in through the main door and the merce
         "I'll make sure we get them and clear your name. Until then you'll be under my custody." The mercenary grabs a key from his pocket.
         
         "You probably won't be allowed back into this town no matter what you choose. However, we'll make sure to keep you safe. Oh, and before I forget. While I couldn't get you your ${bought} back, I was able to snatch the dagger. We'll get it cleaned up for you."
-        *set faction "divine"
+        *set faction "merc"
         *finish
         *comment *goto_scene Mercenary
     

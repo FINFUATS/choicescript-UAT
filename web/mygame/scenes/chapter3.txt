@@ -3,30 +3,30 @@ The second spring after those tragic events surrounding a dear friend and a Jack
 
 In spite of any…
 *fake_choice
-    # Fears that may linger (Courage++)
-        *set GP_arg0 "Courage"
-        *gosub_scene general IncrementSkill
-    # Disapproval from those in your village (Stealth++)
-        *set GP_arg0 "Stealth"
-        *gosub_scene general IncrementSkill
-    # Bitter memories you may have (Improvisation++)
-        *set GP_arg0 "Improvisation"
-        *gosub_scene general IncrementSkill
+    # Fears that may linger ([color=${brawn_color}]Brawn++[/color])
+        *set Brawn +1
+        *set CH3_looming_thoughts "fears that may linger"
+    # Disapproval from those in your village ([color=${agility_color}]Agility++[/color])
+        *set Agility +1
+        *set CH3_looming_thoughts "disapproval from those in your village"
+    # Bitter memories you may have ([color=${cunning_color}]Cunning++[/color])
+        *set Cunning +1
+        *set CH3_looming_thoughts "bitter memories you may have"
 *page_break
 
-, your adventurous side could only be held down for so long; besides, this isn’t even the same forest. The other difference now is that you refuse to drag anyone along with you; not again.
+In spite of any ${CH3_looming_thoughts}, your adventurous side could only be held down for so long; besides, this isn’t even the same forest. The other difference now is that you refuse to drag anyone along with you; not again.
 
 Once upon a time, you hadn’t known better. You had that invincibility that youth granted you, the belief that nothing bad could touch you or the ones you loved. Now, you’ll make better choices. You’re sure of it. You’ve seen what terrible things could happen when you're underprepared. From this moment onward, and for the rest of your life, you will make better choices.
 
 Walking alongside the rushing river, there happens to be a doe walking ahead of you, which you’ve been following… 
 
 *fake_choice
-    # To observe its behavior! The way each creature goes about its own routine in the forest is absolutely fascinating!
-        *comment TODO: Cunning++
-    # To see how long it takes to notice you! You’ll test your speed if it starts running…
-        *comment TODO: Agility++
-    # Because you’re hungry… That doe could provide a couple days of good eating!
-        *comment TODO: Brawn++
+    # To observe its behavior! The way each creature goes about its own routine in the forest is absolutely fascinating! ([color=${cunning_color}]Cunning++[/color])
+        *set Cunning +1
+    # To see how long it takes to notice you! You’ll test your speed if it starts running… ([color=${agility_color}]Agility++[/color])
+        *set Agility +1
+    # Because you’re hungry… That doe could provide a couple days of good eating! ([color=${brawn_color}]Brawn++[/color])
+        *set Brawn +1
 *page_break
 
 As the doe comes to a fork in the road, it turns away from either path, wandering deeper into the forest. Today, you’re feeling particularly bold, so you continue following the doe in spite of past experiences. If anything seems out of place, you’ll know when to run.
@@ -38,9 +38,8 @@ If you had to guess, you’d say she was a wood elf. You haven’t seen many woo
 You…
 
 *fake_choice
-    # Speak to the druid (Speechcraft++)
-        *set GP_arg0 "Speechcraft"
-        *gosub_scene general IncrementSkill
+    # Speak to the druid ([color=${cunning_color}]Cunning++[/color])
+        *set Cunning +1
 
         You walk up to the druid, rather casually, barely containing your excitement. You ask her if she’s a real druid; the kind that really protect the forest and sleep under the shade of the trees.
         
@@ -52,9 +51,8 @@ You…
 
         
         “You may hear of our woes, young sapling, if only so that they may be heard…”
-    # Watch the druid (Stealth++)
-        *set GP_arg0 "Stealth"
-        *gosub_scene general IncrementSkill
+    # Watch the druid ([color=${agility_color}]Agility++[/color])
+        *set Agility +1
         
         You hide in a relatively benign-looking bush, and stare at the druid. This is a rare opportunity; has anyone from your village ever even seen a druid? Well, now you can say you have.
         
@@ -78,9 +76,8 @@ You…
         
         “Very well. You have an air of silence, and our feelings have reached an excess in our hearts. You may know what ails us, little weedling … if only to ease the pressure.”
 
-    # Leave and explore deeper into the forest (Courage++)
-        *set GP_arg0 "Courage"
-        *gosub_scene general IncrementSkill
+    # Leave and explore deeper into the forest ([color=${brawn_color}]Brawn++[/color])
+        *set Brawn +1
 
         But, your instincts tell you otherwise. Better not to disturb these peaceful people of the forest with your villager ways. They avoid outsiders for a reason, you’d imagine.
         

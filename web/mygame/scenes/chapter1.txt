@@ -53,12 +53,21 @@ You decide to,
             
             # Buddy (Boy)
                 *set gender "Male"				
+                *set pronoun_they "him"
+                *set pronoun_them "he"
+                *set pronoun_their "his"
                 
             # Honey (Girl)
                 *set gender "Female"
+                *set pronoun_they "her"
+                *set pronoun_them "she"
+                *set pronoun_their "hers"
                 
             # Kiddo (Other)
                 *set gender "Other"
+                *set pronoun_they "them"
+                *set pronoun_them "they"
+                *set pronoun_their "their"
         
         “You look like you barely slept! Your hair is a mess," she teases, a warm smile playing on her lips. 
         
@@ -311,7 +320,7 @@ Amongst the crowd you hear a shout and turn around. You can see Reese, your best
                 Climbing over crates and dodging through people you two manage to collect all the necessary ingredients. Master Remus is impressed by your culinary prowess and rewards you with a lesson in both agility and brawn. He teaches you techniques that will enhance your physical prowess and quick reflexes.
 
                 
-           # The Elusive Secrets ([color=${brawn_color}]Brawn++[/color] [color=${cunning_color}]Agility++[/color])
+           # The Elusive Secrets ([color=${brawn_color}]Brawn++[/color] [color=${agility_color}]Agility++[/color])
                
                *set brawn +1
                *set agility +1

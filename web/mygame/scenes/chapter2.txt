@@ -56,8 +56,8 @@ Reese’s haughty laughter turns into a deafening scream. You look up to see you
 You charge forward, shouting and yelling with the branch held high above your head. The beast, one you recognize now as a Jackaloid, whips its ugly head to you. Its large muzzle pulls into a grin-like snarl, showing a row of gleaming sharp teeth.
 
 *fake_choice
-    # Leap onto the stump your friend was standing on.
-        *comment TODO: Increment some Agility sub-attribute
+    # Leap onto the stump your friend was standing on ([color=${agility_color}]Agility++[/color])
+        *set Agility +1
         Terrified, but determined, you grip your branch in your hand and leap up on the nearby stump. The added height bolsters your confidence, looking down on the jackaloid instead of staring at it face to face makes this moment feel a little less dire. You have the upper ground now. you can win.
         
         Clenching your makeshift weapon, you leap off the branch with a battle cry. You swing down hard,  whacking the beast right between its eyes. The branch whistled in the air like a whip. The jackaloid screeches and pulls back, its long clawed hand pawing at its face. The tip of the branch had punctured its eye. 
@@ -66,8 +66,8 @@ You charge forward, shouting and yelling with the branch held high above your he
         
         Grabbing your friend's arm and hoisting them to their feet, you begin running towards town.        
         
-    # Rush toward the beast to tackle it.
-        *comment TODO: Increment some Brawn sub-attribute
+    # Rush toward the beast to tackle it ([color=${brawn_color}]Brawn++[/color])
+        *set Brawn +1
         Something in your mind snaps into focus. You throw away the branch and charge at the jackaloid with a wild battle cry. Both the monster and Reese turn when they hear you, and in a flash of movement, you collide with the jackaloid. Instinctually, you drive your shoulder into its chest, the feeling startling close to play tackling your friend. The beast, now that you're closer, isn’t much larger than yourself. 
         
         The two of you go flying back. The jackaloid clearly wasn’t expecting to be confronted like this and is quickly swept up in your tackle. It yelps as all its long limbs begin wildly waving. You both fall right next to a large rock. 
@@ -86,8 +86,8 @@ You charge forward, shouting and yelling with the branch held high above your he
         
         Not wasting any more time, you reach out to grab Reese's hand and begin running to town.        
         
-    # Look around for something to help you.
-        *comment TODO: Increment some Cunning sub-attribute
+    # Look around for something to help you ([color=${cunning_color}]Cunning++[/color])
+        *set Cunning +1
         The branch in your hand feels like a flimsy twig all the sudden. You toss it to the side and quickly look around to try and find something, anything to help you in this moment. By some strange twist of fate, a trail of bees flies past the tip of your nose. Suddenly, you become much more aware of your surroundings. Panic still floods your veins, but there is a moment of clarity that helps your mind process the things around you in a matter of seconds. 
         
         The bees are covered in pollen. They are flying back to their hive. 
@@ -127,19 +127,21 @@ As the two of you run, you see the figure of what looks to be a man, a Priest of
 
 There doesn’t seem to be an easy path to get to him. One path has a steep drop, another is covered in roots, and the last has mockgardens too close for your liking.
 
-*comment Improper usage of attribute variables in this branch
 *fake_choice
-    # The drop is small and you’ll just have to pick your friend up (Brawn++)
+    # The drop is small and you’ll just have to pick your friend up ([color=${brawn_color}]Brawn++[/color])
+        *set Brawn +1
         You help Reese sit on the edge of the drop and check what is at the bottom of the drop. It looks to be just dirt and leaves scattered about. You jump down and help your friend down. They stagger, but you catch them and help them back to their feet.
         
         You both return to running towards the person.
         
-    # The root path looks the safest, all you need to do is avoid tripping. (Agility++)
+    # The root path looks the safest, all you need to do is avoid tripping. ([color=${agility_color}]Agility++[/color])
+        *set Agility +1
         “Watch your step,” you tell your friend as you both begin running down the rooted path. 
         
         As the two of you are running, Reese screams out as their good foot gets caught on a root and they begin to fall down. You quickly catch your balance and help Reese get back up and continue down the path. 
         
-    # This isn’t your first time in the forest, you know how to avoid getting caught. (Cunning++)
+    # This isn’t your first time in the forest, you know how to avoid getting caught. ([color=${cunning_color}]Cunning++[/color])
+        *set Cunning +1
         The two of you run down the path of the mockguardens. You make sure you stay on the closer side of the plants. This way Reese has less of a chance to run into them and you can keep an eye out. 
         
         A rabbit jumps along the path and gets sucked into the ground. You briefly look away and make sure to avoid that spot.
@@ -257,16 +259,16 @@ Reese’s eyes don’t leave yours. Not for a second.
         “No!” You stomp your feet on the hard packed ground. You feel like a toddler in the midst of a temper tantrum. “I’m not going with you. And you’re not going to take my friend away!”
         
         *fake_choice
-            # You push against the priest.
-                *comment TODO: Increment some Brawn sub-attribute
+            # You push against the priest ([color=${brawn_color}]Brawn++[/color])
+                *set Brawn +1
                 You put your entire weight into the priest and manage to get him off balance.
                 
-            # You run around the priest 
-                *comment TODO: Increment some Agility sub-attribute
+            # You run around the priest ([color=${agility_color}]Agility++[/color])
+                *set Agility +1
                 You rush around the priest, when he tries to grab you, you move your arm away from him. He tries to take another step, but gets his foot caught on a root.
                 
-            # You grab their bag of herbs
-                *comment TODO: Increment some Cunning sub-attribute
+            # You grab their bag of herbs ([color=${cunning_color}]Cunning++[/color])
+                *set Cunning +1
                 You pull on their bag of herbs at their waist. Stunned, the priest tries to back away from you and the rope on the bag breaks. You quickly open the bag and throw the herbs at the fact of the priest.
 
         With the priest stunned you run over to your friend. You fling your arms out and stand between him and Reese. 
@@ -380,14 +382,14 @@ Reese suddenly fell to the ground, exhausted. The mercenary quickly knelt down, 
         *comment FIXME: This is bad, the options should not be this long. 
         *fake_choice
             
-            # “You’re my best friend, Reese. We have so much more to do together. We still need to finish that path we were creating.” 
-                *comment TODO: Increment some Agility sub-attribute
+            # “You’re my best friend, Reese. We have so much more to do together. We still need to finish that path we were creating. ([color=${agility_color}]Agility++[/color])” 
+                *set Agility +1
                 
-            # “You’ll get through this and we’ll go on another adventure. Remember? We planned to visit Greenpeak with our parents. They needed us to help transport something.”
-                *comment TODO: Increment some Brawn sub-attribute
+            # “You’ll get through this and we’ll go on another adventure. Remember? We planned to visit Greenpeak with our parents. They needed us to help transport something. ([color=${brawn_color}]Brawn++[/color])”
+                *set Brawn +1
                 
-            # “You better. Who else will I get in trouble with? We still need to plan our next trick.”
-                *comment TODO: Increment some Cunning sub-attribute
+            # “You better. Who else will I get in trouble with? We still need to plan our next trick. ([color=${cunning_color}]Cunning++[/color])”
+                *set Cunning +1
                 
         “You’re my best friend, Reese. We have so much more to do together.”  
         
@@ -462,23 +464,23 @@ Reese suddenly fell to the ground, exhausted. The mercenary quickly knelt down, 
         
         *fake_choice
             
-            # I know a few side streets that will get me there.
-                *comment TODO: Increment some Cunning sub-attribute
+            # I know a few side streets that will get me there ([color=${cunning_color}]Cunning++[/color])
+                *set Cunning +1
                 You run through the streets until you see an alleyway. You and Reese have used this alley many times to hide and get away from trouble. You know it like the back of your hand. 
                 
                 While you are running, you pass by Old Man Herbert. He grabs at your atm.
                 
                 “Where do you think you’re going? You still haven’t fixed the mess you and your friend had created!”
-            # It is not the safest, but Reese helped me make a pathway through town.
-                *comment TODO: Increment some Agility sub-attribute
+            # It is not the safest, but Reese helped me make a pathway through town ([color=${agility_color}]Agility++[/color])
+                *set Agility +1
                 You run across the bridges you and Reese created on the roofs of sturdy buildings. They aren’t the most sturdy of bridges, but they do in a pinch.
                 
                 After you jump down to a balcony, an old man grabs you by the arm. 
                 
                 “I thought I told you two to stop it with the bridges! It is not safe to be running across rooftops.
                 
-            # I don’t have time for this, I will run through the crowd.
-                *comment TODO: Increment some Brawn sub-attribute
+            # I don’t have time for this, I will run through the crowd ([color=${brawn_color}]Brawn++[/color])
+                *set Brawn +1
                 You run recklessly, tripping over uneven stones and nearly bowling over a small child in your hast. People yell at you to slow down, but you don’t even spare them a glance. One man, a grumpy grandpa with a limp, snatches your arm and pulls you to an abrupt stop. 
                 
                 “Watch where you’re going! You could have knocked me over!”
