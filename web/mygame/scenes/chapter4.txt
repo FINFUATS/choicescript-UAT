@@ -283,6 +283,18 @@ The mercenary and priestess glare at each other before suddenly turning their at
         "Welcome to the Flames of Sigel. I'm sure your friend would be proud of you. Come along. We'll head to the temple when we are done here." The priestess leads you to the local church.
         
         *set faction "divine"
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
         
         *finish
 
@@ -290,6 +302,18 @@ The mercenary and priestess glare at each other before suddenly turning their at
         "We'll find who did this, now we need to get you out of here. Thankfully I know some people nearby and you can stay there for the time being." The mercenary takes you into a building.
         
         *set faction "merc"
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
         *finish
 
     #Think about decision. (Reallocate Attribute Points)
@@ -360,13 +384,36 @@ You take a step back and sigh.
         "Welcome to the Flames of Sigel. I'm sure your friend would be proud of you. Come along. We'll head to the temple when we are done here." The priestess leads you to the local church.
         
         *set faction "divine"
-        
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
         *finish
 
     #"I choose to go with the mercenary and find out who did this."
         "We'll find who did this, now we need to get you out of here. Thankfully I know some people nearby and you can stay there for the time being." The mercenary takes you into a building.
         
         *set faction "merc"
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
         *finish
 
     #Think about decision. (Reallocate Attribute Points)
@@ -489,6 +536,7 @@ Later that same night the priestess walks in through the main door and the merce
         *comment *goto_scene Mercenary
     
     #Think about decision. (Reallocate Attribute Points)
+        *set Stored_Attr_Total (Attr_PNT_Total + Brawn) + (Agility + Cunning)
         *page_break
         *goto CH4_Reallocate_Menu
 
