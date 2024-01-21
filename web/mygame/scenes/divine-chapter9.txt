@@ -261,7 +261,7 @@ You then search for your allies,
         *page_break
         *set Riva 1
         *goto CH9d_fight
-        
+            *comment total needs to be incremented by +1 for each success with each character 
     *selectable_if (total = 5) #continue
         You look across the battlefield, there are bodies scattered about of all different kinds. Elves, Dwarves, Humans… However, if you look up you can also see unlikely allies working together. The local mercenary group, the Wolves of Davenport if you recall correctly, is working with the priests to stop the spread of the rot.
 

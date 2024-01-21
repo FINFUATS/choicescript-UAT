@@ -46,10 +46,18 @@
 *comment    None
 *label UpdateAttributes
 
-*comment TODO: We'll set this up after chapter 4.
-*comment set Brawn Brawn + ((((Endurance + Strength) + Presence) + Courage) / 4)
-*comment set Agility Agility + ((((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics) / 4)
-*comment set Cunning Cunning + ((((Improvisation + Knowledge) + Medical) + Speechcraft) / 4)
+*comment Current equations for interaction between attribute and skill values based on Attributes Documentation for after Phase 1
+*comment These are the attribute totals after getting the average of the skills
+*comment and then adding it to the base attribute values from Phase 1
+*comment *set Brawn_SKL_Total Brawn + ((((Endurance + Strength) + Presence) + Courage) / 4)
+*comment *set Agility_SKL_Total Agility + ((((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics) / 4)
+*comment set Cunning_SKL_Total Cunning + ((((Improvisation + Knowledge) + Medical) + Speechcraft) / 4)
+
+*comment These are the attribute totals rounded down for cleaner display to the user
+*comment and for use as whole numbers where every 4 skills is an attribute value increase
+*comment *set Brawn (Brawn_SKL_Total - (Brawn_SKL_Total modulo 1))
+*comment *set Agility (Agility_SKL_Total - (Agility_SKL_Total modulo 1))
+*comment *set Cunning (Cunning_SKL_Total - (Cunning_SKL_Total modulo 1))
 
 *comment TODO: Add magic attribute
 
@@ -125,7 +133,3 @@
 
 *comment agility sub-attributes
 *set Agility ((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics
-
-*comment cunning sub-attributes
-*set Cunning ((Improvisation + Knowledge) + Medical) + Speechcraft
-*return

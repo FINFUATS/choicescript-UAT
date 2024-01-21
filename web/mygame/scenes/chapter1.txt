@@ -106,12 +106,19 @@ You decide to,
         *fake_choice
             # Buddy (Boy)
                 *set gender "Male"				
-                
+                *set pronoun_they "him"
+                *set pronoun_them "he"
+                *set pronoun_their "his"
             # Young Lady (Girl)
                 *set gender "Female"
-            
+                *set pronoun_they "her"
+                *set pronoun_them "she"
+                *set pronoun_their "hers"
             # Kiddo (Other)
                 *set gender "Other"
+                *set pronoun_they "them"
+                *set pronoun_them "they"
+                *set pronoun_their "their"
                 
                 
         ”What are you doing here by yourself?" Choosing to skip the tutorials, you respond with a confident smile, "Just browsing." With that, you immerse yourself in the vibrant marketplace, ready to explore and find your own path in this world of opportunities.
