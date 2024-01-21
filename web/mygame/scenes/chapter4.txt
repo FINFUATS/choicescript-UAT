@@ -2,6 +2,7 @@
 *comment temporary variables
 *temp option
 *temp bought
+*comment Temp variables for Stat Designation Page
 *temp Attr_PNT_Total 0
 *temp Stored_Attr_Total 0
 *temp Increase_Attr false
@@ -465,9 +466,10 @@ Later that same night the priestess walks in through the main door and the merce
         *page_break
         *goto CH4_Reallocate_Menu
 
+*comment Stat Designation Page
 *label CH4_Reallocate_Menu
 
-*comment Display current skill points in total | This total should be taken after collecting all skill points after clicking reallocate with a confirmation prompt
+*comment Display the total of all the attribute points the player got
 You currently have ${Attr_PNT_Total} unused attribute points.
 
 *choice
