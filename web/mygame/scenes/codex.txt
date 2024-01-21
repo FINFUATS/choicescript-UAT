@@ -1,5 +1,6 @@
 *label CodexStart
 [head]Codex[/head]
+
 The codex sections Factions, Items, Magic, and Species are unpopulated.
 *line_break
 The rest of the codex sections are underpopulated.
@@ -293,6 +294,7 @@ What monsters do you want to learn about?
 *fake_choice
     *selectable_if (isDirewolfDiscovered) #Direwolf
         [head]Direwolf[/head]
+        *label Direwolf
         *image images/Dire_Wolf_adult.webp
         The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.
         
@@ -308,6 +310,7 @@ What monsters do you want to learn about?
         *line_break
         *goto Monsters
     *selectable_if (isIchorSwogDiscovered) #Ichor Swog
+        *label Ichor-Swog
         [head]Ichor-Swog[/head]
         *image images/Ichor-Swog.webp
         
@@ -320,6 +323,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isJackaloidDiscovered) #Jackaloid
+        *label Jackaloids
         [head]Jackaloids[/head]
         *image images/Jackaloid.webp
         The Manned Jackaloids are small, werewolf-like creatures that inhabit remote regions far from civilized settlements. Standing between 3 and a half to just under 5 feet tall, they operate in packs, using their presence to frighten away other predators from potential prey and scavenging off decaying carcasses. Despite their frail and lesion-ridden appearance, these creatures exhibit surprising resilience.  
@@ -333,6 +337,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isMockguardenDiscovered) #Mockguarden
+        *label Mockguarden
         [head]Mockguarden[/head]
         *image images/Mockgarden_Closeup.webp
         The Mockguarden, a perilous and cunning predator, is a formidable form of predatory plant that lurks within the depths of untamed forests. With its ability to adapt and camouflage, it poses a significant threat to unsuspecting creatures that venture too close. While its visible parts may change and blend with the surroundings, it is the subterranean mycelium network that truly defines this enigmatic entity.
@@ -349,6 +354,7 @@ What monsters do you want to learn about?
         *line_break
         *goto Monsters
     *selectable_if (isMogfishDiscovered) #Mogfish
+        *label Mogfish
         [head]Mogfish[/head]
         *image images/Mogfish.webp
         Mogfish are dangerous creatures that live in very muddy areas and are big enough to eat an elf. They have dorsal fins along their back and the some of the species have been seen with a long tether on their head that has a glowing orb at the end of it. This orb can mimic the light of torches, making people think there is a person deep in the forest or there is a town in that direction. However, there have been sightings of mogfish without this tether. It is theorized that these are the males.
@@ -360,6 +366,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isWOWDiscovered) #Will-O-Wisps
+        *label Will-O-Wisps
         [head]Will-O-Wisps[/head]
         *image images/Mogfish.webp
         Will-o-wisps are glowing orbs, usually seen floating above the ground in swamps. Their glow  can mimic a torch light, so many people mistake it as a person or a nearby town. They are mischievous little creatures and will lead their victims into trouble. Off cliffs, into tunnels, it is even said that they help the mogfish get food. When they are almost caught or have gotten their victim where they wanted them, they will stop glowing. They will turn basically invisible and watch what happens to their victims. It is rumored that they feed off of the misery of their victims.

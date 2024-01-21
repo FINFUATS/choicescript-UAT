@@ -143,6 +143,7 @@
 *label GAMESTART
 WIP build for the UAT production studio milestone review
 
+
 What chapter?
 *fake_choice
   #Phase 1
@@ -216,6 +217,23 @@ What chapter?
 
   #TEMP: Combat Test
       *goto_scene combat_test
+  #TEMP: Codex Hyper-link Test
+  
+      [codex:Direwolf]Direwolf entry[/codex]
+      
+      [codex:Ichor-Swog]Ichor Swog entry[/codex]
+      
+      [codex:Jackaloids]Jackaloids entry[/codex]
+      
+      [codex:Mockguarden]Mockguarden entry[/codex]
+      
+      [codex:Mogfish]Mogfish entry[/codex]
+      
+      [codex:Will-O-Wisps]Will-O-Wisps entry[/codex]
+      
+      *choice
+          #Back
+              *goto GAMESTART
   #CH1Q84: Format Example
       *goto_scene format_example
   #New Chapters
