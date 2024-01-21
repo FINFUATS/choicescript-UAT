@@ -226,7 +226,7 @@ Which Faction?
 
     #Wolves of Davenport
         [head]Wolves of Davenport[/head]
-        *image inages/WolvesBook.webp
+        *image images/WolvesBook.webp
         *comment Image does not work
         The Wolves of Davenport are a legendary band of mercenaries whose name strikes fear into the hearts of their enemies across the realm of Teren. Led by the seasoned warrior Alistair Blackthorn, this renowned group embodies the epitome of skill, camaraderie, and unwavering determination. With each member possessing unique talents, they form a formidable force that stands as a bulwark against the encroaching darkness. They are a diverse group, drawing individuals from all walks of life, each bringing their own set of exceptional skills to the table.
         
