@@ -451,6 +451,19 @@ Later that same night the priestess walks in through the main door and the merce
         
         "Don't come back. I'm already going to be in a rot full of trouble because of this."
         *set faction "divine"
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
+        
         *finish
         *comment *goto_scene Divine
         
@@ -459,6 +472,19 @@ Later that same night the priestess walks in through the main door and the merce
         
         "You probably won't be allowed back into this town no matter what you choose. However, we'll make sure to keep you safe. Oh, and before I forget. While I couldn't get you your ${bought} back, I was able to snatch the dagger. We'll get it cleaned up for you."
         *set faction "merc"
+        *set Endurance Brawn
+        *set Strength Brawn
+        *set Presence Brawn
+        *set Courage Brawn
+        *set ReactionSpeed Agility
+        *set Stealth Agility
+        *set MotorSkill Agility
+        *set Acrobatics Agility
+        *set Improvisation Cunning
+        *set Knowledge Cunning
+        *set Medical Cunning
+        *set Speechcraft Cunning
+        
         *finish
         *comment *goto_scene Mercenary
     
