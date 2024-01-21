@@ -488,38 +488,38 @@ You currently have ${Attr_PNT_Total} unused attribute points.
         *set Increase_Attr false
         *goto CH4_Reallocate_Menu
 
-    *selectable_if (((Brawn > 0) and (Increase_Attr = false)) or (((Brawn < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Brawn
+    *selectable_if (((Brawn > 0) and (Increase_Attr = false)) or (((Brawn < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify [color=${brawn_color}]Brawn[/color]
         *if (Increase_Attr = false)
-            You are currently decreasing attributes and have decreased your Brawn by -1.
+            You are currently decreasing attributes and have decreased your [color=${brawn_color}]Brawn[/color] by -1.
             *set Attr_PNT_Total Attr_PNT_Total + 1
             *set Brawn Brawn - 1
             *goto CH4_Reallocate_Menu
         *else
-            You are currently increasing attributes and have increased Brawn by +1.
+            You are currently increasing attributes and have increased [color=${brawn_color}]Brawn[/color] by +1.
             *set Attr_PNT_Total Attr_PNT_Total - 1
             *set Brawn Brawn + 1
             *goto CH4_Reallocate_Menu
 
-    *selectable_if (((Agility > 0) and (Increase_Attr = false)) or (((Agility < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Agility
+    *selectable_if (((Agility > 0) and (Increase_Attr = false)) or (((Agility < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify [color=${agility_color}]Agility[/color]
         *if (Increase_Attr = false)
-            You are currently decreasing attributes and have decreased your Agility by -1.
+            You are currently decreasing attributes and have decreased your [color=${agility_color}]Agility[/color] by -1.
             *set Attr_PNT_Total Attr_PNT_Total + 1
             *set Agility Agility - 1
             *goto CH4_Reallocate_Menu
         *else
-            You are currently increasing attributes and have increased Agility by +1.
+            You are currently increasing attributes and have increased [color=${agility_color}]Agility[/color] by +1.
             *set Attr_PNT_Total Attr_PNT_Total - 1
             *set Agility Agility + 1
             *goto CH4_Reallocate_Menu
 
-    *selectable_if (((Cunning > 0) and (Increase_Attr = false)) or (((Cunning < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify Cunning
+    *selectable_if (((Cunning > 0) and (Increase_Attr = false)) or (((Cunning < 10) and (Attr_PNT_Total > 0)) and (Increase_Attr = true))) #Modify [color=${cunning_color}]Cunning[/color]
         *if (Increase_Attr = false)
-            You are currently decreasing attributes and have decreased your Cunning by -1.
+            You are currently decreasing attributes and have decreased your [color=${cunning_color}]Cunning[/color] by -1.
             *set Attr_PNT_Total Attr_PNT_Total + 1
             *set Cunning Cunning - 1
             *goto CH4_Reallocate_Menu
         *else
-            You are currently increasing attributes and have increased Cunning by +1.
+            You are currently increasing attributes and have increased [color=${cunning_color}]Cunning[/color] by +1.
             *set Attr_PNT_Total Attr_PNT_Total - 1
             *set Cunning Cunning + 1
             *goto CH4_Reallocate_Menu
