@@ -43,21 +43,16 @@ function openCodexTo(label_name) {
     }
 
     var scene = new Scene("codex", window.stats, this.nav, { secondaryMode: "codex", saveSlot: "temp", resume: true });
-    
-    // This is fucking cursed...
-    scene.loadLines = function loadLines(str) {
-        this.crc = crc32(str);
-        this.lines = str.split(/\r?\n/);
-        this.parseLabels();
-        this.loaded = true;
-	this.goto(label_name.toLowerCase());
-    };
+  
+    // Significantly less cursed    
+    scene.targetLabel = {label:label_name, origin:scene.name, originLine:scene.lineNum};
     
     clearScreen(function () {
         setButtonTitles();
         var button = document.getElementById("codexButton");
         button.className = "codexButtonWords";
         button.innerHTML = "Return";
+        
         scene.execute();
         
     })
