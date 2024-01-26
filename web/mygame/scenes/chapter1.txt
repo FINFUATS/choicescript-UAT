@@ -410,7 +410,7 @@ You choose to read:
         
         “The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.”
         
-        [b]You've unlocked the [codex:Direwolf]codex_hl_Direwolf[/codex] codex entry![/b]
+        [b]You've unlocked the [codex:codex_hl_Direwolf]Direwolf[/codex] codex entry![/b]
         
         To view this entry, click on the codex in the top right corner, and enter the "Monster" section.
         
