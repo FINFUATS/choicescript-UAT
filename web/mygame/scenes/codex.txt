@@ -144,16 +144,21 @@ Who do you want to know about?
         
         Reese wants to explore more of the forest, I do not want to go. Our parents do not want us to go, they tell us it is too dangerous. That there are huge mockgardens and scary creatures out there. I do not want to see the big scary creatures, but I want to play with my friend. 
         
-        After that nothing else is legible other than the name Reese and jackaloid.
+        *if (isReeseDead)
+            After that nothing else is legible other than the name Reese and jackaloid.
         
-        Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
+            Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
         
-        *if CH2_followed_voice
+            *if CH2_followed_voice
             
-            When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
+                When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
             
+            *else
+                When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
+        
         *else
-            When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
+            That is all that's written on the paper…
+            
         *line_break
         *goto Characters
 

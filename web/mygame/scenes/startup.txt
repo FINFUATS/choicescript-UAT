@@ -59,6 +59,7 @@
 *create brawn_color   "#d60d0d"
 *create agility_color "#FF9900"
 *create cunning_color "#4A86E8"	
+*create codex_color "#0dd63f"
 
 *comment ///////// General Purpose Globals (used in subroutine calls) /////////
 *comment Read only! DO NOT WRITE TO THIS OUTSIDE OF A SUBROUTINE AND SELECT CIRCUMSTANCES!!!
@@ -125,6 +126,9 @@
 *create isMogfishDiscovered     false
 *create isWOWDiscovered         false
 *create murdererKnown         false
+
+*comment Codex contextual global vars
+*create isReeseDead false
 
 *comment Divine Chapter 9 Character Total Globals
 *create Riva 0
