@@ -21,10 +21,10 @@ function hookFunctions() {
 function replacementReplaceBbCode(msg) {
     return msg = String(originalReplaceBbCode(msg))
       // Start and end tags for color 
-      .replace(/\[color\=(.*?)\]/g, '<color style="color: $1;">')
+      .replace(/\[color\=(.*?)\]/g, '<color style="color: $1; --color: $1;">')
       .replace(/\[\/color\]/g, '</color>')
       // Tag for the dictionary system
-      .replace(/\[define\:(.*?)\]/g, "<a id=\"defined-word\" onClick=\"openDefinition('$1')\">$1</a>")
+      .replace(/\[define\:(.*?)\]/g, `<a id="defined-word" onClick="openDefinition('$1')">$1</a>`)
       .replace(/(\[codex\:(.*?)\])(.*?)(\[\/codex])/g, `<a id="codex-redirect" onClick="openCodexTo('$2')">$3</a>`)
       .replace(/\[head\]/g, '<h1 class="custom-head1" align="center" style="margin-bottom: 0em;">')
       .replace(/\[\/head\]/g, '</h1><hr class="custom-head1-line" style="margin-top: 0em; width: 90%;">')
