@@ -128,6 +128,7 @@ Who do you want to know about?
         *goto Characters
 
     #Lord Odel
+        *label codex_hl_Lord_Odel
         [head]Lord Odel[/head]
         Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
         
@@ -136,6 +137,7 @@ Who do you want to know about?
         *goto Characters
 
     #Reese
+        *label codex_hl_Reese
         [head]Reese[/head]
         *image images/reese_torn_paper_finished.webp
         Looks like it was written on an old piece of paper that was torn and was added to the book. It has a drawing of a child that couldn’t be older than 7. Under the drawing there is some writing.
@@ -193,6 +195,7 @@ Who do you want to know about?
         *goto Characters
 
     #Tera
+        *label codex_hl_Tera
         [head]Tera[/head]
         *image images/tera_copyfin.webp
         Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
@@ -299,7 +302,7 @@ What monsters do you want to learn about?
 *fake_choice
     *selectable_if (isDirewolfDiscovered) #Direwolf
         [head]Direwolf[/head]
-        *label Direwolf
+        *label codex_hl_Direwolf
         *image images/Dire_Wolf_adult.webp
         The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.
         
@@ -328,7 +331,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isJackaloidDiscovered) #Jackaloid
-        *label Jackaloids
+        *label codex_hl_Jackaloid
         [head]Jackaloids[/head]
         *image images/Jackaloid.webp
         The Manned Jackaloids are small, werewolf-like creatures that inhabit remote regions far from civilized settlements. Standing between 3 and a half to just under 5 feet tall, they operate in packs, using their presence to frighten away other predators from potential prey and scavenging off decaying carcasses. Despite their frail and lesion-ridden appearance, these creatures exhibit surprising resilience.  
@@ -342,7 +345,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isMockguardenDiscovered) #Mockguarden
-        *label Mockguarden
+        *label codex_hl_Mockguarden
         [head]Mockguarden[/head]
         *image images/Mockgarden_Closeup.webp
         The Mockguarden, a perilous and cunning predator, is a formidable form of predatory plant that lurks within the depths of untamed forests. With its ability to adapt and camouflage, it poses a significant threat to unsuspecting creatures that venture too close. While its visible parts may change and blend with the surroundings, it is the subterranean mycelium network that truly defines this enigmatic entity.
@@ -391,6 +394,7 @@ What monsters do you want to learn about?
 Where do you want to learn about?
 *fake_choice
     #Davenport
+        *label codex_hl_Davenport
         [head]Davenport[/head]
         Davenport, a city that stands as a testament to the ingenuity and resilience of humanity, is a sprawling metropolis nestled within the embrace of the Broken Fields. With its roots reaching back through the annals of history, this cosmopolitan hub has become a beacon of civilization amid the untamed wilderness of the world. Its strategic position, nestled against the flowing river that gracefully winds its way to the vast seas beyond, has transformed Davenport into a thriving center of trade and cultural exchange.
         
@@ -419,7 +423,8 @@ Where do you want to learn about?
         *goto Places
 
     #Teville (City)
-        )[head]Teville (City)[/head]
+        *label codex_hl_Teville_City
+        [head]Teville (City)[/head]
         The capital city Teville is located by the Ironmount mountains on the west side of the country Teville. The capital is broken up into ten different districts. Each district is split up depending on the wealth of the people living in it. With four slums and a castle amongst the city, there is something for everyone.
         
         Starting from the top is the castle. In the castle lives the King of the country. They are the ones running and taking care of their county. Not very many among the common populace have seen the inside, but rumor has it an entire war-room is dedicated to keeping an eye on the Rot within the nation’s borders.. Next is Lowrock. This is where most of the middle-class live and where The Beggar’s Tavern is located, a famous pitstop for many mercenaries and adventuring parties. Most other shops and taverns can also be found in this district. 
@@ -441,6 +446,7 @@ Where do you want to learn about?
         *goto Places
 
     #Summerlight
+        *label codex_hl_Summerlight
         [head]Summerlight[/head]
         *image images/Summerlight_finished.webp
         Summerlight is a small farming village east of Davenport. It is placed right at an intersection between Frountierwood, Cavecross, and the road to Davenport. This makes it a popular location for travelers to stay during their travels. Surprisingly, not a lot happens in this small town. The most exciting thing is when the traveling dwarven bakers come to visit.

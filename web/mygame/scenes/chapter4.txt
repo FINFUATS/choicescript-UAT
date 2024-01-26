@@ -112,7 +112,7 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
 
         There is blood under them, a steadily growing pool that is soaking the carpet and no doubt, staining the wood floor beneath it. For a moment, you feel your stomach churn, your last meal threatening to reappear on the floor at any second.
 
-        You swallow, take a deep breath and focus on the mystery in front of you. When you walk up to the body,your steps both cautious and careful, you notice that it is [codex:Lord Odel]Lord Odel[/codex]. Lord Odel is a lord from a neighboring town, not many like him, but you didn't think it was this bad.
+        You swallow, take a deep breath and focus on the mystery in front of you. When you walk up to the body,your steps both cautious and careful, you notice that it is [codex:codex_hl_Lord_Odel]Lord Odel[/codex]. Lord Odel is a lord from a neighboring town, not many like him, but you didn't think it was this bad.
 
         
         *set CH4_murderer "run"
@@ -127,7 +127,7 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
 
         When you realize what you were holding, a guard walks up to you and aggressively grabs your arm.
 
-        “You are under arrest for the murder of [codex:Lord Odel]Lord Odel[/codex]!”
+        “You are under arrest for the murder of [codex:codex_hl_Lord_Odel]Lord Odel[/codex]!”
         *page_break
         *set item "bloody dagger"
         *set option "leave"
