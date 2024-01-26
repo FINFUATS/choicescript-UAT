@@ -1,0 +1,445 @@
+*label StartChapter6
+
+You head to the infirmary to make sure ${CH5d_injured} is ok. Everyone told you they would be fine but you were overcome with thoughts of Reese and that night. Worst-case scenarios flooded your mind through the night so you eventually decided to just go over and make sure everything was ok yourself. 
+
+*if CH5d_injured = "Riva"
+    You quietly open the door and see Riva lying in bed. You panic for a moment before realizing that she is just asleep. You quietly take a seat next to her bed, calming down and seeing that she is in fact okay. Riva gently stirred from her slumber. She notices you and is startled at first, she must not get many visitors.
+    
+    “Riva, are you alright? That bite looked terrible…” Your brows furrow in concern. 
+    
+    *page_break
+    
+    “Yeah I- I’m fine.” She reassures you.
+    
+    “Are you sure? We had to take you to medical…” 
+    
+    “I’m fine. It’s not the first time one of the worms snuck up on me, and besides I’ve had worse.” Riva gives you a weak smile.
+    
+    Your brows furrow more, “Worse? Riva, you were bleeding heavily and don’t get me started with how bad those teeth looked. I was worried that you weren’t going to make it and if you did, you would lose your arm.”
+    
+    *page_break
+    
+    You notice that you are overwhelming Riva.“Oh, not a good time, uhh-” You look around for something else to talk about.
+    
+    “No no no you’re alright it’s just that I’m not really used to people visiting me in the infirmary let alone someone with as much energy as you.” Riva explains.
+    
+    “Not used to being visited in the infirmary? Does this happen often?” You look at her in surprise.
+    
+    "Yeah, but it’s no big deal.” She says like it is nothing new.
+    
+    *page_break
+    
+    “No big deal? Riva…” You let out a sigh. “Are you sure you will be alright?”
+    
+    “I’m quite alright, nothing more than just a common mockworm. With just a little treatment I should be back on my feet in no time” She waves her not injured hand.
+    
+    “Common mockworm…” You shudder. “I’ll take care of them, we can’t have you getting injured every time you tend to the garden.”
+    
+    “Aw, that's sweet but I’m going to have to ask you not to do that. You see these mockworks look like they don’t belong but they are as important to the ecosystem as a common bee. You wouldn’t kill a spider just because it’s venomous, would you? They help us and they help the environment” She gives you a grateful smile.
+    
+    You nod your head nervously as you ponder all the spiders you have murdered in the past.
+    
+*elseif CH5d_injured = "Cel"
+    
+    You knock on the door, “Come in.” 
+    
+    Walking inside you see Cel sitting up in bed reading the book on ogres. Her head is bandaged up, but it doesn’t look as bad as you feared. 
+    
+    “How’s your head?” You ask with a hint of concern. 
+    
+    “A lot better now than it was earlier. I should be fine by morning.” She says while gently setting her book down. 
+    
+    “That’s a relief.” You relax upon hearing this. 
+    
+    *page_break
+    
+    “How come you are up so late?” She asks. 
+    
+    “I couldn’t sleep. The events of the day kept playing and… I had to come check on you.” You respond. 
+    
+    “That is sweet of you. I am ok now, but you look like you need more sleep.” She points at you. 
+    
+    You scratch the back of your head. “I suppose you're right. Good night.” 
+    
+    “Good night.” She replies as you walk out. 
+    
+*elseif CH5d_injured = "Ivy"
+    You walk into the infirmary and see Ivy sulking in her bed. 
+    
+    “What.” She says curtly. 
+    
+    “I just wanted to check in on how you were doing?” You respond. 
+    
+    “Oh you know just got clocked in the head by a massive ogre so I’m doing great!” She replies sarcastically. 
+    
+    *page_break
+    
+    You stand there nervously trying to gauge how serious she’s being. She eventually sighs. 
+    
+    “I’m doing fine. Loosen up a little, it's not the end of the world.” She rolls her eyes. 
+    
+    You slouch down in the chair next to the bed and relax knowing that she’s doing much better. 
+    
+    “Didn’t you have a book with you on Ogres? Couldn’t find any info in time?” She asks. 
+    
+    “I did try to warn you but you didn’t listen.” Your eyebrow twitches slightly. 
+    
+    *page_break
+    
+    “No you didn’t I would’ve notic-” she pauses “Wait is that why you put your arm out?” 
+    
+    “I thought that was obvious?” You deadpanned 
+    
+    “Say something next time! I thought you were just being overly protective.” She rolls her eyes. 
+    
+    “Why would I do that? You seem like you can handle yourself just fine.” You state. 
+    
+    Ivy looks somewhat shocked by the compliment. “Thanks…” 
+    
+    “Well, except for the ogre.” You say. 
+    
+    She punches you in the arm. After a short laugh, you wish her good night and head back to your room for the night. You get a good night's rest knowing that Ivy is okay.
+    
+*page_break
+
+The next day you are eating a meal with the group. You all have some lighthearted chatter during your meal. Everything is going well until someone runs in with a letter and hands it to Cel. She thanks them and then opens the letter. Her expression gets serious as she looks through it. 
+
+“What is it?” Asks Berthold. 
+
+“Lindow is having trouble with rot and has requested help from the church,” Cel responds. She folds the letter and puts it back in the envelope. 
+
+“Alright, we are going to need to start forming a group to go take care of the rot. I’ll start with everyone here. Who would like to join this mission?” Cel asks. 
+
+Everyone immediately raises their hands. They all have a serious look on their faces. You are the only one who still hasn’t responded. They all turn and look at you. 
+
+*fake_choice
+    #"I'm in"
+        The group nods in approval. 
+        
+        “Alright then. Let’s get to work.” Says Cel. 
+
+    #"If I have to I guess...
+        
+        The group gives you a disapproving look. 
+        
+        “You do not have to but the help would be much appreciated,” Cel says gently. 
+        
+        “Alright, I’ll help.” You sigh. 
+        
+        The group starts moving to get ready for the journey. 
+
+You go to pack your stuff. You quickly gather your clothes and a couple of books you think will be helpful for the journey and pack rather quickly. There wasn’t a lot so it went rather fast. You decide to go help out someone else with their packing. 
+
+Who do you help?
+*fake_choice
+    #Riva
+        You knock on Riva’s door and hear a quiet “come in.’ You walk into the room and see an open bag on her bed. Riva is standing in front of it and seems to be deep in thought. 
+        
+        “I finished packing early and thought I’d see if anyone needed help.” You say. 
+        
+        She glances at you but seems too nervous to speak what's on her mind. You slowly walk over and notice that the bag is empty. She hasn’t packed anything at all. You stand there for a moment trying to figure out how to bring it up. 
+        
+        “I’m not sure what to pack…” She murmurs. 
+        
+        *page_break
+        
+        “Don’t worry! I can help you get the essentials.” You confidently say. 
+        
+        You go around the room and start giving advice on different things she should pack. You help her fit things into her bag. 
+        
+        “Have you never traveled before?” You ask. 
+        
+        She stands there silently. She seems slightly uncomfortable. 
+        
+        “I didn’t mean to pry, just trying to start a conversation…” You nervously laugh. 
+        
+        “It's ok… I haven’t really left the temple is all…” Her volume is just barely above a whisper. 
+        
+        “Well, I hope that I can help make your first trip a good one.” You smile at her. 
+        
+        Riva gives you a small smile back and you continue to quietly pack together.
+
+
+    #Cel
+        You peek into Cel’s room and see her packing stuff on her bed. You knock a bit on the door before heading inside. 
+        
+        “I finished packing and was wondering if you wanted any help?” 
+        
+        “Sure. Can you fold those clothes for me?” Cel asks. 
+        
+        You nod and then head over to the pile and begin folding. The two of you work on packing together in a comfortable silence. She glances over and frowns slightly. 
+        
+        “Is something wrong?” You ask. 
+        
+        “There’s a better way to show you. Here.” She holds out her hand. 
+        
+        You give her the clothing and she shows you the proper way to fold it. After learning to properly fold clothes you both finish packing. 
+
+
+    #Ivy
+        You pass by Ivy’s door where you hear someone raising their voice and punching something. You peek your head in and see Ivy trying to punch her bag closed. You cautiously walk over to her. 
+        
+        “Need some help?” You gently ask. 
+        
+        “No, it’s almost clos-” The bag springs open. 
+        
+        “Fine, you win… How do I fix this?” Ivy huffs. 
+        
+        You walk over and look at the mess of clothes. You start taking everything out. 
+        
+        *page_break
+        
+        “Hey, I just finished putting all of that in! Isn’t it counterintuitive to take everything out?” Ivy asks. 
+        
+        “If we fold the clothes it should fit. Right now they’re stuffed in and that’s why they aren’t fitting.” You explain. 
+        
+        Ivy opens her mouth to argue but then closes it. She walks over and starts helping you fold the clothes. After a while, everything fit comfortably into the bag. 
+        
+        “Maybe you aren’t an idiot.” She murmurs. 
+        
+        “What was that?” You quickly turn to her. 
+        
+        “Don’t worry about it.” She responds. 
+
+        
+    #Winfred
+        You hear some yelling in the distance so you go and investigate. You come across Winfred who was just hyping themselves up
+        
+        “Hey! ${name}!” (Windfred)
+        
+        Windfred calls you over but you freeze up, intimidated by his sheer mass. You have never seen someone as tall and strong as Winfred. Even the strongest knight in Summerlight would be towered by him.  The closer he gets the more you tense up.
+        
+        *if CH5d_injured = "Riva"
+            “Hey I heard what happened to Riva. Don’t worry about her, she is strong and will power through this.” He gives you a big smile. 
+            
+        *elseif CH5d_injured = "Cel"
+            “Hey I heard what happened with the ogre. Don’t worry about it too much, Cel have been through worse.” He gives you a big reassuring smile.  
+        *elseif CH5d_injured = "Ivy"
+            “Hey I heard what happened with the ogre. Don’t worry about it too much, Ivy have been through worse.” He gives you a big reassuring smile.  
+            
+        *page_break
+        
+        You nod your head nervously without even thinking.
+        
+        “Hey come on little buddy I know what will help, come be my sparring partner!” Winfred pats you on the back. 
+        
+        It feels like your soul got knocked out of you with that pat on the back. You agree because you think this will be a good chance to learn more about defending yourself against a stronger opponent. 
+        
+        “Alright get into your position,” Winfred tells you. You put your hands up and your right leg back like you were taught many years ago.
+        
+        “Alright on your go! Be ready! I’m not gonna go easy on you!” Winfred gets into a tackling position. You regret agreeing and deepen your stance.
+        
+        “R-r-ready.” You nervously say.
+        
+        *page_break
+        
+        Before you know it Winfred rushes at you. It almost feels like time has come to a complete stop. You’re given time to think about your life leading up to this moment; the people you’ve helped, you’ve lost and you begin to think that none of that led to this moment, you were just in the wrong place at the wrong time. 
+        
+        Snapping yourself out of it, you move to get out of Winfred’s way. However, it was too late. Winfred hits you with the biggest charge imaginable and you get launched across the field.. You lie on the ground for a minute with every bone in your body feeling like they’re in the wrong place until Windfred comes over and lifts you back onto your feet. You stand with some difficulty.
+        
+        “Sorry about that little buddy. I think I might have overdone it a little, but that burning spark in your eyes made me think you could take it.” Winfred gives you a much lighter pat on the back. It is still enough to knock you off balance, but Winfred catches you and helps you get back into the temple.
+
+
+    #Berthold
+        You come across Berthold in a field. He’s just sitting there. You keep watching to see what he’s doing but he’s completely still. You ask someone in the vicinity and they tell you he is just meditating.
+        
+        You approach him regardless.
+        
+        “Berthold! How are you doing. I was just in the area and was wondering if you needed any help with anything.” You ask.
+        
+        Berthold doesn’t respond, he doesn't even move. You walk around him.
+        
+        “Uhh heh heh, hello?” You ask with a hint of concern.
+        
+        Still nothing. You take a closer look at him to check if he’s still breathing. He is.
+        
+        *page_break
+        
+        You start to wonder if you should leave him be. You don’t get to see Berthold that much, so you were hoping to talk with him. Learn the wisdom of your elder and all of that.
+        
+        You decide to try a different tactic. “Soooo about this weather, pretty nice right?”
+        
+        Still no response, but you do see a little bit of a smile.
+        
+        “What do you think about our upcoming mission?” You take a seat on a nearby rock.
+        
+        Still no response. You sigh and accept that he isn’t going to talk. You hop off of the rock and begin walking back towards the temple.
+        
+        “Well if you need anything just come talk to me.” You explain.
+        
+        No response, but you weren’t expecting one.
+
+        
+*page_break
+
+You are walking down the hall when you see someone run past. They are carrying a bundle of sheets. You haven’t seen anyone bring bed sheets down this hall before, so you  stop them to ask what’s going on.
+
+“The Zealot is coming.” She quickly explains before running off. 
+
+You couldn’t help but be caught off guard by the statement. He was the most well-known member of the church, everyone has heard of him at least once. Unable to believe he would go this far west, you run towards the entrance. 
+
+*page_break
+
+When you get there you  find more people scrambling around to prepare for his entrance. Everyone is trying to make sure things look perfect when suddenly the doors begin opening. The room goes silent as everyone looks upon him. 
+
+The Zealot walks through the door.  He is wearing bright shiny armor that glimmers in the light. He confidently strides into the temple with his head held high. The church members bow their heads in respect but you could not take your eyes off the man. He had an air about him that hypnotized you. Before you know it he begins walking right towards you. 
+
+“Are you a new member?” He asks you.
+
+*page_break
+
+You hold your breath unsure of how to respond. The words get stuck in your throat and so all you can do is nod. 
+
+“Welcome.” He puts his hand on your shoulder. “I hope to see you at the mission meeting.” 
+
+Before you can even comprehend what's happening he walks off. This was the man from all the stories and legends, you had no doubts now. If he was helping you on your mission then everything will go smoothly. You begin to feel much more confident about the mission. 
+
+*page_break
+
+You head into the room and take a seat at the big roundtable. Most of the people you know are there, but a few people are still wandering in. Everyone is talking and settling in when the door bursts open. Everyone goes quiet as the Zealot strides in and stands near the big empty chair. He smiles at everyone. You gaze at the amount of charisma and confidence he wields. 
+
+“As you all know, the town of Lindow is getting infected with rot. We head for the village tomorrow at dawn. When we get there we will split into two teams. I will lead the team that will defend against the monsters. Cel will lead the team using magic to kill off the Rot. Use this meeting to decide which group you will be joining.” 
+
+*page_break
+
+Everyone begins to move around the room. People are quickly picking groups and talking to people. You don’t think you’ll be much help on the magic team so you go over to the Zealot’s fighting team. The people there pat your shoulder and welcome you to the team. 
+
+Winfred and Ivy are joining that group so you quickly stand near them. The Zealot goes over some quick plans and strategies for how they will go about the fight in the town. It’s hard for you to follow but you pick up enough to keep up. 
+
+Eventually, the Zealot dismisses everyone and you head back to your room to sleep. 
+
+*page_break
+
+Everyone leaves at dawn and begins heading to the village. You arrive at nightfall and everyone starts setting up camp. After setting up your spot in the campsite you head over to the fire to find the Zealot sitting there. You debate for a second about heading over when the Zealot turns and smiles at you. He pats the spot next to him so you go sit next to him. 
+
+You realize this is your chance to ask the Zealot some questions. 
+
+*fake_choice
+    #Ask about plan.
+        “Could you elaborate on the plan a little more for me? This is my first time doing something like this and I want to make sure I do it right.” You ask. 
+        
+        The Zealot smiles, happy that you are so dedicated to the mission. He pulls out a map and begins to explain some of his strategies for combating the rot. He tells you to make sure to prioritize the villager's safety. Then he starts giving you tips on how to fight the monsters. 
+        
+        He offers to teach you some sword tricks and you quickly accept. The two of you spar late into the night. You learn more about using a sword from him than you ever have before. During one of your spars, you fall on the ground. 
+        
+        *page_break
+        
+        “Not bad.” The Zealot reaches out a hand. 
+        
+        “Thanks!” You grab his hand and stand up.
+        
+        You guys put away your weapons and go sit down. You wipe the sweat from your brow and the zealot hands you some water. You thank him and take a few sips. 
+        
+        “Soooo where’d you learn to wield a sword like that?” You ask. 
+        
+        “Back in the small town I lived in, there was a master swordsman. He was retired but occasionally I would watch him train and then try to imitate him. One day he caught me messing around with a sword when I really wasn’t supposed to. I thought I was done for but instead of getting in trouble, he showed me how to use it. We began training together and he taught me all that he knew. Of course, experience in real fights helped a lot as well.” He chuckles. 
+        
+        You stare up at him in wonder. He smiles and then wishes you good night.
+
+    #Ask about him.
+        “If I may…Could you tell me a bit about yourself?” You ask. 
+        
+        You realize that sounds a little out of nowhere so you quickly add, “Sorry if that’s a bit straightforward I’ve just heard so much about you and I guess I’m curious about the man behind the stories.” 
+        
+        He cuts you off with a laugh. “You’re fine ${name}. Not many have the courage to be quite so straightforward. I think it’s admirable.” 
+        
+        “Thank you, sir.” You straighten up. 
+        
+        “Don’t worry about the pleasantries right now. Just call me by name.” 
+        
+        “Oh uhhh… thank you, Alaric,” you respond.
+        
+        *page_break
+        
+        “Back when I was younger I had a brother and he was like my best friend. He had bright red hair and looked just like our mother. We did everything together but then one day he…” Alaric looks off into the distance. 
+        
+        “You don’t have to-” You say.
+        
+        “No, it’s ok.” He interrupts “He passed away, I lost him to the rot. I started going to the local temple. I used it as motivation to become what I am today.” He looks up at the night sky. 
+        
+        “I also lost a dear friend to the rot. I’ll help you get rid of it.” You smile at Alaric. 
+        
+        “Thank you, ${name}” He smiles back at you. 
+        
+        After sharing a moment with each other you head to bed. 
+
+    #Ask about the weather.
+        “Sooo that weather huh?” You ask nervously. 
+        
+        “The weather is clear which will be good for the mission.” He gives you a look. 
+        
+        You both sit awkwardly in silence for a while. Eventually, the Zealot stands up and starts walking away. He takes one more look at the scenery. He stands there for a while and really takes in.
+        
+        “Hey, Alaric, are you alr-” You stand up and walk beside him.
+        
+        “The weather was very similar to this the night I lost my wife to the rot.” The Zealot has this far off look.
+        
+        *page_break
+        You can feel your heart along your stomach sink as the weight of his words hits you like the force of an ogre hitting you with its club.
+        
+        “It was also the same night I lost my son and daughter… I couldn’t save all three of them, I couldn’t save even one.” The Zealot continued.
+        
+        You wonder if you should be here. You take a step back to let him think about his past. Right as you are about to take another step back, he turns around and looks at you.
+        
+        “I tried protecting my wife from the rot but I was too late, she was already being corrupted… I had to drive a knife through her skull to prevent her from fully turning. All I had at the time was some rusty knife I found on the floor; you know how hard it is to drive a rusty knife through a human skull? I thought that was going to be the hardest thing I would have to do in my life, but that couldn’t be further from the truth.” The Zealot explains. You look at him with concern, but he just continues.
+        
+        *page_break
+        
+        “I saw my daughter cornered by jackaloids, I bolted towards her, I grabbed each and every one of those little beasts and tore them to shreds, but by the time I got to her, it was too late. She was already wounded heavily by them, meaning my daughter, my little girl, would turn into one of those things any minute. My knife broke in the midst of fighting those jackaloids so I had to hold her in my arms while she was asking me if she was going to be okay. I told her she was as I squeezed her tightly until her neck broke to prevent her suffering from becoming one of those things.”
+        
+        You progressively get more anxious and disturbed as he keeps talking. Again you are wondering why he is talking so much about such a sensitive time in his life, all you did was mention the weather.
+        
+        *page_break
+        
+        “My son was the only one left. He was too young to understand the situation… He went up to his deceased mother, the same mother he witnessed me murder, and tried to comfort her or save her, I don’t know what he was doing, but I tried telling him to get away since the rot was still consuming her corps, but that didn’t work… the rot clung onto him, there was nothing I could do. Then the Jackaloids got to him. I was frozen, I didn’t know what to do. I knew he was a goner but I couldn’t just not do anything, I just stood there frozen with my daughter’s remains. When the dust settled, all that was left of my son was a mangled corpse. I still had to make sure he was dead just to make sure.” He ends, staring off into the distance once again.
+        
+        “Yeah, those, uhh, those Jackaloids can be a pain.I lost a friend to the, his name was Reese.” You say as you make a mental note to not talk about the weather.
+
+        
+*page_break
+
+The next day you all wrap up camp and head into the town. The group marches into the town. Eventually, the Zealot who is leading at the front stops and turns around to the group. He begins his speech. You see another group of people walk up, mercenaries judging by their gear. You didn’t realize they help fight against the rot. 
+
+“You are all here today because of Sigel’s guiding light. You have come from far and wide to defend the defenseless in this time of encroaching darkness. Know this, brave warriors, Sigel favors those who serve under his light. Your names will be remembered as defenders of the peace and adversaries of the forces of Skadon. Do not waiver in the face of this darkness for dawn will always follow the darkest night.”
+
+Everyone cheers at the speech and prepares for battle. 
+
+*page_break
+
+Before you know it, everyone runs into the forest.
+
+(Fight)
+
+*page_break
+
+In the midst of the battle, you notice a stray civilian being attacked by a monster. You quickly rush over and block the jackaloid's attack. 
+
+“Go!” You shout at the civilian. 
+
+The civilian quickly runs away and gets to safety. You breathe a sigh of relief but you still have to handle the jackaloid. At first, you think it's not a problem. After all, you’ve been fighting for a while and seem to be getting the hang of it. However, it quickly begins to overpower you. 
+
+You begin to panic, you’ve never had to deal with this many   but you keep fighting. The sword gets knocked out of your hand. You back up and try to look for a way out of this. A stick, a rock, something.
+
+*page_break
+
+However, you find nothing. You take another step back, only to hit a tree. You have nowhere to go.You close your eyes. If you don’t watch it happen, maybe it will hurt less. However, you are suddenly pushed out of the way. The Zealot is there and he  takes the hit. It looks bad and you think of how Reese looked when he got hit and get worried.. Despite the injury, the Zealot continues to fight.
+
+Not wanting to just sit around you quickly run over and grab your sword. You swing at the Jackaloid and try to help the Zealot fight it off. 
+
+*page_break
+
+(Fight)
+
+*page_break
+
+With one final slash, the jackaloid falls to the floor. Before you can celebrate your victory, the Zealot falls to his knees. You run over to him. 
+
+“We need to get you to a medic,” you look over the wound. It looks worse than you thought. 
+
+There was a large bleeding gash in his arm and you can see the rot already starting to spread. You were terrified of what that means for him. You start calling for a medic but it's still loud so no one can hear you. 
+
+“The rot is spreading…” He states ominously. 
+
+He lifts up his sword and then mutters a spell under his breath. The swing goes so fast you can barely process when his arm falls on the ground. Before you let yourself panic you help the Zealot to a medic. All you can do is pray that all of the rot was cut off in that swing. 
+
+*return
