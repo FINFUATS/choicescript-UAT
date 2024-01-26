@@ -298,8 +298,8 @@ What form of magic do you want to know about?
 What monsters do you want to learn about?
 *fake_choice
     *selectable_if (isDirewolfDiscovered) #Direwolf
-        [head]Direwolf[/head]
         *label Direwolf
+        [head]Direwolf[/head]
         *image images/Dire_Wolf_adult.webp
         The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.
         
