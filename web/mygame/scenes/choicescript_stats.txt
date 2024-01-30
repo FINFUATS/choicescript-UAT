@@ -1,11 +1,6 @@
 This is a stats screen!
 *temp isShowingStatBar false
 *label screen
-*temp relationship_Cel_percentage
-*temp relationship_Ivy_percentage
-*temp relationship_Rip_percentage
-*temp reputation_Flames_percentage
-*temp reputation_Wolves_percentage
 
 *stat_chart
     text name
@@ -18,196 +13,8 @@ This is a stats screen!
     text bought
     text coin 
 
-
-
-*if relationship_Cel > 0
-    *set relationship_Cel_percentage ((relationship_Cel modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Cel_percentage (((relationship_Cel * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if relationship_Ivy > 0
-    *set relationship_Ivy_percentage ((relationship_Ivy modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Ivy_percentage (((relationship_Ivy * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if relationship_Rip > 0
-    *set relationship_Rip_percentage ((relationship_Rip modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Rip_percentage (((relationship_Rip * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*comment This cleans up the decimal of the percentage for better user display
-*set relationship_Cel_percentage relationship_Cel_percentage - (relationship_Cel_percentage modulo 1)
-*set relationship_Ivy_percentage relationship_Ivy_percentage - (relationship_Ivy_percentage modulo 1)
-*set relationship_Rip_percentage relationship_Rip_percentage - (relationship_Rip_percentage modulo 1)
-
-*if (relationship_Cel > (0 - 250)) and (relationship_Cel < 250)
-    *set rel_status_Cel rel_status_4
-    *if relationship_Cel < 0
-        *set trend_Cel "Negative"
-    *elseif relationship_Cel > 0
-        *set trend_Cel "Positive"
-    *elseif relationship_Cel = 0
-        *set trend_Cel "N/A"
-*elseif relationship_Cel < 0
-    *set trend_Cel "Negative"
-    *if (relationship_Cel < (0 - 250)) and (relationship_Cel > ((0 - 250) - 250))
-        *set rel_status_Cel rel_status_5
-    *elseif (relationship_Cel < ((0 - 250) - 250)) and (relationship_Cel > ((0 - 250) - 500))
-        *set rel_status_Cel rel_status_6
-    *elseif (relationship_Cel < ((0 - 250) - 500)) and (relationship_Cel > ((0 - 250) - 750))
-        *set rel_status_Cel rel_status_7
-    *elseif (relationship_Cel <= ((0 - 250) - 750))
-        *set rel_status_Cel rel_status_8
-        *set relationship_Cel_percentage 100
-        *set relationship_Cel (0 - 1000)
-*elseif relationship_Cel > 0
-    *set trend_Cel "Positive"
-    *if (relationship_Cel > 250) and (relationship_Cel < 500)
-        *set rel_status_Cel rel_status_3
-    *elseif (relationship_Cel > 500) and (relationship_Cel < 750)
-        *set rel_status_Cel rel_status_2
-    *elseif (relationship_Cel > 750) and (relationship_Cel < 1000)
-        *set rel_status_Cel rel_status_1
-    *elseif relationship_Cel >= 1000
-        *set rel_status_Cel rel_status_0
-        *set relationship_Cel_percentage 100
-        *set relationship_Cel 1000
-*else
-    *set rel_status_Cel rel_status_4
-
-*if (relationship_Ivy > (0 - 250)) and (relationship_Ivy < 250)
-    *set rel_status_Ivy rel_status_4
-    *if relationship_Ivy < 0
-        *set trend_Ivy "Negative"
-    *elseif relationship_Ivy > 0
-        *set trend_Ivy "Positive"
-    *elseif relationship_Ivy = 0
-        *set trend_Ivy "N/A"
-*elseif relationship_Ivy < 0
-    *set trend_Ivy "Negative"
-    *if (relationship_Ivy < (0 - 250)) and (relationship_Ivy > ((0 - 250) - 250))
-        *set rel_status_Ivy rel_status_5
-    *elseif (relationship_Ivy < ((0 - 250) - 250)) and (relationship_Ivy > ((0 - 250) - 500))
-        *set rel_status_Ivy rel_status_6
-    *elseif (relationship_Ivy < ((0 - 250) - 500)) and (relationship_Ivy > ((0 - 250) - 750))
-        *set rel_status_Ivy rel_status_7
-    *elseif (relationship_Ivy <= ((0 - 250) - 750))
-        *set rel_status_Ivy rel_status_8
-        *set relationship_Ivy_percentage 100
-        *set relationship_Ivy (0 - 1000)
-*elseif relationship_Ivy > 0
-    *set trend_Ivy "Positive"
-    *if (relationship_Ivy > 250) and (relationship_Ivy < 500)
-        *set rel_status_Ivy rel_status_3
-    *elseif (relationship_Ivy > 500) and (relationship_Ivy < 750)
-        *set rel_status_Ivy rel_status_2
-    *elseif (relationship_Ivy > 750) and (relationship_Ivy < 1000)
-        *set rel_status_Ivy rel_status_1
-    *elseif relationship_Ivy >= 1000
-        *set rel_status_Ivy rel_status_0
-        *set relationship_Ivy_percentage 100
-        *set relationship_Ivy 1000
-*else
-    *set rel_status_Ivy rel_status_4
-
-*if (relationship_Rip > (0 - 250)) and (relationship_Rip < 250)
-    *set rel_status_Rip rel_status_4
-    *if relationship_Rip < 0
-        *set trend_Rip "Negative"
-    *elseif relationship_Rip > 0
-        *set trend_Rip "Positive"
-    *elseif relationship_Rip = 0
-        *set trend_Rip "N/A"
-*elseif relationship_Rip < 0
-    *set trend_Rip "Negative"
-    *if (relationship_Rip < (0 - 250)) and (relationship_Rip > ((0 - 250) - 250))
-        *set rel_status_Rip rel_status_5
-    *elseif (relationship_Rip < ((0 - 250) - 250)) and (relationship_Rip > ((0 - 250) - 500))
-        *set rel_status_Rip rel_status_6
-    *elseif (relationship_Rip < ((0 - 250) - 500)) and (relationship_Rip > ((0 - 250) - 750))
-        *set rel_status_Rip rel_status_7
-    *elseif (relationship_Rip <= ((0 - 250) - 750))
-        *set rel_status_Rip rel_status_8
-        *set relationship_Rip_percentage 100
-        *set relationship_Rip (0 - 1000)
-*elseif relationship_Rip > 0
-    *set trend_Rip "Positive"
-    *if (relationship_Rip > 250) and (relationship_Rip < 500)
-        *set rel_status_Rip rel_status_3
-    *elseif (relationship_Rip > 500) and (relationship_Rip < 750)
-        *set rel_status_Rip rel_status_2
-    *elseif (relationship_Rip > 750) and (relationship_Rip < 1000)
-        *set rel_status_Rip rel_status_1
-    *elseif relationship_Rip >= 1000
-        *set rel_status_Rip rel_status_0
-        *set relationship_Rip_percentage 100
-        *set relationship_Rip 1000
-*else
-    *set rel_status_Rip rel_status_4
-
-*if reputation_Flames > 0
-    *set reputation_Flames_percentage ((reputation_Flames modulo reputation_max_xp) / reputation_max_xp) * 100
-*else
-    *set reputation_Flames_percentage (((reputation_Flames * (0 - 1)) modulo reputation_max_xp) / reputation_max_xp) * 100
-*if reputation_Wolves > 0
-    *set reputation_Wolves_percentage ((reputation_Wolves modulo reputation_max_xp) / reputation_max_xp) * 100
-*else
-    *set reputation_Wolves_percentage (((reputation_Wolves * (0 - 1)) modulo reputation_max_xp) / reputation_max_xp) * 100
-
-*set reputation_Flames_percentage reputation_Flames_percentage - (reputation_Flames_percentage modulo 1)
-*set reputation_Wolves_percentage reputation_Wolves_percentage - (reputation_Wolves_percentage modulo 1)
-
-*if (reputation_Flames > (0 - 50)) and (reputation_Flames < 50)
-    *set rep_status_Flames rep_status_2
-    *if reputation_Flames < 0
-        *set trend_Flames "Negative"
-    *elseif reputation_Flames > 0
-        *set trend_Flames "Positive"
-    *elseif reputation_Flames = 0
-        *set trend_Flames "N/A"
-*elseif reputation_Flames < 0
-    *set trend_Flames "Negative"
-    *if (reputation_Flames < (0 - 50)) and (reputation_Flames > ((0 - 50) - 50))
-        *set rep_status_Flames rep_status_3
-    *elseif reputation_Flames <= ((0 - 50) - 50)
-        *set rep_status_Flames rep_status_4
-        *set reputation_Flames_percentage 100
-        *set reputation_Flames (0 - 100)
-*elseif reputation_Flames > 0
-    *set trend_Flames "Positive"
-    *if (reputation_Flames > 50) and (reputation_Flames < 100)
-        *set rep_status_Flames rep_status_1
-    *elseif reputation_Flames >= 100
-        *set rep_status_Flames rep_status_0
-        *set reputation_Flames_percentage 100
-        *set reputation_Flames 100
-*else
-    *set reputation_Flames rep_status_2
-
-*if (reputation_Wolves > (0 - 50)) and (reputation_Wolves < 50)
-    *set rep_status_Wolves rep_status_2
-    *if reputation_Wolves < 0
-        *set trend_Wolves "Negative"
-    *elseif reputation_Wolves > 0
-        *set trend_Wolves "Positive"
-    *elseif reputation_Wolves = 0
-        *set trend_Wolves "N/A"
-*elseif reputation_Wolves < 0
-    *set trend_Wolves "Negative"
-    *if (reputation_Wolves < (0 - 50)) and (reputation_Wolves > ((0 - 50) - 50))
-        *set rep_status_Wolves rep_status_3
-    *elseif reputation_Wolves <= ((0 - 50) - 50)
-        *set rep_status_Wolves rep_status_4
-        *set reputation_Wolves_percentage 100
-        *set reputation_Wolves (0 - 100)
-*elseif reputation_Wolves > 0
-    *set trend_Wolves "Positive"
-    *if (reputation_Wolves > 50) and (reputation_Wolves < 100)
-        *set rep_status_Wolves rep_status_1
-    *elseif reputation_Wolves >= 100
-        *set rep_status_Wolves rep_status_0
-        *set reputation_Wolves_percentage 100
-        *set reputation_Wolves 100
-*else
-    *set reputation_Wolves rep_status_2
-    
+*gosub_scene general UpdateRelRepMeters
+   
 *if isShowingStatBar = false
     *choice
         #Show Relationships and Reputations.
@@ -217,31 +24,31 @@ This is a stats screen!
 *elseif isShowingStatBar = true
     *line_break
     *stat_chart
-        text relationship_Cel Relationship Value with Cel
+        text rel_val_Cel Relationship Value with Cel
         text trend_Cel Trend
         text rel_status_Cel Affinity Status with Cel
         percent relationship_Cel_percentage Current ${trend_Cel} Affinity Progress
     *line_break
     *stat_chart
-        text relationship_Ivy Relationship Value with Ivy
+        text rel_val_Ivy Relationship Value with Ivy
         text trend_Ivy Trend
         text rel_status_Ivy Affinity Status with Ivy
         percent relationship_Ivy_percentage Current ${trend_Ivy} Affinity Progress
     *line_break
     *stat_chart
-        text relationship_Rip Relationship Value with Rip
+        text rel_val_Rip Relationship Value with Rip
         text trend_Rip Trend
         text rel_status_Rip Affinity Status with Rip
         percent relationship_Rip_percentage Current ${trend_Rip} Affinity Progress
     *line_break
     *stat_chart
-        text reputation_Flames Reputation Value with Flames
+        text rep_val_Flames Reputation Value with Flames
         text trend_Flames Trend
         text rep_status_Flames Reputation Status with Flames of Sigel
         percent reputation_Flames_percentage Current ${trend_Flames} Reputation Progress
     *line_break
     *stat_chart
-        text reputation_Wolves Reputation Value with Wolves
+        text rep_val_Wolves Reputation Value with Wolves
         text trend_Wolves Trend
         text rep_status_Wolves Reputation Status with Wolves of Davenport
         percent reputation_Wolves_percentage Current ${trend_Wolves} Reputation Progress
@@ -253,41 +60,41 @@ This is a stats screen!
             *goto screen
 
         #Increase Relationship with Cel.
-            *set relationship_Cel +90
+            *set rel_val_Cel +90
             *goto screen
         
         #Decrease Relationship with Cel.
-            *set relationship_Cel -90
+            *set rel_val_Cel -90
             *goto screen
         
         #Increase Relationship with Ivy.
-            *set relationship_Ivy +90
+            *set rel_val_Ivy +90
             *goto screen
         
         #Decrease Relationship with Ivy.
-            *set relationship_Ivy -90
+            *set rel_val_Ivy -90
             *goto screen
         
         #Increase Relationship with Rip.
-            *set relationship_Rip +90
+            *set rel_val_Rip +90
             *goto screen
         
         #Decrease Relationship with Rip.
-            *set relationship_Rip -90
+            *set rel_val_Rip -90
             *goto screen
 
         #Increase Reputation with Flames.
-            *set reputation_Flames +35
+            *set rep_val_Flames +35
             *goto screen
 
         #Decrease Reputation with Flames.
-            *set reputation_Flames -35
+            *set rep_val_Flames -35
             *goto screen
 
         #Increase Reputation with Wolves.
-            *set reputation_Wolves +35
+            *set rep_val_Wolves +35
             *goto screen
 
         #Decrease Reputation with Wolves.
-            *set reputation_Wolves -35
+            *set rep_val_Wolves -35
             *goto screen

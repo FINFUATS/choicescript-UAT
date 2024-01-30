@@ -133,3 +133,198 @@
 
 *comment agility sub-attributes
 *set Agility ((ReactionSpeed + Stealth) + MotorSkill) + Acrobatics
+
+
+
+*comment Originally in the choicescript_stats scene, now a subroutine in the general scene for organization purposes
+*comment Updates the relationship and reputation percentages, trends, and affinity/rep statuses
+*label UpdateRelRepMeters
+*if rel_val_Cel > 0
+    *set relationship_Cel_percentage ((rel_val_Cel modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Cel_percentage (((rel_val_Cel * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Ivy > 0
+    *set relationship_Ivy_percentage ((rel_val_Ivy modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Ivy_percentage (((rel_val_Ivy * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Rip > 0
+    *set relationship_Rip_percentage ((rel_val_Rip modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Rip_percentage (((rel_val_Rip * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*comment This cleans up the decimal of the percentage for better user display
+*set relationship_Cel_percentage relationship_Cel_percentage - (relationship_Cel_percentage modulo 1)
+*set relationship_Ivy_percentage relationship_Ivy_percentage - (relationship_Ivy_percentage modulo 1)
+*set relationship_Rip_percentage relationship_Rip_percentage - (relationship_Rip_percentage modulo 1)
+
+*if (rel_val_Cel > (0 - 250)) and (rel_val_Cel < 250)
+    *set rel_status_Cel rel_status_4
+    *if rel_val_Cel < 0
+        *set trend_Cel "Negative"
+    *elseif rel_val_Cel > 0
+        *set trend_Cel "Positive"
+    *elseif rel_val_Cel = 0
+        *set trend_Cel "N/A"
+*elseif rel_val_Cel < 0
+    *set trend_Cel "Negative"
+    *if (rel_val_Cel < (0 - 250)) and (rel_val_Cel > ((0 - 250) - 250))
+        *set rel_status_Cel rel_status_5
+    *elseif (rel_val_Cel < ((0 - 250) - 250)) and (rel_val_Cel > ((0 - 250) - 500))
+        *set rel_status_Cel rel_status_6
+    *elseif (rel_val_Cel < ((0 - 250) - 500)) and (rel_val_Cel > ((0 - 250) - 750))
+        *set rel_status_Cel rel_status_7
+    *elseif (rel_val_Cel <= ((0 - 250) - 750))
+        *set rel_status_Cel rel_status_8
+        *set relationship_Cel_percentage 100
+        *set rel_val_Cel (0 - 1000)
+*elseif rel_val_Cel > 0
+    *set trend_Cel "Positive"
+    *if (rel_val_Cel > 250) and (rel_val_Cel < 500)
+        *set rel_status_Cel rel_status_3
+    *elseif (rel_val_Cel > 500) and (rel_val_Cel < 750)
+        *set rel_status_Cel rel_status_2
+    *elseif (rel_val_Cel > 750) and (rel_val_Cel < 1000)
+        *set rel_status_Cel rel_status_1
+    *elseif rel_val_Cel >= 1000
+        *set rel_status_Cel rel_status_0
+        *set relationship_Cel_percentage 100
+        *set rel_val_Cel 1000
+*else
+    *set rel_status_Cel rel_status_4
+
+*if (rel_val_Ivy > (0 - 250)) and (rel_val_Ivy < 250)
+    *set rel_status_Ivy rel_status_4
+    *if rel_val_Ivy < 0
+        *set trend_Ivy "Negative"
+    *elseif rel_val_Ivy > 0
+        *set trend_Ivy "Positive"
+    *elseif rel_val_Ivy = 0
+        *set trend_Ivy "N/A"
+*elseif rel_val_Ivy < 0
+    *set trend_Ivy "Negative"
+    *if (rel_val_Ivy < (0 - 250)) and (rel_val_Ivy > ((0 - 250) - 250))
+        *set rel_status_Ivy rel_status_5
+    *elseif (rel_val_Ivy < ((0 - 250) - 250)) and (rel_val_Ivy > ((0 - 250) - 500))
+        *set rel_status_Ivy rel_status_6
+    *elseif (rel_val_Ivy < ((0 - 250) - 500)) and (rel_val_Ivy > ((0 - 250) - 750))
+        *set rel_status_Ivy rel_status_7
+    *elseif (rel_val_Ivy <= ((0 - 250) - 750))
+        *set rel_status_Ivy rel_status_8
+        *set relationship_Ivy_percentage 100
+        *set rel_val_Ivy (0 - 1000)
+*elseif rel_val_Ivy > 0
+    *set trend_Ivy "Positive"
+    *if (rel_val_Ivy > 250) and (rel_val_Ivy < 500)
+        *set rel_status_Ivy rel_status_3
+    *elseif (rel_val_Ivy > 500) and (rel_val_Ivy < 750)
+        *set rel_status_Ivy rel_status_2
+    *elseif (rel_val_Ivy > 750) and (rel_val_Ivy < 1000)
+        *set rel_status_Ivy rel_status_1
+    *elseif rel_val_Ivy >= 1000
+        *set rel_status_Ivy rel_status_0
+        *set relationship_Ivy_percentage 100
+        *set rel_val_Ivy 1000
+*else
+    *set rel_status_Ivy rel_status_4
+
+*if (rel_val_Rip > (0 - 250)) and (rel_val_Rip < 250)
+    *set rel_status_Rip rel_status_4
+    *if rel_val_Rip < 0
+        *set trend_Rip "Negative"
+    *elseif rel_val_Rip > 0
+        *set trend_Rip "Positive"
+    *elseif rel_val_Rip = 0
+        *set trend_Rip "N/A"
+*elseif rel_val_Rip < 0
+    *set trend_Rip "Negative"
+    *if (rel_val_Rip < (0 - 250)) and (rel_val_Rip > ((0 - 250) - 250))
+        *set rel_status_Rip rel_status_5
+    *elseif (rel_val_Rip < ((0 - 250) - 250)) and (rel_val_Rip > ((0 - 250) - 500))
+        *set rel_status_Rip rel_status_6
+    *elseif (rel_val_Rip < ((0 - 250) - 500)) and (rel_val_Rip > ((0 - 250) - 750))
+        *set rel_status_Rip rel_status_7
+    *elseif (rel_val_Rip <= ((0 - 250) - 750))
+        *set rel_status_Rip rel_status_8
+        *set relationship_Rip_percentage 100
+        *set rel_val_Rip (0 - 1000)
+*elseif rel_val_Rip > 0
+    *set trend_Rip "Positive"
+    *if (rel_val_Rip > 250) and (rel_val_Rip < 500)
+        *set rel_status_Rip rel_status_3
+    *elseif (rel_val_Rip > 500) and (rel_val_Rip < 750)
+        *set rel_status_Rip rel_status_2
+    *elseif (rel_val_Rip > 750) and (rel_val_Rip < 1000)
+        *set rel_status_Rip rel_status_1
+    *elseif rel_val_Rip >= 1000
+        *set rel_status_Rip rel_status_0
+        *set relationship_Rip_percentage 100
+        *set rel_val_Rip 1000
+*else
+    *set rel_status_Rip rel_status_4
+
+*if rep_val_Flames > 0
+    *set reputation_Flames_percentage ((rep_val_Flames modulo reputation_max_xp) / reputation_max_xp) * 100
+*else
+    *set reputation_Flames_percentage (((rep_val_Flames * (0 - 1)) modulo reputation_max_xp) / reputation_max_xp) * 100
+*if rep_val_Wolves > 0
+    *set reputation_Wolves_percentage ((rep_val_Wolves modulo reputation_max_xp) / reputation_max_xp) * 100
+*else
+    *set reputation_Wolves_percentage (((rep_val_Wolves * (0 - 1)) modulo reputation_max_xp) / reputation_max_xp) * 100
+
+*set reputation_Flames_percentage reputation_Flames_percentage - (reputation_Flames_percentage modulo 1)
+*set reputation_Wolves_percentage reputation_Wolves_percentage - (reputation_Wolves_percentage modulo 1)
+
+*if (rep_val_Flames > (0 - 50)) and (rep_val_Flames < 50)
+    *set rep_status_Flames rep_status_2
+    *if rep_val_Flames < 0
+        *set trend_Flames "Negative"
+    *elseif rep_val_Flames > 0
+        *set trend_Flames "Positive"
+    *elseif rep_val_Flames = 0
+        *set trend_Flames "N/A"
+*elseif rep_val_Flames < 0
+    *set trend_Flames "Negative"
+    *if (rep_val_Flames < (0 - 50)) and (rep_val_Flames > ((0 - 50) - 50))
+        *set rep_status_Flames rep_status_3
+    *elseif rep_val_Flames <= ((0 - 50) - 50)
+        *set rep_status_Flames rep_status_4
+        *set reputation_Flames_percentage 100
+        *set rep_val_Flames (0 - 100)
+*elseif rep_val_Flames > 0
+    *set trend_Flames "Positive"
+    *if (rep_val_Flames > 50) and (rep_val_Flames < 100)
+        *set rep_status_Flames rep_status_1
+    *elseif rep_val_Flames >= 100
+        *set rep_status_Flames rep_status_0
+        *set reputation_Flames_percentage 100
+        *set rep_val_Flames 100
+*else
+    *set rep_val_Flames rep_status_2
+
+*if (rep_val_Wolves > (0 - 50)) and (rep_val_Wolves < 50)
+    *set rep_status_Wolves rep_status_2
+    *if rep_val_Wolves < 0
+        *set trend_Wolves "Negative"
+    *elseif rep_val_Wolves > 0
+        *set trend_Wolves "Positive"
+    *elseif rep_val_Wolves = 0
+        *set trend_Wolves "N/A"
+*elseif rep_val_Wolves < 0
+    *set trend_Wolves "Negative"
+    *if (rep_val_Wolves < (0 - 50)) and (rep_val_Wolves > ((0 - 50) - 50))
+        *set rep_status_Wolves rep_status_3
+    *elseif rep_val_Wolves <= ((0 - 50) - 50)
+        *set rep_status_Wolves rep_status_4
+        *set reputation_Wolves_percentage 100
+        *set rep_val_Wolves (0 - 100)
+*elseif rep_val_Wolves > 0
+    *set trend_Wolves "Positive"
+    *if (rep_val_Wolves > 50) and (rep_val_Wolves < 100)
+        *set rep_status_Wolves rep_status_1
+    *elseif rep_val_Wolves >= 100
+        *set rep_status_Wolves rep_status_0
+        *set reputation_Wolves_percentage 100
+        *set rep_val_Wolves 100
+*else
+    *set rep_val_Wolves rep_status_2
+
+*return

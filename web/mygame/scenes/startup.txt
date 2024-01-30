@@ -138,17 +138,25 @@
 *create Cel 0
 *create total 0
 
-*comment Character Relationship Globals
-*create relationship_Cel 0
-*create relationship_Ivy 0
-*create relationship_Rip 0
+*comment Character Relationship Value Globals
+*create rel_val_Cel 0
+*create rel_val_Ivy 0
+*create rel_val_Rip 0
+*comment Character Relationship Status Globals
 *create rel_status_Cel "Indifferent"
 *create rel_status_Ivy "Indifferent"
 *create rel_status_Rip "Indifferent"
+*comment Character Relationship Trend Globals
 *create trend_Cel "N/A"
 *create trend_Ivy "N/A"
 *create trend_Rip "N/A"
-
+*comment Character Relationship Percentage Globals
+*create relationship_Cel_percentage 0
+*create relationship_Ivy_percentage 0
+*create relationship_Rip_percentage 0
+*create reputation_Flames_percentage 0
+*create reputation_Wolves_percentage 0
+*comment Character Relationship Max XP Global
 *create relationship_max_xp 250
 
 *comment Character Affinity Status Globals
@@ -163,13 +171,15 @@
 *create rel_status_8 "Hostile"
 
 *comment Faction Reputation Globals
-*create reputation_Flames 0
-*create reputation_Wolves 0
+*create rep_val_Flames 0
+*create rep_val_Wolves 0
+*comment Faction Reputation Status Globals
 *create rep_status_Flames "Neutral"
 *create rep_status_Wolves "Neutral"
+*comment Faction Reputation Trend Globals
 *create trend_Flames "N/A"
 *create trend_Wolves "N/A"
-
+*comment Faction Reputation Max XP Global
 *create reputation_max_xp 50
 
 *comment Faction Reputation Status Globals
