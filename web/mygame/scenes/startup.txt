@@ -59,6 +59,7 @@
 *create brawn_color   "#d60d0d"
 *create agility_color "#FF9900"
 *create cunning_color "#4A86E8"	
+*create codex_color "#0dd63f"
 
 *comment ///////// General Purpose Globals (used in subroutine calls) /////////
 *comment Read only! DO NOT WRITE TO THIS OUTSIDE OF A SUBROUTINE AND SELECT CIRCUMSTANCES!!!
@@ -126,6 +127,9 @@
 *create isWOWDiscovered         false
 *create murdererKnown         false
 
+*comment Codex contextual global vars
+*create isReeseDead false
+
 *comment Divine Chapter 9 Character Total Globals
 *create Riva 0
 *create Winfred 0
@@ -184,6 +188,7 @@
 *comment *print "[head]@{returnData Success|Failure}![/head]"
 *label GAMESTART
 WIP build for the UAT production studio milestone review
+
 
 What chapter?
 *fake_choice
@@ -258,6 +263,23 @@ What chapter?
 
   #TEMP: Combat Test
       *goto_scene combat_test
+  #TEMP: Codex Hyper-link Test
+  
+      [codex:Direwolf]Direwolf entry[/codex]
+      
+      [codex:Ichor-Swog]Ichor Swog entry[/codex]
+      
+      [codex:Jackaloids]Jackaloids entry[/codex]
+      
+      [codex:Mockguarden]Mockguarden entry[/codex]
+      
+      [codex:Mogfish]Mogfish entry[/codex]
+      
+      [codex:Will-O-Wisps]Will-O-Wisps entry[/codex]
+      
+      *choice
+          #Back
+              *goto GAMESTART
   #CH1Q84: Format Example
       *goto_scene format_example
   #New Chapters

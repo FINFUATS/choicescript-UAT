@@ -7,17 +7,17 @@
 *label StartChapterOne
 
 *image images/tera_copyfin.webp
-Sitting amid the vast expanse of the universe, amidst the swirling tapestry of stars and cosmic wonders, there exists a small blue jewel of a world. This celestial sphere, lovingly tended by the ethereal Goddess Tera, holds within its embrace the essence of life itself. Teeming with vibrant ecosystems, majestic landscapes, and diverse creatures, this world is a testament to the boundless creativity and beauty of its divine caretaker.
+Sitting amid the vast expanse of the universe, amidst the swirling tapestry of stars and cosmic wonders, there exists a small blue jewel of a world. This celestial sphere, lovingly tended by the ethereal [codex:codex_hl_Tera]Goddess Tera[/codex], holds within its embrace the essence of life itself. Teeming with vibrant ecosystems, majestic landscapes, and diverse creatures, this world is a testament to the boundless creativity and beauty of its divine caretaker.
 
 *page_break
 
-Amidst the verdant splendor of the Broken Fields, nestled within the bosom of ancient forests, lies a sprawling metropolis known as Davenport. This city, a testament to dwarven ingenuity and ambition, stands as a beacon of civilization amidst the untamed wilderness. Its strategic location, nestled against the meandering river that effortlessly flows into the great seas beyond, grants it access to vast trade routes and resources from distant lands. Many neighboring towns rely on this port and it has become the trade center of Eastern Teville. 
+Amidst the verdant splendor of the Broken Fields, nestled within the bosom of ancient forests, lies a sprawling metropolis known as [codex:codex_hl_Davenport]Davenport[/codex]. This city, a testament to dwarven ingenuity and ambition, stands as a beacon of civilization amidst the untamed wilderness. Its strategic location, nestled against the meandering river that effortlessly flows into the great seas beyond, grants it access to vast trade routes and resources from distant lands. Many neighboring towns rely on this port and it has become the trade center of Eastern [codex:codex_hl_Teville_City]Teville[/codex]. 
 
 Davenport, often referred to as the "City of Splendors," is a tapestry of contrasting districts and neighborhoods, each with its own unique character and allure. At the heart of the city lies the bustling marketplace, a vibrant hub of commerce where merchants from all corners of the world converge to peddle their wares. Colorful stalls, ornately carved carts, and vibrant tents adorn the "main street," creating a mesmerizing kaleidoscope of sights and sounds.
 
 However, as whispers of unsettling rumors permeate the air, a sense of unease settles upon the citizens of Davenport. Reports of a mysterious and deadly fungus that has claimed lives in nearby villages spread like wildfire, casting a shadow of fear and uncertainty over the land. The very foundations of the city tremble as murmurs of a long-forgotten cult's resurgence reach the ears of its inhabitants. 
 
-Coming from the small town of Summerlight, you will embark on a journey where the fate of Davenport and its inhabitants hangs in the balance. Unravel the mysteries that shroud the land, confront ancient cults and unearthly forces, and learn much more about the inner workings of the world you live in. The marketplace beckons, offering both treasures and dangers, as you navigate the intricate web of alliances, rivalries, and hidden agendas. The future of Davenport, and perhaps even the fate of the entire realm, lies in your hands.
+Coming from the small town of [codex:codex_hl_Summerlight]Summerlight[/codex], you will embark on a journey where the fate of Davenport and its inhabitants hangs in the balance. Unravel the mysteries that shroud the land, confront ancient cults and unearthly forces, and learn much more about the inner workings of the world you live in. The marketplace beckons, offering both treasures and dangers, as you navigate the intricate web of alliances, rivalries, and hidden agendas. The future of Davenport, and perhaps even the fate of the entire realm, lies in your hands.
 
 *page_break
 
@@ -153,11 +153,19 @@ You decide to,
                     
                     # Buddy (Boy).”
                         *set gender "Male"
+                        *set pronoun_they "him"
+                        *set pronoun_them "he"
+                        *set pronoun_their "his"
                     # Honey (Girl).”
-                        
                         *set gender "Female"
+                        *set pronoun_they "her"
+                        *set pronoun_them "she"
+                        *set pronoun_their "hers"
                     # Kiddo (Other).”
                         *set gender "Other"
+                        *set pronoun_they "them"
+                        *set pronoun_them "they"
+                        *set pronoun_their "their"
                         
                 “Could you head to the market after breakfast? We need to stock up on some food. The harvest isn’t in yet.” Your mother asks you. You nod and finish your food.
                 
@@ -172,7 +180,7 @@ You decide to,
                 
                 While searching through the pantry, you stumble upon a hidden compartment. Confused, you open it and find a note from your father.
                 
-                “I was wondering when you would find this. You’re such a clever child. In here you’ll find some toys I got you from Davenport. Thought you and Reese may enjoy playing with them. I hid them from you because I wanted it to be a scavenger hunt, but since you found them before I came back you can have them.”
+                “I was wondering when you would find this. You’re such a clever child. In here you’ll find some toys I got you from Davenport. Thought you and [codex:codex_hl_Reese]Reese[/codex] may enjoy playing with them. I hid them from you because I wanted it to be a scavenger hunt, but since you found them before I came back you can have them.”
                 
                 Your father would sometimes come back with toys or treats from out of town. He tries to get you some of your favorite bread baked by the dwarves. They bake the best bread you have ever had and whenever he leaves that is the one thing you ask from him.
                 
@@ -182,11 +190,19 @@ You decide to,
                     
                     # Buddy (Boy).”
                         *set gender "Male"
+                        *set pronoun_they "him"
+                        *set pronoun_them "he"
+                        *set pronoun_their "his"
                     # Honey (Girl).”
-                        
                         *set gender "Female"
+                        *set pronoun_they "her"
+                        *set pronoun_them "she"
+                        *set pronoun_their "hers"
                     # Kiddo (Other).”
                         *set gender "Other"
+                        *set pronoun_they "them"
+                        *set pronoun_them "they"
+                        *set pronoun_their "their"
                 
                 “Wooden swords and a note from Dad!” You shout back.
                 
@@ -209,7 +225,7 @@ The air is filled with an amalgamation of scents that intermingle harmoniously. 
 
 Navigating through the marketplace requires a keen sense of observation and adaptability. The bustling crowd, composed of locals and visitors alike, weaves through the maze of stalls, creating a dynamic flow of movement. People from all walks of life can be seen here, dressed in a myriad of vibrant and diverse attire, representing their cultural heritage and personal styles. The marketplace is not merely a place of commerce; it is a center of social interaction. Amidst the transactions and haggling, friends catch up over cups of steaming tea, families explore the wares together, and strangers strike up conversations that lead to unexpected friendships. Laughter, shared stories, and the exchange of ideas are interwoven into the fabric of this bustling place.
 
-Amongst the crowd you hear a shout and turn around. You can see Reese, your best friend, running towards you.
+Amongst the crowd you hear a shout and turn around. You can see [codex:codex_hl_Reese]Reese[/codex], your best friend, running towards you.
 
 “${name}! ${name}!” Reese shouts before they stop a few feet away, panting. “What… Are… You… Doing…?”
 
@@ -373,7 +389,7 @@ You choose to read:
         
         “The Mockguarden, a perilous and cunning predator, is a formidable form of predatory plant that lurks within the depths of untamed forests. With its ability to adapt and camouflage, it poses a significant threat to unsuspecting creatures that venture too close. While its visible parts may change and blend with the surroundings, it is the subterranean mycelium network that truly defines this enigmatic entity.”
         
-        [b]You've unlocked the Mockgardens codex entry![/b]
+        [b]You've unlocked the [codex:codex_hl_Mockguarden]Mockguarden[/codex] codex entry![/b]
         
         To view this entry, click on the codex in the top right corner, and enter the "Monster" section.
         *set isMockguardenDiscovered true
@@ -382,7 +398,7 @@ You choose to read:
         
         “The Manned Jackaloids are small, werewolf-like creatures that inhabit remote regions far from civilized settlements. Standing between 3 and a half to just under 5 feet tall, they operate in packs, using their presence to frighten away other predators from potential prey and scavenging off decaying carcasses. Despite their frail and lesion-ridden appearance, these creatures exhibit surprising resilience.
         
-        [b]You've unlocked the Jackaloid codex entry![/b]
+        [b]You've unlocked the [codex:codex_hl_Jackaloid]Jackaloid[/codex] codex entry![/b]
         
         To view this entry, click on the codex in the top right corner, and enter the "Monster" section.
         
@@ -394,7 +410,7 @@ You choose to read:
         
         “The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.”
         
-        [b]You've unlocked the Direwolf codex entry![/b]
+        [b]You've unlocked the [codex:codex_hl_Direwolf]Direwolf[/codex] codex entry![/b]
         
         To view this entry, click on the codex in the top right corner, and enter the "Monster" section.
         

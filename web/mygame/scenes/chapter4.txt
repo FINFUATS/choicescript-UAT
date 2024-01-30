@@ -112,7 +112,7 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
 
         There is blood under them, a steadily growing pool that is soaking the carpet and no doubt, staining the wood floor beneath it. For a moment, you feel your stomach churn, your last meal threatening to reappear on the floor at any second.
 
-        You swallow, take a deep breath and focus on the mystery in front of you. When you walk up to the body,your steps both cautious and careful, you notice that it is Lord Odel. Lord Odel is a lord from a neighboring town, not many like him, but you didn't think it was this bad.
+        You swallow, take a deep breath and focus on the mystery in front of you. When you walk up to the body,your steps both cautious and careful, you notice that it is [codex:codex_hl_Lord_Odel]Lord Odel[/codex]. Lord Odel is a lord from a neighboring town, not many like him, but you didn't think it was this bad.
 
         
         *set CH4_murderer "run"
@@ -127,7 +127,7 @@ A loud, anguished scream came out of the house you were passing. The sudden soun
 
         When you realize what you were holding, a guard walks up to you and aggressively grabs your arm.
 
-        “You are under arrest for the murder of Lord Odel!”
+        “You are under arrest for the murder of [codex:codex_hl_Lord_Odel]Lord Odel[/codex]!”
         *page_break
         *set item "bloody dagger"
         *set option "leave"
@@ -373,7 +373,7 @@ You take a step back and sigh.
 
 “You would have packed your bags and left a long time ago if you were truly responsible for the murder.” The priestess walks to the other wall in the alley, pulling her dark colored cloak closer.
 
-“The murder seemed to be too well planned for an amature. If you knew what you were doing, you would have heard me sneak up on you.” The mercenary looks up as if he is thinking.
+“The murder seemed to be too well planned for an amateur. If you knew what you were doing, you would have heard me sneak up on you.” The mercenary looks up as if he is thinking.
 
 “I could get you out of this town and help you find the murderer  if you help me in return. Don’t worry, it’s nothing bad, just help us protect a few towns.” The mercenary looks over at you.
 

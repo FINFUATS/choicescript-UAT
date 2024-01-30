@@ -15,7 +15,7 @@ The sun was high in the sky, the dappling of clouds providing cool shade as you 
         “Alright…” You reluctantly agree.
 *page_break
 
-The forest on the edge of town was well-traveled. The footpaths are spread across the forest floor like one large spider web of interconnecting routes. The trees were far enough apart to let in plenty of sunlight, illuminating the dense patch of a mockguarden that grew on the forest floor. Having grown up a stone’s throw away from this forest, you had long heard stories about these unassuming plants that grew on the forest floor. Their benign color and simple appearance was just a natural ruse. They weren’t too common, but recently a hunter had noticed a mockguarden hidden amongst the thick grass on the forest floor. It had become town-wide news in less than an hour and all the adults were warning their children about the dangerous plant. Looking closer as you passed the deadly clusters of mushroom-like plants, you could see the pale white bone of some unfortunate animal that had been caught in their snare. 
+The forest on the edge of town was well-traveled. The footpaths are spread across the forest floor like one large spider web of interconnecting routes. The trees were far enough apart to let in plenty of sunlight, illuminating the dense patch of a [codex:codex_hl_Mockguarden]mockguarden[/codex] that grew on the forest floor. Having grown up a stone’s throw away from this forest, you had long heard stories about these unassuming plants that grew on the forest floor. Their benign color and simple appearance was just a natural ruse. They weren’t too common, but recently a hunter had noticed a mockguarden hidden amongst the thick grass on the forest floor. It had become town-wide news in less than an hour and all the adults were warning their children about the dangerous plant. Looking closer as you passed the deadly clusters of mushroom-like plants, you could see the pale white bone of some unfortunate animal that had been caught in their snare. 
 *set isMockguardenDiscovered true
 
 The two of you chased each other, playing tag and picking pretty flowers as you ventured deeper into the forest. The branch Reese found having changed hands multiple times and continuously used to tease and attack.  Eventually, you found your own branch and goaded your friend into playing swords. 
@@ -53,7 +53,7 @@ You roll your eyes in a big dramatic way. It's enough to miss what happened next
 Reese’s haughty laughter turns into a deafening scream. You look up to see your friend gone from their place of glory. A blur of brown quickly vanished behind a nearby tree. You drop the flowers in your hand and grab the branch that had been knocked from your grasp mere moments ago.  You hurry behind the tree, freezing in fright at the sight of a sickly looking beast tearing at your friend’s leg. Their wide eyes turn to you, tears streaming down their cheeks. They reach out to you, “HELP!”
 *set isJackaloidDiscovered true
 
-You charge forward, shouting and yelling with the branch held high above your head. The beast, one you recognize now as a Jackaloid, whips its ugly head to you. Its large muzzle pulls into a grin-like snarl, showing a row of gleaming sharp teeth.
+You charge forward, shouting and yelling with the branch held high above your head. The beast, one you recognize now as a [codex:codex_hl_Jackaloid]Jackaloid[/codex], whips its ugly head to you. Its large muzzle pulls into a grin-like snarl, showing a row of gleaming sharp teeth.
 
 *fake_choice
     # Leap onto the stump your friend was standing on ([color=${agility_color}]Agility++[/color])
@@ -227,7 +227,7 @@ Reese’s eyes don’t leave yours. Not for a second.
         The priest kept saying there was no hope. Later the guards, the healer, your parents and even Reese’s parents will all say there was nothing you could do. That you made the best choice you could have at that moment. 
         
         Their words won’t matter to you. All you know is loss and the stinging guilt that you hadn’t done enough. And now, you’ve lost your dearest friend.
-        
+        *set isReeseDead true
         *finish
     
     # You try to help your friend
@@ -308,7 +308,7 @@ Reese’s eyes don’t leave yours. Not for a second.
         You stared, unblinking, as the jackaloid clamped down on Reese’s neck. The priest had quickly given up on trying to get you to run and had picked you up instead. He tossed you over his shoulder and began running towards town with the type of reckless abandon only a man running for his life had. 
         
         Your eyes stayed focused on the spot you last saw your friend. You didn’t look away for a long time. 
-        
+        *set isReeseDead true
         *finish
     
 
@@ -442,7 +442,7 @@ Reese suddenly fell to the ground, exhausted. The mercenary quickly knelt down, 
         Over a month later, your father sits you down and tells you that Reese is gone. They couldn’t beat the fever. 
         
         You don’t know how you reacted. You don’t remember it. All your fears and sorrows consumed you in that moment, creating a void in your memory. When you finally came to, exhaustion wracked your entire frame and your face felt sticky with tears. It took you a moment to realize that you were curled up on your parents bed, your head on your mothers lap. You stayed there for a long time. 
-        
+        *set isReeseDead true
         *finish
 
     # You listen to the woman and run to the barracks
@@ -568,4 +568,5 @@ Reese suddenly fell to the ground, exhausted. The mercenary quickly knelt down, 
         Your mother doesn’t say anything to you. She simply lifts you by your shoulders and pulls you into a warm hug, slowly rocking you back and forth. 
         
         It doesn’t take away the sting or pain, but at least for a moment, it doesn’t hurt as bad. 
+        *set isReeseDead true
         *finish

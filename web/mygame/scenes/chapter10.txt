@@ -7,6 +7,6 @@
 *else
     *comment bug_continue defined in commands.js
     *bug_continue P2_branch: ${P2_branch} is not "merc" or "divine", defaulting to "merc"
-    *gosub_scene merc-chapter10 CH_BGN
+    *gosub_scene merc-chapter10 StartChapter10
 
 *finish

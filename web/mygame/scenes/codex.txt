@@ -1,5 +1,6 @@
 *label CodexStart
 [head]Codex[/head]
+
 The codex sections Factions, Items, Magic, and Species are unpopulated.
 *line_break
 The rest of the codex sections are underpopulated.
@@ -48,6 +49,7 @@ The rest of the codex sections are underpopulated.
 Who do you want to know about?
 *fake_choice
     #Anwen
+        *label codex_hl_Anwen
         [head]Anwen[/head]
         *image images/Anwen.webp
         Anwen is well known for her ingenuity. Being of elven heritage, she has intensive knowledge on how to care for animals and how to shoot a bow. She can be often seen taking care of the horses or being with the wild life. She is also the champion of the Wolves’ yearly archery competition. However, her true love is tinkering, having created and upgraded many of the weapons used by the Wolves.
@@ -59,6 +61,7 @@ Who do you want to know about?
         *goto Characters
 
     #Cel Storm
+        *label codex_hl_Cel_Storm
         [head]Cel Storm[/head]
         *image images/Cel_Storm.webp
         Cel Storm is a priestess of the Flames of Sigel. She joined the order at a young age when a priest named Dustin saved her from icgor-swogs. The rotted creatures overwhelmed her old town. She was one of the few survivors when the Flames of Sigil showed up. Cel managed to hide herself in an old storage shed and used the holy water her parents gave her to protect herself. Dustin was the one who found her and took her to the order’s temple.
@@ -70,6 +73,7 @@ Who do you want to know about?
         *goto Characters
 
     #Dustin
+        *label codex_hl_Dustin
         [head]Dustin[/head]
         Dustin was the priest that took Cel Storm to the Flames of Sigel’s temple. He is the one who took care of her during her childhood after her town was taken over by ichor-swogs.
         
@@ -82,6 +86,7 @@ Who do you want to know about?
         *goto Characters
 
     #Elena
+        *label codex_hl_Elena
         [head]Elena[/head]
         *image images/elena.webp
         No one is completely sure where Elena came from. The Wolves of Davenport found her during one of her travels. She used arcane powers to help them destroy the rot in a small village. After seeing everyone work together and how everyone cared for each other, she joined the Wolves. Her knowledge and observation skills became vital for scouting missions.
@@ -91,6 +96,7 @@ Who do you want to know about?
         *goto Characters
 
     #Gwyn
+        *label codex_hl_Gwyn
         [head]Gwyn[/head]
         *image images/gwyn.webp
         As a dwarven child of the Sullivan family, it is a surprise to see him with the Wolves of Davenport. He was well known for his knowledge of medicine, his parents were so proud of him that they made an announcement  when he got into the college of Farwater, the one of the best colleges in the land. It was a surprise to everyone when he got kicked out and his parents disowned him. They did not give an official reason why, but rumors say he was using unethical practices in his experiments.
@@ -100,6 +106,7 @@ Who do you want to know about?
         *goto Characters
 
     #Leediel Esheer
+        *label codex_hl_Leediel_Esheer
         [head]Leediel Esheer[/head]
         Leediel Esheer has not been seen since his escape from the Flames of Sigel when he was young. He is presumed dead.
         
@@ -112,6 +119,7 @@ Who do you want to know about?
             
 
     #Leon
+        *label codex_hl_Leon
         [head]Leon[/head]
         *image images/Leon_finally.webp
         Leon “Silvertoung” Hartley was a well known raconteur before he joined the Wolves of Davenport. Known as "The Enigmatic Raconteur," he traveled throughout Terville and told stories of the people he had encountered. Stories about brave warriors in battle or stories of powerful monsters meeting their end. Sometimes he’ll tell stories of love and heartbreak, other times he’ll tell popular stories with his own twist on them. His more recent stories have hopeful endings that are used to inspire others. However, it wasn’t always like that.
@@ -121,12 +129,14 @@ Who do you want to know about?
         *goto Characters
 
     #Glador
+        *label codex_hl_Glador
         [head]Glador[/head]
         TODO:!!!
         *line_break
         *goto Characters
 
     #Lord Odel
+        *label codex_hl_Lord_Odel
         [head]Lord Odel[/head]
         Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
         
@@ -135,6 +145,7 @@ Who do you want to know about?
         *goto Characters
 
     #Reese
+        *label codex_hl_Reese
         [head]Reese[/head]
         *image images/reese_torn_paper_finished.webp
         Looks like it was written on an old piece of paper that was torn and was added to the book. It has a drawing of a child that couldn’t be older than 7. Under the drawing there is some writing.
@@ -143,20 +154,26 @@ Who do you want to know about?
         
         Reese wants to explore more of the forest, I do not want to go. Our parents do not want us to go, they tell us it is too dangerous. That there are huge mockgardens and scary creatures out there. I do not want to see the big scary creatures, but I want to play with my friend. 
         
-        After that nothing else is legible other than the name Reese and jackaloid.
+        *if (isReeseDead)
+            After that nothing else is legible other than the name Reese and jackaloid.
         
-        Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
+            Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
         
-        *if CH2_followed_voice
+            *if CH2_followed_voice
             
-            When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
+                When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
             
+            *else
+                When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
+        
         *else
-            When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
+            That is all that's written on the paper…
+            
         *line_break
         *goto Characters
 
     #Rip Daring
+        *label codex_hl_Rip_Daring
         [head]Rip Daring[/head]
         *image images/mercenary_transparent_background.webp
         Rip Daring, known as "The Fearless Blade," is a renowned mercenary and key member of The Wolves of Davenport, a legendary band of mercenaries. Standing at six feet tall with a muscular build, Rip's rugged countenance and piercing green eyes reflect his unwavering determination and prowess on the battlefield.
@@ -169,6 +186,7 @@ Who do you want to know about?
         *goto Characters
 
     #Sigel
+        *label codex_hl_Sigel
         [head]Sigel[/head]
         *image images/Sigel_-_touch_up.webp
         TODO:!!!
@@ -176,6 +194,7 @@ Who do you want to know about?
         *goto Characters
 
     #Skadon
+        *label codex_hl_Skadon
         [head]Skadon[/head]
         *image images/Skadon.webp
         Skadon, known as "The Father of Oblivion," emerged from the primordial void, a sentient force embodying darkness and the void itself. As the clash between Skadon and Sigel, the sun god, raged, the chaotic magic within creation stirred. Tera, the goddess of beauty, fertility, and "Mother Earth," manifested as the physical world of Teren. In another realm, Galdor, the embodiment of magic's will, brought order to the once chaotic forces.
@@ -187,6 +206,7 @@ Who do you want to know about?
         *goto Characters
 
     #Tera
+        *label codex_hl_Tera
         [head]Tera[/head]
         *image images/tera_copyfin.webp
         Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
@@ -225,7 +245,7 @@ Which Faction?
 
     #Wolves of Davenport
         [head]Wolves of Davenport[/head]
-        *image inages/WolvesBook.webp
+        *image images/WolvesBook.webp
         *comment Image does not work
         The Wolves of Davenport are a legendary band of mercenaries whose name strikes fear into the hearts of their enemies across the realm of Teren. Led by the seasoned warrior Alistair Blackthorn, this renowned group embodies the epitome of skill, camaraderie, and unwavering determination. With each member possessing unique talents, they form a formidable force that stands as a bulwark against the encroaching darkness. They are a diverse group, drawing individuals from all walks of life, each bringing their own set of exceptional skills to the table.
         
@@ -292,6 +312,7 @@ What form of magic do you want to know about?
 What monsters do you want to learn about?
 *fake_choice
     *selectable_if (isDirewolfDiscovered) #Direwolf
+        *label codex_hl_Direwolf
         [head]Direwolf[/head]
         *image images/Dire_Wolf_adult.webp
         The Direwolf, a creature of awe-inspiring stature and intelligence, reigns as a formidable presence within the realms it calls home. Far surpassing the mere size of their smaller kin, these majestic beings exhibit a level of intelligence that sets them apart from regular wolves. Scholars and druids alike attest to their heightened cognitive abilities, recognizing them as remarkable beings in the animal kingdom.
@@ -308,6 +329,7 @@ What monsters do you want to learn about?
         *line_break
         *goto Monsters
     *selectable_if (isIchorSwogDiscovered) #Ichor Swog
+        *label codex_hl_Ichor_Swog
         [head]Ichor-Swog[/head]
         *image images/Ichor-Swog.webp
         
@@ -320,6 +342,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isJackaloidDiscovered) #Jackaloid
+        *label codex_hl_Jackaloid
         [head]Jackaloids[/head]
         *image images/Jackaloid.webp
         The Manned Jackaloids are small, werewolf-like creatures that inhabit remote regions far from civilized settlements. Standing between 3 and a half to just under 5 feet tall, they operate in packs, using their presence to frighten away other predators from potential prey and scavenging off decaying carcasses. Despite their frail and lesion-ridden appearance, these creatures exhibit surprising resilience.  
@@ -333,6 +356,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isMockguardenDiscovered) #Mockguarden
+        *label codex_hl_Mockguarden
         [head]Mockguarden[/head]
         *image images/Mockgarden_Closeup.webp
         The Mockguarden, a perilous and cunning predator, is a formidable form of predatory plant that lurks within the depths of untamed forests. With its ability to adapt and camouflage, it poses a significant threat to unsuspecting creatures that venture too close. While its visible parts may change and blend with the surroundings, it is the subterranean mycelium network that truly defines this enigmatic entity.
@@ -349,6 +373,7 @@ What monsters do you want to learn about?
         *line_break
         *goto Monsters
     *selectable_if (isMogfishDiscovered) #Mogfish
+        *label codex_hl_Mogfish
         [head]Mogfish[/head]
         *image images/Mogfish.webp
         Mogfish are dangerous creatures that live in very muddy areas and are big enough to eat an elf. They have dorsal fins along their back and the some of the species have been seen with a long tether on their head that has a glowing orb at the end of it. This orb can mimic the light of torches, making people think there is a person deep in the forest or there is a town in that direction. However, there have been sightings of mogfish without this tether. It is theorized that these are the males.
@@ -360,6 +385,7 @@ What monsters do you want to learn about?
         *goto Monsters
 
     *selectable_if (isWOWDiscovered) #Will-O-Wisps
+        *label codex_hl_Will_O_Wisps
         [head]Will-O-Wisps[/head]
         *image images/Mogfish.webp
         Will-o-wisps are glowing orbs, usually seen floating above the ground in swamps. Their glow  can mimic a torch light, so many people mistake it as a person or a nearby town. They are mischievous little creatures and will lead their victims into trouble. Off cliffs, into tunnels, it is even said that they help the mogfish get food. When they are almost caught or have gotten their victim where they wanted them, they will stop glowing. They will turn basically invisible and watch what happens to their victims. It is rumored that they feed off of the misery of their victims.
@@ -379,6 +405,7 @@ What monsters do you want to learn about?
 Where do you want to learn about?
 *fake_choice
     #Davenport
+        *label codex_hl_Davenport
         [head]Davenport[/head]
         Davenport, a city that stands as a testament to the ingenuity and resilience of humanity, is a sprawling metropolis nestled within the embrace of the Broken Fields. With its roots reaching back through the annals of history, this cosmopolitan hub has become a beacon of civilization amid the untamed wilderness of the world. Its strategic position, nestled against the flowing river that gracefully winds its way to the vast seas beyond, has transformed Davenport into a thriving center of trade and cultural exchange.
         
@@ -395,19 +422,22 @@ Where do you want to learn about?
         *goto Places
 
     #Elvenport
+        *label codex_hl_Elvenport
         [head]Elvenport[/head]
         TODO:!!!
         *line_break
         *goto Places
 
     #Krigania
+        *label codex_hl_Krigania
         [head]Krigania[/head]
         TODO:!!!
         *line_break
         *goto Places
 
     #Teville (City)
-        )[head]Teville (City)[/head]
+        *label codex_hl_Teville_City
+        [head]Teville (City)[/head]
         The capital city Teville is located by the Ironmount mountains on the west side of the country Teville. The capital is broken up into ten different districts. Each district is split up depending on the wealth of the people living in it. With four slums and a castle amongst the city, there is something for everyone.
         
         Starting from the top is the castle. In the castle lives the King of the country. They are the ones running and taking care of their county. Not very many among the common populace have seen the inside, but rumor has it an entire war-room is dedicated to keeping an eye on the Rot within the nation’s borders.. Next is Lowrock. This is where most of the middle-class live and where The Beggar’s Tavern is located, a famous pitstop for many mercenaries and adventuring parties. Most other shops and taverns can also be found in this district. 
@@ -423,12 +453,14 @@ Where do you want to learn about?
         *goto Places
 
     #Teville (Country)
+        *label codex_hl_Teville_Country
         [head]Teville (Country)[/head]
         TODO:!!!
         *line_break
         *goto Places
 
     #Summerlight
+        *label codex_hl_Summerlight
         [head]Summerlight[/head]
         *image images/Summerlight_finished.webp
         Summerlight is a small farming village east of Davenport. It is placed right at an intersection between Frountierwood, Cavecross, and the road to Davenport. This makes it a popular location for travelers to stay during their travels. Surprisingly, not a lot happens in this small town. The most exciting thing is when the traveling dwarven bakers come to visit.
