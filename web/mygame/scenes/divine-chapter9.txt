@@ -98,6 +98,7 @@ You then search for your allies,
                 
                 However, no matter how many creatures you cut down, some of the miners got hit by one of them. By the time you made it to the camp, only half of them made it.
         *set Riva 1
+        *set total total + 1
         *goto CH9d_fight
     *selectable_if (Winfred = 0) #Winfred
         
@@ -123,6 +124,7 @@ You then search for your allies,
                 “Woah there! That was close! I think I’ve got it from here, how about you go help one of the others.” Winfred tells you before returning to his fight.
 
         *set Winfred 1
+        *set total total + 1
         *goto CH9d_fight
     *selectable_if (Ivy = 0) #Ivy
         
@@ -183,6 +185,7 @@ You then search for your allies,
                 “Come on, we have other people to help. There is no time to mourn.” She explains before walking back towards the medical tent.
         *page_break
         *set Ivy 1
+        *set total total + 1
         *goto CH9d_fight
     *selectable_if (Berthold = 0) #Berthold
         
@@ -233,6 +236,7 @@ You then search for your allies,
         
         *page_break
         *set Berthold 1
+        *set total total + 1
         *goto CH9d_fight
 
     *selectable_if (Cel = 0) #Cel
@@ -259,10 +263,11 @@ You then search for your allies,
                 You are trying to think up a plan when they get pushed away. You look over and you see Cel using her divine powers to keep them away from you. You use this moment to finish off the creatures.
                 
         *page_break
-        *set Riva 1
+        *set Cel 1
+        *set total total + 1
         *goto CH9d_fight
             *comment total needs to be incremented by +1 for each success with each character 
-    *selectable_if (total = 5) #continue
+    *selectable_if (total = 5) #Continue
         You look across the battlefield, there are bodies scattered about of all different kinds. Elves, Dwarves, Humans… However, if you look up you can also see unlikely allies working together. The local mercenary group, the Wolves of Davenport if you recall correctly, is working with the priests to stop the spread of the rot.
 
 That is, until you spot three figures in the distance, a mercenary, a priest, and a small child. You don’t recognize the mercenary, but the priest looks familiar. Like one of the priests during the temple meeting.
