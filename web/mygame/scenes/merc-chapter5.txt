@@ -12,7 +12,7 @@ Both you and the mercenary sneak around the alleys until he stops at a door. It 
 
 The room is barely lit up with only the moonlight showing through a broken window. You can make out a table, a couple of chairs, and some barrels lining the walls. One of the chairs is on the floor, missing a leg, and the table looks rough with some planks broken. It doesn’t look like anyone lived here for years. You can see the mercenary standing over by the table.
 
-“We can hole up in here for the night and we’ll leave as soon as it is morning. I don’t think I ever got your name. My name is Rip, wish this was under better circumstances, but in my line of work it rarely is.” 
+“We can hole up in here for the night and we’ll leave as soon as it is morning. I don’t think I ever got your name. My name is [codex:codex_hl_Rip_Daring]Rip[/codex], wish this was under better circumstances, but in my line of work it rarely is.” 
 
 You respond with,
 
@@ -137,13 +137,13 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
 
 *page_break
 
-Keeping an eye on the ground, you spot some mockgardens on the ground. You avoid them, remembering running through the forest and learning where all of the mockgardens hide. Lost in thought you didn’t notice when Rip stopped and ran into his back.
+Keeping an eye on the ground, you spot some mockguardens on the ground. You avoid them, remembering running through the forest and learning where all of the mockguardens hide. Lost in thought you didn’t notice when Rip stopped and ran into his back.
 
-“We’re here, welcome to the Wolves of Davenport.” Rip steps out of the way so you can see the camp.
+“We’re here, welcome to the [codex:codex_hl_WoD]Wolves of Davenport[/codex].” Rip steps out of the way so you can see the camp.
 
 There are three people by the fire, one of them is making wide gestures while he talks while the other two are listening. Another person is petting a horse. One of the other horses bump up against their back. 
 
-While the two of you are standing at the edge of camp, a giant wolf comes running. It is bigger than any other wolf you have seen before, it must be a direwolf. It is running towards both you and Rip.
+While the two of you are standing at the edge of camp, a giant wolf comes running. It is bigger than any other wolf you have seen before, it must be a [codex:codex_hl_Direwolf]direwolf[/codex]. It is running towards both you and Rip.
 
 You take a couple of steps back, but notice that Rip hasn’t moved at all. Actually, no one seems concerned about the direwolf. The people sitting at the fire stood up, but no one was going after their weapons.
 *page_break
@@ -158,7 +158,7 @@ You take a couple of steps back, but notice that Rip hasn’t moved at all. Actu
 
 *page_break
 
-“The crazy one over there is Leon. Stay on his good side and he’ll tell you some of the best stories. Get on his bad side and no one will find your body. The girl beside him is Elena. She knows the most about the creatures we find. Ask her any question about a creature and she may have an answer.  The dwarf next to her is Gwyn. He is the local medical expert, come to him with most injuries or illnesses and he’ll find something that helps. Lastly, the elf by the horse is Anwen. She is our weapons expert. Need something fixed and she’ll get it done.” Rip introduces the group.
+“The crazy one over there is [codex:codex_hl_Leon]Leon[/codex]. Stay on his good side and he’ll tell you some of the best stories. Get on his bad side and no one will find your body. The girl beside him is [codex:codex_hl_Elena]Elena[/codex]. She knows the most about the creatures we find. Ask her any question about a creature and she may have an answer.  The dwarf next to her is [codex:codex_hl_Gwyn]Gwyn[/codex]. He is the local medical expert, come to him with most injuries or illnesses and he’ll find something that helps. Lastly, the elf by the horse is [codex:codex_hl_Anwen]Anwen[/codex]. She is our weapons expert. Need something fixed and she’ll get it done.” Rip introduces the group.
 
 “Everyone, this is ${name}, they will be staying with us for the foreseeable future.” Rip puts a hand on your shoulder. You give an awkward wave.
 
@@ -237,13 +237,13 @@ Leon looks at you expectantly and you glance over everyone at the fire.
 
         “The Wolves saved me from a group of bandits. There, that’s my story.” Anwen huffed out.
 
-        “That isn’t much of a story, what exciting thing happened before or maybe a journey you took with us is worthy of a story” Leon pouts.
+        “That isn’t much of a story, an exciting thing that happened before or maybe a journey you took with us is worthy of a story” Leon pouts.
 
         “… Before I joined the wolves I was the local tinker. If someone broke their weapon or something was not working properly, they came to me. I fixed it as well as I could and continued on with life. That wasn’t the life for me, so I set out. I left my town and became a traveling craftswoman. I visited towns during my travels and fixed things for food.” Anwen looked into the fire.
 
         “That isn’t to say I didn’t have my hardships. Many didn’t trust an elf to fix their stuff, but the ones who did got their equipment back in better condition than they first got it. If they allowed, I would improve the design. From what I’ve heard, some of my inventions helped many out of bad situations.
 
-    # “How did Rip become the leader?” (End story time)
+    # “How did Rip become the leader?” (End Story Time)
         *goto MC5StoryLoopEnd
     
 *goto MC5StoryLoop
@@ -255,7 +255,7 @@ Rip gets off of the tree and walks over the fire. Tyr not leaving his side.
 
 “What story is it this time?” Rip asks when he gets to the fire. He is standing beside Gwyn, looking up at Leon.
 
-“Your’s, you get to tell your own story.” Leon jumps off of the log and goes to stand by Elena. “Go on, stand on the log!”
+“Yours, you get to tell your own story.” Leon jumps off of the log and goes to stand by Elena. “Go on, stand on the log!”
 
 Rip shakes his head, “Why? I’ve told these stories a million times too many.”
 
@@ -317,7 +317,7 @@ How do you tell the story?
 
     “Life does that sometimes and you end up having to make do with what you’ve got. Dinner is almost ready, feel free to come join us.” Elena takes one last look at you before leaving. 
 
-*elseif mc5_path = "male"
+*elseif mc5_path = "Male"
     *set P2M_roommate "Gwyn"
     “Come on, I’ll take you to your tent. You’ll be sharing with Gwyn.” Rip waits a second before walking towards the tents.
 
@@ -409,7 +409,7 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
 
     “You don’t have to worry about it, I’ve brought my own book.” You smile at Elena before eating your food.
     
-    After eating you return to your tent and read up on mogfish.
+    After eating you return to your tent and read up on [codex:codex_hl_Mogfish]mogfish[/codex].
 *else
     *comment If player does not have book
 
@@ -417,7 +417,7 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
 
     After you are done eating Elena hands you the book and you return to your tent. You read about Trivell and Davenport.
 
-A few days later, (ROOMATE) wakes you up and you both go to the campfire.
+A few days later, ${P2M_roommate} wakes you up and you both go to the campfire.
 
 “Okay, we need to get out there before the mogfish move. Is everyone ready?” Rip asks at the campfire. Everyone nods their head in agreement.
 
@@ -425,7 +425,7 @@ A few days later, (ROOMATE) wakes you up and you both go to the campfire.
 
 “Yes sir.” Gwyn nods his head and goes to a portable table and takes out some supplies. It looks like bandages and elixirs.
 
-“(PLAYER), you stick with Elena in the back. Leon, you’re with me. Anwen, keep an eye on everyone, make sure nothing happens.”
+“${name}, you stick with Elena in the back. Leon, you’re with me. Anwen, keep an eye on everyone, make sure nothing happens.”
 
 ‘Yes sir!”
 *page_break
@@ -444,12 +444,12 @@ Before you know it, Leon’s stick was sucked into the ground. Leon was almost s
 
 “Found one!” Shouted Leon with a sinister grin.
 
-The mogfish slowly pulled itself up from the ground. It is bigger than you expected, big enough to eat a dwarf or a small human. You knew the creature was going to be terrifying, but seeing one up close. It was like nothing you have seen before.
+The [codex:codex_hl_Mogfish]mogfish[/codex] slowly pulled itself up from the ground. It is bigger than you expected, big enough to eat a dwarf or a small human. You knew the creature was going to be terrifying, but seeing one up close. It was like nothing you have seen before.
 *page_break
 
 *image images/Mogfish.webp
 
-Rip and Leon brought out their swords and Anwen grabbed her bow. Elena stayed back, but kept an eye on them. You move towards a tree to lean your stick against a tree, when another mogfish tries to eat it. Jumping back, you let go of the stick and take out your dagger. 
+Rip and Leon brought out their swords and Anwen grabbed her bow. Elena stayed back, but kept an eye on them. You move towards a tree to lean your stick against it, when another mogfish tries to eat it. Jumping back, you let go of the stick and take out your dagger. 
 
 The creature looks worse up close, with a huge mouth and emotionless eyes. This creature is nothing like what you had expected.
 
@@ -501,11 +501,11 @@ You look over at Elena and turn away. Seeing her laying in a cot reminds you of 
 *label MC5EndBranch2
 “Okay, then you’ll help watch the camp.” Rip explains.
 
-A few days later, (ROOMATE) wakes you up and you both go to the campfire.
+A few days later, ${P2M_roommate} wakes you up and you both go to the campfire.
 
 “Okay, we need to get out there before the mogfish move. Is everyone ready?” Rip asks at the campfire. Everyone nods their head in agreement.
 
-“Okay, let’s head out.” Rip walks over to the sticks and starts handing them out to everyone except Gwyn. “Gwyn, it is your turn to watch the camp. Keep an eye out for anything and be ready in case something happens. (PLAYER), you can help him out with any chores that needs to be done.”
+“Okay, let’s head out.” Rip walks over to the sticks and starts handing them out to everyone except Gwyn. “Gwyn, it is your turn to watch the camp. Keep an eye out for anything and be ready in case something happens. ${name}, you can help him out with any chores that needs to be done.”
 
 With that, the group grabs their stick and heads out. You turn to Gwyn and see him standing by a portable table.
 
@@ -514,13 +514,13 @@ With that, the group grabs their stick and heads out. You turn to Gwyn and see h
 
 You walk over to the table and see bandages and elixirs on it. You can’t read what is on the elixir, but based on everything else on the table you think it’s for healing.
 
-“This is a health potion, it helps speed up the recovery of any injury the person may have. I’m getting them ready in case someone gets hurt>” Gwyn explained while holding up the bottle.
+“This is a health potion, it helps speed up the recovery of any injury the person may have. I’m getting them ready in case someone gets hurt.” Gwyn explained while holding up the bottle.
 
 “How often does that happen?” You ask, watching the red swirls in the bottle.
 
 “Far more often than it should… They are a clumsy group of fellas and always seem to get themselves into trouble.” Gwyn sighs as he puts down the bottle.
 
-“But that’s nothing for us to worry about right now. It’ll be a long while before they get back. For now, let’s get some work done. (PLAYER), could you get the firewood?”  Gwyn asks you.
+“But that’s nothing for us to worry about right now. It’ll be a long while before they get back. For now, let’s get some work done. ${name}, could you get the firewood?”  Gwyn asks you.
 
 You grab the firewood and help Gwyn finish up some chores. Afterwards the two of you patrol the outskirts of the camp.
 *page_break
@@ -540,7 +540,7 @@ You hum in response and throw another, bigger stone, this stone hits a small tre
 
 *image images/Mogfish.webp
 
-You turn around and see what you assume is a mogfish climbing out of the ground. It is much bigger than you expected, bigger than Gwyn.
+You turn around and see what you assume is a [codex:codex_hl_Mogfish]mogfish[/codex] climbing out of the ground. It is much bigger than you expected, bigger than Gwyn.
 
 The two of you run towards camp when you trip. While Gwyn is helping you get up, you hear a loud THUMP
 

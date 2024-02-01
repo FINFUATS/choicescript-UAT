@@ -227,6 +227,7 @@ Who do you want to know about?
 Which Faction?
 *fake_choice
     #Flames of Sigel
+        *label codex_hl_FoS
         [head]Flames of Sigel[/head]
         *image images/BOoook_copy_done.webp
         The Flames of Sigel is a band of priests and priestesses, joined together as devout followers of Sigel and the Holy Order. Using their skills in battle and unwavering dedication, they fight against the encroaching rot and strive to protect the people of Teren from all the beasts and terrors lurking in the dark. This order is currently overseen by the Zealot, a brave man who is adorned in armor that shines like the morning sun. With his stalwart presence and commanding voice, many have been swayed into joining the Flames just for a chance to be acknowledged by this legendary man.   
@@ -244,6 +245,7 @@ Which Faction?
         *goto Factions
 
     #Wolves of Davenport
+        *label codex_hl_WoD
         [head]Wolves of Davenport[/head]
         *image images/WolvesBook.webp
         *comment Image does not work

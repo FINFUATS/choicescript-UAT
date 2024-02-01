@@ -373,7 +373,7 @@ Amongst the crowd you hear a shout and turn around. You can see [codex:codex_hl_
 
 After a hearty dinner with Mom, you head to bed with a book. It’s a journal of everything you have found. You have a section for monsters, locations, people and items, each categorized with their own bookmark.
 
-You open your book and add in a new creature you learned about today. The mockguarden. While you and Reese were running around town, you overheard some travelers talking about it.
+While you and Reese were running around town, you overheard some travelers talking about a monster.
 
 “I’d be careful walking down the main road to Lindow if I were you. Heard that it’s been overrun by mockgardens.” One merchant said to another. “Take the side path between Stormdenn and the river, it’s a longer path, but safer.”
 

@@ -1,21 +1,21 @@
 *label StartChapter6
 [head]Chapter 6: First Mission[/head]
 
-The tent is warm when ${P2M_ROOMMATE} shakes you awake. 
+The tent is warm when ${P2M_roommate} shakes you awake. 
 
-“C’mon. Time to pack up.” You look to see ${P2M_ROOMMATE} is nearly done with packing away all their gear. You rub the sleep from your eyes and begin rolling up your bedroll.
+“C’mon. Time to pack up.” You look to see ${P2M_roommate} is nearly done with packing away all their gear. You rub the sleep from your eyes and begin rolling up your bedroll.
 
 *page_break
 
 Outside is abuzz as the rest of the Wolves of Davenport are busy taking down tents and tarps, smothering the lingering hot coals from last night's fire and filling canteens with water from the nearby stream. Everyone seems to work together smoothly with little to no direction. It’s clear just from watching that this group has been traveling together a long time. 
 
-You help ${P2M_ROOMMATE} take down the tent, only getting tangled in the ropes once, and then are tasked with filling up both your canteens. On your way back, you spot Rip securing the last of his gear on the back of his horse. 
+You help ${P2M_roommate} take down the tent, only getting tangled in the ropes once, and then are tasked with filling up both your canteens. On your way back, you spot Rip securing the last of his gear on the back of his horse. 
 
 “Good m-morning.” You just manage to hold back a yawn when you speak. 
 
-“Mornin’. You sleep well? ${P2M_ROOMMATE} didn’t give you a hard time or anything?”
+“Mornin’. You sleep well? ${P2M_roommate} didn’t give you a hard time or anything?”
 
-*if P2M_roommate = "Gywn"
+*if P2M_roommate = "Gwyn"
     *comment If your roommate is GYWN
     “Gywn snores like a bear with congestion on the best nights. Woke up once to him snoring and thought we were in the middle of a thunderstorm once.” Rip gives an amused smile.
 *else
@@ -54,7 +54,7 @@ You arrive in the city at dusk, your stomach grumbling for something besides roa
 
 Stormdeen is bigger than your hometown and so much more crowded. Being right outside Davenport, there are many who stop at Stormdeen on their way to the big city. Merchants with carts filled with products, families on the move for better homes, and so many swords for hire looking for a new client.  
 
-Rip navigates the stress with ease. In fact, his stalwart presence seems to part the crowds in front of them.
+Rip navigates the streets with ease. In fact, his stalwart presence seems to part the crowds in front of them.
 
 You end up inside a tavern a little ways off the main road. Inside it’s dimly lit with a long bar filled with patrons and a group of musicians in the corner. Tables and chairs are scattered everywhere and loud, lively conversation almost drowns out the music. Rip motions towards a large round table near the back of the tavern. There are three people sitting there, but on the table there are at least six mugs. Rip walks over and you all follow. 
 
@@ -118,6 +118,26 @@ Leon asked if you have a weapon.
     
     “It’s a little old, but well kept. It’ll protect you where we’re going.” 
 
+After ensuring you have a weapon to protect yourself, Leon outfits you with some protection: a very worn silk shirt to impede piercing weapons and a leather tunic to go over it to protect from being slashed. You also receive a pair of arm bracers that are a little big and a cloak with a wide hood. Everything is stained and worn from use, likely hand-me-downs from past members of the Wolves. 
+    
+“That should be good to get you started. A little protection can go a long way,” Leon grins. You thank him for his help. 
+
+*page_break
+
+The next morning, Rip leads the group back to the stables. There, Viper is waiting with four other people, two of whom you recognize from last night. In the morning light, you realize that these two are nearly identical twin elves. They each wear their hair in long ponytails and seem to constantly be on alert. There is a dwarven woman with scruff on her chin who looks like she could fall asleep at any moment, and a young human man with a large scar on the side of his head. You quickly notice that part of his ear is missing as well. 
+
+Viper and her crew waste no time when they see you coming. They guide their horses out and wait for you to follow. 
+
+The journey to Lindow will take about a week on horseback. You're curious about Viper’s group, but they stick close to one another. If anything, they seem to almost sneer at you when you get too close. At first, you think they’re giving all of Rip’s group this same look. However, it becomes clear that their attention is solely focused on you. 
+
+*page_break
+
+The dwarf woman yells at you when you don’t cut firewood up to her standard. The twin elves make teasing comments every time you’re sent to fetch water, joking that it's the only job you're capable of doing. Viper herself doesn’t even spare you a glance, even when you're right in front of her. The only one who shows you kindness, and the only one who actually introduces himself, is the human man, Felix. 
+
+“I joined up a few years back, so I’m still the new kid in the group.” Felix often guides his horse next to yours so you can chat during the day. “They all seem really intimidating, but I trust them all with my life, and they trust me. It’s what being a part of the Wolves means.”
+
+You're still so new to this whole world. 
+
 [b]Maybe you can use this time to ask Felix some questions.[/b]
 
 *label CH6M_nameloop_start
@@ -127,7 +147,7 @@ Leon asked if you have a weapon.
         
         “The dwarven woman is Thebeda. She’s pretty sweet once you get to know her, but damn it takes a while for her to warm up to you. I’m pretty sure she only really started liking me after my first year with the group. “
         
-        “You know Viper, of course. Any idea you might have of her being a hard ass, straight forward woman is spot on. She's tough as hell, but a great leader. I don’t think any of us would say a bad word about her after everything we’ve been through.” 
+        “You know Viper, of course. Any idea you might have of her being a hard-ass, straight forward woman is spot on. She's tough as hell, but a great leader. I don’t think any of us would say a bad word about her after everything we’ve been through.” 
     # Why did you join the Wolves of Davenport?
         “Me? I joined up because my uncle was a member. He died helping a family out of a burning building when I was about eleven. I always thought the Wolves of Davenport were better than the heroes in stories.”
         
@@ -138,7 +158,7 @@ Leon asked if you have a weapon.
         A somber look overcomes Felix. He pauses before he speaks. 
         
         “Once. I wasn’t ready then. Now I am.” 
-    # Ask nothing.
+    # Ask nothing. (End Conversation)
         *goto CH6M_nameloop_end
 *goto CH6M_nameloop_start
 *label CH6M_nameloop_end
@@ -183,7 +203,7 @@ When you arrive at Lindow, your group is immediately met with a pair of stressed
 
 The guards immediately look relieved.
 
-“Thank Sigel, we need all the help we can get. It’s been spreading faster than we anticipated. We’ve sent word for help from the Flames of Sigel, but with how fast it’s moving, they probably won’t get here in time.” 
+“Thank Sigel, we need all the help we can get. It’s been spreading faster than we anticipated. We’ve sent word for help from the [codex:codex_hl_FoS]Flames of Sigel[/codex], but with how fast it’s moving, they probably won’t get here in time.” 
 *page_break
 
 Viper speaks up this time. “Our group has two arcane mages. They can hold it back until the priests arrive.” She looks over to the twins, Ailer and Edea. You had no idea that they were trained in the arcane.
