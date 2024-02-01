@@ -60,6 +60,15 @@ Who do you want to know about?
         *line_break
         *goto Characters
 
+    #Berthold Klepper
+        *label codex_hl_Berthold
+        [head]Berthold Klepper[/head]
+        Berthold is one of the oldest people at the Davenport Temple. No one knows his life before he joined, being older than most of the people there. Not even Cel knows his backstory, despite growing up at the temple.
+
+        Berthold can be often seen meditating. He has a room at the temple he uses to host meditation lessons. Teaching how meditation can bring you closer to Sigel and help you prepare to fight the rot.
+        *line_break
+        *goto Characters
+
     #Cel Storm
         *label codex_hl_Cel_Storm
         [head]Cel Storm[/head]
@@ -95,6 +104,13 @@ Who do you want to know about?
         *line_break
         *goto Characters
 
+    #Glador
+        *label codex_hl_Glador
+        [head]Glador[/head]
+        TODO:!!!
+        *line_break
+        *goto Characters
+
     #Gwyn
         *label codex_hl_Gwyn
         [head]Gwyn[/head]
@@ -102,6 +118,17 @@ Who do you want to know about?
         As a dwarven child of the Sullivan family, it is a surprise to see him with the Wolves of Davenport. He was well known for his knowledge of medicine, his parents were so proud of him that they made an announcement  when he got into the college of Farwater, the one of the best colleges in the land. It was a surprise to everyone when he got kicked out and his parents disowned him. They did not give an official reason why, but rumors say he was using unethical practices in his experiments.
         
         This did not deter him and he became a traveling medic, helping those who needed it. Although he never changed in his ways, he knew how to cure poisons that many gave up on. When he ran into the Wolves, one of them was injured. They got hit by a poisoned dart from a particularly crafty brigand. Gwyn managed to cure them and the Wolves asked him to join. Gwyn was reluctant at first, but after discovering he was free to run his experiments, he willingly joined. He became the poisons expert along with one of the top healers. Sharing his knowledge and having the freedom to experiment as he feels fit helped him grow and save many lives.
+        *line_break
+        *goto Characters
+
+    #Ivy Siward
+        *label codex_hl_Ivy
+        [head]Ivy Siward[/head]
+        Not a lot is known about Ivy Siward before she joined the Davenport Temple. She is very secretive of her past, all that is known is that she was found on the streets of Davenport.
+
+        If you ask Ivy her backstory, she'll spin a tale of how she was kidnapped and forced to stay here followed by lots of laughter. Any follow-up questions will also have the response of laughter.
+
+        If you ask Cel, she'd tell you how Ivy was found in the streets begging for food. Cel won't explain any further and Ivy will say that's not what really happened, but won't elaborate.
         *line_break
         *goto Characters
 
@@ -115,8 +142,7 @@ Who do you want to know about?
             
             He got the scar across his face from a botched assassination in his early years and now wears it with pride to show how no one can stop him.  His last hit was lord Odel, a politician he had been hunting down for years and he finally got an opening. However, he was betrayed and had to pin the murder on an unsuspecting local. Now he is hunting down his betrayer to prove that no one messes with him and lives.
         *line_break
-        *goto Characters
-            
+        *goto Characters        
 
     #Leon
         *label codex_hl_Leon
@@ -125,13 +151,6 @@ Who do you want to know about?
         Leon “Silvertoung” Hartley was a well known raconteur before he joined the Wolves of Davenport. Known as "The Enigmatic Raconteur," he traveled throughout Terville and told stories of the people he had encountered. Stories about brave warriors in battle or stories of powerful monsters meeting their end. Sometimes he’ll tell stories of love and heartbreak, other times he’ll tell popular stories with his own twist on them. His more recent stories have hopeful endings that are used to inspire others. However, it wasn’t always like that.
         
         It is unknown how he got the skills he has. Leon is one of the most dangerous members of the Wolves. His skills with the blade is unmatched even with the most skilled swordsman. He seems to know how to sneak himself into any location, no matter how well guarded. Whenever his background is brought up he will either talk about the nomadic storytellers who raised him or completely deflect the question all together. Only a select few know his full story.
-        *line_break
-        *goto Characters
-
-    #Glador
-        *label codex_hl_Glador
-        [head]Glador[/head]
-        TODO:!!!
         *line_break
         *goto Characters
 
@@ -185,6 +204,15 @@ Who do you want to know about?
         *line_break
         *goto Characters
 
+    #Riva Skorropax
+        *label codex_hl_Riva
+        [head]Riva Skorropax[/head]
+        Riva Skorropax is the newest member in the Davenport temple. She is an elven druid from a nearby forest. She is known for being a little clumsy and is known for injuring herself. However, that is not the most common reason to see her in the infirmary. She will take injured animals to the infirmary and watch over them until they have healed.
+
+        No one besides Cel and Ivy knows her backstory. Riva was a regular before she joined. When asked, Riva will stutter and leave. Cel will just shake her head and tell you that some things are better left in the past.
+        *line_break
+        *goto Characters
+
     #Sigel
         *label codex_hl_Sigel
         [head]Sigel[/head]
@@ -212,7 +240,16 @@ Who do you want to know about?
         Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
         *line_break
         *goto Characters
+    
+    #Winfred Cartwright
+        *label codex_hl_Winfred
+        [head]Winfred Cartwright[/head]
+        Winfred was a porter before he joined the Davenport Temple.
+        *line_break
+        *goto Characters
+
     #${puppy_name}
+        *label codex_hl_puppy
         [head]${puppy_name}[/head]
         *image images/Direwolf_puppy_copy.webp
         

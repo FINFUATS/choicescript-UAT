@@ -1,5 +1,5 @@
 *label StartChapter8
-[head]Chapter: Downtime[/head]
+[head]Chapter 8: Shadows of the Dire[/head]
 
 As the days grew colder, an unsettling silence descended upon the once-thriving town south of Davenport, Bexley. There have been rumors spreading of a sinister presence lurking in the nearby forests. Tales of howling in the dead of night and strange sightings haunted the townsfolk. As fear gripped their hearts, the Wolves of Davenport mercenary group receives a distress call.
 
@@ -33,15 +33,19 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
 
 *fake_choice
     # The Bold Charge [color=${brawn_color}](Strength)[/color]
-        *set GP_arg0 Strength
-        *set GP_arg1 "challenging"
-        *gosub_scene general AttributeSkillCheck
-        *temp CH8M_Strength_bool returnData
         Your heart pounds with adrenaline as you decide to lead a fearless charge against the wolf packs. Using your strength, you barrel forward, wielding your weapon with precision and power. 
 
         The goal is to engage the Direwolves head-on, disrupting their attacks and creating an opportunity for your companions to strike. This approach requires raw strength and unwavering bravery to face the ferocity of the wolves head-on. 
 
         With a surge of bravery, you choose the Bold Charge. Your heart is pounding as you prepare to lead the charge against the wolf packs. You grip the weapon tightly, channeling all of your strength and determination into a single decisive move.
+
+        *page_break
+
+        *set GP_arg0 Strength
+        *set GP_arg1 "challenging"
+        *gosub_scene general AttributeSkillCheck
+        *temp CH8M_Strength_bool returnData
+        [head]Strength Check @{CH8M_Strength_bool Success|Failure}![/head]
 
         *if CH8M_Strength_bool
             Your muscles tense as you sprint forward, powerful strides closing the distance between you and the enemy. With a mighty roar, you crash into the midst of the wolf packs, your weapon swings with precision and force.
@@ -61,15 +65,19 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
             *set isFollowing true
 
     # The Agile Flanking Maneuver [color=${agility_color}](Reaction Speed)[/color]
-        *set GP_arg0 ReactionSpeed
-        *set GP_arg1 "challenging"
-        *gosub_scene general AttributeSkillCheck
-        *temp CH8M_ReactionSpeed_bool returnData
         Recognizing the need for speed and agility, you choose to navigate the chaotic battlefield with nimble footwork. You slip through the shadows, dodging wolf attacks and positioning yourself strategically behind the wolves lines.
 
         With swift and precise strikes, you target the vulnerable flanks of the wolf packs, exploiting your speed and reflexes to unleash a series of devastating blows. 
 
         With agility and quick thinking in mind, you choose the Agility Flanking maneuver. Relying on your nimble footwork and swift reflexes to navigate the chaotic battlefield and find an advantageous position from which to strike.
+
+        *page_break
+
+        *set GP_arg0 ReactionSpeed
+        *set GP_arg1 "challenging"
+        *gosub_scene general AttributeSkillCheck
+        *temp CH8M_ReactionSpeed_bool returnData
+        [head]Reaction Speed Check @{CH8M_ReactionSpeed_bool Success|Failure}![/head]
 
         *if CH8M_ReactionSpeed_bool
             Moving swiftly and darting through the chaos with grace and precision. You find yourself behind the wolf packs, hidden in the shadows.  Leon sees your plan and distracts the wolves, giving you time to get in position.
@@ -91,13 +99,17 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
             *set isFollowing true
 
     # The Cunning Ambush [color=${cunning_color}](Knowledge)[/color]
+        Embracing your cunning nature, you decide to set a trap for the Direwolves and their minions. With keen perception and understanding of the wolf’s behavior, you identify a strategic location to lay an ambush.
+
+        Using your knowledge of the wolves' tactics and instincts, you carefully position the mercenaries and yourself, waiting for the perfect moment to spring the trap
+
+        *page_break
+
         *set GP_arg0 Knowledge
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH8M_Knowledge_bool returnData
-        Embracing your cunning nature, you decide to set a trap for the Direwolves and their minions. With keen perception and understanding of the wolf’s behavior, you identify a strategic location to lay an ambush.
-
-        Using your knowledge of the wolves' tactics and instincts, you carefully position the mercenaries and yourself, waiting for the perfect moment to spring the trap
+        [head]Knowledge Check @{CH8M_Knowledge_bool Success|Failure}![/head]
 
         *if CH8M_Knowledge_bool
             You carefully analyze the movements of the wolf packs, identifying a strategic location to lay the ambush.
