@@ -139,6 +139,7 @@
 *comment Originally in the choicescript_stats scene, now a subroutine in the general scene for organization purposes
 *comment Updates the relationship and reputation percentages, trends, and affinity/rep statuses
 *label UpdateRelRepMeters
+*comment Checks to ensure that the relationship values are not negative, else it corrects them to positive
 *if rel_val_Cel > 0
     *set relationship_Cel_percentage ((rel_val_Cel modulo relationship_max_xp) / relationship_max_xp) * 100
 *else
@@ -155,7 +156,7 @@
 *set relationship_Cel_percentage relationship_Cel_percentage - (relationship_Cel_percentage modulo 1)
 *set relationship_Ivy_percentage relationship_Ivy_percentage - (relationship_Ivy_percentage modulo 1)
 *set relationship_Rip_percentage relationship_Rip_percentage - (relationship_Rip_percentage modulo 1)
-
+*comment Checks the relationship values and sets the affinity status of Cel
 *if (rel_val_Cel > (0 - 250)) and (rel_val_Cel < 250)
     *set rel_status_Cel rel_status_4
     *if rel_val_Cel < 0
@@ -190,7 +191,7 @@
         *set rel_val_Cel 1000
 *else
     *set rel_status_Cel rel_status_4
-
+*comment Checks the relationship values and sets the affinity status of Ivy
 *if (rel_val_Ivy > (0 - 250)) and (rel_val_Ivy < 250)
     *set rel_status_Ivy rel_status_4
     *if rel_val_Ivy < 0
@@ -225,7 +226,7 @@
         *set rel_val_Ivy 1000
 *else
     *set rel_status_Ivy rel_status_4
-
+*comment Checks the relationship values and sets the affinity status of Rip
 *if (rel_val_Rip > (0 - 250)) and (rel_val_Rip < 250)
     *set rel_status_Rip rel_status_4
     *if rel_val_Rip < 0
@@ -260,7 +261,7 @@
         *set rel_val_Rip 1000
 *else
     *set rel_status_Rip rel_status_4
-
+*comment Checks to ensure that the reputation values are not negative, else it corrects them to positive
 *if rep_val_Flames > 0
     *set reputation_Flames_percentage ((rep_val_Flames modulo reputation_max_xp) / reputation_max_xp) * 100
 *else
@@ -269,10 +270,10 @@
     *set reputation_Wolves_percentage ((rep_val_Wolves modulo reputation_max_xp) / reputation_max_xp) * 100
 *else
     *set reputation_Wolves_percentage (((rep_val_Wolves * (0 - 1)) modulo reputation_max_xp) / reputation_max_xp) * 100
-
+*comment This cleans up the decimal of the percentage for better user display
 *set reputation_Flames_percentage reputation_Flames_percentage - (reputation_Flames_percentage modulo 1)
 *set reputation_Wolves_percentage reputation_Wolves_percentage - (reputation_Wolves_percentage modulo 1)
-
+*comment Checks the reputation values and sets the status of Flames
 *if (rep_val_Flames > (0 - 50)) and (rep_val_Flames < 50)
     *set rep_status_Flames rep_status_2
     *if rep_val_Flames < 0
@@ -299,7 +300,7 @@
         *set rep_val_Flames 100
 *else
     *set rep_val_Flames rep_status_2
-
+*comment Checks the reputation values and sets the status of Wolves
 *if (rep_val_Wolves > (0 - 50)) and (rep_val_Wolves < 50)
     *set rep_status_Wolves rep_status_2
     *if rep_val_Wolves < 0

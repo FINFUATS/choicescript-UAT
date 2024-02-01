@@ -154,6 +154,7 @@
 *create relationship_Cel_percentage 0
 *create relationship_Ivy_percentage 0
 *create relationship_Rip_percentage 0
+*comment Faction Reputation Percentage Globals
 *create reputation_Flames_percentage 0
 *create reputation_Wolves_percentage 0
 *comment Character Relationship Max XP Global

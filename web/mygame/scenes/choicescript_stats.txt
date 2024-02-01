@@ -1,7 +1,6 @@
 This is a stats screen!
 *temp isShowingStatBar false
 *label screen
-
 *stat_chart
     text name
     text gender
@@ -24,32 +23,22 @@ This is a stats screen!
 *elseif isShowingStatBar = true
     *line_break
     *stat_chart
-        text rel_val_Cel Relationship Value with Cel
-        text trend_Cel Trend
         text rel_status_Cel Affinity Status with Cel
         percent relationship_Cel_percentage Current ${trend_Cel} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Ivy Relationship Value with Ivy
-        text trend_Ivy Trend
         text rel_status_Ivy Affinity Status with Ivy
         percent relationship_Ivy_percentage Current ${trend_Ivy} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Rip Relationship Value with Rip
-        text trend_Rip Trend
         text rel_status_Rip Affinity Status with Rip
         percent relationship_Rip_percentage Current ${trend_Rip} Affinity Progress
     *line_break
     *stat_chart
-        text rep_val_Flames Reputation Value with Flames
-        text trend_Flames Trend
         text rep_status_Flames Reputation Status with Flames of Sigel
         percent reputation_Flames_percentage Current ${trend_Flames} Reputation Progress
     *line_break
     *stat_chart
-        text rep_val_Wolves Reputation Value with Wolves
-        text trend_Wolves Trend
         text rep_status_Wolves Reputation Status with Wolves of Davenport
         percent reputation_Wolves_percentage Current ${trend_Wolves} Reputation Progress
 
@@ -58,7 +47,10 @@ This is a stats screen!
         #Hide Relationships and Reputations.
             *set isShowingStatBar false
             *goto screen
-
+        #TEMP: Go to Affinity/Reputation Testing Options.
+            *goto debug
+    *label debug
+    *choice
         #Increase Relationship with Cel.
             *set rel_val_Cel +90
             *goto screen
@@ -98,3 +90,4 @@ This is a stats screen!
         #Decrease Reputation with Wolves.
             *set rep_val_Wolves -35
             *goto screen
+        
