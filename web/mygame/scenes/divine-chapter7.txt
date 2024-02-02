@@ -29,7 +29,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
 
 *fake_choice
-    *selectable_if (cel_Clean = "no") #Cel (Knowledge)
+    *selectable_if (cel_Clean = "no") #Cel (Moderate [color=${cunning_color}]Knowledge[/color] Check)
         
         *set cel_Clean "yes"
         
@@ -74,7 +74,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
         *page_break
 
-    *selectable_if (riva_Clean = "no") #Riva (Reaction)
+    *selectable_if (riva_Clean = "no") #Riva (Moderate [color=${agility_color}]Reaction Speed[/color] Check)
         
         *set riva_Clean "yes"
         
@@ -113,7 +113,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             “Riva, look out!” You shout. Riva looks up from the paper and sees that she is about to step into a mockguarden. Everyone is also looking at her and she hides behind her paper. You have a feeling she didn’t want everyone to see her almost walk into a natural trap.
         
-    *selectable_if (winfred_Clean = "no") #Winfred (Strength)
+    *selectable_if (winfred_Clean = "no") #Winfred (Moderate [color=${brawn_color}]Strength[/color] Check)
         
         *set winfred_Clean "yes"
         
@@ -142,7 +142,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *else
             You try to pick up one of the bigger boxes, only to drop it immediately. Winfred laughs and points you in the direction of some smaller boxes. You hope there was nothing fragile in there.
         
-    *selectable_if (ivy_Clean = "no") #Ivy (Improvisation)
+    *selectable_if (ivy_Clean = "no") #Ivy (Moderate [color=${cunning_color}]Improvisation[/color] Check)
         
         *set ivy_Clean "yes"
         
@@ -211,7 +211,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             When you next see Ivy, you send her an apologetic look. She ignores you, having to do her own cleaning.
             
-    *selectable_if (berthold_Clean = "no") #Berhtold (Motor Skill)
+    *selectable_if (berthold_Clean = "no") #Berhtold (Moderate [color=${agility_color}]Motor Skill[/color] Check)
         
         *set berthold_Clean "yes"
         
@@ -246,7 +246,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             You hear Berthold sigh. You look over at him to see him shaking his head before returning to his chores. You do the same, being extra careful not to bump into anything.
         
-    #Find your own task (End Loop and Courage)
+    #Find your own task (End Loop, Moderate [color=${brawn_color}]Courage[/color] Check)
         
         You decide to find your own task to do without the help of anyone else. You remember that many of the statues in the more forested side of the garden are getting eaten up by vines and spiderwebs
 
@@ -354,7 +354,7 @@ You are helping out where you can, but you feel like you constantly are in the w
 The big meeting is soon. Cel is with the other high priests seemingly getting prepared for the speech. You go find one of your friends from the temple to hang out with while you wait.
 
 *fake_choice
-    *selectable_if (riva_Find = "no") #Riva (Strength)
+    *selectable_if (riva_Find = "no") #Riva (Challenging [color=${brawn_color}]Strength[/color] Check)
         *set riva_Find "yes"
         
         You find her tending to the plants in the greenhouse. You walk up beside her and she looks up at you.
@@ -394,7 +394,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “I’ll call Winfred or Barthold to come grab them, don’t strain yourself before the big meeting. We have to clean up afterwards.” She says. You nod, disappointed in your own strength.
 
-    *selectable_if (winfred_Find = "no") #Winfred (Medical)
+    *selectable_if (winfred_Find = "no") #Winfred (Challenging [color=${cunning_color}]Medical[/color] Check)
     
         *set winfred_Find "yes"
         
@@ -446,7 +446,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “That could have been so much worse if he fell. Thank you for helping.” Winfred gives a slight smile. You nod and return it.
             
-    *selectable_if (ivy_Find = "no") #Ivy (Acrobatics)
+    *selectable_if (ivy_Find = "no") #Ivy (Challenging [color=${agility_color}]Acrobatics[/color] Check)
         
         *set ivy_Find "yes"
         
@@ -651,7 +651,7 @@ The priest from the meeting walks into the room. You can see that everyone is tr
 “Oh… We’re splitting up the after meeting chores.” Riva explains.
 
 *fake_choice
-    #Lie and explain what chore you are doing (Improvisation)
+    #Lie and explain what chore you are doing (Moderate [color=${cunning_color}]Improvisation[/color] Check)
         
         *page_break
         

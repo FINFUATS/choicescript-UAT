@@ -74,7 +74,7 @@ What will you do with your free time?
 
         By the end of the lesson, you’ve learned a lot more about how to handle yourself in battle. You hope to never have to use this knowledge, but will likely have too in this line of work.
         
-    *selectable_if (archery = "no") #Archery Contest
+    *selectable_if (archery = "no") #Archery Contest (Moderate [color=${agility_color}]Motor Skill[/color] Check)
         
         *set archery "yes"
         During the leisure hours, the camp came alive with friendly sparring matches and competitions that brought out the playful spirit of the Wolves of Davenport. 
@@ -108,7 +108,7 @@ What will you do with your free time?
     
             “Better luck next time.” A voice calls out. You turn around and see Anwen. “The next time we have time to rest I’ll give you some pointers.”
 
-    *selectable_if (race = "no") #Foot Race
+    *selectable_if (race = "no") #Foot Race (Moderate [color=${brawn_color}]Endurance[/color] & [color=${agility_color}]Acrobatics[/color] Check)
         
         *set race "yes"
         *set GP_arg0 Endurance
@@ -161,7 +161,7 @@ What will you do with your free time?
 *label CH7M_daytwo
 Where do you go?
 *fake_choice
-    *selectable_if (food = "no") #Get food for the camp
+    *selectable_if (food = "no") #Get food for the camp (Challenging [color=${brawn_color}]Endurance[/color] Check)
         You stop at the quaint village of Bexley, known for its delicious homemade pies and friendly villagers.
 
         Entering the village, you are greeted by the jovial townspeople who recognized the Wolves of Davenport crest emblazoned on your armor. 
@@ -191,7 +191,7 @@ Where do you go?
             It was too much. You barely manage to finish the third pie before calling it quits.
         *page_break
 
-    *selectable_if (weapons = "no") #Get weapons for the camp
+    *selectable_if (weapons = "no") #Get weapons for the camp (Difficult [color=${brawn_color}]Endurance[/color] Check)
         Continuing your journey, the group arrives at the town of Aston, known for its skilled blacksmiths. You need to get new weapons and armor to keep their mercenary group well-equipped.
 
         You step into the bustling smithy run by the burly and boisterous blacksmith, Gruff, who prided himself on crafting the finest blades.
@@ -204,7 +204,7 @@ Where do you go?
 
         *set weapons "yes"
         *set GP_arg0 Endurance
-        *set GP_arg1 "challenging"
+        *set GP_arg1 "difficult"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_e_bool returnData
         [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]

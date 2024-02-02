@@ -32,7 +32,7 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
 *temp isFollowing false
 
 *fake_choice
-    # The Bold Charge [color=${brawn_color}](Strength)[/color]
+    # The Bold Charge (Challenging [color=${brawn_color}]Strength[/color] Check)
         Your heart pounds with adrenaline as you decide to lead a fearless charge against the wolf packs. Using your strength, you barrel forward, wielding your weapon with precision and power. 
 
         The goal is to engage the Direwolves head-on, disrupting their attacks and creating an opportunity for your companions to strike. This approach requires raw strength and unwavering bravery to face the ferocity of the wolves head-on. 
@@ -64,7 +64,7 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
             Rip quickly gets you out of harm's way and Leon attacks the wolf before it gets you. 
             *set isFollowing true
 
-    # The Agile Flanking Maneuver [color=${agility_color}](Reaction Speed)[/color]
+    # The Agile Flanking Maneuver (Challenging [color=${agility_color}]Reaction Speed[/color] Check)
         Recognizing the need for speed and agility, you choose to navigate the chaotic battlefield with nimble footwork. You slip through the shadows, dodging wolf attacks and positioning yourself strategically behind the wolves lines.
 
         With swift and precise strikes, you target the vulnerable flanks of the wolf packs, exploiting your speed and reflexes to unleash a series of devastating blows. 
@@ -98,7 +98,7 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
             Rip quickly gets you out of harm's way and Leon attacks the wolf before it gets you. 
             *set isFollowing true
 
-    # The Cunning Ambush [color=${cunning_color}](Knowledge)[/color]
+    # The Cunning Ambush (Challenging [color=${cunning_color}]Knowledge[/color] Check)
         Embracing your cunning nature, you decide to set a trap for the Direwolves and their minions. With keen perception and understanding of the wolf’s behavior, you identify a strategic location to lay an ambush.
 
         Using your knowledge of the wolves' tactics and instincts, you carefully position the mercenaries and yourself, waiting for the perfect moment to spring the trap
