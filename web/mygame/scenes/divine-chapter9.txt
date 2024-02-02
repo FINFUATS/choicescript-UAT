@@ -58,7 +58,7 @@ Berthold is the last to show up bringing a bag of medical supplies.
 
 The ride is long and when you reach the mines, the fight has already started.
 
-High priests from neighboring temples have started their push against the rot near the edge of the mines. Nearby, there are mercenaries and soldiers fighting against the jackaoids and Ichor-swogs. Tents have already been set up for the injured and the equipment at the outskirts of the battle.
+High priests from neighboring temples have started their push against the rot near the edge of the mines. Nearby, there are mercenaries and soldiers fighting against the jackaoids and [codex_hl_Ichor_Swog]Ichor-swogs[/codex]. Tents have already been set up for the injured and the equipment at the outskirts of the battle.
 
 You look away from the mines and see how much damage there has been. Trees have scorch marks across their trunks, grass has been burnt, and there are piles of burnt sticks that were once bushes. The huts that the miners stayed in are missing their roofs and have begun to crumble. 
 
@@ -87,7 +87,7 @@ You then search for your allies,
                 
                 The miners all run from the hut towards the makeshift camp.
                 
-                “Thank you (player_name), I’m not sure if I would have been able to save everyone without you.” Riva thirdly says with a smile on her face.
+                “Thank you ${name}, I’m not sure if I would have been able to save everyone without you.” Riva thirdly says with a smile on her face.
 
             #loose
                 A jackaloid overwhelms you and you stumble to the ground. Right when you think it’s all over, Riva sends a vine to save you.

@@ -241,6 +241,13 @@ Who do you want to know about?
         *line_break
         *goto Characters
     
+    #The Zealot
+        *label codex_hl_Zealot
+        [head]The Zealot[/head]
+        The (Alaric) Zealot, the hero of the north, the rot rinser, and the Savior of Saragossa, are just some of the names Alaric is known by throughout the realm. His heart is filled with a burning passion for the church but his methods have been said to be a bit extreme at times. Aside from the occasional “there’s no other way” when it comes to getting rid of rot, he is an amazing ally and an excellent fighter to have by your side. There’s a reason he's become a household name throughout the lands. This is someone you want on your team, just his sheer presence is enough to inspire an army to rise above any situation or to intimidate enemies enough to throw the battle. His heart does burn pure, but it burns pure in his eyes.
+        *line_break
+        *goto Characters
+
     #Winfred Cartwright
         *label codex_hl_Winfred
         [head]Winfred Cartwright[/head]
@@ -324,18 +331,21 @@ What item?
 What form of magic do you want to know about?
 *fake_choice
     #Divine Magic
+        *label codex_hl_Divine_Magic
         [head]Divine Magic[/head]
         Divine magic is used by those blessed by the gods for harmony with the natural world. It is most common for a priest and priestess to have the blessing of their chosen god. The Flames of Sigel get their blessings from Sigel and use it to defeat the rot.
         *line_break
         *goto Magic
 
     #Arcane Magic
+        *label codex_hl_Arcane_Magic
         [head]Arcane Magic[/head]
         Arcane magic is either studied for or the person must be born with the ability to use it. It is unknown who was the first person to be born with the innate ability for magic, but many of their descendants walk among us. They are hard to spot, but those who use their magic for good has been seen assisting divine users against the rot. 
         *line_break
         *goto Magic
 
     #Rot
+        *label codex_hl_Rot
         [head]Rot[/head]
         It is unknown exactly where the rot comes from. It has been around for as long as people have been in Teville. The most common theory is that it involves Skadon. That he summons it and has some control over it. This is what the Flames of Sigel believe. They believe him to be the one controlling the rot and that he must be stopped.
         
