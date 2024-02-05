@@ -140,27 +140,6 @@
 *comment Updates the relationship and reputation percentages, trends, and affinity/rep statuses
 *label UpdateRelRepMeters
 *comment Checks to ensure that the relationship values are not negative, else it corrects them to positive
-*if rel_val_Rip > 0
-    *set relationship_Rip_percentage ((rel_val_Rip modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Rip_percentage (((rel_val_Rip * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if rel_val_Anwen > 0
-    *set relationship_Anwen_percentage ((rel_val_Anwen modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Anwen_percentage (((rel_val_Anwen * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if rel_val_Elena > 0
-    *set relationship_Elena_percentage ((rel_val_Elena modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Elena_percentage (((rel_val_Elena * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if rel_val_Gwyn > 0
-    *set relationship_Gwyn_percentage ((rel_val_Gwyn modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Gwyn_percentage (((rel_val_Gwyn * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-*if rel_val_Leon > 0
-    *set relationship_Leon_percentage ((rel_val_Leon modulo relationship_max_xp) / relationship_max_xp) * 100
-*else
-    *set relationship_Leon_percentage (((rel_val_Leon * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
-
 *if rel_val_Cel > 0
     *set relationship_Cel_percentage ((rel_val_Cel modulo relationship_max_xp) / relationship_max_xp) * 100
 *else
@@ -182,198 +161,39 @@
 *else
     *set relationship_Winfred_percentage (((rel_val_Winfred * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
 
-*comment This cleans up the decimal of the percentage for better user display
-*set relationship_Rip_percentage relationship_Rip_percentage - (relationship_Rip_percentage modulo 1)
-*set relationship_Anwen_percentage relationship_Anwen_percentage - (relationship_Anwen_percentage modulo 1)
-*set relationship_Elena_percentage relationship_Elena_percentage - (relationship_Elena_percentage modulo 1)
-*set relationship_Gwyn_percentage relationship_Gwyn_percentage - (relationship_Gwyn_percentage modulo 1)
-*set relationship_Leon_percentage relationship_Leon_percentage - (relationship_Leon_percentage modulo 1)
+*if rel_val_Rip > 0
+    *set relationship_Rip_percentage ((rel_val_Rip modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Rip_percentage (((rel_val_Rip * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Anwen > 0
+    *set relationship_Anwen_percentage ((rel_val_Anwen modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Anwen_percentage (((rel_val_Anwen * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Elena > 0
+    *set relationship_Elena_percentage ((rel_val_Elena modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Elena_percentage (((rel_val_Elena * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Gwyn > 0
+    *set relationship_Gwyn_percentage ((rel_val_Gwyn modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Gwyn_percentage (((rel_val_Gwyn * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
+*if rel_val_Leon > 0
+    *set relationship_Leon_percentage ((rel_val_Leon modulo relationship_max_xp) / relationship_max_xp) * 100
+*else
+    *set relationship_Leon_percentage (((rel_val_Leon * (0 - 1)) modulo relationship_max_xp) / relationship_max_xp) * 100
 
+*comment This cleans up the decimal of the percentage for better user display
 *set relationship_Cel_percentage relationship_Cel_percentage - (relationship_Cel_percentage modulo 1)
 *set relationship_Berthold_percentage relationship_Berthold_percentage - (relationship_Berthold_percentage modulo 1)
 *set relationship_Ivy_percentage relationship_Ivy_percentage - (relationship_Ivy_percentage modulo 1)
 *set relationship_Riva_percentage relationship_Riva_percentage - (relationship_Riva_percentage modulo 1)
 *set relationship_Winfred_percentage relationship_Winfred_percentage - (relationship_Winfred_percentage modulo 1)
 
-*comment Checks the relationship values and sets the affinity status of Rip
-*if (rel_val_Rip > (0 - 250)) and (rel_val_Rip < 250)
-    *set rel_status_Rip rel_status_4
-    *if rel_val_Rip < 0
-        *set trend_Rip "Negative"
-    *elseif rel_val_Rip > 0
-        *set trend_Rip "Positive"
-    *elseif rel_val_Rip = 0
-        *set trend_Rip "N/A"
-*elseif rel_val_Rip < 0
-    *set trend_Rip "Negative"
-    *if (rel_val_Rip < (0 - 250)) and (rel_val_Rip > ((0 - 250) - 250))
-        *set rel_status_Rip rel_status_5
-    *elseif (rel_val_Rip < ((0 - 250) - 250)) and (rel_val_Rip > ((0 - 250) - 500))
-        *set rel_status_Rip rel_status_6
-    *elseif (rel_val_Rip < ((0 - 250) - 500)) and (rel_val_Rip > ((0 - 250) - 750))
-        *set rel_status_Rip rel_status_7
-    *elseif (rel_val_Rip <= ((0 - 250) - 750))
-        *set rel_status_Rip rel_status_8
-        *set relationship_Rip_percentage 100
-        *set rel_val_Rip (0 - 1000)
-*elseif rel_val_Rip > 0
-    *set trend_Rip "Positive"
-    *if (rel_val_Rip > 250) and (rel_val_Rip < 500)
-        *set rel_status_Rip rel_status_3
-    *elseif (rel_val_Rip > 500) and (rel_val_Rip < 750)
-        *set rel_status_Rip rel_status_2
-    *elseif (rel_val_Rip > 750) and (rel_val_Rip < 1000)
-        *set rel_status_Rip rel_status_1
-    *elseif rel_val_Rip >= 1000
-        *set rel_status_Rip rel_status_0
-        *set relationship_Rip_percentage 100
-        *set rel_val_Rip 1000
-*else
-    *set rel_status_Rip rel_status_4
-
-*comment Checks the relationship values and sets the affinity status of Anwen
-*if (rel_val_Anwen > (0 - 250)) and (rel_val_Anwen < 250)
-    *set rel_status_Anwen rel_status_4
-    *if rel_val_Anwen < 0
-        *set trend_Anwen "Negative"
-    *elseif rel_val_Anwen > 0
-        *set trend_Anwen "Positive"
-    *elseif rel_val_Anwen = 0
-        *set trend_Anwen "N/A"
-*elseif rel_val_Anwen < 0
-    *set trend_Anwen "Negative"
-    *if (rel_val_Anwen < (0 - 250)) and (rel_val_Anwen > ((0 - 250) - 250))
-        *set rel_status_Anwen rel_status_5
-    *elseif (rel_val_Anwen < ((0 - 250) - 250)) and (rel_val_Anwen > ((0 - 250) - 500))
-        *set rel_status_Anwen rel_status_6
-    *elseif (rel_val_Anwen < ((0 - 250) - 500)) and (rel_val_Anwen > ((0 - 250) - 750))
-        *set rel_status_Anwen rel_status_7
-    *elseif (rel_val_Anwen <= ((0 - 250) - 750))
-        *set rel_status_Anwen rel_status_8
-        *set relationship_Anwen_percentage 100
-        *set rel_val_Anwen (0 - 1000)
-*elseif rel_val_Anwen > 0
-    *set trend_Anwen "Positive"
-    *if (rel_val_Anwen > 250) and (rel_val_Anwen < 500)
-        *set rel_status_Anwen rel_status_3
-    *elseif (rel_val_Anwen > 500) and (rel_val_Anwen < 750)
-        *set rel_status_Anwen rel_status_2
-    *elseif (rel_val_Anwen > 750) and (rel_val_Anwen < 1000)
-        *set rel_status_Anwen rel_status_1
-    *elseif rel_val_Anwen >= 1000
-        *set rel_status_Anwen rel_status_0
-        *set relationship_Anwen_percentage 100
-        *set rel_val_Anwen 1000
-*else
-    *set rel_status_Anwen rel_status_4
-
-*comment Checks the relationship values and sets the affinity status of Elena
-*if (rel_val_Elena > (0 - 250)) and (rel_val_Elena < 250)
-    *set rel_status_Elena rel_status_4
-    *if rel_val_Elena < 0
-        *set trend_Elena "Negative"
-    *elseif rel_val_Elena > 0
-        *set trend_Elena "Positive"
-    *elseif rel_val_Elena = 0
-        *set trend_Elena "N/A"
-*elseif rel_val_Elena < 0
-    *set trend_Elena "Negative"
-    *if (rel_val_Elena < (0 - 250)) and (rel_val_Elena > ((0 - 250) - 250))
-        *set rel_status_Elena rel_status_5
-    *elseif (rel_val_Elena < ((0 - 250) - 250)) and (rel_val_Elena > ((0 - 250) - 500))
-        *set rel_status_Elena rel_status_6
-    *elseif (rel_val_Elena < ((0 - 250) - 500)) and (rel_val_Elena > ((0 - 250) - 750))
-        *set rel_status_Elena rel_status_7
-    *elseif (rel_val_Elena <= ((0 - 250) - 750))
-        *set rel_status_Elena rel_status_8
-        *set relationship_Elena_percentage 100
-        *set rel_val_Elena (0 - 1000)
-*elseif rel_val_Elena > 0
-    *set trend_Elena "Positive"
-    *if (rel_val_Elena > 250) and (rel_val_Elena < 500)
-        *set rel_status_Elena rel_status_3
-    *elseif (rel_val_Elena > 500) and (rel_val_Elena < 750)
-        *set rel_status_Elena rel_status_2
-    *elseif (rel_val_Elena > 750) and (rel_val_Elena < 1000)
-        *set rel_status_Elena rel_status_1
-    *elseif rel_val_Elena >= 1000
-        *set rel_status_Elena rel_status_0
-        *set relationship_Elena_percentage 100
-        *set rel_val_Elena 1000
-*else
-    *set rel_status_Elena rel_status_4
-
-*comment Checks the relationship values and sets the affinity status of Gwyn
-*if (rel_val_Gwyn > (0 - 250)) and (rel_val_Gwyn < 250)
-    *set rel_status_Gwyn rel_status_4
-    *if rel_val_Gwyn < 0
-        *set trend_Gwyn "Negative"
-    *elseif rel_val_Gwyn > 0
-        *set trend_Gwyn "Positive"
-    *elseif rel_val_Gwyn = 0
-        *set trend_Gwyn "N/A"
-*elseif rel_val_Gwyn < 0
-    *set trend_Gwyn "Negative"
-    *if (rel_val_Gwyn < (0 - 250)) and (rel_val_Gwyn > ((0 - 250) - 250))
-        *set rel_status_Gwyn rel_status_5
-    *elseif (rel_val_Gwyn < ((0 - 250) - 250)) and (rel_val_Gwyn > ((0 - 250) - 500))
-        *set rel_status_Gwyn rel_status_6
-    *elseif (rel_val_Gwyn < ((0 - 250) - 500)) and (rel_val_Gwyn > ((0 - 250) - 750))
-        *set rel_status_Gwyn rel_status_7
-    *elseif (rel_val_Gwyn <= ((0 - 250) - 750))
-        *set rel_status_Gwyn rel_status_8
-        *set relationship_Gwyn_percentage 100
-        *set rel_val_Gwyn (0 - 1000)
-*elseif rel_val_Gwyn > 0
-    *set trend_Gwyn "Positive"
-    *if (rel_val_Gwyn > 250) and (rel_val_Gwyn < 500)
-        *set rel_status_Gwyn rel_status_3
-    *elseif (rel_val_Gwyn > 500) and (rel_val_Gwyn < 750)
-        *set rel_status_Gwyn rel_status_2
-    *elseif (rel_val_Gwyn > 750) and (rel_val_Gwyn < 1000)
-        *set rel_status_Gwyn rel_status_1
-    *elseif rel_val_Gwyn >= 1000
-        *set rel_status_Gwyn rel_status_0
-        *set relationship_Gwyn_percentage 100
-        *set rel_val_Gwyn 1000
-*else
-    *set rel_status_Gwyn rel_status_4
-
-*comment Checks the relationship values and sets the affinity status of Leon
-*if (rel_val_Leon > (0 - 250)) and (rel_val_Leon < 250)
-    *set rel_status_Leon rel_status_4
-    *if rel_val_Leon < 0
-        *set trend_Leon "Negative"
-    *elseif rel_val_Leon > 0
-        *set trend_Leon "Positive"
-    *elseif rel_val_Leon = 0
-        *set trend_Leon "N/A"
-*elseif rel_val_Leon < 0
-    *set trend_Leon "Negative"
-    *if (rel_val_Leon < (0 - 250)) and (rel_val_Leon > ((0 - 250) - 250))
-        *set rel_status_Leon rel_status_5
-    *elseif (rel_val_Leon < ((0 - 250) - 250)) and (rel_val_Leon > ((0 - 250) - 500))
-        *set rel_status_Leon rel_status_6
-    *elseif (rel_val_Leon < ((0 - 250) - 500)) and (rel_val_Leon > ((0 - 250) - 750))
-        *set rel_status_Leon rel_status_7
-    *elseif (rel_val_Leon <= ((0 - 250) - 750))
-        *set rel_status_Leon rel_status_8
-        *set relationship_Leon_percentage 100
-        *set rel_val_Leon (0 - 1000)
-*elseif rel_val_Leon > 0
-    *set trend_Leon "Positive"
-    *if (rel_val_Leon > 250) and (rel_val_Leon < 500)
-        *set rel_status_Leon rel_status_3
-    *elseif (rel_val_Leon > 500) and (rel_val_Leon < 750)
-        *set rel_status_Leon rel_status_2
-    *elseif (rel_val_Leon > 750) and (rel_val_Leon < 1000)
-        *set rel_status_Leon rel_status_1
-    *elseif rel_val_Leon >= 1000
-        *set rel_status_Leon rel_status_0
-        *set relationship_Leon_percentage 100
-        *set rel_val_Leon 1000
-*else
-    *set rel_status_Leon rel_status_4
+*set relationship_Rip_percentage relationship_Rip_percentage - (relationship_Rip_percentage modulo 1)
+*set relationship_Anwen_percentage relationship_Anwen_percentage - (relationship_Anwen_percentage modulo 1)
+*set relationship_Elena_percentage relationship_Elena_percentage - (relationship_Elena_percentage modulo 1)
+*set relationship_Gwyn_percentage relationship_Gwyn_percentage - (relationship_Gwyn_percentage modulo 1)
+*set relationship_Leon_percentage relationship_Leon_percentage - (relationship_Leon_percentage modulo 1)
 
 *comment Checks the relationship values and sets the affinity status of Cel
 *if (rel_val_Cel > (0 - 250)) and (rel_val_Cel < 250)
@@ -555,6 +375,186 @@
 *else
     *set rel_status_Winfred rel_status_4
 
+*comment Checks the relationship values and sets the affinity status of Rip
+*if (rel_val_Rip > (0 - 250)) and (rel_val_Rip < 250)
+    *set rel_status_Rip rel_status_4
+    *if rel_val_Rip < 0
+        *set trend_Rip "Negative"
+    *elseif rel_val_Rip > 0
+        *set trend_Rip "Positive"
+    *elseif rel_val_Rip = 0
+        *set trend_Rip "N/A"
+*elseif rel_val_Rip < 0
+    *set trend_Rip "Negative"
+    *if (rel_val_Rip < (0 - 250)) and (rel_val_Rip > ((0 - 250) - 250))
+        *set rel_status_Rip rel_status_5
+    *elseif (rel_val_Rip < ((0 - 250) - 250)) and (rel_val_Rip > ((0 - 250) - 500))
+        *set rel_status_Rip rel_status_6
+    *elseif (rel_val_Rip < ((0 - 250) - 500)) and (rel_val_Rip > ((0 - 250) - 750))
+        *set rel_status_Rip rel_status_7
+    *elseif (rel_val_Rip <= ((0 - 250) - 750))
+        *set rel_status_Rip rel_status_8
+        *set relationship_Rip_percentage 100
+        *set rel_val_Rip (0 - 1000)
+*elseif rel_val_Rip > 0
+    *set trend_Rip "Positive"
+    *if (rel_val_Rip > 250) and (rel_val_Rip < 500)
+        *set rel_status_Rip rel_status_3
+    *elseif (rel_val_Rip > 500) and (rel_val_Rip < 750)
+        *set rel_status_Rip rel_status_2
+    *elseif (rel_val_Rip > 750) and (rel_val_Rip < 1000)
+        *set rel_status_Rip rel_status_1
+    *elseif rel_val_Rip >= 1000
+        *set rel_status_Rip rel_status_0
+        *set relationship_Rip_percentage 100
+        *set rel_val_Rip 1000
+*else
+    *set rel_status_Rip rel_status_4
+
+*comment Checks the relationship values and sets the affinity status of Anwen
+*if (rel_val_Anwen > (0 - 250)) and (rel_val_Anwen < 250)
+    *set rel_status_Anwen rel_status_4
+    *if rel_val_Anwen < 0
+        *set trend_Anwen "Negative"
+    *elseif rel_val_Anwen > 0
+        *set trend_Anwen "Positive"
+    *elseif rel_val_Anwen = 0
+        *set trend_Anwen "N/A"
+*elseif rel_val_Anwen < 0
+    *set trend_Anwen "Negative"
+    *if (rel_val_Anwen < (0 - 250)) and (rel_val_Anwen > ((0 - 250) - 250))
+        *set rel_status_Anwen rel_status_5
+    *elseif (rel_val_Anwen < ((0 - 250) - 250)) and (rel_val_Anwen > ((0 - 250) - 500))
+        *set rel_status_Anwen rel_status_6
+    *elseif (rel_val_Anwen < ((0 - 250) - 500)) and (rel_val_Anwen > ((0 - 250) - 750))
+        *set rel_status_Anwen rel_status_7
+    *elseif (rel_val_Anwen <= ((0 - 250) - 750))
+        *set rel_status_Anwen rel_status_8
+        *set relationship_Anwen_percentage 100
+        *set rel_val_Anwen (0 - 1000)
+*elseif rel_val_Anwen > 0
+    *set trend_Anwen "Positive"
+    *if (rel_val_Anwen > 250) and (rel_val_Anwen < 500)
+        *set rel_status_Anwen rel_status_3
+    *elseif (rel_val_Anwen > 500) and (rel_val_Anwen < 750)
+        *set rel_status_Anwen rel_status_2
+    *elseif (rel_val_Anwen > 750) and (rel_val_Anwen < 1000)
+        *set rel_status_Anwen rel_status_1
+    *elseif rel_val_Anwen >= 1000
+        *set rel_status_Anwen rel_status_0
+        *set relationship_Anwen_percentage 100
+        *set rel_val_Anwen 1000
+*else
+    *set rel_status_Anwen rel_status_4
+
+*comment Checks the relationship values and sets the affinity status of Elena
+*if (rel_val_Elena > (0 - 250)) and (rel_val_Elena < 250)
+    *set rel_status_Elena rel_status_4
+    *if rel_val_Elena < 0
+        *set trend_Elena "Negative"
+    *elseif rel_val_Elena > 0
+        *set trend_Elena "Positive"
+    *elseif rel_val_Elena = 0
+        *set trend_Elena "N/A"
+*elseif rel_val_Elena < 0
+    *set trend_Elena "Negative"
+    *if (rel_val_Elena < (0 - 250)) and (rel_val_Elena > ((0 - 250) - 250))
+        *set rel_status_Elena rel_status_5
+    *elseif (rel_val_Elena < ((0 - 250) - 250)) and (rel_val_Elena > ((0 - 250) - 500))
+        *set rel_status_Elena rel_status_6
+    *elseif (rel_val_Elena < ((0 - 250) - 500)) and (rel_val_Elena > ((0 - 250) - 750))
+        *set rel_status_Elena rel_status_7
+    *elseif (rel_val_Elena <= ((0 - 250) - 750))
+        *set rel_status_Elena rel_status_8
+        *set relationship_Elena_percentage 100
+        *set rel_val_Elena (0 - 1000)
+*elseif rel_val_Elena > 0
+    *set trend_Elena "Positive"
+    *if (rel_val_Elena > 250) and (rel_val_Elena < 500)
+        *set rel_status_Elena rel_status_3
+    *elseif (rel_val_Elena > 500) and (rel_val_Elena < 750)
+        *set rel_status_Elena rel_status_2
+    *elseif (rel_val_Elena > 750) and (rel_val_Elena < 1000)
+        *set rel_status_Elena rel_status_1
+    *elseif rel_val_Elena >= 1000
+        *set rel_status_Elena rel_status_0
+        *set relationship_Elena_percentage 100
+        *set rel_val_Elena 1000
+*else
+    *set rel_status_Elena rel_status_4
+
+*comment Checks the relationship values and sets the affinity status of Gwyn
+*if (rel_val_Gwyn > (0 - 250)) and (rel_val_Gwyn < 250)
+    *set rel_status_Gwyn rel_status_4
+    *if rel_val_Gwyn < 0
+        *set trend_Gwyn "Negative"
+    *elseif rel_val_Gwyn > 0
+        *set trend_Gwyn "Positive"
+    *elseif rel_val_Gwyn = 0
+        *set trend_Gwyn "N/A"
+*elseif rel_val_Gwyn < 0
+    *set trend_Gwyn "Negative"
+    *if (rel_val_Gwyn < (0 - 250)) and (rel_val_Gwyn > ((0 - 250) - 250))
+        *set rel_status_Gwyn rel_status_5
+    *elseif (rel_val_Gwyn < ((0 - 250) - 250)) and (rel_val_Gwyn > ((0 - 250) - 500))
+        *set rel_status_Gwyn rel_status_6
+    *elseif (rel_val_Gwyn < ((0 - 250) - 500)) and (rel_val_Gwyn > ((0 - 250) - 750))
+        *set rel_status_Gwyn rel_status_7
+    *elseif (rel_val_Gwyn <= ((0 - 250) - 750))
+        *set rel_status_Gwyn rel_status_8
+        *set relationship_Gwyn_percentage 100
+        *set rel_val_Gwyn (0 - 1000)
+*elseif rel_val_Gwyn > 0
+    *set trend_Gwyn "Positive"
+    *if (rel_val_Gwyn > 250) and (rel_val_Gwyn < 500)
+        *set rel_status_Gwyn rel_status_3
+    *elseif (rel_val_Gwyn > 500) and (rel_val_Gwyn < 750)
+        *set rel_status_Gwyn rel_status_2
+    *elseif (rel_val_Gwyn > 750) and (rel_val_Gwyn < 1000)
+        *set rel_status_Gwyn rel_status_1
+    *elseif rel_val_Gwyn >= 1000
+        *set rel_status_Gwyn rel_status_0
+        *set relationship_Gwyn_percentage 100
+        *set rel_val_Gwyn 1000
+*else
+    *set rel_status_Gwyn rel_status_4
+
+*comment Checks the relationship values and sets the affinity status of Leon
+*if (rel_val_Leon > (0 - 250)) and (rel_val_Leon < 250)
+    *set rel_status_Leon rel_status_4
+    *if rel_val_Leon < 0
+        *set trend_Leon "Negative"
+    *elseif rel_val_Leon > 0
+        *set trend_Leon "Positive"
+    *elseif rel_val_Leon = 0
+        *set trend_Leon "N/A"
+*elseif rel_val_Leon < 0
+    *set trend_Leon "Negative"
+    *if (rel_val_Leon < (0 - 250)) and (rel_val_Leon > ((0 - 250) - 250))
+        *set rel_status_Leon rel_status_5
+    *elseif (rel_val_Leon < ((0 - 250) - 250)) and (rel_val_Leon > ((0 - 250) - 500))
+        *set rel_status_Leon rel_status_6
+    *elseif (rel_val_Leon < ((0 - 250) - 500)) and (rel_val_Leon > ((0 - 250) - 750))
+        *set rel_status_Leon rel_status_7
+    *elseif (rel_val_Leon <= ((0 - 250) - 750))
+        *set rel_status_Leon rel_status_8
+        *set relationship_Leon_percentage 100
+        *set rel_val_Leon (0 - 1000)
+*elseif rel_val_Leon > 0
+    *set trend_Leon "Positive"
+    *if (rel_val_Leon > 250) and (rel_val_Leon < 500)
+        *set rel_status_Leon rel_status_3
+    *elseif (rel_val_Leon > 500) and (rel_val_Leon < 750)
+        *set rel_status_Leon rel_status_2
+    *elseif (rel_val_Leon > 750) and (rel_val_Leon < 1000)
+        *set rel_status_Leon rel_status_1
+    *elseif rel_val_Leon >= 1000
+        *set rel_status_Leon rel_status_0
+        *set relationship_Leon_percentage 100
+        *set rel_val_Leon 1000
+*else
+    *set rel_status_Leon rel_status_4
+    
 *comment Checks to ensure that the reputation values are not negative, else it corrects them to positive
 *if rep_val_Flames > 0
     *set reputation_Flames_percentage ((rep_val_Flames modulo reputation_max_xp) / reputation_max_xp) * 100
