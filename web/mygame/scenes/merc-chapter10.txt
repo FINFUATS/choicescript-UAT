@@ -271,7 +271,7 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
         Tyr comes bursting out from the trees, running straight towards you with an excited look in his eye. Tyr skids to a stop in front of you, rustling your hair with a few loud sniffles before sitting next to you, guarding you from Cel.
 
-        “Pup, what are you doing here? You know that if you get caught, no one will be able to help you.” Rip reveals himself from behind a tree.
+        “${puppy_name}, what are you doing here? You know that if you get caught, no one will be able to help you.” Rip reveals himself from behind a tree.
 
         “Rip, what are you doing here? How did you find me?” You ask
 
@@ -300,7 +300,7 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
                 
                 You look up at Rip. ” I need some time to think Rip. Where are you going? I’ll catch up after I get my thoughts straight.”
 
-                “Stormdenn, but we won’t be there long. Head to Davenport, find the dwarven tavern with a wolf on it and tell them you a black martini with extra gin and blackberry. The bartender will give you a paper with the drink. Go around back and hand the paper to the elf smoking, tell him you were sent by Rip Daring and he’ll let you in.” Rip explains.
+                “Stormdenn, but we won’t be there long. Head to Davenport, find the dwarven tavern with a wolf on it and tell them you want a black martini with extra gin and blackberry. The bartender will give you a paper with the drink. Go around back and hand the paper to the elf smoking, tell him you were sent by Rip Daring and he’ll let you in.” Rip explains.
 
                 You nod.
 

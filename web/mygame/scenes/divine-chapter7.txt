@@ -1,4 +1,6 @@
 *label StartChapter7
+[head]Chapter 7: The Gathering[/head]
+
 It’s been a few months since you’ve been living at the temple and helping out with the chores. 
 
 Cel has called a meeting in the main room. Everyone has gathered around the stand. Riva is standing by the wall, Winfred is behind Cel, Ivy is in a dark corner, and Berthold is standing next to the door. 
@@ -19,7 +21,7 @@ Cel has called a meeting in the main room. Everyone has gathered around the stan
 *temp riva_Clean "no"
 *temp winfred_Clean "no"
 *temp ivy_Clean "no"
-*temp bertold_Clean "no"
+*temp berthold_Clean "no"
 
 *label clean
 
@@ -27,7 +29,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
 
 *fake_choice
-    *selectable_if (cel_Clean = "no") #Cel (Knowledge)
+    *selectable_if (cel_Clean = "no") #Cel (Moderate [color=${cunning_color}]Knowledge[/color] Check)
         
         *set cel_Clean "yes"
         
@@ -50,7 +52,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Knowledge Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Cel):
@@ -72,7 +74,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
         *page_break
 
-    *selectable_if (riva_Clean = "no") #Riva (Reaction)
+    *selectable_if (riva_Clean = "no") #Riva (Moderate [color=${agility_color}]Reaction Speed[/color] Check)
         
         *set riva_Clean "yes"
         
@@ -95,14 +97,14 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Reaction Speed Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
             
             You grab Riva’s arm and pull her back just before she steps into the mockgaurden. She looks at you and then where she was about to step.
 
-            “Oh! Thank you (Player_Name). I was too absorbed into where the mockgaurdens were on the map, I forgot to check where I was stepping…” She sighed while thanking you.
+            “Oh! Thank you ${name}. I was too absorbed into where the mockgaurdens were on the map, I forgot to check where I was stepping…” She sighed while thanking you.
 
             You and Riva work together to remove the mockgaurden from the path.
 
@@ -111,7 +113,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             “Riva, look out!” You shout. Riva looks up from the paper and sees that she is about to step into a mockguarden. Everyone is also looking at her and she hides behind her paper. You have a feeling she didn’t want everyone to see her almost walk into a natural trap.
         
-    *selectable_if (winfred_Clean = "no") #Winfred (Strength)
+    *selectable_if (winfred_Clean = "no") #Winfred (Moderate [color=${brawn_color}]Strength[/color] Check)
         
         *set winfred_Clean "yes"
         
@@ -128,7 +130,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Strength Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
@@ -140,7 +142,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *else
             You try to pick up one of the bigger boxes, only to drop it immediately. Winfred laughs and points you in the direction of some smaller boxes. You hope there was nothing fragile in there.
         
-    *selectable_if (ivy_Clean = "no") #Ivy (Improvisation)
+    *selectable_if (ivy_Clean = "no") #Ivy (Moderate [color=${cunning_color}]Improvisation[/color] Check)
         
         *set ivy_Clean "yes"
         
@@ -167,7 +169,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Stealth Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
@@ -209,11 +211,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             When you next see Ivy, you send her an apologetic look. She ignores you, having to do her own cleaning.
             
-    *selectable_if (bertold_Clean = "no") #Bertold (Motor Skill)
+    *selectable_if (berthold_Clean = "no") #Berhtold (Moderate [color=${agility_color}]Motor Skill[/color] Check)
         
-        *set bertold_Clean "yes"
+        *set berthold_Clean "yes"
         
-        You find Berhold in the meditation room. He is cleaning the statues. You look around and see that the room is not as clean as it usually is. Most of the people who usually keep the room clean must be working on the other rooms, leaving Berthold to work on it by himself.
+        You find Berthold in the meditation room. He is cleaning the statues. You look around and see that the room is not as clean as it usually is. Most of the people who usually keep the room clean must be working on the other rooms, leaving Berthold to work on it by himself.
         
         “Hey Berthold, would you like some help cleaning the room?” You ask.
         
@@ -244,7 +246,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
             
             You hear Berthold sigh. You look over at him to see him shaking his head before returning to his chores. You do the same, being extra careful not to bump into anything.
         
-    #Find your own task (end loop and Courage)
+    #Find your own task (End Loop, Moderate [color=${brawn_color}]Courage[/color] Check)
         
         You decide to find your own task to do without the help of anyone else. You remember that many of the statues in the more forested side of the garden are getting eaten up by vines and spiderwebs
 
@@ -257,14 +259,14 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Courage Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
             
             You clean up every statue that was being reclaimed by nature. You managed to remove all of the vines and all of the webs from the statues. Some of them are cracked or missing pieces, but none of it was because of you.
            
-            “Oh, that’s where that statue went.” Cel walking up behind you. “I remembered we left it outside, but then we lost it many years ago. Never thought I’d see it again. Good job (Player_Name).”
+            “Oh, that’s where that statue went.” Cel walking up behind you. “I remembered we left it outside, but then we lost it many years ago. Never thought I’d see it again. Good job ${name}.”
            
             You smile as the rest of your friends come up to admire you work.
 
@@ -293,7 +295,7 @@ You choose
 
 *fake_choice
     #Monsters
-        You read up on the Mogfish and the Will-O-Wisps as you have never heard of them before.
+        You read up on the [codex:codex_hl_Mogfish]Mogfish[/codex] and the [codex:codex_hl_Will_O_Wisps]Will-O-Wisps[/codex] as you have never heard of them before.
 
         “The mogfish with orbs will stay in the mud with the orb above ground. They wait for an unsuspecting victim to walk over them, then they will open their huge maw to ensnare the unsuspecting victim and suck them in. The rest have to find other ways to get food. These ones will team up with will-o-wisps to mimic the light the other mogfish have.”
 
@@ -301,7 +303,7 @@ You choose
 
     #Locations
         
-        You decide to read up on the city of Teville. Your father used to talk a lot about it and this is the first time you’ve had a book to learn more about the places he went.
+        You decide to read up on the city of [codex:codex_hl_Teville_City]Teville[/codex]. Your father used to talk a lot about it and this is the first time you’ve had a book to learn more about the places he went.
 
         “The capital city Teville is located by the Ironmount mountains on the west side of the country Teville. The capital is broken up into ten different districts. Each district is split up depending on the wealth of the people living in it. With four slums and a castle amongst the city, there is something for everyone.”
 
@@ -310,7 +312,7 @@ You choose
         
     #Magic
         
-        You’ve heard so much about Divine magic while living in the temple, but you realize you don’t know a lot about it. You search through the book for a chapter that explains Divine magic.
+        You’ve heard so much about [codex:codex_hl_Divine_Magic]Divine magic[/codex] while living in the temple, but you realize you don’t know a lot about it. You search through the book for a chapter that explains Divine magic.
         
         “Divine magic is used by those blessed by the gods for harmony with the natural world. It is most common for a priest and priestess to have the blessing of their chosen god. The Flames of Sigel get their blessings from Sigel and use it to defeat the rot.”
         
@@ -352,7 +354,7 @@ You are helping out where you can, but you feel like you constantly are in the w
 The big meeting is soon. Cel is with the other high priests seemingly getting prepared for the speech. You go find one of your friends from the temple to hang out with while you wait.
 
 *fake_choice
-    *selectable_if (riva_Find = "no") #Riva (Strength)
+    *selectable_if (riva_Find = "no") #Riva (Challenging [color=${brawn_color}]Strength[/color] Check)
         *set riva_Find "yes"
         
         You find her tending to the plants in the greenhouse. You walk up beside her and she looks up at you.
@@ -368,7 +370,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Strength Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
@@ -392,7 +394,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “I’ll call Winfred or Barthold to come grab them, don’t strain yourself before the big meeting. We have to clean up afterwards.” She says. You nod, disappointed in your own strength.
 
-    *selectable_if (winfred_Find = "no") #Winfred (Medical)
+    *selectable_if (winfred_Find = "no") #Winfred (Challenging [color=${cunning_color}]Medical[/color] Check)
     
         *set winfred_Find "yes"
         
@@ -407,7 +409,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Medical Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
@@ -444,7 +446,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
             “That could have been so much worse if he fell. Thank you for helping.” Winfred gives a slight smile. You nod and return it.
             
-    *selectable_if (ivy_Find = "no") #Ivy (Acrobatics)
+    *selectable_if (ivy_Find = "no") #Ivy (Challenging [color=${agility_color}]Acrobatics[/color] Check)
         
         *set ivy_Find "yes"
         
@@ -461,7 +463,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Acrobatics Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
             
@@ -588,7 +590,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
 
 *page_break
 
-You gather around the stand, all of the high priests are standing behind it, but you don’t see Zeal. Out of the corner of your eye, you can see Zeal’s armor hiding in one of the side rooms. You wonder if the Sealot is in there. If the bite wasn’t taken care of.
+You gather around the stand, all of the high priests are standing behind it, but you don’t see Zeal. Out of the corner of your eye, you can see Zeal’s armor hiding in one of the side rooms. You wonder if the Zealot is in there. If the bite wasn’t taken care of.
 
 “We’re sorry to say that the Zealot isn’t feeling well and has to sit out for the meeting.” Cel explains, looking towards the crowd. “He told us the news and we are here to share as best as we can.”
 
@@ -649,7 +651,7 @@ The priest from the meeting walks into the room. You can see that everyone is tr
 “Oh… We’re splitting up the after meeting chores.” Riva explains.
 
 *fake_choice
-    #Lie and explain what chore you are doing (Improvisation)
+    #Lie and explain what chore you are doing (Moderate [color=${cunning_color}]Improvisation[/color] Check)
         
         *page_break
         
@@ -658,7 +660,7 @@ The priest from the meeting walks into the room. You can see that everyone is tr
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
-        [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
+        [head]Stealth Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
            “I’m going to help the kitchen and ask what boxes of food they need for dinner.” You explain.

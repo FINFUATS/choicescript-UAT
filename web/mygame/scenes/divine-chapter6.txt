@@ -1,4 +1,5 @@
 *label StartChapter6
+[head]Chapter 6: [/head]
 
 You head to the infirmary to make sure ${CH5d_injured} is ok. Everyone told you they would be fine but you were overcome with thoughts of Reese and that night. Worst-case scenarios flooded your mind through the night so you eventually decided to just go over and make sure everything was ok yourself. 
 
@@ -15,7 +16,7 @@ You head to the infirmary to make sure ${CH5d_injured} is ok. Everyone told you 
     
     “I’m fine. It’s not the first time one of the worms snuck up on me, and besides I’ve had worse.” Riva gives you a weak smile.
     
-    Your brows furrow more, “Worse? Riva, you were bleeding heavily and don’t get me started with how bad those teeth looked. I was worried that you weren’t going to make it and if you did, you would lose your arm.”
+    Your brows furrow more, “Worse? Riva, you were bleeding heavily and don’t get me started with how bad those teeth looked. I was worried that you weren’t going to make it, and if you did, you would have lost your arm.”
     
     *page_break
     
@@ -282,7 +283,7 @@ You couldn’t help but be caught off guard by the statement. He was the most we
 
 When you get there you  find more people scrambling around to prepare for his entrance. Everyone is trying to make sure things look perfect when suddenly the doors begin opening. The room goes silent as everyone looks upon him. 
 
-The Zealot walks through the door.  He is wearing bright shiny armor that glimmers in the light. He confidently strides into the temple with his head held high. The church members bow their heads in respect but you could not take your eyes off the man. He had an air about him that hypnotized you. Before you know it he begins walking right towards you. 
+[codex:codex_hl_Zealot]The Zealot[/codex] walks through the door.  He is wearing bright shiny armor that glimmers in the light. He confidently strides into the temple with his head held high. The church members bow their heads in respect but you could not take your eyes off the man. He had an air about him that hypnotized you. Before you know it he begins walking right towards you. 
 
 “Are you a new member?” He asks you.
 

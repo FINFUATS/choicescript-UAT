@@ -48,175 +48,253 @@ The rest of the codex sections are underpopulated.
 *label Characters
 Who do you want to know about?
 *fake_choice
-    #Anwen
-        *label codex_hl_Anwen
-        [head]Anwen[/head]
-        *image images/Anwen.webp
-        Anwen is well known for her ingenuity. Being of elven heritage, she has intensive knowledge on how to care for animals and how to shoot a bow. She can be often seen taking care of the horses or being with the wild life. She is also the champion of the Wolves’ yearly archery competition. However, her true love is tinkering, having created and upgraded many of the weapons used by the Wolves.
-        
-        Before she joined the Wolves, she was a craftsman in her village. Leaving to pursue her career she got caught up with some bandits. She was surrounded when the wolves came by to save her, only for her to take down a good number of them herself. Impressed by her skills, they offered her a place amongst their ranks. The Wolves could use a tinkerer along with a skilled marksman. She agreed after being promised that she can handle outfitting and modifying the team’s weaponry.
-        
-        She may have a quick temper and is heavily sarcastic, but she is immensely loyal. Saving the Wolves on multiple accounts and requesting that they went back to her village to save them from an attack. She is a valued member of the Wolves of Davenport.
-        *line_break
-        *goto Characters
-
-    #Cel Storm
-        *label codex_hl_Cel_Storm
-        [head]Cel Storm[/head]
-        *image images/Cel_Storm.webp
-        Cel Storm is a priestess of the Flames of Sigel. She joined the order at a young age when a priest named Dustin saved her from icgor-swogs. The rotted creatures overwhelmed her old town. She was one of the few survivors when the Flames of Sigil showed up. Cel managed to hide herself in an old storage shed and used the holy water her parents gave her to protect herself. Dustin was the one who found her and took her to the order’s temple.
-        
-        She is seen helping anyone who needs help, much to the dismay of the order. She followed Dustin’s footsteps in that regard. She doesn’t care who you are or where you came from, if you need help she will find a way to help. She has been seen saving people from Krigania from the jackaloids and mogfish.
-        
-        When her mentor Dustin was killed because some direwolves were forced out of their territory. Cel did some research on direwolves and partitioned a new branch in the order. One that patrolled towns near direwolf territories. She didn’t want these wolves to hurt anyone else.
-        *line_break
-        *goto Characters
-
-    #Dustin
-        *label codex_hl_Dustin
-        [head]Dustin[/head]
-        Dustin was the priest that took Cel Storm to the Flames of Sigel’s temple. He is the one who took care of her during her childhood after her town was taken over by ichor-swogs.
-        
-        He was known for taking in strays even before his wife died. She always talked about how the order should protect and help the people who have lost their homes to the rot. Not many people she took in made it far in the order, and most would leave after getting back on their feet. Some will stay and fully join the order, but they don’t make it far. This didn’t sway her. She was always a kind person and Dustin loved that about her. After she died Dustin continued to help people to honor her memory. 
-        
-        When he brought Cel in, he treated her like his own. The priests thinks she reminded him of his wife. He helped her get accommodated to the temple and got her a private tutor to help her along. Cel grew to look up to him and did her best to make him proud. In return, Dustin tried to be the kind of role model she needed. 
-        
-        Dustin died to a direwolf attack when he was patrolling the towns along the rot border. The direwolves got pushed out of their territory by the rot and attacked a nearby town. From what Cel said, he was protecting a family when the direwolves got him.
-        *line_break
-        *goto Characters
-
-    #Elena
-        *label codex_hl_Elena
-        [head]Elena[/head]
-        *image images/elena.webp
-        No one is completely sure where Elena came from. The Wolves of Davenport found her during one of her travels. She used arcane powers to help them destroy the rot in a small village. After seeing everyone work together and how everyone cared for each other, she joined the Wolves. Her knowledge and observation skills became vital for scouting missions.
-        
-        The little that is known about her past is that she used to travel with someone before they left her. It is unknown what had happened, but it clearly hurt Elena. She spends long periods alone on the edge of town, or camp, engrossed in meditative thought. There are also cities that she refuses to go into as she has many unseen enemies within them.
-        *line_break
-        *goto Characters
-
-    #Gwyn
-        *label codex_hl_Gwyn
-        [head]Gwyn[/head]
-        *image images/gwyn.webp
-        As a dwarven child of the Sullivan family, it is a surprise to see him with the Wolves of Davenport. He was well known for his knowledge of medicine, his parents were so proud of him that they made an announcement  when he got into the college of Farwater, the one of the best colleges in the land. It was a surprise to everyone when he got kicked out and his parents disowned him. They did not give an official reason why, but rumors say he was using unethical practices in his experiments.
-        
-        This did not deter him and he became a traveling medic, helping those who needed it. Although he never changed in his ways, he knew how to cure poisons that many gave up on. When he ran into the Wolves, one of them was injured. They got hit by a poisoned dart from a particularly crafty brigand. Gwyn managed to cure them and the Wolves asked him to join. Gwyn was reluctant at first, but after discovering he was free to run his experiments, he willingly joined. He became the poisons expert along with one of the top healers. Sharing his knowledge and having the freedom to experiment as he feels fit helped him grow and save many lives.
-        *line_break
-        *goto Characters
-
-    #Leediel Esheer
-        *label codex_hl_Leediel_Esheer
-        [head]Leediel Esheer[/head]
-        Leediel Esheer has not been seen since his escape from the Flames of Sigel when he was young. He is presumed dead.
-        
-        *if murdererKnown
-            Leediel Esheer Joined the Mockguarden Patch in his mid teens after escaping from the Flames of Sigel. Having learned the ways of the blade, he has become the second best assassin known in the lands. Just behind the Silent Night, the most feared assassin by the ones who have heard of him.
+    #Cel's Group
+        *label chargroup_Cel
+        Who do you want to know about?
+        *fake_choice
+            #Cel Storm
+                *label codex_hl_Cel_Storm
+                [head]Cel Storm[/head]
+                *image images/Cel_Storm.webp
+                Cel Storm is a priestess of the Flames of Sigel. She joined the order at a young age when a priest named Dustin saved her from icgor-swogs. The rotted creatures overwhelmed her old town. She was one of the few survivors when the Flames of Sigil showed up. Cel managed to hide herself in an old storage shed and used the holy water her parents gave her to protect herself. Dustin was the one who found her and took her to the order’s temple.
+                
+                She is seen helping anyone who needs help, much to the dismay of the order. She followed Dustin’s footsteps in that regard. She doesn’t care who you are or where you came from, if you need help she will find a way to help. She has been seen saving people from Krigania from the jackaloids and mogfish.
+                
+                When her mentor Dustin was killed because some direwolves were forced out of their territory. Cel did some research on direwolves and partitioned a new branch in the order. One that patrolled towns near direwolf territories. She didn’t want these wolves to hurt anyone else.
+                *line_break
+                *goto chargroup_Cel
             
-            He got the scar across his face from a botched assassination in his early years and now wears it with pride to show how no one can stop him.  His last hit was lord Odel, a politician he had been hunting down for years and he finally got an opening. However, he was betrayed and had to pin the murder on an unsuspecting local. Now he is hunting down his betrayer to prove that no one messes with him and lives.
-        *line_break
-        *goto Characters
+            #Berthold Klepper
+                *label codex_hl_Berthold
+                [head]Berthold Klepper[/head]
+                Berthold is one of the oldest people at the Davenport Temple. No one knows his life before he joined, being older than most of the people there. Not even Cel knows his backstory, despite growing up at the temple.
+
+                Berthold can be often seen meditating. He has a room at the temple he uses to host meditation lessons. Teaching how meditation can bring you closer to Sigel and help you prepare to fight the rot.
+                *line_break
+                *goto chargroup_Cel
             
+            #Ivy Siward
+                *label codex_hl_Ivy
+                [head]Ivy Siward[/head]
+                Not a lot is known about Ivy Siward before she joined the Davenport Temple. She is very secretive of her past, all that is known is that she was found on the streets of Davenport.
 
-    #Leon
-        *label codex_hl_Leon
-        [head]Leon[/head]
-        *image images/Leon_finally.webp
-        Leon “Silvertoung” Hartley was a well known raconteur before he joined the Wolves of Davenport. Known as "The Enigmatic Raconteur," he traveled throughout Terville and told stories of the people he had encountered. Stories about brave warriors in battle or stories of powerful monsters meeting their end. Sometimes he’ll tell stories of love and heartbreak, other times he’ll tell popular stories with his own twist on them. His more recent stories have hopeful endings that are used to inspire others. However, it wasn’t always like that.
-        
-        It is unknown how he got the skills he has. Leon is one of the most dangerous members of the Wolves. His skills with the blade is unmatched even with the most skilled swordsman. He seems to know how to sneak himself into any location, no matter how well guarded. Whenever his background is brought up he will either talk about the nomadic storytellers who raised him or completely deflect the question all together. Only a select few know his full story.
-        *line_break
-        *goto Characters
+                If you ask Ivy her backstory, she'll spin a tale of how she was kidnapped and forced to stay here followed by lots of laughter. Any follow-up questions will also have the response of laughter.
 
-    #Glador
-        *label codex_hl_Glador
-        [head]Glador[/head]
-        TODO:!!!
-        *line_break
-        *goto Characters
+                If you ask Cel, she'd tell you how Ivy was found in the streets begging for food. Cel won't explain any further and Ivy will say that's not what really happened, but won't elaborate.
+                *line_break
+                *goto chargroup_Cel
 
-    #Lord Odel
-        *label codex_hl_Lord_Odel
-        [head]Lord Odel[/head]
-        Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
-        
-        Having been recently murdered by an unknown local in Summerlight, the title of lord has been given to his son, Lord Aldin. Until he is old enough to rule, his advisors will be making watching over his land.
-        *line_break
-        *goto Characters
+            #Riva Skorropax
+                *label codex_hl_Riva
+                [head]Riva Skorropax[/head]
+                Riva Skorropax is the newest member in the Davenport temple. She is an elven druid from a nearby forest. She is known for being a little clumsy and is known for injuring herself. However, that is not the most common reason to see her in the infirmary. She will take injured animals to the infirmary and watch over them until they have healed.
 
-    #Reese
-        *label codex_hl_Reese
-        [head]Reese[/head]
-        *image images/reese_torn_paper_finished.webp
-        Looks like it was written on an old piece of paper that was torn and was added to the book. It has a drawing of a child that couldn’t be older than 7. Under the drawing there is some writing.
-        
-        Reese is my neighbor down the street. The two of us go sword fighting near the edge of the woods, our parents don’t like it when we go there. They help me and my mother farm while their parents are out of town for work. They say they work with my father in Davenport. I wonder if they get any of that Dwarven bread.
-        
-        Reese wants to explore more of the forest, I do not want to go. Our parents do not want us to go, they tell us it is too dangerous. That there are huge mockgardens and scary creatures out there. I do not want to see the big scary creatures, but I want to play with my friend. 
-        
-        *if (isReeseDead)
-            After that nothing else is legible other than the name Reese and jackaloid.
-        
-            Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
-        
-            *if CH2_followed_voice
+                No one besides Cel and Ivy knows her backstory. Riva was a regular before she joined. When asked, Riva will stutter and leave. Cel will just shake her head and tell you that some things are better left in the past.
+                *line_break
+                *goto chargroup_Cel
+
+            #Winfred Cartwright
+                *label codex_hl_Winfred
+                [head]Winfred Cartwright[/head]
+                Winfred was a porter before he joined the Davenport Temple.
+                *line_break
+                *goto chargroup_Cel
+
+            #Back
+                *page_break
+                *goto Characters
+
+    #Rip's Group
+        *label chargroup_Rip
+        Who do you want to know about?
+        *fake_choice
+            #Rip Daring
+                *label codex_hl_Rip_Daring
+                [head]Rip Daring[/head]
+                *image images/mercenary_transparent_background.webp
+                Rip Daring, known as "The Fearless Blade," is a renowned mercenary and key member of The Wolves of Davenport, a legendary band of mercenaries. Standing at six feet tall with a muscular build, Rip's rugged countenance and piercing green eyes reflect his unwavering determination and prowess on the battlefield.
+
+                Skilled in various combat techniques, Rip is a master of swordsmanship and hand-to-hand combat. His agility, speed, and acrobatic prowess make him a lethal opponent, while his custom-crafted dual-bladed longsword, "Shadowfang," grants him versatility and power. Rip's leadership qualities and loyalty to his comrades have been forged through past experiences and the mentorship of the fallen leader, Alistair Blackthorn.
+
+                With a dry sense of humor and keen intellect, Rip navigates challenges with wit and resolve. His unwavering commitment to protecting the realm and upholding the ideals of honor and integrity makes him an invaluable asset to The Wolves of Davenport. Rip Daring's legacy as a fearless warrior who led the Wolves and defended Teren from darkness is forever etched in the annals of history.
+
+                *line_break
+                *goto chargroup_Rip
+
+            #Anwen
+                *label codex_hl_Anwen
+                [head]Anwen[/head]
+                *image images/Anwen.webp
+                Anwen is well known for her ingenuity. Being of elven heritage, she has intensive knowledge on how to care for animals and how to shoot a bow. She can be often seen taking care of the horses or being with the wild life. She is also the champion of the Wolves’ yearly archery competition. However, her true love is tinkering, having created and upgraded many of the weapons used by the Wolves.
+                
+                Before she joined the Wolves, she was a craftsman in her village. Leaving to pursue her career she got caught up with some bandits. She was surrounded when the wolves came by to save her, only for her to take down a good number of them herself. Impressed by her skills, they offered her a place amongst their ranks. The Wolves could use a tinkerer along with a skilled marksman. She agreed after being promised that she can handle outfitting and modifying the team’s weaponry.
+                
+                She may have a quick temper and is heavily sarcastic, but she is immensely loyal. Saving the Wolves on multiple accounts and requesting that they went back to her village to save them from an attack. She is a valued member of the Wolves of Davenport.
+                *line_break
+                *goto chargroup_Rip
+
+            #Elena
+                *label codex_hl_Elena
+                [head]Elena[/head]
+                *image images/elena.webp
+                No one is completely sure where Elena came from. The Wolves of Davenport found her during one of her travels. She used arcane powers to help them destroy the rot in a small village. After seeing everyone work together and how everyone cared for each other, she joined the Wolves. Her knowledge and observation skills became vital for scouting missions.
+                
+                The little that is known about her past is that she used to travel with someone before they left her. It is unknown what had happened, but it clearly hurt Elena. She spends long periods alone on the edge of town, or camp, engrossed in meditative thought. There are also cities that she refuses to go into as she has many unseen enemies within them.
+                *line_break
+                *goto chargroup_Rip
+
+            #Gwyn
+                *label codex_hl_Gwyn
+                [head]Gwyn[/head]
+                *image images/gwyn.webp
+                As a dwarven child of the Sullivan family, it is a surprise to see him with the Wolves of Davenport. He was well known for his knowledge of medicine, his parents were so proud of him that they made an announcement  when he got into the college of Farwater, the one of the best colleges in the land. It was a surprise to everyone when he got kicked out and his parents disowned him. They did not give an official reason why, but rumors say he was using unethical practices in his experiments.
+                
+                This did not deter him and he became a traveling medic, helping those who needed it. Although he never changed in his ways, he knew how to cure poisons that many gave up on. When he ran into the Wolves, one of them was injured. They got hit by a poisoned dart from a particularly crafty brigand. Gwyn managed to cure them and the Wolves asked him to join. Gwyn was reluctant at first, but after discovering he was free to run his experiments, he willingly joined. He became the poisons expert along with one of the top healers. Sharing his knowledge and having the freedom to experiment as he feels fit helped him grow and save many lives.
+                *line_break
+                *goto chargroup_Rip
+
+            #Leon
+                *label codex_hl_Leon
+                [head]Leon[/head]
+                *image images/Leon_finally.webp
+                Leon “Silvertoung” Hartley was a well known raconteur before he joined the Wolves of Davenport. Known as "The Enigmatic Raconteur," he traveled throughout Terville and told stories of the people he had encountered. Stories about brave warriors in battle or stories of powerful monsters meeting their end. Sometimes he’ll tell stories of love and heartbreak, other times he’ll tell popular stories with his own twist on them. His more recent stories have hopeful endings that are used to inspire others. However, it wasn’t always like that.
+                
+                It is unknown how he got the skills he has. Leon is one of the most dangerous members of the Wolves. His skills with the blade is unmatched even with the most skilled swordsman. He seems to know how to sneak himself into any location, no matter how well guarded. Whenever his background is brought up he will either talk about the nomadic storytellers who raised him or completely deflect the question all together. Only a select few know his full story.
+                *line_break
+                *goto chargroup_Rip
             
-                When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
-            
-            *else
-                When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
-        
-        *else
-            That is all that's written on the paper…
-            
-        *line_break
-        *goto Characters
+            #${puppy_name}
+                *label codex_hl_puppy
+                [head]${puppy_name}[/head]
+                *image images/Direwolf_puppy_copy.webp
+                
+                Your pup that you found in the ruins of a village.
+                *line_break
+                *goto chargroup_Rip
 
-    #Rip Daring
-        *label codex_hl_Rip_Daring
-        [head]Rip Daring[/head]
-        *image images/mercenary_transparent_background.webp
-        Rip Daring, known as "The Fearless Blade," is a renowned mercenary and key member of The Wolves of Davenport, a legendary band of mercenaries. Standing at six feet tall with a muscular build, Rip's rugged countenance and piercing green eyes reflect his unwavering determination and prowess on the battlefield.
-        
-        Skilled in various combat techniques, Rip is a master of swordsmanship and hand-to-hand combat. His agility, speed, and acrobatic prowess make him a lethal opponent, while his custom-crafted dual-bladed longsword, "Shadowfang," grants him versatility and power. Rip's leadership qualities and loyalty to his comrades have been forged through past experiences and the mentorship of the fallen leader, Alistair Blackthorn.
-        
-        With a dry sense of humor and keen intellect, Rip navigates challenges with wit and resolve. His unwavering commitment to protecting the realm and upholding the ideals of honor and integrity makes him an invaluable asset to The Wolves of Davenport. Rip Daring's legacy as a fearless warrior who led the Wolves and defended Teren from darkness is forever etched in the annals of history.
-        
-        *line_break
-        *goto Characters
+            #Back
+                *page_break
+                *goto Characters
 
-    #Sigel
-        *label codex_hl_Sigel
-        [head]Sigel[/head]
-        *image images/Sigel_-_touch_up.webp
-        TODO:!!!
-        *line_break
-        *goto Characters
+    #Viper's Group
+        *label chargroup_Viper
+        Who do you want to know about?
+        *fake_choice
+            #Back
+                *page_break
+                *goto Characters
 
-    #Skadon
-        *label codex_hl_Skadon
-        [head]Skadon[/head]
-        *image images/Skadon.webp
-        Skadon, known as "The Father of Oblivion," emerged from the primordial void, a sentient force embodying darkness and the void itself. As the clash between Skadon and Sigel, the sun god, raged, the chaotic magic within creation stirred. Tera, the goddess of beauty, fertility, and "Mother Earth," manifested as the physical world of Teren. In another realm, Galdor, the embodiment of magic's will, brought order to the once chaotic forces.
-        
-        Recognizing the fragility of life on Teren, Tera sought Sigel's protection, showing him the burgeoning life on the planet's surface. Impressed by mankind's potential, Sigel proposed a union with Tera to safeguard Teren from Skadon's encroaching darkness. The cosmic balance began to stabilize, with Galdor controlling magic, while Skadon and Sigel's clash birthed other celestial beings and deities.
-        
-        Skadon, as the God of Darkness and The Void, represents the ever-present threat of oblivion. His eternal conflict with Sigel shapes the world of Teren, while Tera nurtures life and Galdor tames the forces of magic. Within this delicate equilibrium, Lune, the goddess of the moon, and other deities emerged. The struggle between light and darkness remains an enduring theme, influencing the destiny of Teren and its inhabitants throughout time.
-        *line_break
-        *goto Characters
+    #Other Characters
+        *label chargroup_Other
+        Who do you want to know about?
+        *fake_choice
+            #Dustin
+                *label codex_hl_Dustin
+                [head]Dustin[/head]
+                Dustin was the priest that took Cel Storm to the Flames of Sigel’s temple. He is the one who took care of her during her childhood after her town was taken over by ichor-swogs.
+                
+                He was known for taking in strays even before his wife died. She always talked about how the order should protect and help the people who have lost their homes to the rot. Not many people she took in made it far in the order, and most would leave after getting back on their feet. Some will stay and fully join the order, but they don’t make it far. This didn’t sway her. She was always a kind person and Dustin loved that about her. After she died Dustin continued to help people to honor her memory. 
+                
+                When he brought Cel in, he treated her like his own. The priests thinks she reminded him of his wife. He helped her get accommodated to the temple and got her a private tutor to help her along. Cel grew to look up to him and did her best to make him proud. In return, Dustin tried to be the kind of role model she needed. 
+                
+                Dustin died to a direwolf attack when he was patrolling the towns along the rot border. The direwolves got pushed out of their territory by the rot and attacked a nearby town. From what Cel said, he was protecting a family when the direwolves got him.
+                *line_break
+                *goto chargroup_Other
 
-    #Tera
-        *label codex_hl_Tera
-        [head]Tera[/head]
-        *image images/tera_copyfin.webp
-        Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
-        *line_break
-        *goto Characters
-    #${puppy_name}
-        [head]${puppy_name}[/head]
-        *image images/Direwolf_puppy_copy.webp
-        
-        Your pup that you found in the ruins of a village.
+            #Glador
+                *label codex_hl_Glador
+                [head]Glador[/head]
+                TODO:!!!
+                *line_break
+                *goto chargroup_Other
+
+            #Leediel Esheer
+                *label codex_hl_Leediel_Esheer
+                [head]Leediel Esheer[/head]
+                Leediel Esheer has not been seen since his escape from the Flames of Sigel when he was young. He is presumed dead.
+                
+                *if murdererKnown
+                    Leediel Esheer Joined the Mockguarden Patch in his mid teens after escaping from the Flames of Sigel. Having learned the ways of the blade, he has become the second best assassin known in the lands. Just behind the Silent Night, the most feared assassin by the ones who have heard of him.
+                    
+                    He got the scar across his face from a botched assassination in his early years and now wears it with pride to show how no one can stop him.  His last hit was lord Odel, a politician he had been hunting down for years and he finally got an opening. However, he was betrayed and had to pin the murder on an unsuspecting local. Now he is hunting down his betrayer to prove that no one messes with him and lives.
+                *line_break
+                *goto chargroup_Other
+
+            #Lord Odel
+                *label codex_hl_Lord_Odel
+                [head]Lord Odel[/head]
+                Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
+                
+                Having been recently murdered by an unknown local in Summerlight, the title of lord has been given to his son, Lord Aldin. Until he is old enough to rule, his advisors will be making watching over his land.
+                *line_break
+                *goto chargroup_Other
+
+            #Reese
+                *label codex_hl_Reese
+                [head]Reese[/head]
+                *image images/reese_torn_paper_finished.webp
+                Looks like it was written on an old piece of paper that was torn and was added to the book. It has a drawing of a child that couldn’t be older than 7. Under the drawing there is some writing.
+                
+                Reese is my neighbor down the street. The two of us go sword fighting near the edge of the woods, our parents don’t like it when we go there. They help me and my mother farm while their parents are out of town for work. They say they work with my father in Davenport. I wonder if they get any of that Dwarven bread.
+                
+                Reese wants to explore more of the forest, I do not want to go. Our parents do not want us to go, they tell us it is too dangerous. That there are huge mockgardens and scary creatures out there. I do not want to see the big scary creatures, but I want to play with my friend. 
+                
+                *if (isReeseDead)
+                    After that nothing else is legible other than the name Reese and jackaloid.
+                
+                    Reese was a child from Summerlight who had met a tragic end. They were playing with their friend in the forest the day the stray jackaloid came from the neighboring village Pinehelm. 
+                
+                    *if CH2_followed_voice
+                    
+                        When they got bit, their friend took them to a visiting priest to see if he could help, but there was nothing that could be done. The closest temple equipped to help was many weeks out and Reese only had two weeks before the end. The full story of what happened is unknown, but the priest explained that he put the child out of his misery before the end came. When Reese’s parents found out, they moved to Davenport to spend the rest of their time working with the fishermen.
+                    
+                    *else
+                        When they got bit, their friend took them back to the village, but there was nothing they could do. The friend gave Reese to the first person that they saw and she took care of Reese for as long as she could. Took them back to their parents and stayed with them until the end. Afterwards, Reese’s parents moved to Davenport and spend the rest of their time working with the fishermen.
+                
+                *else
+                    That is all that's written on the paper…
+                    
+                *line_break
+                *goto chargroup_Other
+
+            #Sigel
+                *label codex_hl_Sigel
+                [head]Sigel[/head]
+                *image images/Sigel_-_touch_up.webp
+                TODO:!!!
+                *line_break
+                *goto chargroup_Other
+
+            #Skadon
+                *label codex_hl_Skadon
+                [head]Skadon[/head]
+                *image images/Skadon.webp
+                Skadon, known as "The Father of Oblivion," emerged from the primordial void, a sentient force embodying darkness and the void itself. As the clash between Skadon and Sigel, the sun god, raged, the chaotic magic within creation stirred. Tera, the goddess of beauty, fertility, and "Mother Earth," manifested as the physical world of Teren. In another realm, Galdor, the embodiment of magic's will, brought order to the once chaotic forces.
+                
+                Recognizing the fragility of life on Teren, Tera sought Sigel's protection, showing him the burgeoning life on the planet's surface. Impressed by mankind's potential, Sigel proposed a union with Tera to safeguard Teren from Skadon's encroaching darkness. The cosmic balance began to stabilize, with Galdor controlling magic, while Skadon and Sigel's clash birthed other celestial beings and deities.
+                
+                Skadon, as the God of Darkness and The Void, represents the ever-present threat of oblivion. His eternal conflict with Sigel shapes the world of Teren, while Tera nurtures life and Galdor tames the forces of magic. Within this delicate equilibrium, Lune, the goddess of the moon, and other deities emerged. The struggle between light and darkness remains an enduring theme, influencing the destiny of Teren and its inhabitants throughout time.
+                *line_break
+                *goto chargroup_Other
+
+            #Tera
+                *label codex_hl_Tera
+                [head]Tera[/head]
+                *image images/tera_copyfin.webp
+                Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
+                *line_break
+                *goto chargroup_Other
+
+            #The Zealot
+                *label codex_hl_Zealot
+                [head]The Zealot[/head]
+                The (Alaric) Zealot, the hero of the north, the rot rinser, and the Savior of Saragossa, are just some of the names Alaric is known by throughout the realm. His heart is filled with a burning passion for the church but his methods have been said to be a bit extreme at times. Aside from the occasional “there’s no other way” when it comes to getting rid of rot, he is an amazing ally and an excellent fighter to have by your side. There’s a reason he's become a household name throughout the lands. This is someone you want on your team, just his sheer presence is enough to inspire an army to rise above any situation or to intimidate enemies enough to throw the battle. His heart does burn pure, but it burns pure in his eyes.
+                *line_break
+                *goto chargroup_Other
+
+            #Back
+                *page_break
+                *goto Characters
 
     #Back
         *page_break
@@ -227,6 +305,7 @@ Who do you want to know about?
 Which Faction?
 *fake_choice
     #Flames of Sigel
+        *label codex_hl_FoS
         [head]Flames of Sigel[/head]
         *image images/BOoook_copy_done.webp
         The Flames of Sigel is a band of priests and priestesses, joined together as devout followers of Sigel and the Holy Order. Using their skills in battle and unwavering dedication, they fight against the encroaching rot and strive to protect the people of Teren from all the beasts and terrors lurking in the dark. This order is currently overseen by the Zealot, a brave man who is adorned in armor that shines like the morning sun. With his stalwart presence and commanding voice, many have been swayed into joining the Flames just for a chance to be acknowledged by this legendary man.   
@@ -244,6 +323,7 @@ Which Faction?
         *goto Factions
 
     #Wolves of Davenport
+        *label codex_hl_WoD
         [head]Wolves of Davenport[/head]
         *image images/WolvesBook.webp
         *comment Image does not work
@@ -285,18 +365,21 @@ What item?
 What form of magic do you want to know about?
 *fake_choice
     #Divine Magic
+        *label codex_hl_Divine_Magic
         [head]Divine Magic[/head]
         Divine magic is used by those blessed by the gods for harmony with the natural world. It is most common for a priest and priestess to have the blessing of their chosen god. The Flames of Sigel get their blessings from Sigel and use it to defeat the rot.
         *line_break
         *goto Magic
 
     #Arcane Magic
+        *label codex_hl_Arcane_Magic
         [head]Arcane Magic[/head]
         Arcane magic is either studied for or the person must be born with the ability to use it. It is unknown who was the first person to be born with the innate ability for magic, but many of their descendants walk among us. They are hard to spot, but those who use their magic for good has been seen assisting divine users against the rot. 
         *line_break
         *goto Magic
 
     #Rot
+        *label codex_hl_Rot
         [head]Rot[/head]
         It is unknown exactly where the rot comes from. It has been around for as long as people have been in Teville. The most common theory is that it involves Skadon. That he summons it and has some control over it. This is what the Flames of Sigel believe. They believe him to be the one controlling the rot and that he must be stopped.
         

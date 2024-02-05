@@ -1,6 +1,5 @@
-[head]Chapter 10D: Home[/head]
 *label CH_BGN
-*temp Cel_Cor 1
+[head]Chapter 10: Home[/head]
 After leaving the temple, you found a group of traveling scholars you recognize from a few weeks back. They were visiting the temple and trying to learn as much as they could in the library before leaving for the next temple. You found them in Stormdenn, just as they were about to leave for the next town.
 
 They are traveling to Cavecross and through to the east side of Teville. You figure getting as far away from Summerlight and Davenport would make less people know who you are and you’ll be able to completely start anew. Maybe you’ll be a farmer like your mother or a fisher like your father.
@@ -68,7 +67,7 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         While you are cleaning up you remember all the times you’ve been here with your father. He passed a few years back and you don’t have anything with you left to remember him by. Everything is still in your old house.
         
         As you threw in the last piece of wood into the fire, you hear a knock at the door
-        *if (Cel_Cor = 1)
+        *if (cel_path = "good")
               *goto CEL_H_C
         *goto CEL_H_P
     #Stay at Summerlight’s temple
@@ -200,7 +199,7 @@ You continue walking down the alleys, you decide to-
             
             “Who are you?” You stand up and ask him.
             
-            “Rip Daring and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
+            “[codex:codex_hl_Rip_Daring]Rip Daring[/codex] and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
             
             You take a step back. “What do you want from me?”
             
@@ -215,7 +214,7 @@ You continue walking down the alleys, you decide to-
         
         “It’s a little late to leave now, who knows what monsters are lurking out there. I can take you to an abandoned house to stay the night and then you can decide what you are doing in the morning.” Rip offers
         
-        *if (Cel_Cor = 1)
+        *if (cel_path = "good")
           *goto CEL_AL_C
         *goto CEL_AL_P
         

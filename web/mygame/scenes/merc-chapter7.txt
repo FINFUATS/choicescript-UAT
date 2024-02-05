@@ -1,5 +1,5 @@
 *label StartChapter7
-[head]Chapter: Downtime[/head]
+[head]Chapter 7: Downtime[/head]
 Amidst the tumultuous journey and the constant perils faced by you and your newfound companions, there comes a brief respite in the form of a lull in the story.
 
 You find yourself settling in a makeshift mercenary camp, nestled in a clearing surrounded by towering ancient trees. The camp exudes a sense of camaraderie and worn-out vitality, as battle-hardened warriors unwind from their arduous endeavors.
@@ -74,7 +74,7 @@ What will you do with your free time?
 
         By the end of the lesson, you’ve learned a lot more about how to handle yourself in battle. You hope to never have to use this knowledge, but will likely have too in this line of work.
         
-    *selectable_if (archery = "no") #Archery Contest
+    *selectable_if (archery = "no") #Archery Contest (Moderate [color=${agility_color}]Motor Skill[/color] Check)
         
         *set archery "yes"
         During the leisure hours, the camp came alive with friendly sparring matches and competitions that brought out the playful spirit of the Wolves of Davenport. 
@@ -108,7 +108,7 @@ What will you do with your free time?
     
             “Better luck next time.” A voice calls out. You turn around and see Anwen. “The next time we have time to rest I’ll give you some pointers.”
 
-    *selectable_if (race = "no") #Foot Race
+    *selectable_if (race = "no") #Foot Race (Moderate [color=${brawn_color}]Endurance[/color] & [color=${agility_color}]Acrobatics[/color] Check)
         
         *set race "yes"
         *set GP_arg0 Endurance
@@ -147,6 +147,8 @@ What will you do with your free time?
         Through these challenges and competitions, you earn the respect of the mercenaries in the camp. From participating in the competitions, you feel more welcomed among the Wolves of Davenport. 
 
         As the night wore on, the camp became a place of warmth and belonging, a true family bonded by the shared experiences of both battle and revelry. You feel the sense of kinship that only a group of kindred spirits could provide, knowing that you are not alone in the world but part of something greater - a family of warriors who fought not only for fortune but for the unbreakable bond that united them together. 
+        
+        *page_break
 
         The next day, you are given the task of leading a small group to the nearby towns and villages to acquire essential provisions such as food, medical supplies, and equipment. They sent you on this mission to test your leadership skills and to show you the impact the wolves have on the local communities.
 
@@ -159,15 +161,7 @@ What will you do with your free time?
 *label CH7M_daytwo
 Where do you go?
 *fake_choice
-    *selectable_if (food = "no") #Get food for the camp
-    
-        *set food "yes"
-        *set GP_arg0 Endurance
-        *set GP_arg1 "challenging"
-        *gosub_scene general AttributeSkillCheck
-        *temp CH7M_e_bool returnData
-        [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
-
+    *selectable_if (food = "no") #Get food for the camp (Challenging [color=${brawn_color}]Endurance[/color] Check)
         You stop at the quaint village of Bexley, known for its delicious homemade pies and friendly villagers.
 
         Entering the village, you are greeted by the jovial townspeople who recognized the Wolves of Davenport crest emblazoned on your armor. 
@@ -176,18 +170,28 @@ Where do you go?
 
         "The annual pie-eating contest is upon us, and our reigning champion is boastful as ever," Bartholomew said with a chuckle. "If you can beat him in a pie-eating showdown, I'll fill your carts with all the pies you need!"
 
+        *page_break
+
+        *set food "yes"
+        *set GP_arg0 Endurance
+        *set GP_arg1 "challenging"
+        *gosub_scene general AttributeSkillCheck
+        *temp CH7M_e_bool returnData
+        [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
+
         *if CH7M_e_bool
             *comment Pass (Minor reputation increase the Wolves):
-            Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you into the first pie. 
+            Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you dig into the first pie. 
     
             With each crust and filling devoured, the crowd's cheers grew louder. In a comedic whirlwind of pie and laughter, you emerged as the new pie-eating champion, earning a cart full of pies, much to the villagers' amusement.
         *else
             *comment Fail (Insignificant reputation increase the Wolves):
-            Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you into the first pie.
+            Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you dig into the first pie.
+
+            It was too much. You barely manage to finish the third pie before calling it quits.
         *page_break
 
-        It was too much, you barely manage to finish the third pie before calling it quits.
-
+    *selectable_if (weapons = "no") #Get weapons for the camp (Difficult [color=${brawn_color}]Endurance[/color] Check)
         Continuing your journey, the group arrives at the town of Aston, known for its skilled blacksmiths. You need to get new weapons and armor to keep their mercenary group well-equipped.
 
         You step into the bustling smithy run by the burly and boisterous blacksmith, Gruff, who prided himself on crafting the finest blades.
@@ -196,11 +200,11 @@ Where do you go?
 
         You feel the eyes of your companions and accept the challenge with a smirk. It was an epic clash of strength, with the smith's bulging muscles against your determination.
 
-    *selectable_if (weapons = "no") #Get weapons for the camp
-        
+        *page_break
+
         *set weapons "yes"
         *set GP_arg0 Endurance
-        *set GP_arg1 "challenging"
+        *set GP_arg1 "difficult"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_e_bool returnData
         [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
@@ -283,7 +287,7 @@ It’s the next day, you look for other ways to help the camp,
 
         Throughout your time here, you witness the sacrifices and risks faced by their fellow mercenaries. You hear stories of battles fought, injuries endured, and the unwavering determination to protect the innocent and uphold their mercenary code. Gwyn's words echoed in your mind, underscoring the importance of their role in the camp - not just as a fighter but as a caretaker for their comrades.
 
-        As you tended to the wounded, they formed connections with their fellow mercenaries. They listened to their stories, shared laughter, and provided comfort during difficult times. These interactions deepened their understanding of the tight-knit bond within the mercenary group, fostering a sense of unity and esprit de corps that would endure through the trials that lay ahead.
+        As you tended to the wounded, they formed connections with their fellow mercenaries. They listened to their stories, shared laughter, and provided comfort during difficult times. These interactions deepened their understanding of the tight-knit bond within the mercenary group, fostering a sense of unity and fellowship that would endure through the trials that lay ahead.
 
     # Done
         At the end of the day, you are sitting by the fire, listening to the stories that are being told. As you are enjoying the time you’ve got to rest, Rip walks up to you.
