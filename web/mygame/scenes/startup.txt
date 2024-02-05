@@ -43,7 +43,7 @@
 *create name "Onyx"
 *create gender "Other"
 *create faction "None"
-*create item "murder_weapon"
+*create item "None"
 *create bought "None"
 *create coin 0
 *create puppy_name "Luna"
@@ -138,57 +138,59 @@
 *create Cel 0
 *create total 0
 
-*comment Character Relationship Value Globals
-*create rel_val_Rip 0
-*create rel_val_Anwen 0
-*create rel_val_Elena 0
-*create rel_val_Gwyn 0
-*create rel_val_Leon 0
+*comment ///////// Relationship Globals /////////
 
+*comment Character Relationship Value Globals
 *create rel_val_Cel 0
 *create rel_val_Berthold 0
 *create rel_val_Ivy 0
 *create rel_val_Riva 0
 *create rel_val_Winfred 0
 
-*comment Character Relationship Status Globals
-*create rel_status_Rip "Indifferent"
-*create rel_status_Anwen "Indifferent"
-*create rel_status_Elena "Indifferent"
-*create rel_status_Gwyn "Indifferent"
-*create rel_status_Leon "Indifferent"
+*create rel_val_Rip 0
+*create rel_val_Anwen 0
+*create rel_val_Elena 0
+*create rel_val_Gwyn 0
+*create rel_val_Leon 0
 
+*comment Character Relationship Status Globals
 *create rel_status_Cel "Indifferent"
 *create rel_status_Berthold "Indifferent"
 *create rel_status_Ivy "Indifferent"
 *create rel_status_Riva "Indifferent"
 *create rel_status_Winfred "Indifferent"
 
-*comment Character Relationship Trend Globals
-*create trend_Rip "N/A"
-*create trend_Anwen "N/A"
-*create trend_Elena "N/A"
-*create trend_Gwyn "N/A"
-*create trend_Leon "N/A"
+*create rel_status_Rip "Indifferent"
+*create rel_status_Anwen "Indifferent"
+*create rel_status_Elena "Indifferent"
+*create rel_status_Gwyn "Indifferent"
+*create rel_status_Leon "Indifferent"
 
+*comment Character Relationship Trend Globals
 *create trend_Cel "N/A"
 *create trend_Berthold "N/A"
 *create trend_Ivy "N/A"
 *create trend_Riva "N/A"
 *create trend_Winfred "N/A"
 
-*comment Character Relationship Percentage Globals
-*create relationship_Rip_percentage 0
-*create relationship_Anwen_percentage 0
-*create relationship_Elena_percentage 0
-*create relationship_Gwyn_percentage 0
-*create relationship_Leon_percentage 0
+*create trend_Rip "N/A"
+*create trend_Anwen "N/A"
+*create trend_Elena "N/A"
+*create trend_Gwyn "N/A"
+*create trend_Leon "N/A"
 
+*comment Character Relationship Percentage Globals
 *create relationship_Cel_percentage 0
 *create relationship_Berthold_percentage 0
 *create relationship_Ivy_percentage 0
 *create relationship_Riva_percentage 0
 *create relationship_Winfred_percentage 0
+
+*create relationship_Rip_percentage 0
+*create relationship_Anwen_percentage 0
+*create relationship_Elena_percentage 0
+*create relationship_Gwyn_percentage 0
+*create relationship_Leon_percentage 0
 
 *comment Faction Reputation Percentage Globals
 *create reputation_Flames_percentage 0
@@ -210,12 +212,15 @@
 *comment Faction Reputation Globals
 *create rep_val_Flames 0
 *create rep_val_Wolves 0
+
 *comment Faction Reputation Status Globals
 *create rep_status_Flames "Neutral"
 *create rep_status_Wolves "Neutral"
+
 *comment Faction Reputation Trend Globals
 *create trend_Flames "N/A"
 *create trend_Wolves "N/A"
+
 *comment Faction Reputation Max XP Global
 *create reputation_max_xp 50
 
@@ -288,12 +293,12 @@ What chapter?
                   #Chapter 6 D
                       *set faction "divine"
                       *goto_scene chapter6
-                  #Chapter 9 D
-                      *set faction "divine"
-                      *goto_scene chapter9
                   #Chapter 7 D
                       *set faction "divine"
                       *goto_scene chapter7
+                  #Chapter 9 D
+                      *set faction "divine"
+                      *goto_scene chapter9
                   #Chapter 10 D
                       *set faction "divine"
                       *goto_scene chapter10

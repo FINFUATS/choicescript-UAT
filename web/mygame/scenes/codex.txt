@@ -48,7 +48,7 @@ The rest of the codex sections are underpopulated.
 *label Characters
 Who do you want to know about?
 *fake_choice
-    #Cel's Group
+    #Flames of Sigel
         *label chargroup_Cel
         Who do you want to know about?
         *fake_choice
@@ -104,7 +104,7 @@ Who do you want to know about?
                 *page_break
                 *goto Characters
 
-    #Rip's Group
+    #Wolves of Davenport
         *label chargroup_Rip
         Who do you want to know about?
         *fake_choice
@@ -176,14 +176,43 @@ Who do you want to know about?
                 *page_break
                 *goto Characters
 
-    #Viper's Group
-        *label chargroup_Viper
-        Who do you want to know about?
+    #Gods
+        *label chargroup_Gods
+        Which God would you like to learn about?
         *fake_choice
+            #Sigel
+                *label codex_hl_Sigel
+                [head]Sigel[/head]
+                *image images/Sigel_-_touch_up.webp
+                TODO:!!!
+                *line_break
+                *goto chargroup_Gods
+            
+            #Skadon
+                *label codex_hl_Skadon
+                [head]Skadon[/head]
+                *image images/Skadon.webp
+                Skadon, known as "The Father of Oblivion," emerged from the primordial void, a sentient force embodying darkness and the void itself. As the clash between Skadon and Sigel, the sun god, raged, the chaotic magic within creation stirred. Tera, the goddess of beauty, fertility, and "Mother Earth," manifested as the physical world of Teren. In another realm, Galdor, the embodiment of magic's will, brought order to the once chaotic forces.
+                
+                Recognizing the fragility of life on Teren, Tera sought Sigel's protection, showing him the burgeoning life on the planet's surface. Impressed by mankind's potential, Sigel proposed a union with Tera to safeguard Teren from Skadon's encroaching darkness. The cosmic balance began to stabilize, with Galdor controlling magic, while Skadon and Sigel's clash birthed other celestial beings and deities.
+                
+                Skadon, as the God of Darkness and The Void, represents the ever-present threat of oblivion. His eternal conflict with Sigel shapes the world of Teren, while Tera nurtures life and Galdor tames the forces of magic. Within this delicate equilibrium, Lune, the goddess of the moon, and other deities emerged. The struggle between light and darkness remains an enduring theme, influencing the destiny of Teren and its inhabitants throughout time.
+                *line_break
+                *goto chargroup_Gods
+
+            #Tera
+                *label codex_hl_Tera
+                [head]Tera[/head]
+                *image images/tera_copyfin.webp
+                Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
+                *line_break
+                *goto chargroup_Gods
+
             #Back
                 *page_break
                 *goto Characters
 
+    
     #Other Characters
         *label chargroup_Other
         Who do you want to know about?
@@ -254,34 +283,6 @@ Who do you want to know about?
                 *else
                     That is all that's written on the paper…
                     
-                *line_break
-                *goto chargroup_Other
-
-            #Sigel
-                *label codex_hl_Sigel
-                [head]Sigel[/head]
-                *image images/Sigel_-_touch_up.webp
-                TODO:!!!
-                *line_break
-                *goto chargroup_Other
-
-            #Skadon
-                *label codex_hl_Skadon
-                [head]Skadon[/head]
-                *image images/Skadon.webp
-                Skadon, known as "The Father of Oblivion," emerged from the primordial void, a sentient force embodying darkness and the void itself. As the clash between Skadon and Sigel, the sun god, raged, the chaotic magic within creation stirred. Tera, the goddess of beauty, fertility, and "Mother Earth," manifested as the physical world of Teren. In another realm, Galdor, the embodiment of magic's will, brought order to the once chaotic forces.
-                
-                Recognizing the fragility of life on Teren, Tera sought Sigel's protection, showing him the burgeoning life on the planet's surface. Impressed by mankind's potential, Sigel proposed a union with Tera to safeguard Teren from Skadon's encroaching darkness. The cosmic balance began to stabilize, with Galdor controlling magic, while Skadon and Sigel's clash birthed other celestial beings and deities.
-                
-                Skadon, as the God of Darkness and The Void, represents the ever-present threat of oblivion. His eternal conflict with Sigel shapes the world of Teren, while Tera nurtures life and Galdor tames the forces of magic. Within this delicate equilibrium, Lune, the goddess of the moon, and other deities emerged. The struggle between light and darkness remains an enduring theme, influencing the destiny of Teren and its inhabitants throughout time.
-                *line_break
-                *goto chargroup_Other
-
-            #Tera
-                *label codex_hl_Tera
-                [head]Tera[/head]
-                *image images/tera_copyfin.webp
-                Tera is considered the mother of all life. The world of Teren was created on the physical manifestation of her being. When she saw life was being created on her being, she helped it along its way. She recruited the help of Sigel to protect the lifeforms from all harm and in return, she accepted his marriage proposal.
                 *line_break
                 *goto chargroup_Other
 
