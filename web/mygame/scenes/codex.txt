@@ -76,6 +76,7 @@ Who do you want to know about?
             #Ivy Siward
                 *label codex_hl_Ivy
                 [head]Ivy Siward[/head]
+                *image images/ivy.webp
                 Not a lot is known about Ivy Siward before she joined the Davenport Temple. She is very secretive of her past, all that is known is that she was found on the streets of Davenport.
 
                 If you ask Ivy her backstory, she'll spin a tale of how she was kidnapped and forced to stay here followed by lots of laughter. Any follow-up questions will also have the response of laughter.
@@ -308,7 +309,7 @@ Which Faction?
     #Flames of Sigel
         *label codex_hl_FoS
         [head]Flames of Sigel[/head]
-        *image images/BOoook_copy_done.webp
+        *image images/Flames_of_Sigel_Logo.webp
         The Flames of Sigel is a band of priests and priestesses, joined together as devout followers of Sigel and the Holy Order. Using their skills in battle and unwavering dedication, they fight against the encroaching rot and strive to protect the people of Teren from all the beasts and terrors lurking in the dark. This order is currently overseen by the Zealot, a brave man who is adorned in armor that shines like the morning sun. With his stalwart presence and commanding voice, many have been swayed into joining the Flames just for a chance to be acknowledged by this legendary man.   
         
         The Flames of Sigel follows these tenets:
@@ -346,6 +347,7 @@ What item?
 *fake_choice
     #Flames of Sigel Amulet
         [head]Flames of Sigel Amulet[/head]
+        *image images/Flames_of_Sigel_Amulet.webp
         An amulet that all members of the Flames of Sigel have. It lets the members of the order recognize each other across the land of Teville. 
         *line_break
         *goto Items
@@ -491,6 +493,7 @@ Where do you want to learn about?
     #Davenport
         *label codex_hl_Davenport
         [head]Davenport[/head]
+        *image images/daven_port.webp
         Davenport, a city that stands as a testament to the ingenuity and resilience of humanity, is a sprawling metropolis nestled within the embrace of the Broken Fields. With its roots reaching back through the annals of history, this cosmopolitan hub has become a beacon of civilization amid the untamed wilderness of the world. Its strategic position, nestled against the flowing river that gracefully winds its way to the vast seas beyond, has transformed Davenport into a thriving center of trade and cultural exchange.
         
         At the heart of the city lies the bustling marketplace, a vibrant tapestry of color, sound, and aromatic delights. Merchants from far and wide gather here, showcasing their exotic goods and rare treasures. Intricately carved carts and stalls brim with vibrant fabrics, tantalizing spices, gleaming jewelry, and mystical artifacts. It is within this kaleidoscope of commerce that the true spirit of Davenport comes alive, as voices from countless lands intermingle, creating a symphony of diverse cultures and languages.
@@ -582,6 +585,7 @@ What Specie do you want to learn about?
 
     #Humans
         [head]Humans[/head]
+        *image images/Human.webp
         Humans are taller than dwarves and gnomes. Some of them are as bulky as a dwarf and others are as thin as an elf. They’re seen all across Teville and are one of the more resilient races. They aren’t immune to anything, they have been seen surviving seemingly impossible things that confuse the other races. They are also the most common race across the land and are the leaders of many kingdoms.
         *line_break
         *goto Species
