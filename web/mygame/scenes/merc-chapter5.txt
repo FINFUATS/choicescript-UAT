@@ -59,7 +59,7 @@ Before you head to sleep you open your bag and look at your item.
     You take your dagger out of your bag and place it next to you. Then you try to get comfy against the corner.
 *elseif item = "book"
     You take out your book and place it in the light. “Creatures around Tellos.” You open up to the first page about Jackaloids. 
-*elseif item = "murder_weapon"
+*elseif item = "bloody dagger"
     You admire the designs on the knife, wondering what they mean.
 *else
     There's nothing there…
