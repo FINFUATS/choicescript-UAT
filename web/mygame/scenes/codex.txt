@@ -573,6 +573,7 @@ What Specie do you want to learn about?
         
     #Elves
         [head]Elves[/head]
+        *image images/Elves.webp
         Elves are a tall and lithe race known for their love of nature. Their height varies along similar lines to humans. Many of them become druids or farmers. Others are known for their intelligence and magical prowess. In Teville they are mainly seen in Elvenport or the city of Teville, trading knowledge or goods. 
         *line_break
         *goto Species
