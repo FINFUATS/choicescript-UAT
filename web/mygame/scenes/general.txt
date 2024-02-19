@@ -75,9 +75,9 @@
 *temp succPercent GP_arg1
 
 *temp rng 0
-*rand rng 0 attr
+*rand rng 0 100
 
-*set returnData (attr * succPercent) >= rng
+*set returnData (attr + succPercent) >= rng
 
 *return
 
@@ -93,27 +93,27 @@
 *temp difficulty GP_arg1
 
 *if (difficulty = "trivial")
-    *set GP_arg1 0.80
+    *set GP_arg1 80
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "simple")
-    *set GP_arg1 0.70
+    *set GP_arg1 70
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "moderate")
-    *set GP_arg1 0.60
+    *set GP_arg1 60
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "challenging")
-    *set GP_arg1 0.50
+    *set GP_arg1 50
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "difficult")
-    *set GP_arg1 0.35
+    *set GP_arg1 35
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "extreme")
-    *set GP_arg1 0.15
+    *set GP_arg1 15
     *gosub AttributeSkillCheckBase
     *return
 *elseif (difficulty = "impossible")
