@@ -55,20 +55,20 @@ You decide to,
             
             # Buddy (Boy)
                 *set gender "Male"				
-                *set pronoun_they "him"
-                *set pronoun_them "he"
+                *set pronoun_they "he"
+                *set pronoun_them "him"
                 *set pronoun_their "his"
                 
             # Honey (Girl)
                 *set gender "Female"
-                *set pronoun_they "her"
-                *set pronoun_them "she"
+                *set pronoun_they "she"
+                *set pronoun_them "her"
                 *set pronoun_their "hers"
                 
             # Kiddo (Other)
                 *set gender "Other"
-                *set pronoun_they "them"
-                *set pronoun_them "they"
+                *set pronoun_they "they"
+                *set pronoun_them "them"
                 *set pronoun_their "their"
         
         “You look like you barely slept! Your hair is a mess," she teases, a warm smile playing on her lips. 
@@ -115,18 +115,18 @@ You decide to,
         *fake_choice
             # Buddy (Boy)
                 *set gender "Male"				
-                *set pronoun_they "him"
-                *set pronoun_them "he"
+                *set pronoun_they "he"
+                *set pronoun_them "him"
                 *set pronoun_their "his"
             # Young Lady (Girl)
                 *set gender "Female"
-                *set pronoun_they "her"
-                *set pronoun_them "she"
+                *set pronoun_they "she"
+                *set pronoun_them "her"
                 *set pronoun_their "hers"
             # Kiddo (Other)
                 *set gender "Other"
-                *set pronoun_they "them"
-                *set pronoun_them "they"
+                *set pronoun_they "they"
+                *set pronoun_them "them"
                 *set pronoun_their "their"
                 
                 
@@ -164,18 +164,18 @@ You decide to,
                     
                     # Buddy (Boy).”
                         *set gender "Male"
-                        *set pronoun_they "him"
-                        *set pronoun_them "he"
+                        *set pronoun_they "he"
+                        *set pronoun_them "him"
                         *set pronoun_their "his"
                     # Honey (Girl).”
                         *set gender "Female"
-                        *set pronoun_they "her"
-                        *set pronoun_them "she"
+                        *set pronoun_they "she"
+                        *set pronoun_them "her"
                         *set pronoun_their "hers"
                     # Kiddo (Other).”
                         *set gender "Other"
-                        *set pronoun_they "them"
-                        *set pronoun_them "they"
+                        *set pronoun_they "they"
+                        *set pronoun_them "them"
                         *set pronoun_their "their"
                         
                “Could you head to the market after breakfast? The harvest isn’t in yet, so we need to stock up on food.” your mother asks you. You nod and finish your food.
@@ -203,18 +203,18 @@ You decide to,
                     
                     # Buddy (Boy).”
                         *set gender "Male"
-                        *set pronoun_they "him"
-                        *set pronoun_them "he"
+                        *set pronoun_they "he"
+                        *set pronoun_them "him"
                         *set pronoun_their "his"
                     # Honey (Girl).”
                         *set gender "Female"
-                        *set pronoun_they "her"
-                        *set pronoun_them "she"
+                        *set pronoun_they "she"
+                        *set pronoun_them "her"
                         *set pronoun_their "hers"
                     # Kiddo (Other).”
                         *set gender "Other"
-                        *set pronoun_they "them"
-                        *set pronoun_them "they"
+                        *set pronoun_they "they"
+                        *set pronoun_them "them"
                         *set pronoun_their "their"
                 
                 “Wooden swords and a note from Dad!” You shout back.
