@@ -2,15 +2,15 @@ This is a stats screen!
 *temp isShowingStatBar false
 *label screen
 *stat_chart
-    text name
-    text gender
+    text Name
+    text Gender
     text Brawn
     text Agility
     text Cunning
-    text faction
-    text item
-    text bought
-    text coin 
+    text Faction
+    text Item
+    text Bought
+    text Coin 
 
 *gosub_scene general UpdateRelRepMeters
    

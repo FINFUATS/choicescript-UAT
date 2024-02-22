@@ -178,7 +178,7 @@ You decide to,
                         *set pronoun_them "them"
                         *set pronoun_their "their"
                         
-               “Could you head to the market after breakfast? The harvest isn’t in yet, so we need to stock up on food.” your mother asks you. You nod and finish your food.
+                “Could you head to the market after breakfast? The harvest isn’t in yet, so we need to stock up on food.” your mother asks you. You nod and finish your food.
                 
                 Having savored your breakfast,  you grab the coin and items you’re planning to trade so you can replenish the dwindling food supplies. You have also been hearing some rumors spreading through the town and wanted to ask some people about them.
                 
