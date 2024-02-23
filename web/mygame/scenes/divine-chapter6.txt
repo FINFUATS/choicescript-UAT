@@ -284,6 +284,7 @@ You couldn’t help but be caught off guard by the statement. He was the most we
 When you get there you  find more people scrambling around to prepare for his entrance. Everyone is trying to make sure things look perfect when suddenly the doors begin opening. The room goes silent as everyone looks upon him. 
 
 [codex:codex_hl_Zealot]The Zealot[/codex] walks through the door.  He is wearing bright shiny armor that glimmers in the light. He confidently strides into the temple with his head held high. The church members bow their heads in respect but you could not take your eyes off the man. He had an air about him that hypnotized you. Before you know it he begins walking right towards you. 
+*set isZealotDiscovered true
 
 “Are you a new member?” He asks you.
 
@@ -401,7 +402,9 @@ You realize this is your chance to ask the Zealot some questions.
 
 The next day you all wrap up camp and head into the town. The group marches into the town. Eventually, the Zealot who is leading at the front stops and turns around to the group. He begins his speech. You see another group of people walk up, mercenaries judging by their gear. You didn’t realize they help fight against the rot. 
 
-“You are all here today because of Sigel’s guiding light. You have come from far and wide to defend the defenseless in this time of encroaching darkness. Know this, brave warriors, Sigel favors those who serve under his light. Your names will be remembered as defenders of the peace and adversaries of the forces of Skadon. Do not waiver in the face of this darkness for dawn will always follow the darkest night.”
+“You are all here today because of [codex:codex_hl_Sigel]Sigel’s[/codex] guiding light. You have come from far and wide to defend the defenseless in this time of encroaching darkness. Know this, brave warriors, Sigel favors those who serve under his light. Your names will be remembered as defenders of the peace and adversaries of the forces of [codex:codex_hl_Skadon]Skadon[/codex]. Do not waiver in the face of this darkness for dawn will always follow the darkest night.”
+*set isSigelDiscovered true
+*set isSkadonDiscovered true
 
 Everyone cheers at the speech and prepares for battle. 
 

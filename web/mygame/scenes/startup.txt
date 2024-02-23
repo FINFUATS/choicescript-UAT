@@ -46,7 +46,7 @@
 *create item "None"
 *create bought "None"
 *create coin 0
-*create puppy_name "Luna"
+*create puppy_name "?"
 
 *create pronoun_they "they"
 *create pronoun_them "them"
@@ -118,7 +118,7 @@
 
 *comment ///////// Codex Globals /////////
 
-*comment Monster sightings global vars
+*comment Monster Sightings Global Vars
 *create isDirewolfDiscovered    false
 *create isIchorSwogDiscovered   false
 *create isJackaloidDiscovered   false
@@ -126,6 +126,40 @@
 *create isMogfishDiscovered     false
 *create isWOWDiscovered         false
 *create murdererKnown         false
+
+*comment People Sightings Global Vars
+*create isCelDiscovered false
+*create isBertholdDiscovered false
+*create isIvyDiscovered false
+*create isRivaDiscovered false
+*create isWinfredDiscovered false
+*create isRipDiscovered false
+*create isAnwenDiscovered false
+*create isElenaDiscovered false
+*create isGwynDiscovered false
+*create isLeonDiscovered false
+*create isPuppyDiscovered false
+*create isSigelDiscovered false
+*create isSkadonDiscovered false
+*create isTeraDiscovered false
+*create isDustinDiscovered false
+*create isGladorDiscovered false
+*create isEsheerDiscovered false
+*create isOdelDiscovered false
+*create isReeseDiscovered false
+*create isZealotDiscovered false
+
+*comment Place Sighting Global Vars
+*create isDavenportDiscovered false
+*create isElvenportDiscovered false
+*create isKriganiaDiscovered false
+*create isTevilleCityDiscovered false
+*create isTevilleCountryDiscovered false
+*create isSummerlightDiscovered false
+
+*comment Item Sighting Global Vars
+*create isAmuletDiscovered false
+*create isKnifeDiscovered false
 
 *comment Codex contextual global vars
 *create isReeseDead false

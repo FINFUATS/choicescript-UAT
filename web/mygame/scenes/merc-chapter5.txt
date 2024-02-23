@@ -13,6 +13,7 @@ Both you and the mercenary sneak around the alleys until he stops at a door. It 
 The room is barely lit up with only the moonlight showing through a broken window. You can make out a table, a couple of chairs, and some barrels lining the walls. One of the chairs is on the floor, missing a leg, and the table looks rough with some planks broken. It doesn’t look like anyone lived here for years. You can see the mercenary standing over by the table.
 
 “We can hole up in here for the night and we’ll leave as soon as it is morning. I don’t think I ever got your name. My name is [codex:codex_hl_Rip_Daring]Rip[/codex], wish this was under better circumstances, but in my line of work it rarely is.” 
+*set isRipDiscovered true
 
 You respond with,
 
@@ -144,6 +145,7 @@ Keeping an eye on the ground, you spot some mockguardens on the ground. You avoi
 There are three people by the fire, one of them is making wide gestures while he talks while the other two are listening. Another person is petting a horse. One of the other horses bump up against their back. 
 
 While the two of you are standing at the edge of camp, a giant wolf comes running. It is bigger than any other wolf you have seen before, it must be a [codex:codex_hl_Direwolf]direwolf[/codex]. It is running towards both you and Rip.
+*set isDirewolfDiscovered true
 
 You take a couple of steps back, but notice that Rip hasn’t moved at all. Actually, no one seems concerned about the direwolf. The people sitting at the fire stood up, but no one was going after their weapons.
 *page_break
@@ -159,6 +161,10 @@ You take a couple of steps back, but notice that Rip hasn’t moved at all. Actu
 *page_break
 
 “The crazy one over there is [codex:codex_hl_Leon]Leon[/codex]. Stay on his good side and he’ll tell you some of the best stories. Get on his bad side and no one will find your body. The girl beside him is [codex:codex_hl_Elena]Elena[/codex]. She knows the most about the creatures we find. Ask her any question about a creature and she may have an answer.  The dwarf next to her is [codex:codex_hl_Gwyn]Gwyn[/codex]. He is the local medical expert, come to him with most injuries or illnesses and he’ll find something that helps. Lastly, the elf by the horse is [codex:codex_hl_Anwen]Anwen[/codex]. She is our weapons expert. Need something fixed and she’ll get it done.” Rip introduces the group.
+*set isAnwenDiscovered true
+*set isLeonDiscovered true
+*set isGwynDiscovered true
+*set isElenaDiscovered true
 
 “Everyone, this is ${name}, they will be staying with us for the foreseeable future.” Rip puts a hand on your shoulder. You give an awkward wave.
 
@@ -410,6 +416,7 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
     “You don’t have to worry about it, I’ve brought my own book.” You smile at Elena before eating your food.
     
     After eating you return to your tent and read up on [codex:codex_hl_Mogfish]mogfish[/codex].
+    *set isMogfishDiscovered true
 *else
     *comment If player does not have book
 
@@ -445,6 +452,7 @@ Before you know it, Leon’s stick was sucked into the ground. Leon was almost s
 “Found one!” Shouted Leon with a sinister grin.
 
 The [codex:codex_hl_Mogfish]mogfish[/codex] slowly pulled itself up from the ground. It is bigger than you expected, big enough to eat a dwarf or a small human. You knew the creature was going to be terrifying, but seeing one up close. It was like nothing you have seen before.
+*set isMogfishDiscovered true
 *page_break
 
 *image images/Mogfish.webp
@@ -541,6 +549,7 @@ You hum in response and throw another, bigger stone, this stone hits a small tre
 *image images/Mogfish.webp
 
 You turn around and see what you assume is a [codex:codex_hl_Mogfish]mogfish[/codex] climbing out of the ground. It is much bigger than you expected, bigger than Gwyn.
+*set isMogfishDiscovered true
 
 The two of you run towards camp when you trip. While Gwyn is helping you get up, you hear a loud THUMP
 

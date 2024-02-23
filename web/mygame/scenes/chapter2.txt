@@ -126,7 +126,7 @@ As you get closer to town, you hear a voice in the forest. A low, grumbling voic
         *goto CH2_Reffuse
 
 *label CH2_Affirm
-As the two of you run, you see the figure of a man out of the corner of your eye. Judging by the golden sun emblem on his outfit, you believe him to be a Priest of Sigel. The man has a bag bursting with herbs but is still trying to stuff more into it. 
+As the two of you run, you see the figure of a man out of the corner of your eye. Judging by the golden sun emblem on his outfit, you believe him to be a Priest of Sigel. The man has a bag bursting with herbs but is still trying to stuff more into it.
 
 There doesn’t seem to be an easy path to get to him. One path has a steep drop, another is covered in roots, and the last has mockguardens too close for your liking.
 

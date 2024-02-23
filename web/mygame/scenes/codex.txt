@@ -7,25 +7,127 @@ The rest of the codex sections are underpopulated.
 *fake_choice
     # DEBUG: Unlock all dynamic entries
         [head]Monsters[/head]
-        *set isDirewolfDiscovered    true
+        *set isDirewolfDiscovered true
         Discovered Direwolf!!!
         *line_break
-        *set isIchorSwogDiscovered   true
+        *set isIchorSwogDiscovered true
         Discovered IchorSwog!!!
         *line_break
-        *set isJackaloidDiscovered   true
+        *set isJackaloidDiscovered true
         Discovered Jackaloid!!!
         *line_break
         *set isMockguardenDiscovered true
         Discovered Mockguarden!!!
         *line_break
-        *set isMogfishDiscovered     true
+        *set isMogfishDiscovered true
         Discovered Mogfish!!!
         *line_break
-        *set isWOWDiscovered         true
+        *set isWOWDiscovered true
         Discovered Will-O-Wisps!!!
-        *set murdererKnown         true
         *page_break
+
+        [head]Exceptions[/head]
+        *set murdererKnown true
+        Murderer Known! (Leediel Esheer)
+        *line_break
+        *set isReeseDead true
+        Reese Dead!
+        *page_break
+
+        [head]People[/head]
+        *set isCelDiscovered true
+        Discovered Cel Storm!!!
+        *line_break
+        *set isBertholdDiscovered true
+        Discovered Berthold Klepper!!!
+        *line_break
+        *set isIvyDiscovered true
+        Discovered Ivy Siward!!!
+        *line_break
+        *set isRivaDiscovered true
+        Discovered Riva Skorrapax!!!
+        *line_break
+        *set isWinfredDiscovered true
+        Discovered Winfred Cartwright!!!
+        *line_break
+
+        *set isRipDiscovered true
+        Discovered Rip Daring!!!
+        *line_break
+        *set isAnwenDiscovered true
+        Discovered Anwen!!!
+        *line_break
+        *set isElenaDiscovered true
+        Discovered Elena!!!
+        *line_break
+        *set isGwynDiscovered true
+        Discovered Gwyn!!!
+        *line_break
+        *set isLeonDiscovered true
+        Discovered Leon!!!
+        *line_break
+        *set isPuppyDiscovered true
+        Discovered Puppy!!!
+        *line_break
+
+        *set isSigelDiscovered true
+        Discovered Sigel!!!
+        *line_break
+        *set isSkadonDiscovered true
+        Discovered Skadon!!!
+        *line_break
+        *set isTeraDiscovered true
+        Discovered Tera!!!
+        *line_break
+
+        *set isDustinDiscovered true
+        Discovered Dustin!!!
+        *line_break
+        *set isGladorDiscovered true
+        Discovered Glador!!!
+        *line_break
+        *set isEsheerDiscovered true
+        Discovered leediel Esheer!!!
+        *line_break
+        *set isOdelDiscovered true
+        Discovered Lord Odel!!!
+        *line_break
+        *set isReeseDiscovered true
+        Discovered Reese!!!
+        *line_break
+        *set isZealotDiscovered true
+        Discovered Zealot!!!
+        *page_break
+
+        [head]Items[/head]
+        *set isAmuletDiscovered true
+        Discovered Amulet!!!
+        *line_break
+        *set isKnifeDiscovered true
+        Discovered Reese!!!
+        *line_break
+
+        [head]Places[/head]
+        *set isDavenportDiscovered true
+        Discovered Davenport!!!
+        *line_break
+        *set isElvenportDiscovered true
+        Discovered Elvenport!!!
+        *line_break
+        *set isKriganiaDiscovered true
+        Discovered Krigania!!!
+        *line_break
+        *set isTevilleCityDiscovered true
+        Discovered Teville (City)!!!
+        *line_break
+        *set isTevilleCountryDiscovered true
+        Discovered Teville (Country)!!!
+        *line_break
+        *set isSummerlightDiscovered true
+        Discovered Summerlight!!!
+        *page_break
+
+        [b][/b]
         *goto CodexStart
     # Characters
         *goto Characters
@@ -52,7 +154,7 @@ Who do you want to know about?
         *label chargroup_Cel
         Who do you want to know about?
         *fake_choice
-            #Cel Storm
+            *selectable_if (isCelDiscovered) #Cel Storm
                 *label codex_hl_Cel_Storm
                 [head]Cel Storm[/head]
                 *image images/Cel_Storm.webp
@@ -64,7 +166,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Cel
             
-            #Berthold Klepper
+            *selectable_if (isBertholdDiscovered) #Berthold Klepper
                 *label codex_hl_Berthold
                 [head]Berthold Klepper[/head]
                 Berthold is one of the oldest people at the Davenport Temple. No one knows his life before he joined, being older than most of the people there. Not even Cel knows his backstory, despite growing up at the temple.
@@ -73,7 +175,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Cel
             
-            #Ivy Siward
+            *selectable_if (isIvyDiscovered) #Ivy Siward
                 *label codex_hl_Ivy
                 [head]Ivy Siward[/head]
                 *image images/ivy.webp
@@ -85,7 +187,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Cel
 
-            #Riva Skorropax
+            *selectable_if (isRivaDiscovered) #Riva Skorropax
                 *label codex_hl_Riva
                 [head]Riva Skorropax[/head]
                 Riva Skorropax is the newest member in the Davenport temple. She is an elven druid from a nearby forest. She is known for being a little clumsy and is known for injuring herself. However, that is not the most common reason to see her in the infirmary. She will take injured animals to the infirmary and watch over them until they have healed.
@@ -94,7 +196,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Cel
 
-            #Winfred Cartwright
+            *selectable_if (isWinfredDiscovered) #Winfred Cartwright
                 *label codex_hl_Winfred
                 [head]Winfred Cartwright[/head]
                 Winfred was a porter before he joined the Davenport Temple.
@@ -109,7 +211,7 @@ Who do you want to know about?
         *label chargroup_Rip
         Who do you want to know about?
         *fake_choice
-            #Rip Daring
+            *selectable_if (isRipDiscovered) #Rip Daring
                 *label codex_hl_Rip_Daring
                 [head]Rip Daring[/head]
                 *image images/mercenary_transparent_background.webp
@@ -122,7 +224,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Rip
 
-            #Anwen
+            *selectable_if (isAnwenDiscovered) #Anwen
                 *label codex_hl_Anwen
                 [head]Anwen[/head]
                 *image images/Anwen.webp
@@ -134,7 +236,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Rip
 
-            #Elena
+            *selectable_if (isElenaDiscovered) #Elena
                 *label codex_hl_Elena
                 [head]Elena[/head]
                 *image images/elena.webp
@@ -144,7 +246,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Rip
 
-            #Gwyn
+            *selectable_if (isGwynDiscovered) #Gwyn
                 *label codex_hl_Gwyn
                 [head]Gwyn[/head]
                 *image images/gwyn.webp
@@ -154,7 +256,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Rip
 
-            #Leon
+            *selectable_if (isLeonDiscovered) #Leon
                 *label codex_hl_Leon
                 [head]Leon[/head]
                 *image images/Leon_finally.webp
@@ -164,7 +266,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Rip
             
-            #${puppy_name}
+            *selectable_if (isPuppyDiscovered) #${puppy_name}
                 *label codex_hl_puppy
                 [head]${puppy_name}[/head]
                 *image images/Direwolf_puppy_copy.webp
@@ -181,7 +283,7 @@ Who do you want to know about?
         *label chargroup_Gods
         Which God would you like to learn about?
         *fake_choice
-            #Sigel
+            *selectable_if (isSigelDiscovered) #Sigel
                 *label codex_hl_Sigel
                 [head]Sigel[/head]
                 *image images/Sigel_-_touch_up.webp
@@ -189,7 +291,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Gods
             
-            #Skadon
+            *selectable_if (isSkadonDiscovered) #Skadon
                 *label codex_hl_Skadon
                 [head]Skadon[/head]
                 *image images/Skadon.webp
@@ -201,7 +303,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Gods
 
-            #Tera
+            *selectable_if (isTeraDiscovered) #Tera
                 *label codex_hl_Tera
                 [head]Tera[/head]
                 *image images/tera_copyfin.webp
@@ -250,7 +352,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Other
 
-            #Lord Odel
+            *selectable_if (isOdelDiscovered) #Lord Odel
                 *label codex_hl_Lord_Odel
                 [head]Lord Odel[/head]
                 Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
@@ -259,7 +361,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Other
 
-            #Reese
+            *selectable_if (isReeseDiscovered) #Reese
                 *label codex_hl_Reese
                 [head]Reese[/head]
                 *image images/reese_torn_paper_finished.webp
@@ -287,7 +389,7 @@ Who do you want to know about?
                 *line_break
                 *goto chargroup_Other
 
-            #The Zealot
+            *selectable_if (isZealotDiscovered) #The Zealot
                 *label codex_hl_Zealot
                 [head]The Zealot[/head]
                 The (Alaric) Zealot, the hero of the north, the rot rinser, and the Savior of Saragossa, are just some of the names Alaric is known by throughout the realm. His heart is filled with a burning passion for the church but his methods have been said to be a bit extreme at times. Aside from the occasional “there’s no other way” when it comes to getting rid of rot, he is an amazing ally and an excellent fighter to have by your side. There’s a reason he's become a household name throughout the lands. This is someone you want on your team, just his sheer presence is enough to inspire an army to rise above any situation or to intimidate enemies enough to throw the battle. His heart does burn pure, but it burns pure in his eyes.
@@ -352,7 +454,7 @@ What item?
         *line_break
         *goto Items
 
-    #Knife with strange design
+    #Knife with Strange Design
         [head]Knife with strange design[/head]
         *image images/knife_no_background.webp
         The knife the murderer used to kill Lord Odel. He planted it on you to pin the murder on you and get away. It has some strange designs on it that no one seems to recognize, but seem familiar. From a far off memory that you can’t seem to catch.
@@ -490,7 +592,7 @@ What monsters do you want to learn about?
 *label Places
 Where do you want to learn about?
 *fake_choice
-    #Davenport
+    *selectable_if (isDavenportDiscovered) #Davenport
         *label codex_hl_Davenport
         [head]Davenport[/head]
         *image images/daven_port.webp
@@ -522,7 +624,7 @@ Where do you want to learn about?
         *line_break
         *goto Places
 
-    #Teville (City)
+    *selectable_if (isTevilleCityDiscovered) #Teville (City)
         *label codex_hl_Teville_City
         [head]Teville (City)[/head]
         The capital city Teville is located by the Ironmount mountains on the west side of the country Teville. The capital is broken up into ten different districts. Each district is split up depending on the wealth of the people living in it. With four slums and a castle amongst the city, there is something for everyone.
@@ -539,14 +641,14 @@ Where do you want to learn about?
         *line_break
         *goto Places
 
-    #Teville (Country)
+    *selectable_if (isTevilleCountryDiscovered) #Teville (Country)
         *label codex_hl_Teville_Country
         [head]Teville (Country)[/head]
         TODO:!!!
         *line_break
         *goto Places
 
-    #Summerlight
+    *selectable_if (isSummerlightDiscovered) #Summerlight
         *label codex_hl_Summerlight
         [head]Summerlight[/head]
         *image images/Summerlight_finished.webp

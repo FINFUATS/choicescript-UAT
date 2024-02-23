@@ -23,6 +23,7 @@ The priestess, who you lost track of while you were inspecting the room, sits do
 As the priestess lightly chuckles to herself, you can’t help but stare. She meets your eyes with a look of understanding.
 
 “Oh, well of course; how could I forget? My name is [codex:codex_hl_Cel_Storm]Cel Storm[/codex]; I am a priestess of Sigil. In particular, I’m the priestess of the temple that we’re going to come sunrise…”
+*set isCelDiscovered true
 
 Cel pauses for a few seconds, and then puts on a reassuring look.
 
@@ -275,6 +276,7 @@ Cel turns back to you, and gestures at you,
 *page_break
 
 “That’s [codex:codex_hl_Berthold]Berthold[/codex]; he’s been around even longer than me. He won’t usually say a whole lot, but if you ever need any advice, he has decades of wisdom to offer.”
+*set isBertholdDiscovered true
 
 He does another bow. You respond just as you did the first time.
 
@@ -282,7 +284,8 @@ You watch Cel point at the largest man in the group; he looks older than you, an
 
 *page_break
 
-“That’s [codex_hl_Winfred]Winfred[/codex]; he’s been a great help with heavy lifting, and a pleasure to have around!”
+“That’s [codex:codex_hl_Winfred]Winfred[/codex]; he’s been a great help with heavy lifting, and a pleasure to have around!”
+*set isWinfredDiscovered true
 
 “Welcome.” he says, smiling. He seems like a man of few words, but high spirits.
 
@@ -292,7 +295,10 @@ You can’t get over how tall and wide he is. Everyone in town told you to eat y
 
 Cel moves her arm over to the next person in your field of view. Somehow, she stands out even more than Berthold, in that she doesn’t look like she belongs here at all. In fact, she looks more like the other man who tried to help you that day; the mercenary,
 “That’s [codex:codex_hl_Ivy]Ivy[/codex]; she grew up here, just like I did.”
+*set isIvyDiscovered true
+
 The girl’s stern expression doesn’t budge, but she gives you a hand gesture, which you suppose is probably some kind of greeting. She looks the same age as you…
+
 “Run while you can; Cel kidnapped me when I was young, and she’s never let me go since…”
 
 *page_break
@@ -314,7 +320,8 @@ Cel sighs. You can tell it takes all her strength to hold back a “well, that�
 
 Cel puts back on her joyful demeanor, and points at the next member. You actually didn’t notice her until Cel pointed. She’s a wood elf, maybe a couple of years older than you. Her entire posture seems to be doubled in on itself, like she’s scared to be seen. You can see a couple leaves in her hair, though none on her clothing.
 
-“This is [codex_hl_Riva]Riva[/codex]; she’s still really shy, but she’ll warm up to you with time.” Cel says.
+“This is [codex:codex_hl_Riva]Riva[/codex]; she’s still really shy, but she’ll warm up to you with time.” Cel says.
+*set isRivaDiscovered true
 
 The girl doesn’t react. You can’t tell if she’s shy or just living in her own world…
 

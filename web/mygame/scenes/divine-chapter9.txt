@@ -58,7 +58,8 @@ Berthold is the last to show up bringing a bag of medical supplies.
 
 The ride is long and when you reach the mines, the fight has already started.
 
-High priests from neighboring temples have started their push against the rot near the edge of the mines. Nearby, there are mercenaries and soldiers fighting against the jackaoids and [codex_hl_Ichor_Swog]Ichor-swogs[/codex]. Tents have already been set up for the injured and the equipment at the outskirts of the battle.
+High priests from neighboring temples have started their push against the rot near the edge of the mines. Nearby, there are mercenaries and soldiers fighting against the jackaoids and [codex:codex_hl_Ichor_Swog]Ichor-swogs[/codex]. Tents have already been set up for the injured and the equipment at the outskirts of the battle.
+*set isIchorSwogDiscovered true
 
 You look away from the mines and see how much damage there has been. Trees have scorch marks across their trunks, grass has been burnt, and there are piles of burnt sticks that were once bushes. The huts that the miners stayed in are missing their roofs and have begun to crumble. 
 

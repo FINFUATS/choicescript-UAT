@@ -297,11 +297,13 @@ Felix catches your eye. He gives you a reassuring smile before donning his own m
 A call comes from outside. Rip and the rest of the Wolves head out. Taking a deep breath, you follow. 
 *page_break
 
-A procession of people is marching out on the street. At the head, was the man you saw yesterday. Splendid golden armor on top of a regal gray horse. Around you, people whisper, calling him a paladin, but just as often if not more, the people call him the Zealot. 
+A procession of people is marching out on the street. At the head, was the man you saw yesterday. Splendid golden armor on top of a regal gray horse. Around you, people whisper, calling him a paladin, but just as often if not more, the people call him the [codex:codex_hl_Zealot]Zealot[/codex].
+*set isZealotDiscovered true
 
 Rip and Viper lead you all into the crowd. It's full of people prepared for battle just like you. You are led to the west end of town, at the edge of the forest. The man on the horse turns and begins to speak. 
 
-“You are all here today because of Sigel’s guiding light. You have come from far and wide to defend the defenseless in this time of encroaching darkness. Know this, brave warriors, Sigel favors those who serve under his light. Your names will be remembered as defenders of the peace and adversaries of the forces of Skadon. Do not waiver in the face of this darkness for dawn will alway follow the darkness night.” 
+“You are all here today because of [codex:codex_hl_Sigel]Sigel’s[/codex] guiding light. You have come from far and wide to defend the defenseless in this time of encroaching darkness. Know this, brave warriors, Sigel favors those who serve under his light. Your names will be remembered as defenders of the peace and adversaries of the forces of [codex:codex_hl_Skadon]Skadon[/codex]. Do not waiver in the face of this darkness for dawn will alway follow the darkness night.” 
+*set isSkadonDiscovered true
 *page_break
 
 The people around you seem bolstered by the man's words. Cheers ring out as warriors begin bangging their shields with their swords. All around you, weapons are being drawn. You grasp your dagger, willing your hand to stop shaking. 

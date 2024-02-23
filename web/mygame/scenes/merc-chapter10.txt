@@ -217,7 +217,8 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
             “Sounds like you went on some adventure.” A female voice calls out behind you.
 
-            You whip around to see a priestess. You remember her from before, when you had just been arrested. She offered you safety, believing in your innocences. It feels like ages since you met, but you still remember her introducing herself as Cel.
+            You whip around to see a priestess. You remember her from before, when you had just been arrested. She offered you safety, believing in your innocences. It feels like ages since you met, but you still remember her introducing herself as [codex:codex_hl_Cel_Storm]Cel[/codex].
+            *set isCelDiscovered true
 
             “My apologies for scaring you. I was doing my rounds and I saw you. You shouldn’t be here. The guards are on high alert and you’re still a wanted criminal.” She said while walking up beside you. Her eyes glance down to the grave.
 
@@ -241,7 +242,8 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
             “Sounds like you went on some adventure.” A female voice calls out behind you.
 
-            You whip around to see a priestess, You remember her from before, when you had just been arrested. She offered you safety, believing in your innocences. It feels like ages since you met, but you still remember her introducing herself as Cel., you think her name is Cel.
+            You whip around to see a priestess, You remember her from before, when you had just been arrested. She offered you safety, believing in your innocences. It feels like ages since you met, but you still remember her introducing herself as [codex:codex_hl_Cel_Storm]Cel[/codex]., you think her name is Cel.
+            *set isCelDiscovered true
 
             “My apologies for scaring you. I was doing my rounds and I saw you. You shouldn’t be here. The guards are on high alert and you’re still a wanted criminal.” She said while walking up beside you. Her eyes glance down to the grave.
 
@@ -271,7 +273,7 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
         Tyr comes bursting out from the trees, running straight towards you with an excited look in his eye. Tyr skids to a stop in front of you, rustling your hair with a few loud sniffles before sitting next to you, guarding you from Cel.
 
-        “${puppy_name}, what are you doing here? You know that if you get caught, no one will be able to help you.” Rip reveals himself from behind a tree.
+        “Tyr, what are you doing here? You know that if you get caught, no one will be able to help you.” Rip reveals himself from behind a tree.
 
         “Rip, what are you doing here? How did you find me?” You ask
 

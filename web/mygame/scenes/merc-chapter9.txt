@@ -7,7 +7,8 @@ With ore veins depleting, the miners were given new orders to mine into a partic
 
 “For example,” Rip had informed you and the other wolves on the way here, “did you know that the people of Silvervein haven’t excavated a particular site in nearly a century?”
 
-A group of miners fled the town screaming bloody murderer in the small hours of the morning, claiming that Ichorswog poured out of the mines in droves…
+A group of miners fled the town screaming bloody murderer in the small hours of the morning, claiming that [codex:codex-hl-IchorSwog]Ichorswog[/codex] poured out of the mines in droves…
+*set isIchorSwogDiscovered true
 
 The village center you stand in front of is in absolute shambles. Windows are broken, injured villagers are strewn about like confetti, and living ones are running to and fro. At some point, when all of this started, someone must have thought that a line of burning oil might protect them. The ineffective fire, luckily, hasn’t spread.
 

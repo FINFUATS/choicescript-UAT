@@ -296,6 +296,8 @@ You choose
 *fake_choice
     #Monsters
         You read up on the [codex:codex_hl_Mogfish]Mogfish[/codex] and the [codex:codex_hl_Will_O_Wisps]Will-O-Wisps[/codex] as you have never heard of them before.
+        *set isMogfishDiscovered true
+        *set isWOWDiscovered true
 
         “The mogfish with orbs will stay in the mud with the orb above ground. They wait for an unsuspecting victim to walk over them, then they will open their huge maw to ensnare the unsuspecting victim and suck them in. The rest have to find other ways to get food. These ones will team up with will-o-wisps to mimic the light the other mogfish have.”
 
@@ -304,6 +306,7 @@ You choose
     #Locations
         
         You decide to read up on the city of [codex:codex_hl_Teville_City]Teville[/codex]. Your father used to talk a lot about it and this is the first time you’ve had a book to learn more about the places he went.
+        *set isTevilleCityDiscovered true
 
         “The capital city Teville is located by the Ironmount mountains on the west side of the country Teville. The capital is broken up into ten different districts. Each district is split up depending on the wealth of the people living in it. With four slums and a castle amongst the city, there is something for everyone.”
 

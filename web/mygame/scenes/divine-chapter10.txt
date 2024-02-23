@@ -200,6 +200,7 @@ You continue walking down the alleys, you decide to-
             “Who are you?” You stand up and ask him.
             
             “[codex:codex_hl_Rip_Daring]Rip Daring[/codex] and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
+            *set isRipDiscovered true
             
             You take a step back. “What do you want from me?”
             

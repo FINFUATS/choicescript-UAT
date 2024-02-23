@@ -159,5 +159,6 @@ The pup still looks scared, but is no longer trying to hide. You know it’s goi
 
 First thing, you need to name him:
 *input_text puppy_name
+*set isPuppyDiscovered true
 
 *return
