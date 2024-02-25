@@ -91,6 +91,8 @@ What will you do with your free time?
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_ms_bool returnData
+        *set MotorSkill + 1
+        *gosub_scene general UpdateAttributes
         [head]Motor Skill Check @{CH7M_ms_bool Success|Failure}![/head]
 
         *if CH7M_ms_bool
@@ -115,11 +117,15 @@ What will you do with your free time?
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_ea_bool returnData
+        *set Endurance + 1
+        *gosub_scene general UpdateAttributes
 
         *set GP_arg0 Acrobatics
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *set CH7M_ea_bool returnData and CH7M_ea_bool
+        *set Acrobatics + 1
+        *gosub_scene general UpdateAttributes
 
         [head]Endurance & Acrobatics Skill Check @{CH7M_ea_bool Success|Failure}![/head]
 
@@ -177,6 +183,8 @@ Where do you go?
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_e_bool returnData
+        *set Endurance + 1
+        *gosub_scene general UpdateAttributes
         [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
 
         *if CH7M_e_bool
@@ -207,6 +215,8 @@ Where do you go?
         *set GP_arg1 "difficult"
         *gosub_scene general AttributeSkillCheck
         *temp CH7M_e_bool returnData
+        *set Endurance + 1
+        *gosub_scene general UpdateAttributes
         [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
 
         *if CH7M_e_bool

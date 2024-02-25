@@ -52,6 +52,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Knowledge + 1
+        *gosub_scene general UpdateAttributes
         [head]Knowledge Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -97,6 +99,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set ReactionSpeed + 1
+        *gosub_scene general UpdateAttributes
         [head]Reaction Speed Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -130,6 +134,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Strength + 1
+        *gosub_scene general UpdateAttributes
         [head]Strength Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -169,6 +175,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Stealth + 1
+        *gosub_scene general UpdateAttributes
         [head]Stealth Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -230,6 +238,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set MotorSkill + 1
+        *gosub_scene general UpdateAttributes
         [head]Motor Skill Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -259,6 +269,8 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Courage + 1
+        *gosub_scene general UpdateAttributes
         [head]Courage Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -373,6 +385,8 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Strength + 1
+        *gosub_scene general UpdateAttributes
         [head]Strength Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -412,6 +426,8 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Medical + 1
+        *gosub_scene general UpdateAttributes
         [head]Medical Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -466,6 +482,8 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Acrobatics + 1
+        *gosub_scene general UpdateAttributes
         [head]Acrobatics Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
@@ -663,6 +681,8 @@ The priest from the meeting walks into the room. You can see that everyone is tr
         *set GP_arg1 "moderate"
         *gosub_scene general AttributeSkillCheck
         *temp CH7D_ms_bool returnData
+        *set Stealth + 1
+        *gosub_scene general UpdateAttributes
         [head]Stealth Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool

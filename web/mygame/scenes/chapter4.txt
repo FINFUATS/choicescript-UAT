@@ -122,7 +122,8 @@ A loud, anguished scream comes out of the house you are passing. The sudden soun
         
         The scream, though alarming, has nothing to do with you. More often than not, getting involved in random situations around town often leads to bad luck. It isn’t worth the risk.
 
-        As you continue walking towards your house, someone bumps into you. You turn, expecting an apology or at least an acknowledgement, but the person lengthens their stride and continues on their way. They have a hood on and you can’t see their face. You check your pockets, only to find your ${item} missing, replaced with a bloody iron knife.
+        As you continue walking towards your house, someone bumps into you. You turn, expecting an apology or at least an acknowledgement, but the person lengthens their stride and continues on their way. They have a hood on and you can’t see their face. You check your pockets, only to find your ${item} missing, replaced with a [codex:codex_hl_Knife]bloody iron knife[/codex].
+        *set isKnifeDiscovered true
 
         When you realize what you are holding, a guard walks up to you and aggressively grabs your arm.
 

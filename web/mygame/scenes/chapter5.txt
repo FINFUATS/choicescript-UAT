@@ -1,5 +1,22 @@
 *comment Dummy scene to direct the flow of phase 2 branch
 
+*comment Between chapter 4 and 5, this will set all subskills to be equal to what the main skills are.
+*comment This is important, and will break incrementing subskill values during skill checks if done wrong.
+*set Endurance Brawn
+*set Strength Brawn
+*set Presence Brawn
+*set Courage Brawn
+
+*set ReactionSpeed Agility
+*set Stealth Agility
+*set MotorSkill Agility
+*set Acrobatics Agility
+
+*set Improvisation Cunning
+*set Knowledge Cunning
+*set Medical Cunning
+*set Speechcraft Cunning
+
 *if faction = "merc"
     *gosub_scene merc-chapter5 StartChapter5
 *elseif faction = "divine"

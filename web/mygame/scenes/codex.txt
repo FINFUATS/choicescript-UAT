@@ -448,13 +448,15 @@ Which Faction?
 What item?
 *fake_choice
     #Flames of Sigel Amulet
+        *label codex_hl_Amulet
         [head]Flames of Sigel Amulet[/head]
         *image images/Flames_of_Sigel_Amulet.webp
         An amulet that all members of the Flames of Sigel have. It lets the members of the order recognize each other across the land of Teville. 
         *line_break
         *goto Items
 
-    #Knife with Strange Design
+    *selectable_if (isKnifeDiscovered) #Knife with Strange Design
+        *label codex_hl_Knife
         [head]Knife with strange design[/head]
         *image images/knife_no_background.webp
         The knife the murderer used to kill Lord Odel. He planted it on you to pin the murder on you and get away. It has some strange designs on it that no one seems to recognize, but seem familiar. From a far off memory that you can’t seem to catch.

@@ -45,6 +45,8 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH8M_Strength_bool returnData
+        *set Strength + 1
+        *gosub_scene general UpdateAttributes
         [head]Strength Check @{CH8M_Strength_bool Success|Failure}![/head]
 
         *if CH8M_Strength_bool
@@ -77,6 +79,8 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH8M_ReactionSpeed_bool returnData
+        *set ReactionSpeed + 1
+        *gosub_scene general UpdateAttributes
         [head]Reaction Speed Check @{CH8M_ReactionSpeed_bool Success|Failure}![/head]
 
         *if CH8M_ReactionSpeed_bool
@@ -109,6 +113,8 @@ In this moment, the fate of the town hung in the balance, and the Wolves of Dave
         *set GP_arg1 "challenging"
         *gosub_scene general AttributeSkillCheck
         *temp CH8M_Knowledge_bool returnData
+        *set Knowledge + 1
+        *gosub_scene general UpdateAttributes
         [head]Knowledge Check @{CH8M_Knowledge_bool Success|Failure}![/head]
 
         *if CH8M_Knowledge_bool
