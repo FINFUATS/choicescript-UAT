@@ -23,64 +23,64 @@ This is a stats screen!
 *elseif isShowingStatBar = true
     *line_break
     *stat_chart
-        text rel_val_Cel ${rel_val_Cel}
+        text rel_val_Cel
         text rel_status_Cel Affinity Status with Cel
         percent relationship_Cel_percentage Current ${trend_Cel} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Cel ${rel_val_Berthold}
+        text rel_val_Cel
         text rel_status_Berthold Affinity Status with Berthold
         percent relationship_Berthold_percentage Current ${trend_Berthold} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Cel ${rel_val_Ivy}
+        text rel_val_Cel
         text rel_status_Ivy Affinity Status with Ivy
         percent relationship_Ivy_percentage Current ${trend_Ivy} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Cel ${rel_val_Riva}
+        text rel_val_Cel
         text rel_status_Riva Affinity Status with Riva
         percent relationship_Riva_percentage Current ${trend_Riva} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Cel ${rel_val_Winfred}
+        text rel_val_Cel
         text rel_status_Winfred Affinity Status with Winfred
         percent relationship_Winfred_percentage Current ${trend_Winfred} Affinity Progress
     *line_break
 
     *stat_chart
-        text rel_val_Rip ${rel_val_Rip}
+        text rel_val_Rip
         text rel_status_Rip Affinity Status with Rip
         percent relationship_Rip_percentage Current ${trend_Rip} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Anwen ${rel_val_Anwen}
+        text rel_val_Anwen
         text rel_status_Anwen Affinity Status with Anwen
         percent relationship_Anwen_percentage Current ${trend_Anwen} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Elena ${rel_val_Elena}
+        text rel_val_Elena
         text rel_status_Elena Affinity Status with Elena
         percent relationship_Elena_percentage Current ${trend_Elena} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Gwyn ${rel_val_Gwyn}
+        text rel_val_Gwyn
         text rel_status_Gwyn Affinity Status with Gwyn
         percent relationship_Gwyn_percentage Current ${trend_Gwyn} Affinity Progress
     *line_break
     *stat_chart
-        text rel_val_Leon ${rel_val_Leon}
+        text rel_val_Leon
         text rel_status_Leon Affinity Status with Leon
         percent relationship_Leon_percentage Current ${trend_Leon} Affinity Progress
     *line_break
 
     *stat_chart
-        text rep_val_Flames ${rep_val_Flames}
+        text rep_val_Flames
         text rep_status_Flames Reputation Status with Flames of Sigel
         percent reputation_Flames_percentage Current ${trend_Flames} Reputation Progress
     *line_break
     *stat_chart
-        text rep_val_Wolves ${rep_val_Wolves}
+        text rep_val_Wolves
         text rep_status_Wolves Reputation Status with Wolves of Davenport
         percent reputation_Wolves_percentage Current ${trend_Wolves} Reputation Progress
 
