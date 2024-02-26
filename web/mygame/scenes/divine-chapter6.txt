@@ -115,12 +115,37 @@ Everyone immediately raises their hands. They all have a serious look on their f
 
 *fake_choice
     #"I'm in"
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionCel
+        *gosub_scene general UpdateRelValCel
+        *gosub_scene general UpdateReactionIvy
+        *gosub_scene general UpdateRelValIvy
+        *gosub_scene general UpdateReactionBerthold
+        *gosub_scene general UpdateRelValBerthold
+        *gosub_scene general UpdateReactionWinfred
+        *gosub_scene general UpdateRelValWinfred
+        *gosub_scene general UpdateReactionRiva
+        *gosub_scene general UpdateRelValRiva
+
         The group nods in approval. 
         
         “Alright then. Let’s get to work.” Says Cel. 
 
     #"If I have to I guess...
-        
+        *set cur_behavior_tag tag_Selfish
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionCel
+        *gosub_scene general UpdateRelValCel
+        *gosub_scene general UpdateReactionIvy
+        *gosub_scene general UpdateRelValIvy
+        *gosub_scene general UpdateReactionBerthold
+        *gosub_scene general UpdateRelValBerthold
+        *gosub_scene general UpdateReactionWinfred
+        *gosub_scene general UpdateRelValWinfred
+        *gosub_scene general UpdateReactionRiva
+        *gosub_scene general UpdateRelValRiva
+
         The group gives you a disapproving look. 
         
         “You do not have to but the help would be much appreciated,” Cel says gently. 
@@ -134,6 +159,11 @@ You go to pack your stuff. You quickly gather your clothes and a couple of books
 Who do you help?
 *fake_choice
     #Riva
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionRiva
+        *gosub_scene general UpdateRelValRiva
+
         You knock on Riva’s door and hear a quiet “come in.’ You walk into the room and see an open bag on her bed. Riva is standing in front of it and seems to be deep in thought. 
         
         “I finished packing early and thought I’d see if anyone needed help.” You say. 
@@ -162,6 +192,11 @@ Who do you help?
 
 
     #Cel
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionCel
+        *gosub_scene general UpdateRelValCel
+
         You peek into Cel’s room and see her packing stuff on her bed. You knock a bit on the door before heading inside. 
         
         “I finished packing and was wondering if you wanted any help?” 
@@ -178,6 +213,11 @@ Who do you help?
 
 
     #Ivy
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionIvy
+        *gosub_scene general UpdateRelValIvy
+
         You pass by Ivy’s door where you hear someone raising their voice and punching something. You peek your head in and see Ivy trying to punch her bag closed. You cautiously walk over to her. 
         
         “Need some help?” You gently ask. 
@@ -204,6 +244,11 @@ Who do you help?
 
         
     #Winfred
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionWinfred
+        *gosub_scene general UpdateRelValWinfred
+
         You hear some yelling in the distance so you go and investigate. You come across Winfred who was just hyping themselves up
         
         “Hey! ${name}!” (Windfred)
@@ -318,6 +363,10 @@ You realize this is your chance to ask the Zealot some questions.
 
 *fake_choice
     #Ask about plan.
+        *set cur_f_severity_value f_severity_minor
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateRepValFlames
+
         “Could you elaborate on the plan a little more for me? This is my first time doing something like this and I want to make sure I do it right.” You ask. 
         
         The Zealot smiles, happy that you are so dedicated to the mission. He pulls out a map and begins to explain some of his strategies for combating the rot. He tells you to make sure to prioritize the villager's safety. Then he starts giving you tips on how to fight the monsters. 
@@ -339,6 +388,10 @@ You realize this is your chance to ask the Zealot some questions.
         You stare up at him in wonder. He smiles and then wishes you good night.
 
     #Ask about him.
+        *set cur_f_severity_value f_severity_minor
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateRepValFlames
+
         “If I may…Could you tell me a bit about yourself?” You ask. 
         
         You realize that sounds a little out of nowhere so you quickly add, “Sorry if that’s a bit straightforward I’ve just heard so much about you and I guess I’m curious about the man behind the stories.” 
@@ -366,6 +419,10 @@ You realize this is your chance to ask the Zealot some questions.
         After sharing a moment with each other you head to bed. 
 
     #Ask about the weather.
+        *set cur_f_severity_value f_severity_minor
+        *set cur_f_behavior_tag tag_f_Hindering
+        *gosub_scene general UpdateRepValFlames
+
         “Sooo that weather huh?” You ask nervously. 
         
         “The weather is clear which will be good for the mission.” He gives you a look. 

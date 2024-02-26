@@ -167,36 +167,59 @@ You continue chatting with Felix about this and that, doing your best to ignore 
 
 Rip and the rest of your pack also notice the odd tension. More often than not, one of them is present after Viper and her team snap at you for something. It leaves you feeling embarrassed for some reason. 
 *page_break
-*comment (This section will be based on the relationship with each character. If none of them care for the player, this section is skipped and proceed to the next section.)
-*comment Leon
-*comment “Hey (PLAYERS NAME), got a second?” Leon calls out to one night at camp. He guides you towards the horses, just out of earshot from where everyone is resting. 
-*comment “You okay?” he asks. “Viper and her crew, they’re not the nicest, huh?”
-*comment “I…guess not.” You don’t want to complain. 
-*comment “Listen, don’t let them get to you, alright? You're doing fine, better than most people I’d guess. Not everyone can roll with having their life changed like you. So just keep up your spirits, yeah?” 
-*comment You crack a smile. Leon’s words are comforting.
-*comment Anwen
-*comment “Hurry up, kid! We can’t be waitin’ on you all day!” The dwarf, Thebeda, has been scolding you for the past few minutes. Her first reprimand made you jump and spill the contents of your bag. 
-*comment “Maybe if you’d let the poor (GIRL, BOY, KID) be, (HE,SHE,THEY) would be able to pack. Instead we all have to bear the burden of your donkey bray of a voice.” Anwen shoved past Thebeda, glaring at the twins snickering just behind her. 
-*comment “Here ${name}, let me help.”
-*comment Anwen helped you pack and load your horse. You notice her sticking a little closer to you and defending you when the others begin to tease. 
-*comment Her protective actions are comforting. 
-*comment Elena
-*comment “${name}, come sit with me.” Elena calls you. You go and join her by the campfire, away from Viper’s group. “I know you're quite the curious one, so I was wondering if you would like to hear about my latest book?” 
-*comment She shows you the cover. There’s a beast you’ve never seen on the cover. Your interest has peaked. 
-*comment Elena smiles. “I thought you’d be interested. Now, the author is more a theorist than an actual scholar, but his ideas are actually quite sound…” 
-*comment You spend the night conversing with Elena, the same with the next night. You realize after the third time that Elena has been pulling you into conversation before Viper’s group has a chance to bother you. 
-*comment Elena’s subtle show of affection is comforting. 
-*comment Gwyn
-*comment “${name}! Come lend me a hand, will you?” Gwyn calls you over as soon as camp is set up. He has a whole line of dried herbs and bottles of strange liquids laid out on the ground. “I found these flowers on the side of the road. They make a simple healing potion that can help blood clot. It’s good to know how to recognize ingredients like this. Let me show you some things.”  
-*comment Before you can say anything, Gwyn begins a mini lecture about herbs and flowers commonly found in the area. You’re roped into helping pull petals and crush beetles the next night. After the third night of potion making, you realize that Gywn has recruited you long before Viper and her crew can bother you. 
-*comment Gwyn’s teaching and care is comforting.
-*comment Rip
-*comment After the third night on the road, after the twins Ailer and Edea made strange comments about your new armor, Rip pulls you aside. Tyr trots along beside him. Rip leads you away from camp a little while, where the grass is taller and the trees are less. Tyr explores freely, going in and out of the tall grass but always coming back to Rip’s side after a while. 
-*comment Eventually, you stop in a meadow. The moon is shining brightly before you.
-*comment Rip doesn’t say anything, just stands quietly under the moonlight. You take a deep breath and just concentrate on the world around you. It's so peaceful here you completely forget about the frustrations of the day.  
-*comment Eventually, you head back to camp, your mind more settled than before. You find the comments and sneers from the others don’t bother you as much. 
-*comment Seeing Rip’s care as a leader is comforting. 
+*if ((rel_status_Leon = rel_status_3) or (rel_status_Leon = rel_status_2)) or ((rel_status_Leon = rel_status_1) or (rel_status_Leon = rel_status_0))
+    “Hey (PLAYERS NAME), got a second?” Leon calls out to one night at camp. He guides you towards the horses, just out of earshot from where everyone is resting. 
+    
+    “You okay?” he asks. “Viper and her crew, they’re not the nicest, huh?”
+    
+    “I…guess not.” You don’t want to complain. 
+    
+    “Listen, don’t let them get to you, alright? You're doing fine, better than most people I’d guess. Not everyone can roll with having their life changed like you. So just keep up your spirits, yeah?” 
+    
+    You crack a smile. Leon’s words are comforting.
 
+*elseif ((rel_status_Anwen = rel_status_3) or (rel_status_Anwen = rel_status_2)) or ((rel_status_Anwen = rel_status_1) or (rel_status_Anwen = rel_status_0))
+    “Hurry up, kid! We can’t be waitin’ on you all day!” The dwarf, Thebeda, has been scolding you for the past few minutes. Her first reprimand made you jump and spill the contents of your bag. 
+    
+    “Maybe if you’d let the poor (GIRL, BOY, KID) be, (HE,SHE,THEY) would be able to pack. Instead we all have to bear the burden of your donkey bray of a voice.” Anwen shoved past Thebeda, glaring at the twins snickering just behind her. 
+    
+    “Here ${name}, let me help.”
+    
+    Anwen helped you pack and load your horse. You notice her sticking a little closer to you and defending you when the others begin to tease. 
+    
+    Her protective actions are comforting. 
+
+*elseif ((rel_status_Elena = rel_status_3) or (rel_status_Elena = rel_status_2)) or ((rel_status_Elena = rel_status_1) or (rel_status_Elena = rel_status_0))
+    “${name}, come sit with me.” Elena calls you. You go and join her by the campfire, away from Viper’s group. “I know you're quite the curious one, so I was wondering if you would like to hear about my latest book?” 
+    
+    She shows you the cover. There’s a beast you’ve never seen on the cover. Your interest has peaked. 
+    
+    Elena smiles. “I thought you’d be interested. Now, the author is more a theorist than an actual scholar, but his ideas are actually quite sound…” 
+    
+    You spend the night conversing with Elena, the same with the next night. You realize after the third time that Elena has been pulling you into conversation before Viper’s group has a chance to bother you. 
+    
+    Elena’s subtle show of affection is comforting. 
+
+*elseif ((rel_status_Gwyn = rel_status_3) or (rel_status_Gwyn = rel_status_2)) or ((rel_status_Gwyn = rel_status_1) or (rel_status_Gwyn = rel_status_0))
+    “${name}! Come lend me a hand, will you?” Gwyn calls you over as soon as camp is set up. He has a whole line of dried herbs and bottles of strange liquids laid out on the ground. “I found these flowers on the side of the road. They make a simple healing potion that can help blood clot. It’s good to know how to recognize ingredients like this. Let me show you some things.”  
+    
+    Before you can say anything, Gwyn begins a mini lecture about herbs and flowers commonly found in the area. You’re roped into helping pull petals and crush beetles the next night. After the third night of potion making, you realize that Gywn has recruited you long before Viper and her crew can bother you. 
+    
+    Gwyn’s teaching and care is comforting.
+
+*elseif ((rel_status_Rip = rel_status_3) or (rel_status_Rip = rel_status_2)) or ((rel_status_Rip = rel_status_1) or (rel_status_Rip = rel_status_0))
+    After the third night on the road, after the twins Ailer and Edea made strange comments about your new armor, Rip pulls you aside. Tyr trots along beside him. Rip leads you away from camp a little while, where the grass is taller and the trees are less. Tyr explores freely, going in and out of the tall grass but always coming back to Rip’s side after a while. 
+    
+    Eventually, you stop in a meadow. The moon is shining brightly before you.
+    
+    Rip doesn’t say anything, just stands quietly under the moonlight. You take a deep breath and just concentrate on the world around you. It's so peaceful here you completely forget about the frustrations of the day.  
+    
+    Eventually, you head back to camp, your mind more settled than before. You find the comments and sneers from the others don’t bother you as much. 
+    
+    Seeing Rip’s care as a leader is comforting. 
+
+*else
+    *page_break
 When you arrive at Lindow, your group is immediately met with a pair of stressed looking towns guards. They approach you with hands braced on their spears and ask why such a large group is coming to Lindow. 
 
 “We’re here to help protect this place against the rot.” Rip answers. 
@@ -226,6 +249,19 @@ A loud shout behind you startles you. Right, you were getting drinks for your cr
 After delivering the drinks, you:
 *fake_choice
     # Stay with Rip’s group (Increase relationship with entire party)
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+        *gosub_scene general UpdateReactionAnwen
+        *gosub_scene general UpdateRelValAnwen
+        *gosub_scene general UpdateReactionGwyn
+        *gosub_scene general UpdateRelValGwyn
+        *gosub_scene general UpdateReactionElena
+        *gosub_scene general UpdateRelValElena
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
         You sit down at the table, right in the middle of a gripping story. 
         
         Leon is standing with one leg up on his chair. Surrounding him is a collection of people, enraptured with the story he weaves. 
@@ -248,6 +284,10 @@ After delivering the drinks, you:
         Leon drags you to his side of the table and suddenly you're in the middle of the chaos. It’s a little overwhelming, but you find yourself smiling more than you have in a long time. 
         *page_break
     # Talk with Felix, the one member of Viper’s group that you get along with (Increase reputation)
+        *set cur_f_severity_value f_severity_average
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateRepValFlames
+
         You spot Felix heading out of the tavern. Curious, you follow him. 
         
         Outside, Felix is leaning against the building. “Oh, hey ${name}. What are you doing out here?”
@@ -347,9 +387,11 @@ You gasp, your mind slamming back to the present. Anwen is staring at you, a mix
 
 She gives you her handheld catapult. “Shoot anything that attacks us!”
 
+*page_break
+
 **(FIGHT SCENE. Skill checks galore. Will end with player having to rescue Felix from a jackaloid)**
 *temp CH5M_battle_won true
-*bug_continue Fight not implemented yet, assuming battle was won.
+Fight not implemented yet, assuming battle was won.
 
 *if CH5M_battle_won
     *comment Battle is won.

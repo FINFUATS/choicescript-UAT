@@ -84,6 +84,14 @@ You then search for your allies,
         
         *choice
             #win
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_major
+                *set cur_f_severity_value f_severity_major
+                *set cur_f_behavior_tag tag_f_Helping
+                *gosub_scene general UpdateReactionRiva
+                *gosub_scene general UpdateRelValRiva
+                *gosub_scene general UpdateRepValFlames
+
                 You stab another one of the ichor-swog creatures and shout at the miners. “It’s clear! Go! Go!”
                 
                 The miners all run from the hut towards the makeshift camp.
@@ -91,6 +99,14 @@ You then search for your allies,
                 “Thank you ${name}, I’m not sure if I would have been able to save everyone without you.” Riva thirdly says with a smile on her face.
 
             #loose
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_minor
+                *set cur_f_severity_value f_severity_average
+                *set cur_f_behavior_tag tag_f_Hindering
+                *gosub_scene general UpdateReactionRiva
+                *gosub_scene general UpdateRelValRiva
+                *gosub_scene general UpdateRepValFlames
+
                 A jackaloid overwhelms you and you stumble to the ground. Right when you think it’s all over, Riva sends a vine to save you.
                 
                 You nod to her your thanks before getting back up and looking towards the hut. In that small moment, a jackaloid managed to slash at one of the miners.
@@ -113,11 +129,27 @@ You then search for your allies,
         
         *choice
             #win
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_major
+                *set cur_f_severity_value f_severity_major
+                *set cur_f_behavior_tag tag_f_Helping
+                *gosub_scene general UpdateReactionWinfred
+                *gosub_scene general UpdateRelValWinfred
+                *gosub_scene general UpdateRepValFlames
+
                 With one last slash, you manage to help bring down a good portion of the creatures. Winfred walks up to you and gives you a big pat on the back, that makes you stumble slightly.
                 
                 “Good job! You were a great help, now come on, the others need help.” He booms before searching for someone to help.
 
             #loose
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_minor
+                *set cur_f_severity_value f_severity_average
+                *set cur_f_behavior_tag tag_f_Hindering
+                *gosub_scene general UpdateReactionWinfred
+                *gosub_scene general UpdateRelValWinfred
+                *gosub_scene general UpdateRepValFlames
+
                 One of the creatures rushes you and you stumble backwards. You hold your dagger out in a way that if the creature tried that again, it would stab itself.
                 
                 Before it had a chance to try again, Winfred uses his sword and slashes the head off of the creature.
@@ -144,6 +176,11 @@ You then search for your allies,
         *choice
             
             #Save the townsmen first
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_average
+                *gosub_scene general UpdateReactionIvy
+                *gosub_scene general UpdateRelValIvy
+
                 “Ivy, let’s save the townsmen first, the house the nobles are in looks sturdy enough to hold out a little longer.” You say and she lets out a sigh before nodding.
                 
                 You, Ivy, and one of the medics run towards the tavern and manage to avoid the creatures.
@@ -165,6 +202,11 @@ You then search for your allies,
                 “Come on, we have other people to help. There is no time to mourn.” She explains before walking back towards the medical tent.
 
             #Save the nobles first
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_average
+                *gosub_scene general UpdateReactionIvy
+                *gosub_scene general UpdateRelValIvy
+
                 “Ivy, let’s save nobles first. That tavern has held up to worse than these conditions, I’m not sure how much longer the house can hold” You say and she lets out a sigh before nodding.
                 
                 You, Ivy, and one of the medics run towards the noble’s house and manage to avoid the creatures.
@@ -198,6 +240,11 @@ You then search for your allies,
         
         *choice
             #Not so well
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_average
+                *gosub_scene general UpdateReactionBerthold
+                *gosub_scene general UpdateRelValBerthold
+
                 “I’ve never seen so much death and destruction before…” You mumble out a response and look at all of the injured people around you. “It’s too much.”
                 
                 “Then come with me.” Berthold stands up and leads you to a smaller tent nearby.
@@ -205,6 +252,11 @@ You then search for your allies,
                 “Sometimes we all need a break from what is going on around us.” Berthold explains as he opens the tent. It is full of crates and supplies. “If you don’t take a break when you need it, you have the chance of falling apart when you are most needed. Come help me transport these items to the medical tent and I can show you how to dress a wound.”
 
             #As well as I can be
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_average
+                *gosub_scene general UpdateReactionBerthold
+                *gosub_scene general UpdateRelValBerthold
+
                 “As well as I can be with everything going on.” You sigh.
                 
                 Berthold hums before standing up. “Not very many people could handle this kind of battle, you’re taking it better than most.” He begins walking towards one of the smaller tents.
@@ -254,11 +306,21 @@ You then search for your allies,
         
         *choice
             #win
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_average
+                *gosub_scene general UpdateReactionCel
+                *gosub_scene general UpdateRelValCel
+
                 You use your wit to cut down each of the creatures. By grabbing a few rocks before battle, you throw them at the jackaloids and manage to hit some in the head. This lessened the amount you needed to fight when they reached you.
                 
                 That made it so you only had to fight two jackaloids. Both of which you manage to take down.
 
             #loose
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_insignificant
+                *gosub_scene general UpdateReactionCel
+                *gosub_scene general UpdateRelValCel
+
                 You get overwhelmed, there are so many of them. You manage to kill the first jackaloid that attacks you, but since you’ve been on the defensive.
                 
                 You are trying to think up a plan when they get pushed away. You look over and you see Cel using her divine powers to keep them away from you. You use this moment to finish off the creatures.

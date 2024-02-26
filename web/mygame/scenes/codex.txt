@@ -190,6 +190,7 @@ Who do you want to know about?
             *selectable_if (isRivaDiscovered) #Riva Skorropax
                 *label codex_hl_Riva
                 [head]Riva Skorropax[/head]
+                *image images/riva.webp
                 Riva Skorropax is the newest member in the Davenport temple. She is an elven druid from a nearby forest. She is known for being a little clumsy and is known for injuring herself. However, that is not the most common reason to see her in the infirmary. She will take injured animals to the infirmary and watch over them until they have healed.
 
                 No one besides Cel and Ivy knows her backstory. Riva was a regular before she joined. When asked, Riva will stutter and leave. Cel will just shake her head and tell you that some things are better left in the past.
@@ -199,6 +200,7 @@ Who do you want to know about?
             *selectable_if (isWinfredDiscovered) #Winfred Cartwright
                 *label codex_hl_Winfred
                 [head]Winfred Cartwright[/head]
+                *image images/winfred.webp
                 Winfred was a porter before he joined the Davenport Temple.
                 *line_break
                 *goto chargroup_Cel
@@ -323,6 +325,7 @@ Who do you want to know about?
             #Dustin
                 *label codex_hl_Dustin
                 [head]Dustin[/head]
+                *image images/dustin.webp
                 Dustin was the priest that took Cel Storm to the Flames of Sigel’s temple. He is the one who took care of her during her childhood after her town was taken over by ichor-swogs.
                 
                 He was known for taking in strays even before his wife died. She always talked about how the order should protect and help the people who have lost their homes to the rot. Not many people she took in made it far in the order, and most would leave after getting back on their feet. Some will stay and fully join the order, but they don’t make it far. This didn’t sway her. She was always a kind person and Dustin loved that about her. After she died Dustin continued to help people to honor her memory. 

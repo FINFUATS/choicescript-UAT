@@ -7,12 +7,32 @@ Cel has called a meeting in the main room. Everyone has gathered around the stan
 
 *fake_choice
     #Riva
+        *set cur_behavior_tag tag_Peaceful
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionRiva
+        *gosub_scene general UpdateRelValRiva
+
         Riva offers you a small smile before focusing on Cel.
     #Winfred
+        *set cur_behavior_tag tag_Peaceful
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionWinfred
+        *gosub_scene general UpdateRelValWinfred
+
         Winfred pats you on the back, not taking his eyes off of the stand.
     #Ivy
+        *set cur_behavior_tag tag_Peaceful
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionIvy
+        *gosub_scene general UpdateRelValIvy
+
         Ivy huffs out a greeting to you, pretending not to pay attention to Cel.
     #Berthold
+        *set cur_behavior_tag tag_Peaceful
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionBerthold
+        *gosub_scene general UpdateRelValBerthold
+
         Berthold nods to acknowledge your presents.
         
 “The yearly gathering of all the high priests is coming up and we are hosting it this year. We have to make sure everything is perfect for their arrival.” Cel explained to the crowd. “Everyone should know their chores, if you do not, come find me and I’ll assign you something to do.”
@@ -58,7 +78,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Cel):
-            
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+
             You remember where most of the books go and put them back. The pile gets smaller and smaller until there are only a handful of books you don’t know where to put them. 
 
             “Good job, I can take over from here. Could you start dusting the statues and remaining shelves?” Cel takes the remaining books.
@@ -67,6 +91,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
         *else
             *comment Fail (Insignificant reputation increase the Cel):
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+
             You realize that you don’t remember where any of these books go. You ask Cel where a few of them go before she gives you a different task.
             
             “Here, how about you go dust the statues and shelves? I’ll worry about the books.” Cel takes the pile of books away from you before sorting them out.
@@ -105,7 +134,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionRiva
+            *gosub_scene general UpdateRelValRiva
+
             You grab Riva’s arm and pull her back just before she steps into the mockgaurden. She looks at you and then where she was about to step.
 
             “Oh! Thank you ${name}. I was too absorbed into where the mockgaurdens were on the map, I forgot to check where I was stepping…” She sighed while thanking you.
@@ -114,7 +147,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
 
         *else
-            
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionRiva
+            *gosub_scene general UpdateRelValRiva
+
             “Riva, look out!” You shout. Riva looks up from the paper and sees that she is about to step into a mockguarden. Everyone is also looking at her and she hides behind her paper. You have a feeling she didn’t want everyone to see her almost walk into a natural trap.
         
     *selectable_if (winfred_Clean = "no") #Winfred (Moderate [color=${brawn_color}]Strength[/color] Check)
@@ -140,18 +177,27 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionWinfred
+            *gosub_scene general UpdateRelValWinfred
+
             You pick up one of the big boxes and follow Winfred into the kitchen. You surprise even yourself with your strength and safely set the box down in the kitchen. 
 
             “Good job! You have a lot more muscle in that thin frame than I thought!” Winfred compliments you. You smile before grabbing the next box.
 
         *else
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionWinfred
+            *gosub_scene general UpdateRelValWinfred
+
             You try to pick up one of the bigger boxes, only to drop it immediately. Winfred laughs and points you in the direction of some smaller boxes. You hope there was nothing fragile in there.
         
     *selectable_if (ivy_Clean = "no") #Ivy (Moderate [color=${cunning_color}]Improvisation[/color] Check)
         
         *set ivy_Clean "yes"
-        
+
         You spot Ivy poking around the old library. The old library is in a separate building. It used to  store the old books that no one reads anymore.That is, until one of the supports fell from because no one was upkeeping the building. Now it is off limits and all of the books have been moved to a new location.
         
         You have never been in the building before, only heard of it from your friends at the temple. Ivy talked about it the most, saying how it was the only peaceful spot in all of the temple.
@@ -161,7 +207,7 @@ With that, everyone left the main room, leaving you and a handful of new people 
         *page_break
         
         “${name}, why are you following me?” Ivy asks, accusingly.
-      	 
+
         “I saw you over by the old library and I was curious about what you were doing.” You explain.
          
         “I’m sneaking into that library and hiding in there for a while. I already finished my task and if anyone sees me standing around, they are going to give me more.” She explains. “Here, if you want to help me get into the old library, distract the guard as I sneak in.”
@@ -181,6 +227,10 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionIvy
+            *gosub_scene general UpdateRelValIvy
             
             “HALT! The old library is off limits for safety concerns.” The guard explains.
             
@@ -198,7 +248,11 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
 
         *else
-            
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionIvy
+            *gosub_scene general UpdateRelValIvy
+
             You walk up to the guard with no plan in mind.
             
             “HALT! The old library is off limits for safety concerns.” The guard explains.
@@ -244,14 +298,22 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionBerthold
+            *gosub_scene general UpdateRelValBerthold
+
             You quickly catch the statue and stand it back up. You look it over to make sure it didn’t get damaged before returning to your cleaning.
             
             “Nice catch.” You hear Berthold call out from the other side of the room. You smile at him before getting back to work.
 
 
         *else
-            
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionBerthold
+            *gosub_scene general UpdateRelValBerthold
+
             You quickly move to catch it, but a small crack forms on the side of the statue. You turn the statue to make the crack less obvious. 
             
             You hear Berthold sigh. You look over at him to see him shaking his head before returning to his chores. You do the same, being extra careful not to bump into anything.
@@ -275,7 +337,10 @@ With that, everyone left the main room, leaving you and a handful of new people 
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_f_severity_value f_severity_minor
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValFlames
+
             You clean up every statue that was being reclaimed by nature. You managed to remove all of the vines and all of the webs from the statues. Some of them are cracked or missing pieces, but none of it was because of you.
            
             “Oh, that’s where that statue went.” Cel walking up behind you. “I remembered we left it outside, but then we lost it many years ago. Never thought I’d see it again. Good job ${name}.”
@@ -285,6 +350,10 @@ With that, everyone left the main room, leaving you and a handful of new people 
 
 
         *else
+            *set cur_f_severity_value f_severity_insignificant
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateRepValFlames
+
             You start by cleaning one of the smaller statues. After digging it out of the vines, you pick it up to look at it. As you are examining the statue, a spider crawls out from behind the statue and you drop it.
             
             You move to pick up all of the pieces before deciding that you are not picking up any more statues from now on.
@@ -391,7 +460,14 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_average
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateReactionRiva
+            *gosub_scene general UpdateRelValRiva
+            *gosub_scene general UpdateRepValFlames
+
             You easily pick up the basket of vegetables and take them to the kitchen. You do a couple of trips back and forth until there are six baskets of different vegetables in the kitchen.
 
             Your arms hurt and your back aches, but it is done. There should be enough food to last the weekend.
@@ -407,6 +483,11 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
             You give her a smile and take the last basket to the kitchen.
 
         *else
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionRiva
+            *gosub_scene general UpdateRelValRiva
+
             You try to lift up the first basket, but are only able to lift it a few inches. You try again, but Riva stops you.
 
             “I’ll call Winfred or Barthold to come grab them, don’t strain yourself before the big meeting. We have to clean up afterwards.” She says. You nod, disappointed in your own strength.
@@ -432,7 +513,14 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         
         *if CH7D_ms_bool
             *comment Pass (Minor reputation increase with the Riva):
-            
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_average
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateReactionWinfred
+            *gosub_scene general UpdateRelValWinfred
+            *gosub_scene general UpdateRepValFlames
+
             You look down at the injured person and notice that his leg is starting to swell.
             
             “He broke his leg, could one of you get me two long sticks and some cloth? And possibly some pillows?” You ask the group as you help the guy lay down so as to not agitate the injury.
@@ -452,7 +540,11 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
             “I was very adventurous as a child. Everyone I knew has broken at least one bone at that time and I learned how to temporarily keep it in place while we waited for the healer.” You explained
 
         *else
-            
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+
             You aren’t sure what happened, the guy seems to be in pain, but you don’t know what is causing it. 
 
             Winfred bends down to pick him up. When the injured priest puts weight on one of his legs, he buckles and almost goes face first back to the ground.
@@ -487,7 +579,14 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         [head]Acrobatics Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
-            
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_average
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateReactionIvy
+            *gosub_scene general UpdateRelValIvy
+            *gosub_scene general UpdateRepValFlames
+
             You begin climbing up the wall, being extra careful not to fall. When reaching for the next vine, you notice that it is wrapped up in a loose brick. You instead reach for a different branch and use that to climb up. You bump into the vine and the brick falls to the, taking the vine with it.
             
             *page_break
@@ -515,7 +614,11 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
             After you get back to the group, they all seem amazed that you found her.
 
         *else
-            
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_insignificant
+            *gosub_scene general UpdateReactionIvy
+            *gosub_scene general UpdateRelValIvy
+
             You begin climbing up the wall, being extra careful not to fall. When reaching for the next vine, you don’t notice that it is wrapped up in a loose brick. When you grab and pull on it, the brick flies out of the wall, taking the vine with it.
             
             *page_break
@@ -686,11 +789,19 @@ The priest from the meeting walks into the room. You can see that everyone is tr
         [head]Stealth Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValFlames
+
            “I’m going to help the kitchen and ask what boxes of food they need for dinner.” You explain.
 
            The high priest nods and then stares at everyone else. You think he bought it.
 
         *else
+            *set cur_f_severity_value f_severity_minor
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateRepValFlames
+
             “I’m… going to go to the kitchen. They may need help before dinner.” You explain.
 
             The high priest gives you a slow nod before looking at everyone else. You are not sure if they bought it.

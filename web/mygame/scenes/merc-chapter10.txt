@@ -86,9 +86,7 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         
         You glared at him.
 
-        *bug_continue affinity system not implemented yet, assuming party likes player
-        
-        *if true
+        *if (((rel_status_Rip = rel_status_3) or (rel_status_Rip = rel_status_2)) or ((rel_status_Rip = rel_status_1) or (rel_status_Rip = rel_status_0))) and (((rel_status_Anwen = rel_status_3) or (rel_status_Anwen = rel_status_2)) or ((rel_status_Anwen = rel_status_1) or (rel_status_Anwen = rel_status_0)))
             *comment If the party likes the player
             “Look, everyone is worried about you after you disappeared. Even Anwen. ${puppy_name} has been looking for you every time someone returns to camp. You could have waited until we were in a town or back at Davenport before leaving. Could have taken ${puppy_name} with you.” Rip explained.
         *else
@@ -282,8 +280,7 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         [b]You glared at him.[/b]
         *page_break
 
-        *bug_continue affinity system not implemented yet, assuming party likes player
-        *if true       
+        *if (((rel_status_Rip = rel_status_3) or (rel_status_Rip = rel_status_2)) or ((rel_status_Rip = rel_status_1) or (rel_status_Rip = rel_status_0))) and (((rel_status_Anwen = rel_status_3) or (rel_status_Anwen = rel_status_2)) or ((rel_status_Anwen = rel_status_1) or (rel_status_Anwen = rel_status_0)))
             *comment If the party likes the player
             “Look, everyone is worried about you after you disappeared. Even Anwen. ${puppy_name} has been looking for you every time someone returns to camp. You could have waited until we were in a town or back at Davenport before leaving. Could have taken ${puppy_name} with you.” Rip explained.
         *else

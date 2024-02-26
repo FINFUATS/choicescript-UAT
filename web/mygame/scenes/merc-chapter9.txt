@@ -32,6 +32,14 @@ You decide to lend a helping hand to…
         *temp won_leon_fight true
 
         *if won_leon_fight
+            *set cur_behavior_tag tag_f_Helping
+            *set cur_severity_multiplier multiplier_major
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateReactionLeon
+            *gosub_scene general UpdateRelValLeon
+            *gosub_scene general UpdateRepValWolves
+
             Leon draws his blade from the last of these vile things. Somehow, you find yourself surprised to see him wipe the sweat from his brow.
             
             “I could’ve taken them, you know…” he says
@@ -42,6 +50,14 @@ You decide to lend a helping hand to…
             *page_break
             *goto CH9M_BattleField
         *else
+            *set cur_behavior_tag tag_f_Hindering
+            *set cur_severity_multiplier multiplier_average
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateReactionLeon
+            *gosub_scene general UpdateRelValLeon
+            *gosub_scene general UpdateRepValWolves
+
             Your vision does not fade, the way you would imagine it would, but, rather, abruptly cuts off. The finality of death, however, evades you for today.
             *page_break
             *goto CH9M_Loss
@@ -102,9 +118,21 @@ You decide to lend a helping hand to…
         [b]You think Gwyn should…[/b]
         *fake_choice
             # Prioritize the miners
+                *set cur_f_severity_value f_severity_major
+                *set cur_f_behavior_tag tag_f_Helping
+                *gosub_scene general UpdateRepValWolves
+
                 This option should increase reputation… 
         
             # Prioritize Nobles
+                *set cur_behavior_tag tag_f_Helping
+                *set cur_severity_multiplier multiplier_major
+                *set cur_f_severity_value f_severity_minor
+                *set cur_f_behavior_tag tag_f_Helping
+                *gosub_scene general UpdateReactionGwyn
+                *gosub_scene general UpdateRelValGwyn
+                *gosub_scene general UpdateRepValWolves
+
                 This option will increase profit. 
         
             # The room smells of death… it’s quite sickening…
@@ -183,7 +211,9 @@ You decide to lend a helping hand to…
         *fake_choice
             # Yes
                 Anwyn flashes a brief smile. You sense that she’s a little surprised to hear you say that.
+                
                 “Well, considering you aren’t Leon, I take that as a good sign. Best of luck.”
+                
                 Finished tending equipment, the two of you leave the armory and split ways.
                 *page_break
                 *goto CH9M_BattleField
@@ -205,6 +235,10 @@ You decide to lend a helping hand to…
         (Assuming win)
         *temp CH9M_priestess_battle_win true
         *if CH9M_priestess_battle_win
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             You help the priestess up from the ground. She takes a deep breath in… and then lets out an exhale.
         
             “I’m rather sorry about that, friend…” she says “I’ll take better care where I tread from here on!”
@@ -212,6 +246,10 @@ You decide to lend a helping hand to…
             You don’t get even a second to respond, as she runs off, fading into the distance. Something tells you she’s going to pick up right where it is that she left off… 
             *goto CH9M_BattleField
         *else
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateRepValWolves
+
             Your vision does not fade, the way you would imagine it would, but, rather, abruptly cuts off. The finality of death, however, evades you for today. 
             *goto CH9M_Loss
     

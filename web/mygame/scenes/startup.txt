@@ -265,6 +265,77 @@
 *create rep_status_3 "Tense"
 *create rep_status_4 "Terrible"
 
+*comment Reaction Value Globals
+*create reaction_loved 120
+*create reaction_liked 90
+*create reaction_agree 45
+*create reaction_neutral 0
+*create reaction_disagree 45
+*create reaction_disliked 90
+*create reaction_hated 120
+
+*comment Relationship Multiplier Globals
+*create multiplier_grandiose 1.5
+*create multiplier_major 1.25
+*create multiplier_average 1
+*create multiplier_minor 0.5
+*create multiplier_insignificant 0.25
+
+*comment Faction Choice/Action Severity Value Globals
+*create f_severity_grandiose 15
+*create f_severity_major 10
+*create f_severity_average 5
+*create f_severity_minor 2.5
+*create f_severity_insignificant 1
+*create cur_rep_bonus 0
+
+*comment Reputation Bonus Globals
+*create rep_bonus_excellent 5
+*create rep_bonus_positive 2.5
+*create rep_bonus_neutral 0
+*create rep_bonus_tense 5
+*create rep_bonus_terrible 10
+
+*comment Personality Reaction Globals
+*create cur_personality_reaction_Cel 0
+*create cur_personality_reaction_Ivy 0
+*create cur_personality_reaction_Riva 0
+*create cur_personality_reaction_Winfred 0
+*create cur_personality_reaction_Berthold 0
+*create cur_personality_reaction_Rip 0
+*create cur_personality_reaction_Anwen 0
+*create cur_personality_reaction_Gwyn 0
+*create cur_personality_reaction_Leon 0
+*create cur_personality_reaction_Elena 0
+
+*comment Behavior Tag Globals for Choices
+*create tag_Generous "Generous"
+*create tag_Nice "Nice"
+*create tag_Peaceful "Peaceful"
+*create tag_Selfish "Selfish"
+*create tag_Mean "Mean"
+*create tag_Violent "Violent"
+*create tag_Murdering "Murdering"
+*create tag_Slaying "Slaying"
+*create tag_Stealing "Stealing"
+*create tag_Divine "Divine"
+*create tag_Arcane "Arcane"
+*create tag_f_Helping "f_Helping"
+*create tag_f_Hindering "f_Hindering"
+
+*comment Current Tag and Multiplier Globals
+*create cur_behavior_tag "N/A"
+*create cur_severity_multiplier 1
+*create cur_f_severity_value 0
+*comment Helping or hindering tag
+*create cur_f_behavior_tag "N/A"
+
+*comment Affinity Effect Globals
+*create cur_affinity_effect_Flames 0
+*create cur_affinity_effect_Wolves 0
+
+
+
 *comment -----------------------------------------------------------------------
 
 *comment *set GP_arg0 6

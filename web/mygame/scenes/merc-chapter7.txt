@@ -65,9 +65,19 @@ What will you do with your free time?
 
         *if ch7m_has_won_training
             *comment Pass (Minor reputation increase with Rip)
+            *set cur_behavior_tag tag_Slaying
+            *set cur_severity_multiplier multiplier_average
+            *gosub_scene general UpdateReactionRip
+            *gosub_scene general UpdateRelValRip
+
             “You did well.” Rip bestowed upon them a rare smile, clapping a firm hand on their shoulder.
         *else
             *comment Fail (Insignificant increase increase with Rip)
+            *set cur_behavior_tag tag_Slaying
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionRip
+            *gosub_scene general UpdateRelValRip
+
             “It takes time and practice, you’ll get there.” Rip pats you on the back before returning the weapons to the pile.
 
         "But remember, it's not just about raw strength. It's about using your head too." With that, Rip shared his insights on battlefield tactics, teaching you how to read the flow of battle and make split-second decisions that could turn the tide.
@@ -97,6 +107,10 @@ What will you do with your free time?
 
         *if CH7M_ms_bool
             *comment Pass (Minor reputation increase with the Wolves):
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             As the crowd gathers around, cheering and placing friendly bets, you take a deep breath, steadying your bow, and lets the arrow fly. It soars through the air, hitting the target dead center.
     
             The cheers erupt as you earn a round of applause, even from Thalia herself. The archer smiles, giving a nod of approval, and the two of you exchange a friendly fist bump, your bond strengthened through the shared passion for the art of archery.
@@ -104,6 +118,10 @@ What will you do with your free time?
             “Good job.” A voice calls out. You turn around and see Anwen. “We should have a friendly competition of our own next time.”
         *else
             *comment Fail (Insignificant reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_minor
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             As the crowd gathers around, cheering and placing friendly bets, you take a deep breath, steadying your bow, and lets the arrow fly. It soars through the air, and hits the outer circle. 
     
             The cheers erupt as Thalia’s arrow hits the target. She gives you a small nod before turning to the crowd.
@@ -133,6 +151,10 @@ What will you do with your free time?
 
         *if CH7M_ea_bool
             *comment Pass (Minor reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             The race is intense, with both competitors giving their all. Rook seems to have the lead, but you found some hidden strength and summoned your agility, sprinting past tents and leaping over logs. In a photo finish, you narrowly edge out Rook, claiming victory by a whisker.
     
             “Good job newbie, next time I won’t stumble on a root.” Root teases you.
@@ -141,11 +163,23 @@ What will you do with your free time?
 
         *else
             *comment Fail (Insignificant reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_average
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             The race was intense, with both competitors giving their all. Rook is in the lead when you trip on a log. When you stand up and begin running, you can see Rook is far in front of you. When you reach the finish line, Rook is there waiting.
     
             “Better luck next time, newbie.” Rook smiles. You nod in response.
 
     # Storytelling with Leon (End day) 
+        *set cur_behavior_tag tag_Peaceful
+        *set cur_severity_multiplier multiplier_minor
+        *set cur_f_severity_value f_severity_insignificant
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+        *gosub_scene general UpdateRepValWolves
+
         As the sun set, the camp gathered for a hilarious competition of storytelling. Each mercenary took turns spinning exaggerated tales of their adventures, trying to outdo one another with outrageous anecdotes and fantastical tales. 
 
         You join in the fun, sitting next to Leon. You tell the story of the mogfish, how it jumped into a tree while chasing you. Leon joins in on the story and helps you add more flare to it. The camp roars with laughter after you use the tips Leon gave you to expand the story with how the mogfish fell flat on its face and struggled to get up. Giving you just enough time to kill it.
@@ -189,11 +223,19 @@ Where do you go?
 
         *if CH7M_e_bool
             *comment Pass (Minor reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you dig into the first pie. 
     
             With each crust and filling devoured, the crowd's cheers grew louder. In a comedic whirlwind of pie and laughter, you emerged as the new pie-eating champion, earning a cart full of pies, much to the villagers' amusement.
         *else
             *comment Fail (Insignificant reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_insignificant
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateRepValWolves
+
             Unfazed, you accepted the challenge, entering the contest with a grin. The village gathered to witness the spectacle, and as the countdown began, you dig into the first pie.
 
             It was too much. You barely manage to finish the third pie before calling it quits.
@@ -221,11 +263,19 @@ Where do you go?
 
         *if CH7M_e_bool
             *comment Pass (Major reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_major
+            *set cur_f_behavior_tag tag_f_Helping
+            *gosub_scene general UpdateRepValWolves
+
             You managed to overpower Gruff, and the blacksmith roared with laughter, slapping the player on the back. "You've got some real brawn, I'll give you that! Choose any weapon you want, it's yours!" 
 
             With the carts filled with supplies, the group returned to the camp victorious, laden not only with essentials but also with tales of their humorous exploits.
         *else
             *comment Fail (Minor reputation increase the Wolves):
+            *set cur_f_severity_value f_severity_minor
+            *set cur_f_behavior_tag tag_f_Hindering
+            *gosub_scene general UpdateRepValWolves
+
             The struggle lasts so long that the group doesn’t know who is going to win. After putting up a valiant fight, Gruff manganese to beat you
 
             "You've got some real brawn, I haven’t had a fight like that in a long while. Here, this is what I’ll do for you.” Gruff walks over to a rack of weapons. “Take any of these that you’d like. They aren’t my strongest weapons, but your enemy won’t know that.”
@@ -245,7 +295,14 @@ It’s the next day, you look for other ways to help the camp,
     *selectable_if (explore = "no") #Explore
         
         *set explore "yes"
-        
+        *set cur_behavior_tag tag_f_Helping
+        *set cur_severity_multiplier multiplier_average
+        *set cur_f_severity_value f_severity_average
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+        *gosub_scene general UpdateRepValWolves
+
         Rip Daring recognizes the value of knowing the lay of the land. He assigns you the job to explore the nearby forest, mapping out potential dangers, hidden resources, and possible routes for future missions.
 
         This exploration not only allows you to contribute to the camp's safety but also a chance to connect with the natural beauty of the wilderness.
@@ -279,7 +336,14 @@ It’s the next day, you look for other ways to help the camp,
     *selectable_if (assist = "no") #Assist
         
         *set assist "yes"
-        
+        *set cur_behavior_tag tag_f_Helping
+        *set cur_severity_multiplier multiplier_average
+        *set cur_f_severity_value f_severity_average
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateReactionGwyn
+        *gosub_scene general UpdateRelValGwyn
+        *gosub_scene general UpdateRepValWolves
+
         The infirmary in the camp is always busy with injured mercenaries. You decide to lend a hand to the healers, learn basic first aid and herbal remedies. 
 
         As you tend to the wounded, you gain a deeper understanding of the sacrifices and risks involved in the life of a mercenary.

@@ -20,8 +20,18 @@ You respond with,
 *fake_choice
     # “${name}.”
     # “My name is ${name}, and likewise.”
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+
         Rip walks over to you and you shake his hand.
     # “How do I know I can trust you?”
+        *set cur_behavior_tag tag_Mean
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+
         “You don’t, but clearly you trusted me more than the priestess or else you won’t be here.” Rip crosses his arms and leans against the broken table. You make a note that the table is stronger than it looks.
 
         “${name}”
@@ -39,6 +49,11 @@ Before you head to sleep you open your bag and look at your item.
 
     *fake_choice
         # Share with Rip
+            *set cur_behavior_tag tag_Generous
+            *set cur_severity_multiplier multiplier_average
+            *gosub_scene general UpdateReactionRip
+            *gosub_scene general UpdateRelValRip
+            
             “Rip,” you whisper.
 
             “What? Go to sleep,” Rip mumbles.
@@ -64,7 +79,7 @@ Before you head to sleep you open your bag and look at your item.
     You admire the designs on the knife, wondering what they mean.
 *else
     There's nothing there…
-    *bug_continue item: ${item}, we should probably be dealing with this???
+    *comment *bug_continue item: ${item}, we should probably be dealing with this???
 *page_break
   
 The next morning Rip wakes you up and you pack up your stuff.
@@ -101,7 +116,11 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
 *comment /// I have legit no idea how to implement this... ///
 *comment TODO: use the reputation system here…
 *if CH4_murderer =  "chased"
-    
+    *set cur_behavior_tag tag_Nice
+    *set cur_severity_multiplier multiplier_minor
+    *gosub_scene general UpdateReactionRip
+    *gosub_scene general UpdateRelValRip
+
     “I heard a scream while I was walking home. Not very much happens here, so I decided to go check it out. You never know if it is something as simple as a mouse, or if someone has fallen. When I walked into the house, there was a body on the floor, I… I walked up to the body to see who it was… It was Lord Odel… I-I should have called the guards right then and there.” You look at the ground as you talk.
     
     “Then what happened?”
@@ -119,7 +138,11 @@ When the two of you make it to the forest, Rip leads you down a pathway. It is a
     “He probably jumped over a wall or blended in with the crowd if you didn’t know what you were looking for,” Rip explains.
 
 *elseif CH4_murderer =  "leave"
-    
+    *set cur_behavior_tag tag_Selfish
+    *set cur_severity_multiplier multiplier_minor
+    *gosub_scene general UpdateReactionRip
+    *gosub_scene general UpdateRelValRip
+
     “I heard a scream coming from a house, so I… decided to leave the area. Nothing good ever happens when you get involved with something you don’t have anything to do with. I was walking away from the scream, keeping a look out for a guard, when someone bumped into me. I didn’t realize at the time it was the murderer. He took my ${item} and gave me the murder weapon. While I was confused, the guards grabbed me.”
     
     Rip hums in disapproval.
@@ -173,10 +196,20 @@ Leon is the first person to walk up to you, he puts his arm over your shoulders.
 You,
 *fake_choice
     # Accept the gesture.
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_insignificant
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
         Leon walks you over to the campfire and gestures at a log.
     # Move to the side and give Leon a small smile.
         Leon stares at you for a second before shrugging and walks back to the fire. He gestures to you to follow.
     # Shrug off his arm and continue staring at the fire.
+        *set cur_behavior_tag tag_Mean
+        *set cur_severity_multiplier multiplier_insignificant
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+        
         Leon stares at you before walking over to the campfire. He makes a gesture to one of the logs.
 
 “Come on, take a seat.” Leon hops up on one of the logs.
@@ -278,6 +311,17 @@ How do you tell the story?
 
 *fake_choice
     # “I happened to be at the wrong place at the wrong time…” 
+        *set cur_behavior_tag tag_Selfish
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionAnwen
+        *gosub_scene general UpdateRelValAnwen
+        *gosub_scene general UpdateReactionGwyn
+        *gosub_scene general UpdateRelValGwyn
+        *gosub_scene general UpdateReactionElena
+        *gosub_scene general UpdateRelValElena
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
         “It’s more common than you would think,” Elena comments.
         
         “Yeah… I guess so.” You mumble looking down.
@@ -285,6 +329,19 @@ How do you tell the story?
         “But you are here now and we’ll help you where we can.” Elena offers you a smile.
 
     # “I was on my way home when a murder got pinned on me!” 
+        *set cur_behavior_tag tag_Selfish
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+        *gosub_scene general UpdateReactionAnwen
+        *gosub_scene general UpdateRelValAnwen
+        *gosub_scene general UpdateReactionGwyn
+        *gosub_scene general UpdateRelValGwyn
+        *gosub_scene general UpdateReactionElena
+        *gosub_scene general UpdateRelValElena
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
         “Woah now, I can get the frustration, but you are safe now.” Leon jokingly takes a step back. “Maybe I shouldn’t have asked so soon.”
 
     # “I’m not so sure myself. I’m going to need some time to sort it and understand it.”
@@ -403,8 +460,30 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
 
 *fake_choice
     # “I’ll join, but I’ll want to read up on it first.”
+        *set cur_behavior_tag tag_f_Helping
+        *set cur_severity_multiplier multiplier_average
+        *set cur_f_severity_value f_severity_average
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateReactionRip
+        *gosub_scene general UpdateRelValRip
+        *gosub_scene general UpdateReactionAnwen
+        *gosub_scene general UpdateRelValAnwen
+        *gosub_scene general UpdateReactionElena
+        *gosub_scene general UpdateRelValElena
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+        *gosub_scene general UpdateRepValWolves
+
         *goto MC5EndBranch1
     # “I want to stay here. I don’t think I’m ready for an adventure just yet”
+        *set cur_behavior_tag tag_f_Helping
+        *set cur_severity_multiplier multiplier_minor
+        *set cur_f_severity_value f_severity_minor
+        *set cur_f_behavior_tag tag_f_Helping
+        *gosub_scene general UpdateReactionGwyn
+        *gosub_scene general UpdateRelValGwyn
+        *gosub_scene general UpdateRepValWolves
+
         *goto MC5EndBranch2
 
 *label MC5EndBranch1

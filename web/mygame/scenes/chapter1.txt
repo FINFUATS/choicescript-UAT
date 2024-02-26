@@ -83,6 +83,7 @@ You decide to,
            # Tend to the fields ([color=${brawn_color}]Brawn++[/color] [color=${agility_color}]Agility++[/color])
                 *set Brawn +1
                 *set Agility +1
+
                 You pick up a sturdy plow and work alongside your mother, pushing it through the earth with all your strength, utilizing your brawn. The physical exertion tests your muscles, and you can feel them straining with the effort. At the same time, you must navigate the uneven terrain and maneuver around rocks and obstacles, showcasing your agility.
 
                 Together, you and your mother plow the fields, preparing them for the planting season. The combination of your brawn and agility allows you to complete the task efficiently, impressing your mother with your physical abilities.

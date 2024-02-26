@@ -627,3 +627,421 @@
     *set rep_val_Wolves rep_status_2
 
 *return
+
+*label UpdateCurrentAffinityEffectFlames
+*if rep_status_Flames = rep_status_0
+    *set cur_affinity_effect_Flames 0.25
+*elseif rep_status_Flames = rep_status_1
+    *set cur_affinity_effect_Flames 0.1
+*elseif rep_status_Flames = rep_status_2
+    *set cur_affinity_effect_Flames 0
+*elseif rep_status_Flames = rep_status_3
+    *set cur_affinity_effect_Flames -0.1
+*elseif rep_status_Flames = rep_status_4
+    *set cur_affinity_effect_Flames -0.25
+*return
+
+*label UpdateCurrentAffinityEffectWolves
+*if rep_status_Wolves = rep_status_0
+    *set cur_affinity_effect_Wolves 0.25
+*elseif rep_status_Wolves = rep_status_1
+    *set cur_affinity_effect_Wolves 0.1
+*elseif rep_status_Wolves = rep_status_2
+    *set cur_affinity_effect_Wolves 0
+*elseif rep_status_Wolves = rep_status_3
+    *set cur_affinity_effect_Wolves -0.1
+*elseif rep_status_Wolves = rep_status_4
+    *set cur_affinity_effect_Wolves -0.25
+*return
+
+*label UpdateReactionCel
+*gosub UpdateCurrentAffinityEffectFlames
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Cel (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Cel (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Cel (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Cel ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Cel ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Cel ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Cel ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Cel (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Cel ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Cel (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Cel (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Cel (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Cel ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*return
+    
+*label UpdateReactionIvy
+*gosub UpdateCurrentAffinityEffectFlames
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Ivy (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Ivy (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Ivy (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Ivy ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Ivy ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Ivy ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Ivy ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Ivy (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Ivy ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Ivy (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Ivy (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Ivy (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Ivy ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*return
+
+*label UpdateReactionBerthold
+*gosub UpdateCurrentAffinityEffectFlames
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Berthold (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Berthold (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Berthold (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Berthold ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Berthold ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Berthold ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Berthold ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Berthold (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Berthold ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Berthold (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Berthold (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Berthold (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Berthold ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*return
+
+*label UpdateReactionRiva
+*gosub UpdateCurrentAffinityEffectFlames
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Riva (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Riva (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Riva (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Riva ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Riva ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Riva ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Riva ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Riva (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Riva ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Riva (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Riva (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Riva (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Riva ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*return
+
+*label UpdateReactionWinfred
+*gosub UpdateCurrentAffinityEffectFlames
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Winfred (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Winfred (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Winfred (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Winfred ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Winfred ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Winfred ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Winfred ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Winfred (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Winfred ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Winfred (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Winfred (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Winfred (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Winfred ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
+*return
+
+*label UpdateReactionRip
+*gosub UpdateCurrentAffinityEffectWolves
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Rip (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Rip (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Rip (reaction_disagree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Rip ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Rip ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Rip ((reaction_agree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Rip ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Rip (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Rip ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Rip (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Rip (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Rip (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Rip ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*return
+
+*label UpdateReactionAnwen
+*gosub UpdateCurrentAffinityEffectWolves
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Anwen (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Anwen (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Anwen (reaction_disliked * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Anwen ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Anwen ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Anwen ((reaction_liked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Anwen ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Anwen (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Anwen ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Anwen (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Anwen (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Anwen (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Anwen ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*return
+
+*label UpdateReactionElena
+*gosub UpdateCurrentAffinityEffectWolves
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Elena (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Elena (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Elena (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Elena ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Elena ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Elena ((reaction_agree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Elena ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Elena (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Elena ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Elena (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Elena (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Elena (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Elena ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*return
+
+*label UpdateReactionGwyn
+*gosub UpdateCurrentAffinityEffectWolves
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Gwyn (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Gwyn (reaction_agree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Gwyn (reaction_disagree * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Gwyn ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Gwyn ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Gwyn ((reaction_liked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Gwyn ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Gwyn (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Gwyn ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Gwyn (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Gwyn (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Gwyn (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Gwyn ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*return
+
+*label UpdateReactionLeon
+*gosub UpdateCurrentAffinityEffectWolves
+
+*if cur_behavior_tag = tag_Generous
+    *set cur_personality_reaction_Leon (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Nice
+    *set cur_personality_reaction_Leon (reaction_liked * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Peaceful
+    *set cur_personality_reaction_Leon (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Selfish
+    *set cur_personality_reaction_Leon ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Mean
+    *set cur_personality_reaction_Leon ((reaction_disagree * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Violent
+    *set cur_personality_reaction_Leon ((reaction_liked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Murdering
+    *set cur_personality_reaction_Leon ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Slaying
+    *set cur_personality_reaction_Leon (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Stealing
+    *set cur_personality_reaction_Leon ((reaction_disliked * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Divine
+    *set cur_personality_reaction_Leon (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_Arcane
+    *set cur_personality_reaction_Leon (reaction_neutral * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Helping
+    *set cur_personality_reaction_Leon (reaction_loved * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*elseif cur_behavior_tag = tag_f_Hindering
+    *set cur_personality_reaction_Leon ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
+*return
+
+*label UpdateRelValCel
+*set rel_val_Cel rel_val_Cel + cur_personality_reaction_Cel
+*return
+*label UpdateRelValIvy
+*set rel_val_Ivy rel_val_Ivy + cur_personality_reaction_Ivy
+*return
+
+*label UpdateRelValBerthold
+*set rel_val_Berthold rel_val_Berthold + cur_personality_reaction_Berthold
+*return
+
+*label UpdateRelValRiva
+*set rel_val_Riva rel_val_Riva + cur_personality_reaction_Riva
+*return
+
+*label UpdateRelValWinfred
+*set rel_val_Winfred rel_val_Winfred + cur_personality_reaction_Winfred
+*return
+
+
+*label UpdateRelValRip
+*set rel_val_Rip rel_val_Rip + cur_personality_reaction_Rip 
+*return
+
+*label UpdateRelValAnwen
+*set rel_val_Anwen rel_val_Anwen + cur_personality_reaction_Anwen
+*return
+
+*label UpdateRelValElena
+*set rel_val_Elena rel_val_Elena + cur_personality_reaction_Elena
+*return
+
+*label UpdateRelValGwyn
+*set rel_val_Gwyn rel_val_Gwyn + cur_personality_reaction_Gwyn
+*return
+
+*label UpdateRelValLeon
+*set rel_val_Leon rel_val_Leon + cur_personality_reaction_Leon
+*return
+
+*label UpdateRepValFlames
+*if (cur_f_severity_value = f_severity_major) or (cur_f_severity_value = f_severity_grandiose)
+    *if rep_status_Flames = rep_status_0
+        *set cur_rep_bonus rep_bonus_excellent
+    *elseif rep_status_Flames = rep_status_1
+        *set cur_rep_bonus rep_bonus_positive
+    *elseif rep_status_Flames = rep_status_2
+        *set cur_rep_bonus rep_bonus_neutral
+    *elseif rep_status_Flames = rep_status_3
+        *set cur_rep_bonus (0 - rep_bonus_tense)
+    *elseif rep_status_Flames = rep_status_4
+        *set cur_rep_bonus (0 - rep_bonus_terrible)
+*else
+    *set cur_rep_bonus 0
+    
+*if cur_f_behavior_tag = tag_f_Helping
+    *set rep_val_Flames rep_val_Flames + (cur_f_severity_value + cur_rep_bonus)
+*elseif cur_f_behavior_tag = tag_f_Hindering
+    *set rep_val_Flames rep_val_Flames + (((0 - 1) * (cur_f_severity_value)) + cur_rep_bonus)
+*return
+
+*label UpdateRepValWolves
+*if (cur_f_severity_value = f_severity_major) or (cur_f_severity_value = f_severity_grandiose)
+    *if rep_status_Wolves = rep_status_0
+        *set cur_rep_bonus rep_bonus_excellent
+    *elseif rep_status_Wolves = rep_status_1
+        *set cur_rep_bonus rep_bonus_positive
+    *elseif rep_status_Wolves = rep_status_2
+        *set cur_rep_bonus rep_bonus_neutral
+    *elseif rep_status_Wolves = rep_status_3
+        *set cur_rep_bonus (0 - rep_bonus_tense)
+    *elseif rep_status_Wolves = rep_status_4
+        *set cur_rep_bonus (0 - rep_bonus_terrible)
+*else
+    *set cur_rep_bonus 0
+    
+*if cur_f_behavior_tag = tag_f_Helping
+    *set rep_val_Wolves rep_val_Wolves + (cur_f_severity_value + cur_rep_bonus)
+*elseif cur_f_behavior_tag = tag_f_Hindering
+    *set rep_val_Wolves rep_val_Wolves + (((0 - 1) * (cur_f_severity_value)) + cur_rep_bonus)
+*return
