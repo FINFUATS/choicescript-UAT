@@ -68,8 +68,11 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         
         As you threw in the last piece of wood into the fire, you hear a knock at the door
         *if (cel_path = "good")
-              *goto CEL_H_C
-        *goto CEL_H_P
+            *goto Hut_Cel
+        
+        *else
+            *goto Hut_Ivy
+
     #Stay at Summerlight’s temple
         You want to see your old town, visit all of the places you used to go. Even if you can never go back to that life, this is your last chance to say goodbye.
         
@@ -110,7 +113,7 @@ You are pacing around, trying to make a decision. The light is fading fast and t
 
 You continue walking down the alleys, you decide to-
 *fake_choice
-    *selectable_if (X=1) #Walk by your old house
+    *selectable_if (X = 1) #Walk by your old house
         You decide to walk by your old house. You are curious if they have already sold it off.
         
         As you are walking through the alleys, you notice that many of the houses are boarded up. That doesn’t usually happen unless something bad has happened. It makes you nervous because the last time this happened, the rot was right outside of the village.
@@ -124,7 +127,7 @@ You continue walking down the alleys, you decide to-
         *set X X + 1
         *set Q Q + 1
         *goto LOOP
-    *selectable_if (Y=1) #Walk by your old workplace.
+    *selectable_if (Y = 1) #Walk by your old workplace.
         You decide to visit your old workplace. Curious if they are still in business despite being associated with you.
         
         You get there with very little issue. While there are more guards than usual, they don’t seem to notice you. In fact, they seem distracted.
@@ -140,7 +143,7 @@ You continue walking down the alleys, you decide to-
         *set Y Y + 1
         *set Q Q + 1
         *goto LOOP
-    *selectable_if (Z=1) #Checkup on a friend
+    *selectable_if (Z = 1) #Checkup on a friend
         You decide to check up on an old friend. You met them a few years ago during a job and became fast friends. You wonder how they are doing and feel bad for leaving at such a short notice.
         
         You are walking through the alleys when you see a guard keeping watch down an alley. You try to remember if there is anything important about this area. It just seems like a normal road in the neighborhood.
@@ -156,7 +159,7 @@ You continue walking down the alleys, you decide to-
         *set Z Z + 1
         *set Q Q + 1
         *goto LOOP
-    *selectable_if (Q=3) #Visit the cemetery
+    *selectable_if (Q = 3) #Visit the cemetery
         You head down the path towards the cemetery to see Reese. You are surprised by the lack of guards as you walk down. You guess no one cares if someone walks by the cemetery, something inside of the town must be more important.
         
         It makes you uneasy. Usually they aren’t this forgetful when it comes to guarding the town. There must be a shift change or the guards are nearby, but not in this section. You try to ignore the feeling and just keep an eye out.
@@ -185,41 +188,49 @@ You continue walking down the alleys, you decide to-
             “I made quite a few friends while I was there, before everything went downhill. I am not sure when it started, in the beginning all I did was help where I could. Then the person who took me in got hurt.” You look down at the grass.
             
             “I went to help them fight an ogre and she got hit with a club before anyone even noticed the ogre was there. I got her out of there as quickly as I could and she made a full recovery. Though… I feel like if I was paying attention or read my monster's book, then I could have prevented it from happening…”
-            (Chapter 6)
-            “Then we had a giant gathering of all the priests and priestesses. They were visiting from all over Teren to hear a speech from the Zealot. However, something happened. He never came out to do the speech, Cel did the speech for him.” You look at the tombstone.
+        
+        (TODO: Chapter 6 Explanation)
+        
+        “Then we had a giant gathering of all the priests and priestesses. They were visiting from all over Teren to hear a speech from the Zealot. However, something happened. He never came out to do the speech, Cel did the speech for him.” You look at the tombstone.
             
-            “Then when Cel was answering questions, someone accused the Zealot of burning down a small town. Cel froze up and Priest answered the question for her. Then everyone broke off into our individual groups. Cel later tried to explain what had happened, but the priest came back to check on us. I don’t think he wants the news of what happened to the Zealot to be public.”
-            (Chapter 8)
-            (Chapter 9)
-            “Then me and Cel got into a massive argument. I was trying to show her evidence of what the other high priests have been doing behind her back, but she didn’t believe me. She couldn’t believe that they were doing such horrible crimes.” You sigh. “I had to leave. I couldn’t stay there knowing what happened and knowing that Cel doesn’t believe me.”
+        “Then when Cel was answering questions, someone accused the Zealot of burning down a small town. Cel froze up and Priest answered the question for her. Then everyone broke off into our individual groups. Cel later tried to explain what had happened, but the priest came back to check on us. I don’t think he wants the news of what happened to the Zealot to be public.”
+        
+        (TODO: Chapter 8 Explanation)
+        
+        (TODO: Chapter 9 Explanation)
+        
+        “Then me and Cel got into a massive argument. I was trying to show her evidence of what the other high priests have been doing behind her back, but she didn’t believe me. She couldn’t believe that they were doing such horrible crimes.” You sigh. “I had to leave. I couldn’t stay there knowing what happened and knowing that Cel doesn’t believe me.”
             
-            “Sometimes trust and beliefs cloud one’s judgment.” A voice called out from behind you.
+        “Sometimes trust and beliefs cloud one’s judgment.” A voice called out from behind you.
             
-            It is a familiar looking figure. He wears a green cloak, has dark brown hair, and a dagger strapped to his side. He reminds you of that mercenary you saw many months ago.
+        It is a familiar looking figure. He wears a green cloak, has dark brown hair, and a dagger strapped to his side. He reminds you of that mercenary you saw many months ago.
             
-            “Who are you?” You stand up and ask him.
+        “Who are you?” You stand up and ask him.
             
-            “[codex:codex_hl_Rip_Daring]Rip Daring[/codex] and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
-            *set isRipDiscovered true
+        “[codex:codex_hl_Rip_Daring]Rip Daring[/codex] and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
+        *set isRipDiscovered true
             
-            You take a step back. “What do you want from me?”
+        You take a step back. “What do you want from me?”
             
-            “You, nothing. You were framed for a murder you didn’t commit. Though, I would suggest leaving soon. The guards don’t think the same.” He explains.
+        “You, nothing. You were framed for a murder you didn’t commit. Though, I would suggest leaving soon. The guards don’t think the same.” He explains.
             
-            You look around, “were you the one who made sure that no one was here?”
+        You look around, “were you the one who made sure that no one was here?”
             
-            “Yep, and I made sure you never got caught in the city. I don’t know what you were thinking about coming back to town and all.” Rip scolds slightly. “I thought you left for the Flames of Sigel?”
+        “Yep, and I made sure you never got caught in the city. I don’t know what you were thinking about coming back to town and all.” Rip scolds slightly. “I thought you left for the Flames of Sigel?”
             
         *page_break
+
         “Things didn’t work out and I left. I didn’t know that the scholars I was traveling with were going to stop here and split up with them.” You explain. “I’ll be leaving soon, I just wanted to say my last goodbyes before leaving.”
         
         “It’s a little late to leave now, who knows what monsters are lurking out there. I can take you to an abandoned house to stay the night and then you can decide what you are doing in the morning.” Rip offers
         
         *if (cel_path = "good")
-          *goto CEL_AL_C
-        *goto CEL_AL_P
+            *goto Cemetary_Cel
+
+        *else
+            *goto Cemetary_Ivy
         
-*label CEL_H_C
+*label Hut_Cel
 You freeze and stare at the door. After a few seconds there was another knock at the door. You slowly walk towards the door and grab a dagger out of your bag.
 
 When you reach the door and look outside through one of the holes in the wall, you see Cel.
@@ -261,6 +272,7 @@ You,
         
         You quickly grab your bag and follow her.
         *finish
+    
     #Decline her invitation
         
         *set CH10_ending "shack"
@@ -276,7 +288,7 @@ You,
         You quickly grab your bag and follow her.
         *finish
 
-*label CEL_H_P
+*label Hut_Ivy
 You freeze and stare at the door. After a few seconds there was another knock at the door. You slowly walk towards the door and grab a dagger out of your bag.
 
 When you reach the door and look outside through one of the holes in the wall, you see Ivy.
@@ -329,7 +341,7 @@ You look at Ivy’s solemn expression and decide to,
         Outside you can see smoke coming from the village. You stare at it for a second before another explosion goes off. One of the towers catches on fire. Both you and Ivy run towards the town
         *finish
 
-*label CEL_AL_C
+*label Cemetary_Cel
 Before you make a decision, Cel walks down the path to the graveyard.
 
 “Or I can lead you back to the local temple. The guards never check in there.” She says.
@@ -385,12 +397,12 @@ You look between the both of them and decide,
         You pass Cel and see her horrified expression before she follows you and you notice Rip not that far behind you. The three of you just pass the gate before another explosion is heard.
         *finish
 
-*label CEL_AL_P
+*label Cemetary_Ivy
 Rip then snaps his head up at the forest. He gives you the motion to stay quiet when-
 
-“(Player_name)!”
+“${name}!”
 
-“(Player_name)! I’ve been looking everywhere for you.” Ivy walks out from behind a tree, huffing out of breath.
+“${name}! I’ve been looking everywhere for you.” Ivy walks out from behind a tree, huffing out of breath.
 
 “Ivy? What are you doing here?” You ask.
 
@@ -406,7 +418,7 @@ Ivy glares at him. “Cel almost never snaps at us, least of all Riva. Not only 
 
 “People change and there is nothing you can do about it.” Rip comments.
 
-“Not this much, not like this.” Ivy scolds. “${name} I need your help talking with her, she isn’t listening to any of us. I don’t know what to do anymore.”
+“Not this much, not like this.” Ivy scolds. “${name}, I need your help talking with her, she isn’t listening to any of us. I don’t know what to do anymore.”
 
 “You don’t have to follow her. Some people just change and she is a high priest of a temple for the Flames of Sigel. She probably has good reasons to not involve her friends.” Rip counter offers.
 
@@ -427,6 +439,7 @@ You look between the two of them,
         An explosion came from the center of town. You look over at Ivy who has a confused expression. Just as you were about to start running towards the town, Rip runs on by you two.
         Both you and Ivyl run after him just as another explosion sounds. You can already see that some of the buildings are on fire.
         *finish
+
     #You follow Rip
         You look between Rip and Ivy before saying, “I’m sorry Ivy, but I don’t think I could do much. This all happened because of our argument and I might make it worse”
         
