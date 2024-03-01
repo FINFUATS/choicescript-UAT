@@ -10,7 +10,7 @@ You are walking near the back of the caravan, there are a few merchants ahead of
 
 As you are looking around, keeping an eye on the forest, you see a deep cut in a tree. It looks like something was embedded in the tree for a period of time, the mark is deep enough that the new growth hasn’t erased the mark yet. It reminds you of the time a salesman came to Summerlight and told everyone that he hid an axe in the forest and the first person to find it gets a free weapon.
 
-You weren’t the one to find it, but you remember  the person who did. You asked them later where it was and they took you into the forest and showed you. It wasn’t that far off the beaten path, just enough that it wasn’t visible to the unaware. You’re surprised that you noticed the tree, but you shook it off. No need to worry about it now.
+You weren’t the one to find it, but you remember the person who did. You asked them later where it was and they took you into the forest and showed you. It wasn’t that far off the beaten path, just enough that it wasn’t visible to the unaware. You’re surprised that you noticed the tree, but you shook it off. No need to worry about it now.
 
 *page_break
 
@@ -158,10 +158,15 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         After walking through some of the alleys, you notice that there are more guards roaming around. It’s going to be difficult walking through town.
 
         It will be practice for how your life is going to be.
+
+        *temp X 1
+        *temp Y 1
+        *temp Z 1
+        *temp Q 0
         *label CH10M_walkloop
         [b]You continue walking down the alleys, you decide to-[/b]
         *fake_choice
-            # Walk by your old house.
+            *selectable_if (X = 1) # Walk by your old house.
                 You decide to visit your house. You’re curious if they had already sold it. 
 
                 As you walk by the many houses, you notice most of them are boarded up. They don’t usually board up their houses unless something bad has happened. It makes you worried.
@@ -171,7 +176,9 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
                 As you are about to walk up and take a closer look, a guard walks by your house. It seems they still have the place under watch.
 
                 You figured this is as close as you can get to the house and turn back. You don’t live there anymore and you left nothing of importance behind.
-            # Walk by your old workplace.
+                *set X X + 1
+                *set Q Q + 1
+            *selectable_if (Y = 1) # Walk by your old workplace.
                 You decide to visit your old workplace. You’re curious if they are still in business. 
 
                 You get there with little to no problem. While there seems to be more guards around, they don’t notice you.
@@ -183,7 +190,9 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
                 You wonder why? Not many people need this kind of work, add a rumor of one of the employees and you thought it would go under. Not get more customers.
 
                 You don’t ponder this for long as you see a guard walk out of an alleyway in the distance.
-            # Checkup on a friend. (end walk)
+                *set Y Y + 1
+                *set Q Q + 1
+            *selectable_if (Z = 1) # Checkup on a friend. (end walk)
                 You decide to check up on an old friend. You met them a few years ago during a job and became fast friends. You felt bad for leaving without a notice.
 
                 You are walking through the alleys when you see a guard keeping watch down an alley. You rack your brain , trying to remember what is so important about this area. It’s just a random road in the neighborhood.
@@ -193,6 +202,8 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
                 You decide to take the long route and make it to your friend’s house. You can see them reading by the window. You give a small smile, remembering their excitement when talking about their new book. You’re happy to see that they are okay.
 
                 You go back down the alley, you don’t want to get them mixed up in your mess.
+                *set Z Z + 1
+                *set Q Q + 1
                 *goto CH10M_walkloop_end
         *goto CH10M_walkloop
         *label CH10M_walkloop_end

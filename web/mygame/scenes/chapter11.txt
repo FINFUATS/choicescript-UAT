@@ -210,3 +210,14 @@
     Ivy looks up the path before running towards town. “We have to get these people out of here.”
     
     You and Rip follow her. You bring out your dagger and hope that it’ll be enough.
+
+*comment Town section begins
+
+*page_break
+
+You run into town square and see the extent of the damage.
+
+*temp X 1
+*temp Y 1
+*temp Z 1
+*temp Q 0
