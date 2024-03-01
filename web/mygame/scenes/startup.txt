@@ -278,8 +278,8 @@
 *create multiplier_grandiose 1.5
 *create multiplier_major 1.25
 *create multiplier_average 1
-*create multiplier_minor 0.5
-*create multiplier_insignificant 0.25
+*create multiplier_minor 0.75
+*create multiplier_insignificant 0.5
 
 *comment Faction Choice/Action Severity Value Globals
 *create f_severity_grandiose 15
@@ -297,11 +297,13 @@
 *create rep_bonus_terrible 10
 
 *comment Personality Reaction Globals
+*comment Cel's group
 *create cur_personality_reaction_Cel 0
 *create cur_personality_reaction_Ivy 0
 *create cur_personality_reaction_Riva 0
 *create cur_personality_reaction_Winfred 0
 *create cur_personality_reaction_Berthold 0
+*comment Rip's group
 *create cur_personality_reaction_Rip 0
 *create cur_personality_reaction_Anwen 0
 *create cur_personality_reaction_Gwyn 0

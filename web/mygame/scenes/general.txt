@@ -628,6 +628,7 @@
 
 *return
 
+*comment This subroutine updates the affinity effect based on the status of player's reputation with the Flames
 *label UpdateCurrentAffinityEffectFlames
 *if rep_status_Flames = rep_status_0
     *set cur_affinity_effect_Flames 0.25
@@ -641,6 +642,7 @@
     *set cur_affinity_effect_Flames -0.25
 *return
 
+*comment This subroutine updates the affinity effect based on the status of player's reputation with the Wolves
 *label UpdateCurrentAffinityEffectWolves
 *if rep_status_Wolves = rep_status_0
     *set cur_affinity_effect_Wolves 0.25
@@ -654,6 +656,7 @@
     *set cur_affinity_effect_Wolves -0.25
 *return
 
+*comment This subroutine updates the personality reaction of Cel based on the current behavior as exhibited by the player's choice
 *label UpdateReactionCel
 *gosub UpdateCurrentAffinityEffectFlames
 
@@ -684,7 +687,8 @@
 *elseif cur_behavior_tag = tag_f_Hindering
     *set cur_personality_reaction_Cel ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
 *return
-    
+
+*comment This subroutine updates the personality reaction of Ivy based on the current behavior as exhibited by the player's choice
 *label UpdateReactionIvy
 *gosub UpdateCurrentAffinityEffectFlames
 
@@ -716,6 +720,7 @@
     *set cur_personality_reaction_Ivy ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
 *return
 
+*comment This subroutine updates the personality reaction of Berthold based on the current behavior as exhibited by the player's choice
 *label UpdateReactionBerthold
 *gosub UpdateCurrentAffinityEffectFlames
 
@@ -747,6 +752,7 @@
     *set cur_personality_reaction_Berthold ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
 *return
 
+*comment This subroutine updates the personality reaction of Riva based on the current behavior as exhibited by the player's choice
 *label UpdateReactionRiva
 *gosub UpdateCurrentAffinityEffectFlames
 
@@ -778,6 +784,7 @@
     *set cur_personality_reaction_Riva ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
 *return
 
+*comment This subroutine updates the personality reaction of Winfred based on the current behavior as exhibited by the player's choice
 *label UpdateReactionWinfred
 *gosub UpdateCurrentAffinityEffectFlames
 
@@ -809,6 +816,7 @@
     *set cur_personality_reaction_Winfred ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Flames))
 *return
 
+*comment This subroutine updates the personality reaction of Rip based on the current behavior as exhibited by the player's choice
 *label UpdateReactionRip
 *gosub UpdateCurrentAffinityEffectWolves
 
@@ -840,6 +848,7 @@
     *set cur_personality_reaction_Rip ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
 *return
 
+*comment This subroutine updates the personality reaction of Anwen based on the current behavior as exhibited by the player's choice
 *label UpdateReactionAnwen
 *gosub UpdateCurrentAffinityEffectWolves
 
@@ -871,6 +880,7 @@
     *set cur_personality_reaction_Anwen ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
 *return
 
+*comment This subroutine updates the personality reaction of Elena based on the current behavior as exhibited by the player's choice
 *label UpdateReactionElena
 *gosub UpdateCurrentAffinityEffectWolves
 
@@ -902,6 +912,7 @@
     *set cur_personality_reaction_Elena ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
 *return
 
+*comment This subroutine updates the personality reaction of Gwyn based on the current behavior as exhibited by the player's choice
 *label UpdateReactionGwyn
 *gosub UpdateCurrentAffinityEffectWolves
 
@@ -933,6 +944,7 @@
     *set cur_personality_reaction_Gwyn ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
 *return
 
+*comment This subroutine updates the personality reaction of Leon based on the current behavior as exhibited by the player's choice
 *label UpdateReactionLeon
 *gosub UpdateCurrentAffinityEffectWolves
 
@@ -964,46 +976,59 @@
     *set cur_personality_reaction_Leon ((reaction_hated * (0 - 1)) * (cur_severity_multiplier + cur_affinity_effect_Wolves))
 *return
 
+*comment This subroutine updates the total relationship value of the player with Cel
 *label UpdateRelValCel
 *set rel_val_Cel rel_val_Cel + cur_personality_reaction_Cel
 *return
+
+*comment This subroutine updates the total relationship value of the player with Ivy
 *label UpdateRelValIvy
 *set rel_val_Ivy rel_val_Ivy + cur_personality_reaction_Ivy
 *return
 
+*comment This subroutine updates the total relationship value of the player with Berthold
 *label UpdateRelValBerthold
 *set rel_val_Berthold rel_val_Berthold + cur_personality_reaction_Berthold
 *return
 
+*comment This subroutine updates the total relationship value of the player with Riva
 *label UpdateRelValRiva
 *set rel_val_Riva rel_val_Riva + cur_personality_reaction_Riva
 *return
 
+*comment This subroutine updates the total relationship value of the player with Winfred
 *label UpdateRelValWinfred
 *set rel_val_Winfred rel_val_Winfred + cur_personality_reaction_Winfred
 *return
 
 
+*comment This subroutine updates the total relationship value of the player with Rip
 *label UpdateRelValRip
 *set rel_val_Rip rel_val_Rip + cur_personality_reaction_Rip 
 *return
 
+*comment This subroutine updates the total relationship value of the player with Anwen
 *label UpdateRelValAnwen
 *set rel_val_Anwen rel_val_Anwen + cur_personality_reaction_Anwen
 *return
 
+*comment This subroutine updates the total relationship value of the player with Elena
 *label UpdateRelValElena
 *set rel_val_Elena rel_val_Elena + cur_personality_reaction_Elena
 *return
 
+*comment This subroutine updates the total relationship value of the player with Gwyn
 *label UpdateRelValGwyn
 *set rel_val_Gwyn rel_val_Gwyn + cur_personality_reaction_Gwyn
 *return
 
+*comment This subroutine updates the total relationship value of the player with Leon
 *label UpdateRelValLeon
 *set rel_val_Leon rel_val_Leon + cur_personality_reaction_Leon
 *return
 
+*comment This subroutine updates the total reputation value of the player with Flames
+*comment Also determines if the player gets a bonus based on the choices severity if it is major or grandiose severity
 *label UpdateRepValFlames
 *if (cur_f_severity_value = f_severity_major) or (cur_f_severity_value = f_severity_grandiose)
     *if rep_status_Flames = rep_status_0
@@ -1025,6 +1050,8 @@
     *set rep_val_Flames rep_val_Flames + (((0 - 1) * (cur_f_severity_value)) + cur_rep_bonus)
 *return
 
+*comment This subroutine updates the total reputation value of the player with Wolves
+*comment Also determines if the player gets a bonus based on the choices severity if it is major or grandiose severity
 *label UpdateRepValWolves
 *if (cur_f_severity_value = f_severity_major) or (cur_f_severity_value = f_severity_grandiose)
     *if rep_status_Wolves = rep_status_0

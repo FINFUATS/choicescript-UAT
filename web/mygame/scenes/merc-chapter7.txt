@@ -64,7 +64,7 @@ What will you do with your free time?
         *page_break
 
         *if ch7m_has_won_training
-            *comment Pass (Minor reputation increase with Rip)
+            *comment Pass (Average reputation increase with Rip)
             *set cur_behavior_tag tag_Slaying
             *set cur_severity_multiplier multiplier_average
             *gosub_scene general UpdateReactionRip
@@ -72,7 +72,7 @@ What will you do with your free time?
 
             “You did well.” Rip bestowed upon them a rare smile, clapping a firm hand on their shoulder.
         *else
-            *comment Fail (Insignificant increase increase with Rip)
+            *comment Fail (Minor increase increase with Rip)
             *set cur_behavior_tag tag_Slaying
             *set cur_severity_multiplier multiplier_minor
             *gosub_scene general UpdateReactionRip
@@ -106,7 +106,7 @@ What will you do with your free time?
         [head]Motor Skill Check @{CH7M_ms_bool Success|Failure}![/head]
 
         *if CH7M_ms_bool
-            *comment Pass (Minor reputation increase with the Wolves):
+            *comment Pass (Average reputation increase with the Wolves):
             *set cur_f_severity_value f_severity_average
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValWolves
@@ -117,7 +117,7 @@ What will you do with your free time?
     
             “Good job.” A voice calls out. You turn around and see Anwen. “We should have a friendly competition of our own next time.”
         *else
-            *comment Fail (Insignificant reputation increase the Wolves):
+            *comment Fail (Minor reputation increase the Wolves):
             *set cur_f_severity_value f_severity_minor
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValWolves
@@ -150,7 +150,7 @@ What will you do with your free time?
         This challenge is a foot race around the camp, winding through tents and obstacles. You are matched against a quick-footed rogue named Rook.
 
         *if CH7M_ea_bool
-            *comment Pass (Minor reputation increase the Wolves):
+            *comment Pass (Average reputation increase the Wolves):
             *set cur_f_severity_value f_severity_average
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValWolves
@@ -162,7 +162,7 @@ What will you do with your free time?
             “We’ll see, you never know what may happen.” You retort, smiling.
 
         *else
-            *comment Fail (Insignificant reputation increase the Wolves):
+            *comment Fail (Average reputation increase the Wolves):
             *set cur_f_severity_value f_severity_average
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValWolves
@@ -222,7 +222,7 @@ Where do you go?
         [head]Endurance Skill Check @{CH7M_e_bool Success|Failure}![/head]
 
         *if CH7M_e_bool
-            *comment Pass (Minor reputation increase the Wolves):
+            *comment Pass (Major reputation increase the Wolves):
             *set cur_f_severity_value f_severity_major
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValWolves

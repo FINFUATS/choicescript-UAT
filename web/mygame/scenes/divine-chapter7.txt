@@ -459,7 +459,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         [head]Strength Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
-            *comment Pass (Minor reputation increase with the Riva):
+            *comment Pass (Average reputation increase with the Riva):
             *set cur_behavior_tag tag_f_Helping
             *set cur_severity_multiplier multiplier_average
             *set cur_f_severity_value f_severity_average
@@ -512,7 +512,7 @@ The big meeting is soon. Cel is with the other high priests seemingly getting pr
         [head]Medical Check @{CH7D_ms_bool Success|Failure}![/head]
         
         *if CH7D_ms_bool
-            *comment Pass (Minor reputation increase with the Riva):
+            *comment Pass (Average reputation increase with the Riva):
             *set cur_behavior_tag tag_f_Helping
             *set cur_severity_multiplier multiplier_average
             *set cur_f_severity_value f_severity_average
