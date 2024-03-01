@@ -40,6 +40,7 @@ Once you get there, you walk over to the,
         *set item "bread"
         *set bought "bread"
         *set coin -2
+        *set CH4_market_item "bread"
         
     # Library. You have been looking at a book for weeks and you finally have the money to get it.
         The library is never really busy, since not many people know how to read beyond their family name. However, the Flames of Sigel requires there to be at least a small store for them to read and study while they stay. They visit at least once a month and that's enough to keep the library running. Although, there are a lot more people here than usual. You wonder if any of their priests have come to town.  
@@ -60,6 +61,7 @@ Once you get there, you walk over to the,
         *set item "book"
         *set bought "book"
         *set coin -3
+        *set CH4_market_item "book"
         
     #Blacksmith. Your dagger is old and falling apart. You have been meaning to replace it.
         The blacksmith isn't particularly busy today. Only a handful of people are actually looking at his wares; everyone else seems to just be standing off to the side and chatting about this and that. Although you notice there are many groups of unfamiliar looking people around, all of them visibly armed and some armored. The sight of all these strangers makes you a little nervous. 
@@ -92,6 +94,7 @@ Once you get there, you walk over to the,
         *set item "dagger"
         *set bought "dagger"
         *set coin -5
+        *set CH4_market_item "dagger"
 *page_break
 
 You find it odd that there are so many ${faction} around. The last time you saw this many was… Five years ago, when you went out exploring with Reese. The memory of that time is enough to make you nervous. Maybe you should visit them again soon. However, first you need to take your ${item} back to your house and put it away. Maybe you’ll visit after-

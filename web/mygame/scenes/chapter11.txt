@@ -70,7 +70,7 @@
     
     You and Cel follow him. You bring out your dagger and hope that it’ll be enough.
     
-*if ((faction = "divine") and (CH10_ending = "shack")) and (cel_path = "good")
+*elseif ((faction = "divine") and (CH10_ending = "shack")) and (cel_path = "good")
     
     You and Cel reach the walls of the town. You can see the taller buildings on fire and falling apart. The roof of the tower closest to the wall looks like it is about to cave in.
     
@@ -114,7 +114,7 @@
     
     The mercenary shakes his head before returning his focus to town square. You and Cel follow after him.
 
-*if ((faction = "divine") and (CH10_ending = "graveyard")) and (cel_path = "good")
+*elseif ((faction = "divine") and (CH10_ending = "graveyard")) and (cel_path = "good")
     You run by the graveyard gate and see another explosion towards the center of town. You take a frantic look around before recognizing exactly where you are. 
     
     “This way!” You shout before running through the alleyways. Rip and Cel follow close behind you.
@@ -141,7 +141,7 @@
     
     Cel runs up the path, you and Rip follow her. You bring out your dagger and hope that it’ll be enough.
 
-*if ((faction = "divine") and (CH10_ending = "shack")) and (cel_path = "bad")
+*elseif ((faction = "divine") and (CH10_ending = "shack")) and (cel_path = "bad")
     
     You and Ivy reach the walls of the town. You can see the taller buildings on fire and falling apart. The roof of the tower closest to the wall looks like it is about to cave in.
     
@@ -183,7 +183,7 @@
     
     The mercenary shakes his head before returning his focus to town square. You and Cel follow after him.
     
-*if ((faction = "divine") and (CH10_ending = "graveyard")) and (cel_path = "bad")
+*elseif ((faction = "divine") and (CH10_ending = "graveyard")) and (cel_path = "bad")
     
     You run by the graveyard gate and see another explosion towards the center of town. You take a frantic look around before recognizing exactly where you are. 
     
@@ -211,13 +211,486 @@
     
     You and Rip follow her. You bring out your dagger and hope that it’ll be enough.
 
-*comment Town section begins
+*else
+    *bug_continue No faction assigned.
 
+*comment Town section begins
 *page_break
 
-You run into town square and see the extent of the damage.
+You run into town square and see the extent of the damage. Everywhere you look there is more and more destruction.
 
 *temp X 1
 *temp Y 1
-*temp Z 1
 *temp Q 0
+*label CH11_TownLoop
+
+*fake_choice
+    *selectable_if (X = 1) #You look at the marketplace.
+        You look over at the market. The smaller stalls have turned into ash and the bigger ones are still on fire.
+
+        *page_break
+
+        *if (CH4_market_item = "bread")
+            The dwarven bakery has fallen apart. The stand is badly burnt, the tarp that was hanging over it is ripped and scorched. Their wagon is missing a wheel and the roof is on fire. Lastly their oven has toppled over.
+
+            It must have been bad for the dwarves to up and leave.
+
+        *if (CH4_market_item = "knife")
+            You look towards the town’s blacksmith and see that it’s still standing. The stand is badly burnt and all of the weapons are missing. The furnace is still standing, but you can see a handle poking out from the opening. 
+    
+        *if (CH4_market_item = "book")
+            You look at the library and have a difficult time seeing the inside. The glass is badly scorched and the door is closed. From what you can see, there is a fire spreading inside. You mourn the loss of the books.
+
+        *set X X + 1
+        *set Q Q + 1
+        *goto CH11_TownLoop
+
+    *selectable_if (Y = 1) #You look at the buildings.
+        You look at the surrounding buildings. Many of the roofs are on fire and the walls have been damaged. Wood pieces across the floor by the buildings and supports have been chipped away. Some bigger pieces of wood are on the floor with a burnt end.
+
+        As you look at the buildings, a roof in the distance caves in. You look at your companions, both of them have worried expressions.
+
+        *set Y Y + 1
+        *set Q Q + 1
+        *goto CH11_TownLoop
+
+    *selectable_if (Q = 2) #You look at the center of town.
+        You look towards the center of town square, there are rocks and wooden bits everywhere covered in gray dust. Mixed in with the rubble are destroyed wooden barrels. The metal bands have been snapped and you realize that the wooden bits must have come from the barrels.
+
+        Dwarves use these barrels to transport cargo, mostly food or water. You have never seen them transport something that could do this.
+
+        Staring at the destroyed barrels, you see a line within the dust leading to an alleyway. Walking towards the alley, you hear a huge explosion coming from down it.
+
+*if (faction = "merc")
+    You run down the alleyway and find a dwarf standing in the middle of the alley with a barrel. Before you can do anything, they throw the barrel down another alley before running away.
+    
+    *comment TODO: If Ichor-swogs aren't written into the ch9M rework, rewrite this part.
+
+    You decide to:
+    fake_choice
+        #Run over and help.
+            You case after the dwarf. As you run by the alley you see where the barrel landed.
+
+            The walls have a dark dust across them and the ground is covered in many tiny creatures. Creatures that have brought their surviving brethren and began to pile up.
+
+            “Ichor-swogs,” you mutter before resuming your chase, digging in your pocket for a mask.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_merc_help_fight true
+
+            *if won_merc_help_fight
+                After you win the battle, you look around for the dwarf, only for them to be gone. You move your foot towards the alley you saw them go down, when you hear footsteps behind you.
+
+                "${name}!"
+
+                You turn around and see Cel running towards you.
+
+                “${name}! Where are you?” Cel calls out.
+
+                “I’m over here! Be careful there are jackaloids!” You reply as you run towards her.
+
+                “Jackaloids? Here? We need to move. Why did you run off if there are such dangerous creatures here?” Cel says slightly out of breath.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “It’s good that you went to help, but tell us next time.” Cel shakes her head before leading you down the path.
+
+            *else
+                You get knocked down by the jackaloid, thankfully it just hit your bag.
+
+                As you look around for a means to escape, you see the jackaloid get pushed away before exploding. You look up and see that it’s Rip.
+
+                “We need to get going. There are too many of them” Cel explains as she holds out her hand.
+
+                You nod as you grab her hand and stand up.
+
+                “Why did you leave the group?” Cel asks.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “It’s good that you went to help, but tell us next time.” Cel shakes her head before leading you down the path.
+            
+            *page_break
+
+            As you take a step to follow, a jackaloid jumps out between you two. You move your hand to grab at your dagger when-
+
+            “STOP!” Cel shouts.
+
+            You look up at her as a part of the building falls onto the jackaloid. The explosions must have weakened the supports.
+
+            There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+            “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+            “Be careful! There is no saying what is out here!” Cel shouts back before you hear footsteps running away.
+        
+        #Ask Rip and Cel what to do.
+            “Rip! Cel! There is someone over here!” You shout and run towards the alleyway.
+
+            Rip and Cel follow close behind you before reaching the start of the alley. The three of you look down the alleyway and see the dwarf holding a barrel. 
+
+            Rip takes a step forward when the dwarf sets the barrel on fire and throws it down a different alleyway. This makes Rip stop his movements and you freeze up.
+
+            The dwarf runs away and Rip runs up to the alley. He looks down at it and takes a step back.
+
+            “Ichor-swogs! We need to move!” Rip shouts before running after the dwarf.
+
+            Cel follows after quickly follows after. You take a moment to process everything and in that moment a jackaloid jumps out at you.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_merc_ask_fight true
+
+            *if won_merc_ask_fight
+                You slice off the jackaloids head with your dagger. You look behind it and see that Rip was fighting his own jackaloid.
+
+                You take a step to help him, when-
+
+                “Stay there!” He shouts as he pushes back the jackaloid.
+
+                You freese your movements and look at him in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Cel, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “Alright, be careful out there.” Rip shouts back before you hear footsteps running away.
+
+            *else
+                The jackaloid lunges at you, in your block, it manages to take a hold of your dagger and pull it away.
+
+                You are backing away when something pushes it away, you look over and see Rip looking in your direction while dealing with his own jackaloid. You look back at your jackaloid and see Rip’s spare dagger protruding from it’s head.
+
+                You quickly run over to your dagger, but as soon as you are about to help Cel-
+
+                “Stay there!” He shouts as he pushes back the jackaloid.
+
+                You freese your movements and look at him in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Cel, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “Alright, be careful out there.” Rip shouts back before you hear footsteps running away.
+
+*elseif (faction = "divine") and (cel_path = "good")
+    You run down the alleyway and find a dwarf standing in the middle of the alley with a barrel. Before you can do anything, they throw the barrel down another alley before running away.
+    
+    You decide to:
+    fake_choice
+        #Run over and help.
+            You case after the dwarf. As you run by the alley you see where the barrel landed.
+
+            The walls have a dark dust across them and the ground is covered in many tiny creatures. Creatures that have brought their surviving brethren and began to pile up.
+
+            “Ichor-swogs,” you mutter before resuming your chase, digging in your pocket for a mask.
+
+            When you catch up to the dwarf, you see them with their sword out, staring down an alley. As you are about to call out, a jackaloid jumps out at the dwarf. The dwarf uses their sword to push the jackaloid away and slash at its arm.
+
+            You finish putting on your mask and grab for your dagger. Just as you unsheath it, a jackaloid jumps out at you. You quickly parry it and take a few steps back to gain some distance.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_cel_help_fight true
+
+            *if won_cel_help_fight
+                After you win the battle, you look around for the dwarf, only for them to be gone. You move your foot towards the alley you saw them go down, when you hear footsteps behind you.
+
+                "${name}!"
+
+                You turn around and see Cel running towards you.
+
+                “${name}! Where are you?” Cel calls out.
+
+                “I’m over here! Be careful there are jackaloids!” You reply as you run towards her.
+
+                “Jackaloids? Here? We need to move. Why did you run off if there are such dangerous creatures here?” Cel says slightly out of breath.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “It’s good that you went to help, but tell us next time.” Cel shakes her head before leading you down the path.
+
+            *else
+                You get knocked down by the jackaloid, thankfully it just hit your bag.
+
+                As you look around for a means to escape, you see the jackaloid get pushed away before exploding. You look up and see that it’s Rip.
+
+                “We need to get going. There are too many of them” Cel explains as she holds out her hand.
+
+                You nod as you grab her hand and stand up.
+
+                “Why did you leave the group?” Cel asks.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “It’s good that you went to help, but tell us next time.” Cel shakes her head before leading you down the path.
+
+            *page_break
+
+            As you take a step to follow, a jackaloid jumps out between you two. You move your hand to grab at your dagger when-
+
+            “STOP!” Cel shouts.
+
+            You look up at her as a part of the building falls onto the jackaloid. The explosions must have weakened the supports.
+
+            There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+            “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+            “Be careful! There is no saying what is out here!” Cel shouts back before you hear footsteps running away.
+
+        #Ask Rip and Cel what to do.
+            “Rip! Cel! There is someone over here!” You shout and run towards the alleyway.
+
+            Rip and Cel follow close behind you before reaching the start of the alley. The three of you look down the alleyway and see the dwarf holding a barrel. 
+
+            Rip takes a step forward when the dwarf sets the barrel on fire and throws it down a different alleyway. This makes Rip stop his movements and you freeze up.
+
+            The dwarf runs away and Rip runs up to the alley. He looks down at it and takes a step back.
+
+            “Ichor-swogs! We need to move!” Rip shouts before running after the dwarf.
+
+            Cel follows after quickly follows after. You take a moment to process everything and in that moment a jackaloid jumps out at you.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_cel_ask_fight true
+
+            *if won_cel_ask_fight
+                You slice off the jackaloids head with your dagger. You look behind it and see that Cel was taking care of her own jackaloid. 
+
+                You take a step to help her when-
+
+                “Stay there!” She shouts as she uses her divine magic to push back the jackaloid.
+
+                You freese your movements and look at her in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “Be careful! There is no saying what is out here!” Cel shouts back before you hear footsteps running away.
+
+            *else
+                The jackaloid lunges at you, in your block, it manages to take a hold of your dagger and pull it away.
+
+                You are backing away when something pushes it away, you look over and see Cel looking in your direction while dealing with her own jackaloid.
+
+                You quickly run over to your dagger, but as soon as you are about to help Cel-
+
+                “Stay there!” She shouts as she uses her divine magic to push back the jackaloid.
+
+                You freese your movements and look at her in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “Be careful! There is no saying what is out here!” Cel shouts back before you hear footsteps running away.
+
+*elseif (faction = "divine") and (cel_path = "good")
+    You run down the alleyway and find a dwarf standing in the middle of the alley with a barrel. Before you can do anything, they throw the barrel down another alley before running away.
+
+    You decide to:
+    *fake_choice
+        #Run over and help.
+            You case after the dwarf. As you run by the alley you see where the barrel landed.
+
+            The walls have a dark dust across them and the ground is covered in many tiny creatures. Creatures that have brought their surviving brethren and began to pile up.
+
+            “Ichor-swogs,” you mutter before resuming your chase, digging in your pocket for a mask.
+
+            When you catch up to the dwarf, you see them with their sword out, staring down an alley. As you are about to call out, a jackaloid jumps out at the dwarf. The dwarf uses their sword to push the jackaloid away and slash at its arm.
+
+            You finish putting on your mask and grab for your dagger. Just as you unsheath it, a jackaloid jumps out at you. You quickly parry it and take a few steps back to gain some distance.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_ivy_run_fight true
+
+            *if won_ivy_run_fight
+                After you win the battle, you look around for the dwarf, only for them to be gone. You move your foot towards the alley you saw them go down, when you hear footsteps behind you.
+
+                “${name}!”
+
+                You turn around and see Ivy running towards you.
+
+                “${name}! Where did you freaking go?” Ivy calls out.
+
+                “I’m over here! Be careful there are jackaloids!” You reply as you run towards her.
+
+                “Jackaloids?! We need to get out of here! We don’t have the numbers for this. Why did you leave us anyways?” Ivy asks slightly out of breath.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “While I am glad you were going around helping people, you don’t go off by yourself. You are lucky it was just one jackaloid.” Ivy shakes her head before leading you down the path.
+
+            *else
+                You get knocked down by the jackaloid, thankfully it just hit your bag.
+
+                As you look around for a means to escape, you see the jackaloid’s head get chopped off. You look up and see that it’s Ivy.
+
+                “You idiot, we need to leave. Now.” Ivy explains as she holds out his hand.
+
+                You nod as you grab his hand and stand up.
+
+                “Where were you trying to get to anyways?” Ivy asks.
+
+                “I saw a dwarf. They were throwing barrels at ichor-swogs. I chased after them to ask what happened, but they got away.” You explained, looking down slightly.
+
+                “While I am glad you were going around helping people, you don’t go off by yourself. You are lucky it was just one jackaloid.” Ivy shakes her head before leading you down the path.
+            
+            *page_break
+
+            As you take a step to follow, a jackaloid jumps out between you two. You move your hand to grab at your dagger when-
+
+            “STAY!” Ivy shouts.
+
+            You look up at her as a part of the building falls onto the jackaloid. The explosions must have weakened the supports.
+
+            There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+            “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+            “You better! Don’t get yourself killed out there!.” Ivy shouts back before you hear footsteps running away.
+
+        #Ask Ivy and Rip what to do.
+            “Ivy! Rip! There is someone over here!” You shout and run towards the alleyway.
+
+            Ivy and Rip follow close behind you before reaching the start of the alley. The three of you look down the alleyway and see the dwarf holding a barrel. 
+
+            Rip takes a step forward when the dwarf sets the barrel on fire and throws it down a different alleyway. This makes Rip stop his movements and you freeze up.
+
+            The dwarf runs away and Rip runs up to the alley. He looks down at it and takes a step back.
+
+            “Ichor-swogs! We need to move!” Rip shouts before running after the dwarf.
+
+            Cel follows after quickly follows after. You take a moment to process everything and in that moment a jackaloid jumps out at you.
+
+            (TODO: Implement Fight Scene, Assuming Won)
+
+            *page_break
+
+            *temp won_ivy_ask_fight true
+
+            *if won_ivy_ask_fight
+                You slice off the jackaloids head with your dagger. You look behind it and see that Ivy was taking care of her own jackaloid. 
+
+                You take a step to help her when-
+
+                “Stay there!” She shouts as she pushes back the jackaloid.
+
+                You freese your movements and look at her in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “You better! Don’t get yourself killed out there!.” Ivy shouts back before you hear footsteps running away.
+
+            *else
+                The jackaloid lunges at you, in your block, it manages to take a hold of your dagger and pull it away.
+
+                You are backing away when something pushes it away, you look over and see Ivy looking in your direction while dealing with her own jackaloid. You look back at the jackaloid and there is a piece of wood sticking out of it.
+
+                You quickly run over to your dagger, but as soon as you are about to help Ivy-
+
+                “Stay there!” She shouts as she uses her divine magic to push back the jackaloid.
+
+                You freese your movements and look at her in confusion when a part of a building falls in front of you. The explosions must have weakened the supports.
+
+                There is no way across. The rubble is too tall and has too many sharp points to safely climb over at night.
+
+                “Get back to Rip, I’ll go around! I know this down better than I know my own name!” You shout over the wall.
+
+                “You better! Don’t get yourself killed out there!.” Ivy shouts back before you hear footsteps running away.
+
+else
+    *bug_continue No faction assigned.
+
+*page_break
+
+You stare at the pile of burning wood before turning around, the footsteps getting quieter and quieter. 
+
+“I should be able to follow this alleyways back to the market.” You mutter to yourself, walking into the second alley.
+
+You look around, keeping an eye out for jackaloids or ichor-swogs. Many of the buildings have broken windows or holes in the walls. Some balconies and roofs have begun to collapse.
+
+“How did this happen and why here? This is a peaceful town where nothing of importance happens. The most eventful thing has been Lord Odel’s visit then murder.” You sigh and look at the ground, spotting a person. 
+
+They’re twitching. You stand over them and you can see them twitching, but you can’t tell if they are breathing.
+
+“Hey? Hey, are you alright?” You ask, crouching down.
+
+The person snaps up and tries to grab at you, you fall over and roll away before getting up. You look at the person, their skin is gray and there is a feral look in their eyes. 
+
+You back up before sprinting down the alley. “Something isn’t right here. That- that person isn’t… They aren’t…” 
+
+*page_break
+
+You frantically look down the alleys for a path, some way to get out of here. Every pathway is blocked by rubble or has those creatures down them.
+
+When you find a clear path, you make a sharp turn down it, only to notice a glint of gold down it. As you get closer, you notice that it’s a person, a very familiar person.
+
+*if (faction = "merc")
+    It’s that knight that led the fight at Lindow. The Zealot, if you remember correctly. You begin running towards him when you notice something is wrong.
+
+    His bright golden armor is covered in a black goo that seems to be coming from underneath the armor. He is also stumbling with every step, like he is having trouble walking.
+
+    He turns to look at you and you can see that his skin has also grayed, but there is still the light of life in his eyes. 
+
+    You freeze. He is missing an arm and the stump where it used to be is oozing the black goo, splatting on the ground when it builds up.
+
+*elseif (faction = "divine")
+    It’s the Zealot! You begin to run towards him for help, when you notice something is wrong.
+
+    His bright golden armor is covered in a black goo that seems to be coming from underneath the armor. He is also stumbling with every step, like he is having trouble walking. 
+
+    He turns to look at you and you can see that his skin has also grayed, but there is still the light of life in his eyes.
+
+    You freeze. The arm he chopped off is oozing the black goo, splatting on the ground when it builds up.
+
+    “It wasn’t enough…” You say in horror as your eyes widen.
+
+*page_break
+
+As you stare at the Zealot, a humanoid creature stumbles in-front of you. You quickly snap out of your transe before realizing that you are surrounded.
+
+Frantically looking around, you see that one of the buildings is missing a wall. You quickly run into the building and search for a place to go. The upstairs is on fire and there is rubble all around.
+
+Without having anywhere else to go, you begin climbing the stairs, hoping that the fire will ward off these creatures.
+
+When you reach the top of the stairs, there is a small room where the roof has caved in. You run to the hole in the roof and see the damage.
+
+*page_break
+
+The creatures are stumbling through the village, buildings are falling, and everything is on fire.
+
+Frantically looking for where to go next, you see the pathway you and Reese created is still stable. You run over to it and use the pathway to run across a few buildings before finding a safe place to get down.
+
+Looking around at where you are, you see that you are at the front gate. Half of the gate has fallen and the guard tower is on fire.
+
+*if (faction = "merc")
+    You run out of the gate before looking back inside, praying that Rip and Cel made it out alright.
+
+*elseif (faction = "divine") and (cel_path = "good")
+    You run out of the gate before looking back inside, praying that Rip and Cel made it out alright.
+
+*elseif (faction = "divine") and (cel_path = "bad")
+    You run out of the gate before looking back inside, praying that Ivy and Ripl made it out alright.
+
+*else
+    *bug_continue No faction assigned.
+
+*finish
