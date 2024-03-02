@@ -14,12 +14,19 @@ The village center you stand in front of is in absolute shambles. Windows are br
 
 That isn’t even to mention the presence of various mercenary groups, not unlike your own, all shades of people from the nearby Sigilic Temples, ang, by Sigil, the Ichorswog. You’ve never seen so many.
 
+*temp V 1
+*temp W 1
+*temp X 1
+*temp Y 1
+*temp Z 1
 *label CH9M_BattleField
 You shouldn’t strike out on your own. Rip and the others would never discourage you from “being a hero,” but you’re still arguably the runt of the litter here. For now, you’re better off as auxiliary to your comrades…
 
 You decide to lend a helping hand to…
+
 *fake_choice
-    # Aid Leon!
+    selectable_if (V = 1) # Aid Leon!
+        *set V V + 1
         You make your way to the part of the village Leon splintered off to. You pick off a few stray Ichorswog on your way there. These spawns of Skadon bleed without the slightest tinge of red: pure darkness.
         
         The village centre’s built around a water well, though the water in it now runs black and corrupted. The homes in this part of the village are actually standing rather strong. The wealthy tend to live nearer to amenities such as wells…
@@ -28,7 +35,6 @@ You decide to lend a helping hand to…
 
         (TODO: Implement fight scene, assuming won)
         *page_break
-
         *temp won_leon_fight true
 
         *if won_leon_fight
@@ -61,7 +67,8 @@ You decide to lend a helping hand to…
             Your vision does not fade, the way you would imagine it would, but, rather, abruptly cuts off. The finality of death, however, evades you for today.
             *page_break
             *goto CH9M_Loss
-    # Aid Elena!
+    *selectable_if (W = 1) #Aid Elena!
+        *set W W + 1
         (OUTLINE, Assuming win)
         The player receives a plan of action from Elena; they won’t be able to do much about all of the ichorswog in the area, and so all they can do is clear out a chunk of them… they’ll need to act fast (The player is left with the choice of which chunk to clear.)
         
@@ -80,7 +87,8 @@ You decide to lend a helping hand to…
         Play KO text.
         *page_break
         *goto CH9M_BattleField
-    # Aid Gwyn!
+    selectable_if (X = 1) # Aid Gwyn!
+        *set X X + 1
         You decide, for right now, to leave behind the chaos of this doomed village, and, instead, head for the infirmary. After all, your presence in this village serves more as a prevention of further death than it does an attempt to “save the village.” No, no such thing will be happening today, unfortunately.
         
         As you close the door behind you, the infirmary certainly doesn’t seem that much better, though the bodies here aren’t strewn about nearly as haphazardly as they are outside. There are so many bodies, in fact, that you almost have trouble spotting Gwyn, or any of the healers, for that matter.
@@ -152,7 +160,8 @@ You decide to lend a helping hand to…
         You leave Gwyn to his devices. The battlefield still calls to you…
         *page_break
         *goto CH9M_BattleField
-    # Aid Anwyn!
+    *selectable_if (Y = 1) # Aid Anwyn!
+        *set Y Y + 1
         You slink into the armory. You took the long way around, so as to avoid any more trouble than you need right about now. The armory isn’t the worst place to take a short break. Falling from exhaustion doesn’t do any good for anyone.
         
         People of various backgrounds are seated at tables, grindstones, or workbenches, either resting or fixing up their equipment. Here, the smell of metal is the smell of metal. Outside, it’s blood.
@@ -222,7 +231,8 @@ You decide to lend a helping hand to…
                 *page_break
                 *goto_scene merc-chapter9-5 CH9fiveM_anwyn
                 *return
-    # Help that priestess!
+    *selectable_if (Z = 1) # Help that priestess!
+        *set Z Z + 1
         You see a priestess dashing around, doing what she can for the injured, bringing them to the building that the healers are holed up in, and, at times, even tending to their wounds out in the open.
         
         Your eyes are particularly drawn to her as an Ichorswog pounces, knocking her down. From where you are, you can see steadfast determination morph into something else… something… rather concerning.

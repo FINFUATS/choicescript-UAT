@@ -267,7 +267,7 @@ You run into town square and see the extent of the damage. Everywhere you look t
     *comment TODO: If Ichor-swogs aren't written into the ch9M rework, rewrite this part.
 
     You decide to:
-    fake_choice
+    *fake_choice
         #Run over and help.
             You case after the dwarf. As you run by the alley you see where the barrel landed.
 
@@ -382,7 +382,7 @@ You run into town square and see the extent of the damage. Everywhere you look t
     You run down the alleyway and find a dwarf standing in the middle of the alley with a barrel. Before you can do anything, they throw the barrel down another alley before running away.
     
     You decide to:
-    fake_choice
+    *fake_choice
         #Run over and help.
             You case after the dwarf. As you run by the alley you see where the barrel landed.
 

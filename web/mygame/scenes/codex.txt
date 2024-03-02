@@ -104,7 +104,7 @@ The rest of the codex sections are underpopulated.
         Discovered Amulet!!!
         *line_break
         *set isKnifeDiscovered true
-        Discovered Reese!!!
+        Discovered Bloody Knife!!!
         *line_break
 
         [head]Places[/head]
@@ -460,7 +460,7 @@ What item?
 
     *selectable_if (isKnifeDiscovered) #Knife with Strange Design
         *label codex_hl_Knife
-        [head]Knife with strange design[/head]
+        [head]Knife with Strange Design[/head]
         *image images/knife_no_background.webp
         The knife the murderer used to kill Lord Odel. He planted it on you to pin the murder on you and get away. It has some strange designs on it that no one seems to recognize, but seem familiar. From a far off memory that you can’t seem to catch.
         *line_break
