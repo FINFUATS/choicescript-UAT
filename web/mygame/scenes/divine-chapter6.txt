@@ -545,7 +545,7 @@ There was a large bleeding gash in his arm and you can see the rot already start
 
 He lifts up his sword and then mutters a spell under his breath. The swing goes so fast you can barely process when his arm falls on the ground. Before you let yourself panic you help the Zealot to a medic. All you can do is pray that all of the rot was cut off in that swing. 
 
-*return
+*goto_scene divine-chapter7
 
 
 *comment Subroutine for the combat result
