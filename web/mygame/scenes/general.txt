@@ -137,6 +137,43 @@
 
 
 
+
+*comment This subroutine determines if the check succeeded using a random number and the relevant attribute value.
+*label chance_checker
+*rand Chance 1 100
+*set Chance + attrib
+
+*if Chance >= chance_floor
+    *set did_chance_check_succeed true
+    *set Success Success + 1
+*else
+    *set did_chance_check_succeed false
+    *set Failure Failure + 1
+
+*return
+
+*comment This subroutine does the success and failure checking
+*label succeed_checker
+*if did_chance_check_succeed = true
+    [head]Success![/head]
+    *print description_text
+    *print victory_text
+    
+    *if Success >= 3
+        *set win_encounter true
+        
+*else
+    [head]Failure![/head]
+    *print description_text
+    *print failure_text
+
+    *if Failure >= 3
+        *set fail_encounter true
+    
+*return
+
+
+
 *comment Originally in the choicescript_stats scene, now a subroutine in the general scene for organization purposes
 *comment Updates the relationship and reputation percentages, trends, and affinity/rep statuses
 *label UpdateRelRepMeters

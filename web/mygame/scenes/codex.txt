@@ -339,6 +339,7 @@ Who do you want to know about?
             #Glador
                 *label codex_hl_Glador
                 [head]Glador[/head]
+                *image images/Glador.webp
                 TODO:!!!
                 *line_break
                 *goto chargroup_Other
@@ -358,6 +359,7 @@ Who do you want to know about?
             *selectable_if (isOdelDiscovered) #Lord Odel
                 *label codex_hl_Lord_Odel
                 [head]Lord Odel[/head]
+                *image images/lord_odel.webp
                 Lord Odel is not a very liked lord. As the Lord of Davenport, he was known for keeping the port running and his outspoken dislike for arcane users. All arcane users have to register with the city and pay a high fee to practice arcane magic or risk being thrown into the prison. He is also known for upping the protection of villages close to direwolf territory by training his guards how to hunt and kill direwolves. Of all the lords in the land, he is the one who has the most direwolf pelts.
                 
                 Having been recently murdered by an unknown local in Summerlight, the title of lord has been given to his son, Lord Aldin. Until he is old enough to rule, his advisors will be making watching over his land.
@@ -432,7 +434,7 @@ Which Faction?
     #Wolves of Davenport
         *label codex_hl_WoD
         [head]Wolves of Davenport[/head]
-        *image images/WolvesBook.webp
+        *image images/wolves_logo.webp
         *comment Image does not work
         The Wolves of Davenport are a legendary band of mercenaries whose name strikes fear into the hearts of their enemies across the realm of Teren. Led by the seasoned warrior Alistair Blackthorn, this renowned group embodies the epitome of skill, camaraderie, and unwavering determination. With each member possessing unique talents, they form a formidable force that stands as a bulwark against the encroaching darkness. They are a diverse group, drawing individuals from all walks of life, each bringing their own set of exceptional skills to the table.
         
@@ -687,6 +689,7 @@ What Specie do you want to learn about?
 
     #Gnomes
         [head]Gnomes[/head]
+        *image images/Gnomes.webp
         Gnomes are the shortest of the races, and the most intelligent. Many gnomes have been seen using arcane magic after years of practicing. They have no known head location, instead they stay in the cities and towns built by the other races. Seemingly because it let’s them have more time to study their chosen craft. Whatever their craft, they are known to dedicate their entire lives to it. From clockmaking to shoemaking to studying the arcane.
         *line_break
         *goto Species

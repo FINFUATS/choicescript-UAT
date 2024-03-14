@@ -164,6 +164,19 @@
 *comment Codex contextual global vars
 *create isReeseDead false
 
+*comment ///////// Combat Globals /////////
+*create Success 0
+*create Failure 0
+*create Chance 0
+*create chance_floor 0
+*create did_chance_check_succeed true
+*create attrib 0
+*create description_text ""
+*create victory_text ""
+*create failure_text ""
+*create win_encounter false
+*create fail_encounter false
+
 *comment Divine Chapter 9 Character Total Globals
 *create Riva 0
 *create Winfred 0

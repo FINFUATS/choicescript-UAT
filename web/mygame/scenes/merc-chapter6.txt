@@ -1,4 +1,11 @@
 *label StartChapter6
+*set Success 0
+*set Failure 0
+*set win_encounter false
+*set fail_encounter false
+*set description_text ""
+*set victory_text ""
+*set failure_text ""
 [head]Chapter 6: First Mission[/head]
 
 The tent is warm when ${P2M_roommate} shakes you awake. 
@@ -389,11 +396,43 @@ She gives you her handheld catapult. “Shoot anything that attacks us!”
 
 *page_break
 
-**(FIGHT SCENE. Skill checks galore. Will end with player having to rescue Felix from a jackaloid)**
-*temp CH5M_battle_won true
-Fight not implemented yet, assuming battle was won.
+*label MC6FightLoop
+*image images/Jackaloid.webp
+*fake_choice
+    # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+        *set attrib Strength
+        *set chance_floor 60
+        *gosub_scene general chance_checker
 
-*if CH5M_battle_won
+        *set description_text "Gripping your weapon tightly, you charge directly at the creature."
+        *set victory_text "You manage to pierce the Jackaloid, slicing through a part of its skin as it quickly pulls itself out from your blade."
+        *set failure_text "You run as fast as you can, but the creature manages to hop out of the way, nearly clawing at you as you stumble by."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Attempt to dodge its pounce. [b][color=${agility_color}](Agility)[/color][/b]
+        *set attrib Agility
+        *set chance_floor 75
+        *gosub_scene general chance_checker
+
+        *set description_text "You move erratically and create distance between you and the creature."
+        *set victory_text "When it jumps at you, you manage to hop out of its way and retaliate with a successful strike of your own."
+        *set failure_text "The creature jumps and you attempt to dodge out of the way, but you were a little late and find yourself bumping into the creature as your both get staggered for a moment."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+        *set attrib Cunning
+        *set chance_floor 50
+        *gosub_scene general chance_checker
+
+        *set description_text "You spot a dense collection of bushes and leaves."
+        *set victory_text "Maneuvering quickly, you dip into the bushes as the Jackaloid leaps past the trees you left in your wake. As it sniffs and prowls through the pushes, you stab upward as its head and torso pass over you. You get a good slice into it before it quickly backs off for a moment."
+        *set failure_text "The creature is too fast to lose it in the bushes, and you notice that it saw you trying to hide. You quickly return to the group before it can catch you."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+
+*goto MC6FightLoop
+*label MC6FightBranch
+*if win_encounter = true
     *comment Battle is won.
     You stare down at the body of the jackaloid. They look so much smaller now that you’ve grown. 
     
@@ -432,7 +471,7 @@ Fight not implemented yet, assuming battle was won.
     Amidst the thanks and cheerful conversation with your new allies, a figure in gold finally emerges from the forest. You frown to see him limping slightly, a strange blot of dirt or something on the side of his armor. 
     
     Your attention is quickly pulled away by Felix clapping you on the shoulder as you all make your way back into town. 
-*else
+*elseif fail_encounter = true
     *comment Battle is lost.
     You stare down at the body of the jackaloid, and next to it, Felix covered in blood. The jackaloid looks so much smaller now that you’ve grown, but the terror you feel is just like before. 
     
@@ -463,5 +502,35 @@ Fight not implemented yet, assuming battle was won.
     Amidst the guilt floating in your mind, you vaguely notice a figure in gold finally emerging from the forest. You frown to see him limping slightly, a strange blot of dirt or something on the side of his armor. 
     
     Your attention is quickly pulled away by Rip leading you towards town. Viper and the rest of her group are already gone. 
+
+*page_break
+*goto_scene merc-chapter7
+
+
+*comment Subroutine for the combat result
+*label combat_result
+*if win_encounter = true
+
+
+    Just as soon as the Jackaloid's end appeared to be nearing, it shifts its attention from you and towards someone else.
+
+    Injured, it starts sprinting away from you and at Felix. Remembering your old friend's fate, you sprint after the Jackaloid and plunge your weapon into its back before it has a chance to attack Felix.
+
+    You successfully slayed the Jackaloid.
+    *page_break
+    *goto MC6FightBranch
+
+*elseif fail_encounter = true
+
+
+    This Jackaloid turned out to be far more difficult than you were expecting. Your end was nearing, however, before it could attack, it shifts its attention from you and towards someone else.
+
+    It starts sprinting away from you, and you see that it is charging at Felix. Remembering your old friend's fate, you sprint after the Jackaloid.
+
+    Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards and pushing its corpse off of Felix.
+
+    You had failed to kill the Jackaloid in time.
+    *page_break
+    *goto MC6FightBranch
 
 *return

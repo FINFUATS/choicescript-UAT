@@ -1,5 +1,16 @@
 *ending
 *label StartChapter5
+
+*set Success 0
+*set Failure 0
+*set win_encounter false
+*set fail_encounter false
+*set description_text ""
+*set victory_text ""
+*set failure_text ""
+*temp DC5B1 true
+*temp DC5B2 true
+*temp DC5B3 true
 [head]Chapter 5: The Flames of Sigil[/head]
 
 “Come, right this way” the priestess whispers to you, hesitant to wake anyone in the dead of night.
@@ -715,7 +726,42 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
-        **(Fight scene)**
+        *label DC5FightBranch1
+        *fake_choice
+            # Aim for the worm's weak spot directly with your.  [b][color=${brawn_color}](Brawn)[/color][/b]
+                *set attrib Strength
+                *set chance_floor 80
+                *gosub_scene general chance_checker
+        
+                *set description_text "You aim for the weak spot directly with your weapon."
+                *set victory_text "The blade manages to leave a gash on the creature."
+                *set failure_text "The blade misses the creature."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Attempt to move quickly outmaneuver the worm. [b][color=${agility_color}](Agility)[/color][/b]
+                *set attrib Agility
+                *set chance_floor 60
+                *gosub_scene general chance_checker
+        
+                *set description_text "You move quickly outmaneuver the creature."
+                *set victory_text "The worm is too slow for you, and you manage to make your mark."
+                *set failure_text "The creature manages to catch up to you with remarkably fast speed for a worm, and you miss your opportunity to attack."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Utilize the surroundings in the greenhouse to create a trap. [b][color=${cunning_color}](Cunning)[/color][/b]
+                *set attrib Cunning
+                *set chance_floor 50
+                *gosub_scene general chance_checker
+        
+                *set description_text "You use your surroundings in the greenhouse to create a trap."
+                *set victory_text "The creature inches closer, but before it can lunge at you, it is ensnared for a moment by the large sticks you sharpened with your blade. Using the opportunity, you cut the creature."
+                *set failure_text "The creature avoids your trap, and you miss your opportunity to attack."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+        
+        *goto DC5FightBranch1
+        *label DC5FightWinBranch1
+        *label DC5FightLoseBranch1
 
         **(Riva gets injured)**
         
@@ -767,9 +813,44 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
+
+        *label DC5FightBranch2
         *image images/Ogre-Encounter.webp
+        *fake_choice
+            # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+                *set attrib Strength
+                *set chance_floor 90
+                *gosub_scene general chance_checker
         
-        **(Fight scene)**
+                *set description_text "Gripping your weapon tightly, you charge directly at the creature."
+                *set victory_text "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
+                *set failure_text "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Attempt to outmaneuver its attack. [b][color=${agility_color}](Agility)[/color][/b]
+                *set attrib Agility
+                *set chance_floor 55
+                *gosub_scene general chance_checker
+        
+                *set description_text "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
+                *set victory_text "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
+                *set failure_text "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed as the force of the nearby impact its fists made with the ground sends you a couple feet backwards."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+                *set attrib Cunning
+                *set chance_floor 75
+                *gosub_scene general chance_checker
+        
+                *set description_text "You spot a nearby building that was partially in ruin."
+                *set victory_text "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
+                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+        
+        *goto DC5FightBranch2
+        *label DC5FightWinBranch2
+        *label DC5FightLoseBranch2
 
         **(Cel gets injured)**
         
@@ -816,7 +897,7 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
-        *image images/Ogre-Encounter.webp
+
         
         Ivy doesn’t seem to understand, though, because she shoves your arm away and keeps going.
         
@@ -824,7 +905,43 @@ Do you want to help Riva with her herbs?
 
         “Ivy!” Cel yells.
         
-        **(Fight scene)**
+        *label DC5FightBranch3
+        *image images/Ogre-Encounter.webp
+        *fake_choice
+            # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+                *set attrib Strength
+                *set chance_floor 90
+                *gosub_scene general chance_checker
+        
+                *set description_text "Gripping your weapon tightly, you charge directly at the creature."
+                *set victory_text "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
+                *set failure_text "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Attempt to outmaneuver its attack. [b][color=${agility_color}](Agility)[/color][/b]
+                *set attrib Agility
+                *set chance_floor 55
+                *gosub_scene general chance_checker
+        
+                *set description_text "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
+                *set victory_text "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
+                *set failure_text "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed as the force of the nearby impact its fists made with the ground sends you a couple feet backwards."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+            # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+                *set attrib Cunning
+                *set chance_floor 75
+                *gosub_scene general chance_checker
+        
+                *set description_text "You spot a nearby building that was partially in ruin."
+                *set victory_text "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
+                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *gosub_scene general succeed_checker
+                *gosub combat_result
+        
+        *goto DC5FightBranch3
+        *label DC5FightWinBranch3
+        *label DC5FightLoseBranch3
 
         **(Ivy gets injured)**
         
@@ -876,7 +993,8 @@ She sits up
 
 “Please sleep well…” she requests before leaving
 
-*return
+*page_break
+*goto_scene divine-chapter6
 
 *label IVC
 
@@ -924,5 +1042,70 @@ She pauses.
 
 With that, she leaves the room as abruptly as she entered it.
 
+*page_break
+*goto_scene divine-chapter6
+
+
+*comment Subroutine for the combat result
+*label combat_result
+*if win_encounter = true
+    *if DC5B1 = true
+
+        You successfully slay the worm.
+
+        However, before you have a chance to take a good look at your kill, you hear something behind you.
+
+        Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto DC5FightWinBranch1
+    *elseif DC5B2 = true
+
+        You successfully slay the Ogre.
+
+        However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+        You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground.
+        *page_break
+        *goto DC5FightWinBranch2
+    *elseif DC5B3 = true
+
+        You successfully slay the Ogre.
+
+        However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+        You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground.
+        *page_break
+        *goto DC5FightWinBranch3
+
+*elseif fail_encounter = true
+    *if DC5B1 = true
+
+        You fail to slay the worm.
+
+        The worm moves faster than you expected. However, as though it were only protecting its territory, it began to dig underground.
+
+        You're relieved that you didn't get lunged at any more, but before you can rest, you hear something behind you.
+
+        Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto DC5FightLoseBranch1
+    *elseif DC5B2 = true
+
+        You fail to slay the Ogre. Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+
+        While regaining your composure, you notice something behind you.
+
+        You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground and unconscious.
+        *page_break
+        *goto DC5FightLoseBranch2
+    *elseif DC5B3 = true
+
+        You fail to slay the Ogre. Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+
+        While regaining your composure, you notice something behind you.
+
+        You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground and unconscious.
+        *page_break
+        *goto DC5FightLoseBranch3
 
 *return

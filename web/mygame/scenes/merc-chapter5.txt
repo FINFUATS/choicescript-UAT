@@ -1,5 +1,15 @@
 *ending
 *label StartChapter5
+
+*set Success 0
+*set Failure 0
+*set win_encounter false
+*set fail_encounter false
+*set description_text ""
+*set victory_text ""
+*set failure_text ""
+*temp MC5B1 true
+*temp MC5B2 true
 [head]Chapter 5: Wolves of Davenport[/head]
 
 “Follow me, I’ll get you to a place where the guards won’t think to look for you.” The mercenary leads you down some back alleys. You look around, trying to recognize some of the area, but none of it looks familiar. You avoided this side of town as much as you could since Reese’s death. Couldn’t bear to visit the places the two of you used to play.
@@ -474,6 +484,8 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
         *gosub_scene general UpdateRelValLeon
         *gosub_scene general UpdateRepValWolves
 
+        *set MC5B1 true
+        *set MC5B2 false
         *goto MC5EndBranch1
     # “I want to stay here. I don’t think I’m ready for an adventure just yet”
         *set cur_behavior_tag tag_f_Helping
@@ -484,6 +496,8 @@ You join the group around the fire and sit on the log across from Elena and Gwyn
         *gosub_scene general UpdateRelValGwyn
         *gosub_scene general UpdateRepValWolves
 
+        *set MC5B2 true
+        *set MC5B1 false
         *goto MC5EndBranch2
 
 *label MC5EndBranch1
@@ -531,10 +545,9 @@ Before you know it, Leon’s stick was sucked into the ground. Leon was almost s
 “Found one!” Shouted Leon with a sinister grin.
 
 The [codex:codex_hl_Mogfish]mogfish[/codex] slowly pulled itself up from the ground. It is bigger than you expected, big enough to eat a dwarf or a small human. You knew the creature was going to be terrifying, but seeing one up close. It was like nothing you have seen before.
+*image images/Mogfish.webp
 *set isMogfishDiscovered true
 *page_break
-
-*image images/Mogfish.webp
 
 Rip and Leon brought out their swords and Anwen grabbed her bow. Elena stayed back, but kept an eye on them. You move towards a tree to lean your stick against it, when another mogfish tries to eat it. Jumping back, you let go of the stick and take out your dagger. 
 
@@ -542,12 +555,47 @@ The creature looks worse up close, with a huge mouth and emotionless eyes. This 
 
 You take a few steps back as it drags itself out of the mud. 
 
-**(Terrified Fight Scene)**
+*label MC5FightBranch1
+*image images/Mogfish.webp
+*fake_choice
+    # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+        *set attrib Strength
+        *set chance_floor 80
+        *gosub_scene general chance_checker
 
+        *set description_text "Gripping your weapon tightly, you charge directly at the creature."
+        *set victory_text "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
+        *set failure_text "You run as fast as you can, but the creature manages to hop out of the way."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Attempt to dodge under its high jump and counterattack. [b][color=${agility_color}](Agility)[/color][/b]
+        *set attrib Agility
+        *set chance_floor 60
+        *gosub_scene general chance_checker
+
+        *set description_text "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
+        *set victory_text "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
+        *set failure_text "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+        *set attrib Cunning
+        *set chance_floor 50
+        *gosub_scene general chance_checker
+
+        *set description_text "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. Moving over to the brush, you attempt to slip between the trees as the Mogfish follows you."
+        *set victory_text "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
+        *set failure_text "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+
+*goto MC5FightBranch1
+*label MC5FightWinBranch1
+*label MC5FightLoseBranch1
 **(Elena’s leg gets injured)**
 *page_break
 
-Anwen and Leon quickly run over to Elena and help her up. Leon hold her up and begins to slowly walk her back to camp. You stare at her, horrified over what had happened.
+Anwen and Leon quickly run over to Elena and help her up. Leon holds her up and begins to slowly walk her back to camp. You stare at her, horrified over what had happened.
 
 Rip walks over to you and puts a hand on your shoulder. 
 
@@ -582,8 +630,9 @@ You look over at Elena and turn away. Seeing her laying in a cot reminds you of 
 
 “How are you ${name}?”
 
-**(Change based on how fight goes)**
-*return
+*page_break
+*goto_scene merc-chapter6
+
 
 *label MC5EndBranch2
 “Okay, then you’ll help watch the camp.” Rip explains.
@@ -625,10 +674,10 @@ You hum in response and throw another, bigger stone, this stone hits a small tre
 “Uh oh, we need to run!” Gwyn says before grabbing your arm and running back to camp.
 *page_break
 
-*image images/Mogfish.webp
-
 You turn around and see what you assume is a [codex:codex_hl_Mogfish]mogfish[/codex] climbing out of the ground. It is much bigger than you expected, bigger than Gwyn.
+*image images/Mogfish.webp
 *set isMogfishDiscovered true
+*page_break
 
 The two of you run towards camp when you trip. While Gwyn is helping you get up, you hear a loud THUMP
 
@@ -636,7 +685,43 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
 
 “I don’t think we can outrun it, we’re going to have to fight!” Gwyn shouts.
 
-**(Fight scene)**
+*label MC5FightBranch2
+*image images/Mogfish.webp
+*fake_choice
+    # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+        *set attrib Strength
+        *set chance_floor 80
+        *gosub_scene general chance_checker
+
+        *set description_text "Gripping your weapon tightly, you charge directly at the creature."
+        *set victory_text "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
+        *set failure_text "You run as fast as you can, but the creature manages to hop out of the way."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Attempt to dodge under its high jump and counterattack. [b][color=${agility_color}](Agility)[/color][/b]
+        *set attrib Agility
+        *set chance_floor 60
+        *gosub_scene general chance_checker
+
+        *set description_text "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
+        *set victory_text "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
+        *set failure_text "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+    # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+        *set attrib Cunning
+        *set chance_floor 50
+        *gosub_scene general chance_checker
+
+        *set description_text "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. You move over to the brush and try to slip between the trees as the Mogfish follows you."
+        *set victory_text "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
+        *set failure_text "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *gosub_scene general succeed_checker
+        *gosub combat_result
+
+*goto MC5FightBranch2
+*label MC5FightWinBranch2
+*label MC5FightLoseBranch2
 
 **(Gwyn gets injured)**
 *page_break
@@ -678,5 +763,57 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
 “He’ll be okay, he’s had worse. Now, What about a direwolf and a-” Leon is about to say something when Anwen bonks him on the back of the head.
 
 “Direwolf next.”
+
+*page_break
+*goto_scene merc-chapter6
+
+
+
+
+*comment Subroutine for the combat result
+*label combat_result
+*if win_encounter = true
+    *if MC5B1 = true
+
+        You successfully slay the mogfish.
+
+        However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+        Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto MC5FightWinBranch1
+    *elseif MC5B2 = true
+
+        You successfully slay the mogfish.
+
+        However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+        Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto MC5FightWinBranch2
+
+*elseif fail_encounter = true
+    *if MC5B1 = true
+
+        You fail to slay the mogfish.
+
+        The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
+
+        As the the Mogfish attempts to pounce on you, you see an glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
+        
+        You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
+
+        Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto MC5FightLoseBranch1
+    *elseif MC5B2 = true
+
+        The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
+
+        However, before you have a chance to process your near-death experience, you hear something behind you.
+
+        Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+        *page_break
+        *goto MC5FightLoseBranch2
 
 *return
