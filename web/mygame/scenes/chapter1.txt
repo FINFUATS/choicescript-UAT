@@ -325,13 +325,13 @@ Amongst the crowd you hear a shout and turn around. You can see [codex:codex_hl_
         [b]With the tutorials skipped, you are free to apply your skills, and attributes as you see fit. The world of possibilities awaits you in the marketplace, where you can interact with various merchants, engage in conversations, and uncover hidden opportunities.[/b]
         
         *fake_choice
-            # Strength [color=${brawn_color}]Brawn++[/color]
+            # Brawn ([color=${brawn_color}]Brawn++[/color])
                 *set brawn +1
 
-            # Agility  [color=${agility_color}]Agility++[/color]
+            # Agility  ([color=${agility_color}]Agility++[/color])
                 *set agility +1
 
-            # Cunning  [color=${cunning_color}]Cunning++[/color]
+            # Cunning ([color=${cunning_color}]Cunning++[/color])
                 *set cunning +1
         *goto SC1_Home
 
