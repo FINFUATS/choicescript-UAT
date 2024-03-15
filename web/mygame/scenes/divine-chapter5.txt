@@ -763,7 +763,6 @@ Do you want to help Riva with her herbs?
         *label DC5FightWinBranch1
         *label DC5FightLoseBranch1
 
-        **(Riva gets injured)**
         
         *page_break
         
@@ -852,7 +851,6 @@ Do you want to help Riva with her herbs?
         *label DC5FightWinBranch2
         *label DC5FightLoseBranch2
 
-        **(Cel gets injured)**
         
         *page_break
         
@@ -943,7 +941,6 @@ Do you want to help Riva with her herbs?
         *label DC5FightWinBranch3
         *label DC5FightLoseBranch3
 
-        **(Ivy gets injured)**
         
         *page_break
         
@@ -1042,8 +1039,8 @@ She pauses.
 
 With that, she leaves the room as abruptly as she entered it.
 
-*page_break
-*goto_scene divine-chapter6
+*page_break Next Chapter
+*goto_scene chapter6
 
 
 *comment Subroutine for the combat result

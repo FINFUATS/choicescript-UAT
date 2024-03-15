@@ -545,8 +545,8 @@ There was a large bleeding gash in his arm and you can see the rot already start
 
 He lifts up his sword and then mutters a spell under his breath. The swing goes so fast you can barely process when his arm falls on the ground. Before you let yourself panic you help the Zealot to a medic. All you can do is pray that all of the rot was cut off in that swing. 
 
-*page_break
-*goto_scene divine-chapter7
+*page_break Next Chapter
+*goto_scene chapter7
 
 
 *comment Subroutine for the combat result
@@ -554,7 +554,7 @@ He lifts up his sword and then mutters a spell under his breath. The swing goes 
 *if win_encounter = true
 
 
-    Keeping the Jackaloid from harming the Zealot or yourself any further, you mannage to bring the Jackaloid to its knees.
+    Keeping the Jackaloid from harming the Zealot or yourself any further, you manage to bring the Jackaloid to its knees.
     
     You successfully slayed the Jackaloid.
     *page_break

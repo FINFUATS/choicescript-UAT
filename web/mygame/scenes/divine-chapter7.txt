@@ -793,9 +793,9 @@ The priest from the meeting walks into the room. You can see that everyone is tr
             *set cur_f_behavior_tag tag_f_Helping
             *gosub_scene general UpdateRepValFlames
 
-           “I’m going to help the kitchen and ask what boxes of food they need for dinner.” You explain.
+            “I’m going to help the kitchen and ask what boxes of food they need for dinner.” You explain.
 
-           The high priest nods and then stares at everyone else. You think he bought it.
+            The high priest nods and then stares at everyone else. You think he bought it.
 
         *else
             *set cur_f_severity_value f_severity_minor

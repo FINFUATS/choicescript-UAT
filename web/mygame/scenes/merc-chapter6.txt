@@ -503,8 +503,8 @@ She gives you her handheld catapult. “Shoot anything that attacks us!”
     
     Your attention is quickly pulled away by Rip leading you towards town. Viper and the rest of her group are already gone. 
 
-*page_break
-*goto_scene merc-chapter7
+*page_break Next Chapter
+*goto_scene chapter7
 
 
 *comment Subroutine for the combat result

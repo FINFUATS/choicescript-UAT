@@ -592,7 +592,6 @@ You take a few steps back as it drags itself out of the mud.
 *goto MC5FightBranch1
 *label MC5FightWinBranch1
 *label MC5FightLoseBranch1
-**(Elena’s leg gets injured)**
 *page_break
 
 Anwen and Leon quickly run over to Elena and help her up. Leon holds her up and begins to slowly walk her back to camp. You stare at her, horrified over what had happened.
@@ -723,7 +722,6 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
 *label MC5FightWinBranch2
 *label MC5FightLoseBranch2
 
-**(Gwyn gets injured)**
 *page_break
 
 You help Gwyn up and let him lean against you. For a second you see Reese beside you, giving you a weak smile before you shake your head and begin walking. 
@@ -764,8 +762,8 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
 
 “Direwolf next.”
 
-*page_break
-*goto_scene merc-chapter6
+*page_break Next Chapter
+*goto_scene chapter6
 
 
 
@@ -799,7 +797,7 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
 
         The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
 
-        As the the Mogfish attempts to pounce on you, you see an glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
+        As the the Mogfish attempts to pounce on you, you see a glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
         
         You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
 
