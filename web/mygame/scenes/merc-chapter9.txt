@@ -25,7 +25,7 @@ You shouldn’t strike out on your own. Rip and the others would never discourag
 You decide to lend a helping hand to…
 
 *fake_choice
-    selectable_if (V = 1) # Aid Leon!
+    *selectable_if (V = 1) # Aid Leon!
         *set V V + 1
         You make your way to the part of the village Leon splintered off to. You pick off a few stray Ichorswog on your way there. These spawns of Skadon bleed without the slightest tinge of red: pure darkness.
         
@@ -87,7 +87,7 @@ You decide to lend a helping hand to…
         Play KO text.
         *page_break
         *goto CH9M_BattleField
-    selectable_if (X = 1) # Aid Gwyn!
+    *selectable_if (X = 1) # Aid Gwyn!
         *set X X + 1
         You decide, for right now, to leave behind the chaos of this doomed village, and, instead, head for the infirmary. After all, your presence in this village serves more as a prevention of further death than it does an attempt to “save the village.” No, no such thing will be happening today, unfortunately.
         

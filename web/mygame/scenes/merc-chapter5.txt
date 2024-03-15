@@ -248,9 +248,13 @@ Everyone looks at you, you are not used to having so many eyes on you and try to
 
 Leon looks at you expectantly and you glance over everyone at the fire.
 
+*temp W 1
+*temp X 1
+*temp Y 1
+*temp Z 1
 *label MC5StoryLoop
 *fake_choice
-    #“Let’s hear your story.”
+    *selectable_if (W = 1) #“Let’s hear your story.”
         *image images/Leon_finally.webp
         “Oh! You want to hear my story! Hmm…. Where do I start?”
 
@@ -264,7 +268,9 @@ Leon looks at you expectantly and you glance over everyone at the fire.
 
         “Fine, here is a story that actually happened. I stopped a robbery before joining the Wolves. There were four men stealing a cart of grains from the local baker. I was all by myself, but I was able to put a stop to the robbery. I took out the driver and the passenger. After the cart stopped, I got the other two men out and beat them in combat. After I got the cart back to the baker, she gave me some bread for my troubles.” Leon acted out some of the fight scenes and was overly expressive during his whole story.
 
-    # “I’m curious about Elena.”
+        *set W W + 1
+
+    *selectable_if (X = 1) # “I’m curious about Elena.”
         *image images/elena.webp
         “Really? Okay, umm… Where should I start?”
 
@@ -272,7 +278,9 @@ Leon looks at you expectantly and you glance over everyone at the fire.
 
         “During one of my jobs, we had to go visit a town close to the beach. I did all the research I could on the area and we left. However, when we got there, it was invaded by a monster I have never seen before. It was in none of my books and not a single person we asked knew what it was. It was a fish-like creature, but it was roaming on land like a person. We killed it in the end, but we still don’t know what it was.” Elena looks off at the forest.
 
-    # “What is Gwyn’s story?”
+        *set X X + 1
+
+    *selectable_if (Y = 1) # “What is Gwyn’s story?”
         *image images/gwyn.webp
         “You want my story? Okay, let’s see here…”
 
@@ -280,7 +288,9 @@ Leon looks at you expectantly and you glance over everyone at the fire.
         
         “My methodologies worked wonders and nobody who has used them has complained. My potions work wonders to heal a wound or take care of a cold. A few years back I was asked to create a potion to save a lord who caught a nasty cold. They feared the worst, but my potions helped bring him back from the brink and he was better within a week!” Gwyn exclaimed
 
-    # “What was Anwen’s story?”
+        *set Y Y + 1
+
+    *selectable_if (Z = 1) # “What was Anwen’s story?”
         *image images/Anwen.webp
         “Why do you want my story? Fine. Hmmm…”
 
@@ -291,6 +301,8 @@ Leon looks at you expectantly and you glance over everyone at the fire.
         “… Before I joined the wolves I was the local tinker. If someone broke their weapon or something was not working properly, they came to me. I fixed it as well as I could and continued on with life. That wasn’t the life for me, so I set out. I left my town and became a traveling craftswoman. I visited towns during my travels and fixed things for food.” Anwen looked into the fire.
 
         “That isn’t to say I didn’t have my hardships. Many didn’t trust an elf to fix their stuff, but the ones who did got their equipment back in better condition than they first got it. If they allowed, I would improve the design. From what I’ve heard, some of my inventions helped many out of bad situations.
+
+        *set Z Z + 1
 
     # “How did Rip become the leader?” (End Story Time)
         *goto MC5StoryLoopEnd

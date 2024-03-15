@@ -381,15 +381,19 @@ The temple is rather large, so you get your own room. You don’t know anyone to
 
 
 *page_break
-
 Conveniently, not long after you’re settled, you hear a call from the dining hall. It’s time for lunch. You hadn’t considered it up until now due to everything you were thinking about, but you’ve barely eaten since… Since what happened. You’d rather not think about it again.
 
+*temp V 1
+*temp W 1
+*temp X 1
+*temp Y 1
+*temp Z 1
 *label DC5StoryLoop
 
 Once you’re seated, you decide to get to know the people you’ll be living with for the foreseeable future. How about…
 
 *fake_choice
-    #Cel. Admittedly, you haven’t asked her a whole lot about who she is.
+    *selectable_if (V = 1) #Cel. Admittedly, you haven’t asked her a whole lot about who she is.
         “Cel?” you call.
         
         “Hmm? Is there something you need?” she responds.
@@ -419,8 +423,10 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         “To answer your question, though, I’m the priestess because the man who saved me passed away some years ago.”
 
         Cel smiles at you and gets back to her food. You’re a little surprised she can smile like that after having to remember those things… You hope to be that strong some day.
+
+        *set V V + 1
         
-    #Riva hasn’t said a word to you yet… You wonder if she can talk.
+    *selectable_if (W = 1) #Riva hasn’t said a word to you yet… You wonder if she can talk.
         
         “Um… Riva?” you ask, trying not to startle her.
         
@@ -463,8 +469,10 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         “She was as thin as a stick when we found her the first time. And the second time. After the third, I told her she didn’t have to go home.” Cel explains.
 
         Riva quietly continues eating. That… was an odd conversation.
+
+        *set W W + 1
         
-    #Ivy is the only person here who seems to be the same age as you.
+    *selectable_if (X = 1) #Ivy is the only person here who seems to be the same age as you.
         
         “Hey, Ivy?” you ask.
         
@@ -499,8 +507,10 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         Suddenly, her contrast with everyone else in the room makes a lot more sense. She doesn’t come off as the Sigilic type.
 
         You talk to her a little bit more before deciding to move on.
+
+        *set X X + 1
         
-    #Winfred looks like a jolly fellow. What’s he about?
+    *selectable_if (Y = 1) #Winfred looks like a jolly fellow. What’s he about?
         
         “Winfred, what’s your background?”
         
@@ -521,8 +531,10 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         “Would have been better if I’d never done it in the first place, but we can’t change the past…”
 
         That marks the end of a pretty light and simple conversation. It’s rather refreshing, given how the past couple days have been for you.
+
+        *set Y Y + 1
         
-    #Berthold was the first person to greet you; you wonder what he’s like.
+    *selectable_if (Z = 1) #Berthold was the first person to greet you; you wonder what he’s like.
         
         “Klepper?” you ask.
         
@@ -545,6 +557,8 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         He gives you a smile before returning to his food. You’re surprised someone this old can have that sort of an edge… You almost don’t believe him.
 
         Still, if he’s made it this long and still had it in him to say things like that… Maybe you’ll want to hear out the old man’s advice.
+
+        *set Z Z + 1
 
     #No one (End Questions)
         *goto MC5StoryLoopEnd
@@ -948,7 +962,7 @@ Do you want to help Riva with her herbs?
         
         Her body had dropped like a ragdoll when it happened, and there’s still barely any movement. The only solace you could take was that she’s still breathing. Cel wastes no time, though.
 
-        “Help me hold her up! We need to get back to the carriage!” Cell tells you.
+        “Help me hold her up! We need to get back to the carriage!” Cel tells you.
 
         You follow along, hauling Ivy back to the carriage. You, supporting her as well as you can with your strength. The driver immediately picks up on the situation, and rushes back to the temple
 
