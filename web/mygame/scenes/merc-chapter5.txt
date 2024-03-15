@@ -641,8 +641,8 @@ You look over at Elena and turn away. Seeing her laying in a cot reminds you of 
 
 “How are you ${name}?”
 
-*page_break
-*goto_scene merc-chapter6
+*page_break Next Chapter
+*goto_scene chapter6
 
 
 *label MC5EndBranch2
