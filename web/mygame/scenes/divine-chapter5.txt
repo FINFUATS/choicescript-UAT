@@ -1004,8 +1004,8 @@ She sits up
 
 “Please sleep well…” she requests before leaving
 
-*page_break
-*goto_scene divine-chapter6
+*page_break Next Chapter
+*goto_scene chapter6
 
 *label IVC
 
