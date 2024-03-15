@@ -1,4 +1,5 @@
 *label chapter11
+[head]Chapter 11[/head]
 *if (faction = "merc") and (CH10_ending = "shack")
     You and Rip reach the walls of the town. You can see the taller buildings on fire and falling apart. The roof of the tower closest to the wall looks like it is about to cave in.
     
@@ -616,7 +617,7 @@ You run into town square and see the extent of the damage. Everywhere you look t
 
                 “You better! Don’t get yourself killed out there!.” Ivy shouts back before you hear footsteps running away.
 
-else
+*else
     *bug_continue No faction assigned.
 
 *page_break
