@@ -428,7 +428,7 @@ As if on cue, a Jackaloid bounds toward you.
         *gosub_scene general chance_checker
 
         *set description_text "You spot a dense collection of bushes and leaves."
-        *set victory_text "Maneuvering quickly, you dip into the bushes as the Jackaloid leaps past the trees you left in your wake. As it sniffs and prowls through the bushes unaware of where you are, you shoot it with your handheld catapult."
+        *set victory_text "Maneuvering quickly, you dip into the bushes as the Jackaloid leaps past the trees you left in your wake. As it sniffs and prowls through the bushes unaware of where you are, you shoot it with Anwen's handheld catapult."
         *set failure_text "The creature is too fast to lose it in the bushes, and you notice that it saw you trying to hide. You quickly return to the group before it can catch you."
         *gosub_scene general succeed_checker
         *gosub combat_result

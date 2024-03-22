@@ -444,6 +444,14 @@ Which Faction?
         *line_break
         *goto Factions
 
+    #Druids
+        *label codex_hl_Druids
+        [head]Druids[/head]
+        *image images/druids_logo.webp
+        TODO:!!!
+        *line_break
+        *goto Factions
+
     #Back
         *page_break
         *goto CodexStart

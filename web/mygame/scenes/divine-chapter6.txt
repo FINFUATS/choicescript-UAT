@@ -555,7 +555,7 @@ He lifts up his sword and then mutters a spell under his breath. The swing goes 
 *if win_encounter = true
 
 
-    Keeping the Jackaloid from harming the Zealot or yourself any further, you manage to bring the Jackaloid into a slouching position as it attempts to claw its way to you with little success.
+    Keeping the Jackaloid from harming the Zealot or yourself any further, you manage to bring the Jackaloid into a slouching position as it attempts to claw its way to you with dwindling success.
     
     You successfully slayed the Jackaloid.
     *page_break
