@@ -569,6 +569,7 @@ You take a few steps back as it drags itself out of the mud.
 
 *label MC5FightBranch1
 *image images/Mogfish.webp
+*gosub_scene general generate_combat_number
 *fake_choice
     # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
         *set attrib Strength
@@ -698,6 +699,7 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
 
 *label MC5FightBranch2
 *image images/Mogfish.webp
+*gosub_scene general generate_combat_number
 *fake_choice
     # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
         *set attrib Strength

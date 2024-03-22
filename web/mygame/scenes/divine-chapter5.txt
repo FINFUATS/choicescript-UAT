@@ -696,6 +696,10 @@ Do you want to help Riva with her herbs?
         *gosub_scene general UpdateRelValRiva
         *gosub_scene general UpdateRepValFlames
 
+        *set DC5B1 true
+        *set DC5B2 false
+        *set DC5B3 false
+
         *set CH5d_injured "Riva"
         
         You decide to help Riva with her herbs. As obvious as it is that Cel is intentionally trying to keep you out of that ogre situation, you’d really like to avoid violence for the week anyways. It would seem that you and Cel’s interests are aligned.
@@ -740,9 +744,14 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
+        A large worm appeared! While hacking away at the herbs, it had quickly sprung out of the ground.
+
+        It doesn't appear to come in peace as it violently lashes out around itself and inches toward you two.
+
         *label DC5FightBranch1
+        *gosub_scene general generate_combat_number
         *fake_choice
-            # Aim for the worm's weak spot directly with your.  [b][color=${brawn_color}](Brawn)[/color][/b]
+            # Aim for the worm's weak spot by taking it on directly.  [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
                 *set chance_floor 80
                 *gosub_scene general chance_checker
@@ -811,6 +820,10 @@ Do you want to help Riva with her herbs?
         *gosub_scene general UpdateRelValWinfred
         *gosub_scene general UpdateRepValFlames
 
+        *set DC5B1 false
+        *set DC5B2 true
+        *set DC5B3 false
+
         *set CH5d_injured "Cel"
         As soon as the four of you arrive at the town, it becomes clear that something just isn’t right. Everything’s so silent. Of course, you quickly realize that the silence is more a symptom of the people hiding than the ogres themselves. Actually…
         
@@ -829,6 +842,7 @@ Do you want to help Riva with her herbs?
 
         *label DC5FightBranch2
         *image images/Ogre-Encounter.webp
+        *gosub_scene general generate_combat_number
         *fake_choice
             # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
@@ -891,6 +905,10 @@ Do you want to help Riva with her herbs?
         *gosub_scene general UpdateRelValWinfred
         *gosub_scene general UpdateRepValFlames
 
+        *set DC5B1 false
+        *set DC5B2 false
+        *set DC5B3 true
+
         *set CH5d_injured "Ivy"
         
         You decide to read the ogre chapter of “The Flora and Fauna of Teren” on the way to be ready.
@@ -916,9 +934,12 @@ Do you want to help Riva with her herbs?
         And then a club goes flying.
 
         “Ivy!” Cel yells.
+
+        Before you have a chance to turn to Cel and Ivy, the Ogre has already made its way to you. It looks like you won't be leaving without a fight.
         
         *label DC5FightBranch3
         *image images/Ogre-Encounter.webp
+        *gosub_scene general generate_combat_number
         *fake_choice
             # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
@@ -947,7 +968,7 @@ Do you want to help Riva with her herbs?
         
                 *set description_text "You spot a nearby building that was partially in ruin."
                 *set victory_text "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
-                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stones. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
                 *gosub_scene general succeed_checker
                 *gosub combat_result
         

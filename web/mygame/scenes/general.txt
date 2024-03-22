@@ -137,10 +137,16 @@
 
 
 
+*comment Subroutine to generate a random number for the combat Chance variable on a separate page
+*comment The random number in ChoiceScript typically needs to be generated before when you have to use it.
+*comment This helps ensure that the player cannot keep regenerating the random number to one that favors them.
+*label generate_combat_number
+*rand Chance 1 100
+*return
 
 *comment This subroutine determines if the check succeeded using a random number and the relevant attribute value.
 *label chance_checker
-*rand Chance 1 100
+
 *set Chance + attrib
 
 *if Chance >= chance_floor
