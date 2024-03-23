@@ -375,7 +375,7 @@ You take a step back and sigh.
         *page_break
         *goto CH4_Reallocate_Menu
 *label C4_Caught
-
+*set CH4_isCaught true
 You remember seeing a path to the forest a few weeks ago. It’s risky, but not many people seem to take it. You gather all your belongings and start heading that way.
 
 You are almost there when -

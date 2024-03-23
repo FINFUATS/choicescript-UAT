@@ -51,8 +51,12 @@ Cel pauses for a few seconds, and then puts on a reassuring look.
         *set cur_severity_multiplier multiplier_minor
         *gosub_scene general UpdateReactionCel
         *gosub_scene general UpdateRelValCel
-
-        “Of course. Those men had no right, putting you in a cell like that…”
+        
+        *if CH4_isCaught true
+            “Of course. Those men had no right, putting you in a cell like that…”
+        
+        *else
+            "Of course."
         
         You consider how obvious it was to both her and the other person that visited you that you hadn’t done anything. With that in mind, she probably has a point.
 
@@ -381,7 +385,7 @@ The temple is rather large, so you get your own room. You don’t know anyone to
 
 
 *page_break
-Conveniently, not long after you’re settled, you hear a call from the dining hall. It’s time for lunch. You hadn’t considered it up until now due to everything you were thinking about, but you’ve barely eaten since… Since what happened. You’d rather not think about it again.
+After taking some time to settle in, you hear a call from the dining hall. It’s time for dinner. You hadn’t considered it up until now due to everything you were thinking about, but you’ve barely eaten since… Since what happened. You’d rather not think about it again.
 
 *temp V 1
 *temp W 1

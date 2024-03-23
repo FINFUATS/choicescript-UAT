@@ -322,7 +322,7 @@ Who do you want to know about?
         *label chargroup_Other
         Who do you want to know about?
         *fake_choice
-            #Dustin
+            *selectable_if (isDustinDiscovered) #Dustin
                 *label codex_hl_Dustin
                 [head]Dustin[/head]
                 *image images/dustin.webp

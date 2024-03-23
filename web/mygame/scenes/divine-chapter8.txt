@@ -1,4 +1,242 @@
 *label StartChapter8
+[head]Chapter 8: Cel[/head]
 
-TESTING DIVINE CHAP8
+Late into the night, you find yourself unable to sleep. Thinking of the crisp air and the sky of stars painted like a canvas of constellations, you decide to take a leisurely stroll through the garden. 
+
+Savoring the serenity of the moment, you wander amongst the fragrant blossoms and cool night air. Your footsteps lead you to a curious sight; Cel, standing in her pajamas, gazing at the moon. 
+
+Her eyes are brimming with sadness.
+*temp CH8d_question "none"
+*fake_choice
+    #"Are you alright, Cel?"
+        *set CH8d_question "Are you alright, Cel?"
+
+    #"What are you doing out this late?"
+        *set CH8d_question "What are you doing out this late?"
+
+    #"Can't Sleep?"
+        *set CH8d_question "Can't sleep?"
+*if (rel_val_Cel > 0)
+    Being curious, you ask, “${CH8d_question}” The question has a hint of worry along with a bit of irritation from your lack of much needed sleep.
+
+    “Huh- Oh hello ${name}. Just had a rough night, bad dream and all that. I'm guessing you cannot sleep?” Cel says, turning to face you. As the crisp wind blows past you both, you shiver.
+  
+    “How did you- ahh that's cold.” You hug yourself tightly before continuing your sentence. “How did you know?”
+
+    “I can just tell.”
+
+    “Oh- Did you want to talk about your dream?”
+
+    This question causes Cel to go into thought. She takes a minute to think about the dream, and if she should really tell you what’s going on through her mind. It’s not long until she lets out a soft sigh. “It was about my childhood, the fire that burned down my village and took lives with it.” Cel looks visibly tense as the words leave her mouth.
+
+    You quietly listen as Cel starts to speak.
+
+    *page_break
+
+    [b]32 Years Ago[/b]
+
+    *page_break
+
+    [i]It was a seemingly normal day in Cel's childhood, a time when the world felt safe and secure. She was outside with her mother, a talented seamstress, who was fashioning a beautiful new piece of clothing for her. The sun cast a warm and gentle glow over their small, idyllic village. Cel would stop playing with her toys to watch her mother’s hands work, they were fast yet flawless with each motion.[/i]
+
+    [i]“Mama?” Cel’s voice filled with curiosity “Why do you love to make clothes so much?”[/i]
+
+    [i]Her mother would look up from her work, her eyes sparkling with love and affection. “Oh, darling, it's not just about clothes themselves, it's about the stories they tell.” She explained as Cel stood up from the blanket that was placed down and moved close to her mother, looking at the piece of clothing that was being made. Her mother continues “From each stitch, each design, they hold a piece of our history and our love.” Cel would be amazed by her mothers work, she always was curious on why she did what she did but still was amazed by such complicated designs.[/i]
+
+    [i]Her mothers smiled, her hands never ceasing their elegant work. “Okay Mama.” Cel agreed.[/i]
+
+    [i]"I once made a dress for your grandmother. It was the most beautiful shade of blue, like the clearest sky on a summer's day. She wore it to a grand celebration, and I remember the joy in her eyes, the way she danced as if she were floating on air."[/i]
+
+    [i]Cel's eyes sparkled with fascination. "I wish I could wear something as beautiful as that one day."[/i]
+
+    [i]Her mother chuckled softly, her heart full of love for her daughter. "You will, my dear. And I'll be right here to make it for you, just as my mother did for me."[/i]
+
+    *page_break
+
+    [i]As the heartwarming moment drew to a close, Cel's father, an accomplished hunter, returned from a day of providing for the village. Cel perked up and turned her attention to her father, who was covered in dirt from his day's work.[/i]
+
+    [i]Looking up at her father with eyes brimming with curiosity, Cel inquired, "Papa, what was it like out in the woods today?" Her voice was filled with excitement, as she always loved her father's stories.[/i]
+
+    [i]Her father knelt down beside her, giving her hair a gentle tousle and wearing a warm smile. "Oh, Cel, it was a good day. The forest was peaceful, and the animals were quite cooperative. We've gathered enough food to sustain the village for a while." This brought a loving smile to Cel's mother's face. She chimed in, "That's just what we needed. I was worried you wouldn't find much out there. Have you heard about what they've been saying lately?"[/i]
+
+    [i]Cel's father cast a worried but determined glance down at Cel. "Yes, I've heard, but there was no problem out in the woods today. There were plenty of animals to hunt." His voice held reassurance for his girls.[/i]
+
+    *page_break
+
+    [i]Cel picked up on the concern etched across her parents' faces. Intrigued, she tilted her head, seeking solace in their comforting presence. "What's wrong, Mama?" she inquired, her mother's expression transitioning from worry to tenderness, mindful of her daughter's innocence. "Nothing, my love," her mother reassured, enveloping Cel in a sense of security.[/i]
+
+    [i]However, Cel's mother's face still bore a trace of worry. The Ichor-swogs had been the talk of the village since they wiped out a small town just west of them. Fearing they might be next, the villagers had started preparations with weapons they believed could combat this swarm of Ichor-swogs. The mother was lost in thought until a smell of something burning filled her nose, followed by screams from the heart of the town. She quickly stood up and, looking down, saw chaos unfolding as people ran and fires spread rapidly.[/i]
+
+    [i]All three of them heard a villager scream, "Ichor-swogs!" and at that moment, chaos truly broke loose.[/i]
+
+    *page_break
+
+    "That's all I can remember. Every night, I have to relive it in my nightmares. I wish I could figure out what happened. I wish I knew more; if only I could remember more." Cel looks at you with tears in her eyes. It’s obviously a story that hasn’t been talked about in a very long time. You consider what to say to your friend, who had clearly just reopened an old wound.
+
+    Cel’s cry for help tugs at your heartstrings. This reaction prompts you to walk over to Cel and embrace her tightly, reassuring her of your support. Cel returns the hug, taking a deep breath to calm herself from that painful memory.
+
+    An idea pops into your mind. You softly suggest to Cel, "Why don't you go to the village and try to uncover what happened? Maybe being in the village again will trigger more of your memories." The idea poses a risk to Cel, but you genuinely want to help her find peace and learn more about her past.
+
+    Cel contemplates the idea, weighing the possibilities that such a journey entails before responding to you. "Would you come with me?" She asks in a curious yet nervous tone. 
+
+    *fake_choice
+        #"Of course."
+            *set CH8d_CelPath "went"
+            The next day, the two of you leave for Cel’s old burned down village.
+
+            As you walk through the remnants of Cel's old village, a sense of desolation and sorrow hangs in the air. The charred ruins of what used to be homes and shops serves as a grim reminder of the tragic events that had transpired there. Cel clings tightly to your hand, seeking comfort in your presence. You gaze at what used to be Cel's village, your heart heavy with the weight of the past. You continue walking until you reach a place that seems familiar to Cel. "This was my home," she whispers, her voice filled with a mix of sadness and nostalgia.
+
+            Once a beautiful, strong house now stands as a skeletal structure, barely recognizable. The only thing left that could resemble Cel’s home is the somewhat still-standing mailbox in front of the ruins. You place your hand on Cel's shoulder and give a reassuring squeeze, eliciting a small yet still sad smile from her.
+
+            "Do you want to take a look around, or would you prefer to stand here for a bit? If you want, we can still—" you’re interrupted as Cel shakes her head. 
+
+            "No, I don't want to go home. I want to remember what happened. Thank you for your concern; wait here." Cel walks toward the burnt frame of the house, being cautious of where she steps. Her eyes scan the area as her memory begins to replay what had happened that day.
+
+            *page_break
+
+            [i]Her parents' screams filled the air as the swarm and fire closed in on their house. Cel's parents turned to her with a loving yet fearful expression. They embraced her tightly before her mother spoke, her voice trembling, "Cel, please listen to me, my child. Grow up happy, and always remember that you were loved by both of us. You are our heart and soul. We're doing this for your protection. Remember that as you grow older."[/i]
+
+            [i]Cel's eyes welled up with tears, and she spoke in a quivering voice, "Mama? Papa?" She gazed at her parents, who were also on the verge of tears. Her mother placed a necklace around Cel's neck before they both kissed her on the forehead, their eyes locked with hers for a moment before instructing her to run.[/i]
+
+            [i]"But, Pa—" She was gently pushed toward the back door by her father as her mother held herself tightly.[/i]
+
+            [i]"Run, Cel. We'll find you when this is all over. Please, my daughter, run." Cel did as she was told, fleeing into the woods behind the house, her small legs carrying her until exhaustion set in and the acrid smell of burning houses began to fade.[/i]
+
+            [i]Cel's tears began to dry as she found a tree to rest under. "Papa will find me," she whispered to herself, oblivious to the fact that many days would pass. After several days had gone by, she started her journey back to the village, sniffling from crying. She was hungry, cold, and terribly alone.[/i]
+
+            *page_break
+
+            [i]She eventually reached her old village, where the smell of burnt wood, bodies, and devastation still lingered in the air. She walked along the familiar stone pathway to where her house once stood, only to find it completely destroyed. "M-Mama? Papa?" she called out to her parents as she approached the spot where her front door had been.[/i]
+
+            *set isDustinDiscovered true
+            [i]However, her cries were interrupted by a stranger's voice. "Little one?" Startled, Cel turned around to meet the gaze of a man named [codex:codex_hl_Dustin]Dustin[/codex].[/i]
+
+            [i]"H-have you seen my parents?" she stammered. 
+        
+            [i]This caused Dustin to soften his eyes and shake his head. "No, sweetie. My name is Dustin, and I am a priest in a nearby temple. We have nice blankets, food, and some water. Why don't we see if your parents are there?"[/i]
+
+            [i]Cel looked nervous, but her growling stomach convinced her. She nodded and reached for Dustin's hand, following him to the Temple of Flames of Sigel.[/i]
+
+            *page_break
+
+            Tears flow rapidly from Cel's eyes. It’s a complex mix of missing her parents and feeling grateful for Dustin's presence. You approach Cel and envelop her in a tight, comforting hug. Cel speaks about the newly unlocked memory, her voice quivering, "I remember what happened now. My parents sent me away to the woods, and when they didn't come to find me, I returned to the village. Before I could search for them, Dustin found me and took me to the temple, saying my parents might be there. They weren't."
+
+            You respond softly, "I'm so sorry, Cel." She gives a soft nod, pulling away from the hug to wipe the tears from her eyes. "We can go now," she says.
+
+            You reply with a quiet, "Okay," and make their way back to the temple together. Throughout the journey, Cel remains quiet, lost in her thoughts.
+
+            *page_break
+
+            Upon returning to the temple, you notice that Cel's demeanor has noticeably shifted. She appears more subdued and distant, her usual warmth and chatter replaced by a silent, almost mechanical routine. Without exchanging her usual tales of the journey, she simply walks to her room, leaving Ivy and Riva perplexed and worried.
+
+            Ivy and Riva had grown accustomed to Cel's openness, especially about her travels. Whenever they hadn't accompanied her on a trip, she would eagerly recount her experiences, sharing the highs and lows, the people she had met, and the places she had visited. But now, there’s an unsettling silence, a void where her stories used to be.
+
+            Ivy exchanges a concerned glance with Riva. Their worry is etched onto their faces. They can’t help but wonder what transpired during Cel's recent journey that left her so visibly changed. They know they need to give her space and time, but they also understand that sooner or later, Cel will need to share the burden of her newly unlocked memories.
+
+            *fake_choice
+                #Nervous greeting
+                    Looking away nervously, you finally speak, "Hi, Riva and Ivy."
+
+                #Preemptive Apology
+                    Looking down at the floor, you finally speak, "Sorry in advance."
+
+                #The Weather
+                    Finding the nearest window to look out of, you finally speak, "Nice weather we're having!"
+
+            Riva raises an eyebrow and asks, "What happened to Cel? Where did you guys go?"
+
+            You hesitate before answering, "We went to her old village."
+
+            Ivy's eyes widen in surprise. "What?! Why?!" Her worry is clearly evident.
+
+            You take a deep breath and say, "She had a PTSD dream and wanted to figure out what happened to her parents and her village, so I helped her... I didn't think she would change like this. She's been quiet the whole way back."
+
+            Riva's concern deepens, and she exchanges a concerned glance with Ivy. "Is she okay?"
+
+            You nod, a mixture of relief and lingering anxiety in your voice. "Physically, she's fine. But emotionally, she's going through a lot. She had a flood of memories and emotions, and it left her in a pretty fragile state. We'll need to be there for her, make sure she knows we care."
+
+            Ivy speaks up, her voice filled with determination. "We will be there for her; we are her family. She'll need us." Riva nods in agreement to support Ivy's statement.
+
+        #"I can't."
+            *set CH8d_CelPath "didNot"
+            Her hope swiftly fades as you shake your head. "I don't believe I'm the most suitable person for this journey," you admit.
+
+            Despite Cel's disagreement with your statement, you resolutely stand your ground. Cel can’t help but feel a twinge of disappointment, recognizing that you’re the crucial person she needs on this journey. If she were to disclose her plans to the others, they would undoubtedly plead with her not to embark on this trip. She respects your choice and nods.
+
+            After concluding the evening conversation, you retire to bed. The following morning, as you prepare for your daily chores, you make their way to the dining hall to retrieve your task list. However, upon scanning the room, a conspicuous absence catches your attention—Cel is nowhere to be found. Murmurs among others hint at her mysterious disappearance. Concerned, you hasten to Cel's room, discovering the door ajar and the bed untouched. She never returned last night. A search of the garden yields no trace of her presence. 
+        
+            *page_break
+
+            Realization dawns on you, prompting a swift return indoors to seek answers from Ivy and Riva.."Did you catch sight of Cel this morning?" 
+
+            Riva and Ivy exchange glances, both shaking their heads. "Not at all," Riva replies. "Have you?" 
+
+            You hesitate for a moment, then take a deep breath before responding. "Only last night, during a bout of insomnia. She opened up about her past, and I may have suggested she visit the village to uncover the truth about her parents." Shock registers on both Ivy and Riva's faces.
+
+            "What?! Why would you suggest that?" Ivy exclaims, a growing sense of worry casting its shadow over her expression.
+
+            "It appeared as though she carried a considerable burden of unresolved trauma. At that moment, the suggestion seemed reasonable, and she earnestly wanted me to accompany her, but I hesitated and declined." Your countenance betrays a sense of regret as you acknowledge leaving your friend alone. Ivy can’t help but facepalm in response to your seemingly thoughtless decision.
+
+            "Alright, she's gone now. When she returns, we'll address the situation. For the time being, let's hope she comes back," Riva remarks calmly. She’s puzzled by your choice not to join Cel on this crucial quest, but opts to let it go for now.
+
+            *page_break
+
+            Several days drift by when Cel, wearied and disheveled from her journey, enters the temple once more. Her eyes, once filled with light and life, now seem dimmed. As she passes your group, anticipation for your lively friend to update everyone on her quest turns to concern. The absence of the expected briefing hints at something gravely amiss. Ivy trails behind Cel, only to find a firmly closed door barring her entry into Cel's room. Shock momentarily holds Ivy in its grip, but she quickly composes herself.
+
+            "Cel?" she utters softly, her worry palpable. "Are you okay?" The question hangs in the air, met with an unsettling silence. Ivy attempts the doorknob, only to discover it unexpectedly locked. Turning away, she joins the others—you and Riva—engaged in your daily tasks.
+
+            "She locked her door," Ivy shares with a hint of concern, her fingers nervously finding refuge in her mouth.
+
+            "Wait, seriously?" Riva responds, abruptly halting her sweeping and directing a worried gaze at Ivy. "This isn't like Cel at all. Why would she lock her door? What went down on this quest?" With a sense of urgency, Riva leans the broom against the wall and hastens to Cel's room, her concern showing on her face. She attempts to pry an answer from Cel and tests the doorknob, but to no avail.
+
+            Riva scans the area for a possible entry into the room, but Ivy intervenes before she can make a move. "What if we wait until she's ready to talk? Invading her privacy might not be the best approach. We don't know what she's going through or what's on her mind right now," Ivy suggests, her voice maintaining a calm tone but revealing underlying concern.
+
+            After preparing to argue, Riva hesitates and then sighs, acknowledging Ivy's perspective. She nods and directs her gaze to Cel's closed door. "We'll be here whenever you're ready, Cel," Riva assures, her voice offering comfort. Ivy gently pulls Riva away, steering them both towards completing their chores together.
+
+*elseif (rel_val_Cel <= 0)
+    *set CH8d_CelPath "neither"
+    Being curious, you asked “${CH8d_question}” The question had a hint of worry along with a bit of irritation from the lack of much needed sleep.
+
+    “Huh- Oh hello ${name}. Just had a rough night, I'm guessing you can not sleep?” Cel says, turning to you. As the crisp wind blows past, both of you shiver.
+
+    “How did you- ahh that's cold.” You hug yourself tightly before continuing your sentence “How did you know?”
+
+    “I can just tell.”
+
+    “Oh- Did you want to talk about your dream?”
+
+    A heavy silence envelops you and Cel. She gazes at the full moon, exhaling a faint, audible sigh. Then, Cel turns her attention to you, subtly shaking her head. "No, I'll be fine. Nightmares are inevitable; there's little we can do about them." You wear a worried expression but refrain from pressing further. Cel shifts her focus back to the night sky, where she attempts to distract herself by identifying constellations, like the Little and Big Dipper, though her efforts are in vain as the memory of the haunting dream lingers.
+
+    Your exhaustion begins to overtake you, punctuated by several yawns, prompting you to bid Cel goodnight and retreat to your room.
+
+    *page_break
+
+    Morning arrives, and you rise to commence your daily tasks. After getting ready, you proceed to the dining hall, where everyone is being assigned their chores for the day. However, their perplexed gazes sweep the room as they realize that Cel is conspicuously absent, giving rise to hushed, puzzled murmurs within the group.
+
+    You survey your surroundings, taking a moment to glance at your chore list, before making your way towards Cel's room. Noticing that the door is closed, you knock gently on it. "Cel?" There’s no immediate response, prompting you to cautiously test the doorknob. You find it unlocked. You ease the door open to reveal an empty room, as though Cel hadn't returned to her bed last night.
+    *temp X 1
+    *temp Y 1
+    *label CH8d_SearchLoop
+
+    Where should you look?
+    *fake_choice
+        *selectable_if (X = 1) #The Kitchen
+            Thinking of the tasks you have to get done today, you beeline straight to the kitchen in hopes of stumbling across Cel along the way. To no avail, you find the kitchen empty, if not a bit dirty. Whether it be from your compulsive need to find your friend, or your desire to procrastinate your chores if not for a bit longer, you decide to look elsewhere.
+
+            *set X + 1
+            *goto CH8d_SearchLoop
+        #The Garden
+            You retrace your steps back to the garden, where you discover Cel peacefully dozing beneath the shelter of an oak tree.
+
+            Approaching her, you softly whisper her name, just loud enough to rouse her without startling her. "Cel?" you repeat her name in hushed tones three times, and finally, Cel stirs. "Huh? Oh, hi," she mumbles, stretching and slowly rising to her feet.
+
+            Your gaze fixates on Cel, concern etched across your face. "Why didn't you retire to your room? Is everything alright?" 
+
+            Cel brushes herself off and, without answering, strides past you towards the dining hall. With a hint of weariness still evident in her voice, Cel inquires, "What tasks do I have for today?" skillfully sidestepping your inquiry. This prompts you to hasten your steps to catch up with Cel.
+
+        *selectable_if (Y = 1) #The Front Entrance
+            With the idea that Cel could be waiting for another newcomer, or perhaps waiting for someone to return, you decide to meander to the front entrance of the temple. After swiftly admiring the view, you look around to see a lack of Cel. Thinking you'll have better luck elsewhere, you breathe in another breath of fresh air and head back inside.
+
+            *set Y + 1
+            *goto CH8d_SearchLoop
 *return

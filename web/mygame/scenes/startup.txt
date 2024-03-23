@@ -107,6 +107,7 @@
 *create CH3_looming_thoughts "text"
 *create CH3_ending "bad"
 *create CH4_market_item "none"
+*create CH4_isCaught false
 *create CH4_visited_reese_grave false 
 *create CH4_murderer "cutOff"
 *create CH5d_injured "Ivy"
@@ -417,6 +418,9 @@ What chapter?
                   #Chapter 7 D
                       *set faction "divine"
                       *goto_scene chapter7
+                  #Chapter 8 D
+                      *set faction "divine"
+                      *goto_scene chapter8
                   #Chapter 9 D
                       *set faction "divine"
                       *goto_scene chapter9

@@ -1,5 +1,5 @@
 *label StartChapter9
-
+[head]Chapter 9[/head]
 It’s been a few days since Cel visited her old village. She has been studying in the library more often, trying to process what happened.
 
 You walk into the library looking for her. The library doesn’t look like it has been used much since the Zealot came to visit. All of the books are in their places aside from the ones Cel has piled up at a table. 
@@ -35,6 +35,8 @@ She has three books stacked up at one of the far tables and she is currently rea
     “I’m just… thinking about what I discovered. I’m sorry I don’t really want to talk about it…” She says as she stares at the books.
     
     “That’s al-” You start when…
+*elseif CH8d_CelPath = "neither"
+    “Reading up on the rot I see.” You comment as you walk towards Cel.
 *else
     BUG
     
