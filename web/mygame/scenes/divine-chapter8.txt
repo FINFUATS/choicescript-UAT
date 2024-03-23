@@ -116,7 +116,8 @@ Her eyes are brimming with sadness.
             [i]This caused Dustin to soften his eyes and shake his head. "No, sweetie. My name is Dustin, and I am a priest in a nearby temple. We have nice blankets, food, and some water. Why don't we see if your parents are there?"[/i]
 
             [i]Cel looked nervous, but her growling stomach convinced her. She nodded and reached for Dustin's hand, following him to the Temple of Flames of Sigel.[/i]
-
+            
+            *set isCelBackstory true
             *page_break
 
             Tears flow rapidly from Cel's eyes. It’s a complex mix of missing her parents and feeling grateful for Dustin's presence. You approach Cel and envelop her in a tight, comforting hug. Cel speaks about the newly unlocked memory, her voice quivering, "I remember what happened now. My parents sent me away to the woods, and when they didn't come to find me, I returned to the village. Before I could search for them, Dustin found me and took me to the temple, saying my parents might be there. They weren't."

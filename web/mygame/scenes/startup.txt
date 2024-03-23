@@ -165,6 +165,7 @@
 
 *comment Codex contextual global vars
 *create isReeseDead false
+*create isCelBackstory false
 
 *comment ///////// Combat Globals /////////
 *create Success 0

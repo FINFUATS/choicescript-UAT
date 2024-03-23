@@ -32,6 +32,8 @@ The rest of the codex sections are underpopulated.
         *line_break
         *set isReeseDead true
         Reese Dead!
+        *set isCelBackstory true
+        Cel's Backstory Told!
         *page_break
 
         [head]People[/head]
@@ -152,17 +154,20 @@ Who do you want to know about?
 *fake_choice
     #Flames of Sigel
         *label chargroup_Cel
+
         Who do you want to know about?
         *fake_choice
             *selectable_if (isCelDiscovered) #Cel Storm
                 *label codex_hl_Cel_Storm
                 [head]Cel Storm[/head]
                 *image images/Cel_Storm.webp
-                Cel Storm is a priestess of the Flames of Sigel. She joined the order at a young age when a priest named Dustin saved her from icgor-swogs. The rotted creatures overwhelmed her old town. She was one of the few survivors when the Flames of Sigil showed up. Cel managed to hide herself in an old storage shed and used the holy water her parents gave her to protect herself. Dustin was the one who found her and took her to the order’s temple.
                 
-                She is seen helping anyone who needs help, much to the dismay of the order. She followed Dustin’s footsteps in that regard. She doesn’t care who you are or where you came from, if you need help she will find a way to help. She has been seen saving people from Krigania from the jackaloids and mogfish.
+                Cel Storm is a priestess of the Flames of Sigel.She is seen helping anyone who needs help, much to the dismay of the order. She followed Dustin’s footsteps in that regard. She doesn’t care who you are or where you came from, if you need help she will find a way to help. She has been seen saving people from Krigania from the jackaloids and mogfish.
                 
-                When her mentor Dustin was killed because some direwolves were forced out of their territory. Cel did some research on direwolves and partitioned a new branch in the order. One that patrolled towns near direwolf territories. She didn’t want these wolves to hurt anyone else.
+                *if (isCelBackstory)
+                    She joined the order at a young age when a priest named Dustin saved her from icgor-swogs. The rotted creatures overwhelmed her old town. She was one of the few survivors when the Flames of Sigil showed up. Cel managed to hide herself in an old storage shed and used the holy water her parents gave her to protect herself. Dustin was the one who found her and took her to the order’s temple.
+
+                    When her mentor Dustin was killed because some direwolves were forced out of their territory. Cel did some research on direwolves and partitioned a new branch in the order. One that patrolled towns near direwolf territories. She didn’t want these wolves to hurt anyone else.
                 *line_break
                 *goto chargroup_Cel
             
@@ -211,6 +216,7 @@ Who do you want to know about?
 
     #Wolves of Davenport
         *label chargroup_Rip
+
         Who do you want to know about?
         *fake_choice
             *selectable_if (isRipDiscovered) #Rip Daring
@@ -283,6 +289,7 @@ Who do you want to know about?
 
     #Gods
         *label chargroup_Gods
+
         Which God would you like to learn about?
         *fake_choice
             *selectable_if (isSigelDiscovered) #Sigel
@@ -320,6 +327,7 @@ Who do you want to know about?
     
     #Other Characters
         *label chargroup_Other
+
         Who do you want to know about?
         *fake_choice
             *selectable_if (isDustinDiscovered) #Dustin
