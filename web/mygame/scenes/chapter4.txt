@@ -213,33 +213,71 @@ You decide to say one last goodbye to your childhood friend, Reese. You would vi
 
 You make your way through town, using the alleyways to stay out of sight from the patrolling guards, until you make it to the cemetery. Once there, you take a familiar path towards your friend, not noticing the person following you.
 
-*page_break
+[b]What do you tell your late friend?[/b]
+*fake_choice
+    #I miss you.
+        “Hey, Reese, long time no see. Before I go, I just wanted to say that I really miss you. You were the last person in the world to deserve the fate you were given. Seriously! I still have yet to meet another person as kind hearted as you were, and I want you to know that. Even when I’m gone, I’ll always be thinking of you.”
 
-Located right next to the forest, the cemetery has a small fence around it. There are many graves here, but you know it's actually pretty small for a town like yours. You make your way past the graves, being extra careful because there are a few mockguardens that like to make their home here.
+        You pause and take a moment to stare at Reese’s name carved upon the headstone. Closing your eyes, you can still see their smile. You can hear their laugh in your ear, feel their arm slung over your shoulder. You were close enough to be mistaken for siblings, and sometimes, you both pretended you were. More than anything, you wish Reese was still by your side.
 
-When you get to Reese’s grave, you kneel over it and place a handful of wildflowers on the withered stone. It’s been so long but the ache in your chest feels new every time you come here.  
+        Using your sleeve, you clean the dirt and grime from the headstone. Your fingers trace over Reese’s name one last time. “I really miss you, old friend.”
 
-*page_break
+    #I'm leaving now.
+        “Hey, Reese. Some things have come up and, well, I have to get out of here. I just want you to know that even if I never come back to this place, I’ll still be thinking of you. In a way, I guess it’s better to get out of this town and explore what the world has to offer. Maybe bringing your memories with me will help you to see the world as well!"
 
-“Someone murdered Lord Odel,” you say bluntly to the stone. The words tumble out of your mouth quickly after that. “I don’t know who, but they got away. The guards seem to think I did it. That jerk who did it managed to leave some evidence on me, so I’m going to have to leave. This will probably be the last time I’m able to visit.”
+        You pause and take a moment to stare at Reese’s name carved upon the headstone. Closing your eyes, you can still see their smile. You can hear their laugh in your ear, feel their arm slung over your shoulder. You were close enough to be mistaken for siblings, and sometimes, you both pretended you were. More than anything, you wish Reese was still by your side.
 
-You pause and take a moment to stare at Reese’s name carved upon the headstone. Closing your eyes, you can still see their smile. You can hear their laugh in your ear, feel their arm slung over your shoulder. You were close enough to be mistaken for siblings, and sometimes, you both pretended you were. More than anything, you wish Reese was still by your side.
+        Using your sleeve, you clean the dirt and grime from the headstone. Your fingers trace over Reese’s name one last time. “I hope you can watch over me, old friend.”
 
-Using your sleeve, you clean the dirt and grime from the headstone. Your fingers trace over Reese’s name one last time. “I really miss you, old friend.”
+    #Someone framed me.
+        “Someone murdered Lord Odel,” you say bluntly to the stone. The words tumble out of your mouth quickly after that. “I don’t know who, but they got away. The guards seem to think I did it. That jerk who did it managed to leave some evidence on me, so I’m going to have to leave. This will probably be the last time I’m able to visit.”
 
-*page_break
+        You pause and take a moment to stare at Reese’s name carved upon the headstone. Closing your eyes, you can still see their smile. You can hear their laugh in your ear, feel their arm slung over your shoulder. You were close enough to be mistaken for siblings, and sometimes, you both pretended you were. More than anything, you wish Reese was still by your side.
 
-*image images/Cel_Storm.webp
+        Using your sleeve, you clean the dirt and grime from the headstone. Your fingers trace over Reese’s name one last time. “May we meet again, old friend.”
 
-As you stand, you hear the crunching of leaves behind you. You whip around and stare at the priestess. 
+[b]As you stand, you hear the crunching of leaves behind you.[/b]
+*fake_choice
+    #Jump behind Reese’s grave.
+        *image images/Cel_Storm.webp
+        As the coward you are, you jump behind your friend’s grave, and use it as protection against the unknown intruder. Upon closer examination, however, you notice that it’s a priestess!
 
-“I’m sorry, I just happened to see you out here. Why are you here so late? Don’t you know how dangerous it is to be out at night?” she asks you while walking closer.
+        “I’m sorry, I didn’t mean to startle you. I just happened to see you out here. Why are you here so late? Don’t you know how dangerous it is to be out at night?” she asks you while walking closer.
+
+    #Turn to see who it is.
+        *image images/Cel_Storm.webp
+        You whip around to see a priestess.
+
+        “I’m sorry, I just happened to see you out here. Why are you here so late? Don’t you know how dangerous it is to be out at night?” she asks you while walking closer.
+
+    #Defend yourself!
+        *image images/Cel_Storm.webp
+        *if (item = "bread")
+            You turn around, whipping out the best weapon you have: the cure to starvation. As you point your bread at this stranger, you manage to catch a glimpse of her: a priestess.
+
+            “I’m fine, thank you. I just had dinner a few hours ago. Anyways, why are you here so late? Don’t you know how dangerous it is to be out at night?” she asks you while walking closer.
+
+        *elseif (item = "book")
+            You turn around, whipping out the best weapon you have: knowledge. As you point your book at this stranger, you manage to catch a glimpse of her: a priestess.
+
+            “Oh wow, that’s a good one. It’s very popular amongst The Flames of Sigel, and rightfully so. Anyways, why are you here so late? Don’t you know how dangerous it is to be out at night?” she asks you while walking closer.
+
+        *elseif (item = "dagger")
+            You turn around, whipping out the best weapon you have: sharp steel. As you point your knife at this stranger, you manage to catch a glimpse of her: a priestess.
+
+            “If you go around pointing dangerous toys like that at strangers, you’re not going to make any friends. Anyways, why are you here so late?” she asks you while walking closer. “That knife won’t be able to protect you from everything the dark night has to throw at you,”
+
+        *elseif (item = "bloody dagger")
+            You turn around, whipping out the best weapon you have: a hungry blade. As you point the weapon that just murdered Lord Odel at this stranger, you manage to catch a glimpse of her: a priestess.
+
+            “By the gods! If you wave that weapon around, people really are going to think you murdered him! Anyways, why are you here so late?” she asks you while walking closer. “That blade won’t be able to protect you from everything the dark night has to throw at you.”
+        
+        *else   
+            *bug_continue No item is being held.
 
 “I was just saying goodbye to my friend. I don’t think I’ll be able to visit them again,” you say as you quickly grab your stuff.
 
-*page_break
-
-“Why not? Are you going somewhere?”  The priestess walks around a grave, steadily getting closer to you.
+“Why not? Are you going somewhere?”  The priestess walks around a grave, steadily getting closer to you. 
 
 “I’ve got mixed up in something I had nothing to do with and I have to leave.” You start heading towards the gate. 
 
@@ -253,19 +291,23 @@ As you stand, you hear the crunching of leaves behind you. You whip around and s
 
 *image images/mercenary_transparent_background.webp
 
-A new voice cuts through the darkness.
+Before you have the chance to decide, a new voice cuts through the darkness.
 
 “I’m not sure the temple would accept ${pronoun_them}. Lord Odel was murdered and I think this is the person they are after.” A man strides out of the shadows, wearing a cloak and a sword on his back. He doesn’t look like any guard you know, so he must be a mercenary.
 
-*page_break
+[b]What do you say?[/b]
+*fake_choice
+    #I'm innocent!
+        “You have the wrong guy, I had nothing to do with that,” you say as you start backing away from the mercenary and the priestess.
 
-“You have the wrong guy, I had nothing to do with that,” you say as you start backing away from the mercenary and the priestess.
+        “Even so, you are the one everyone is after.” The mercenary crosses his arms and stares at you. His eyes are unnaturally still, like the gaze of a predator mere moments before lunging at its prey. 
 
-“Even so, you are the one everyone is after.” The mercenary crosses his arms and stares at you. His eyes are unnaturally still, like the gaze of a predator mere moments before lunging at its prey. 
+    #Leave me alone.
+        I was just trying to say goodbye to my friend at this very late hour before I move on to the next town in hopes of some peace and quiet. Now please, leave me be.
+
+        “Unfortunately, peace and quiet is no longer an option for you. You are the one everyone is after.” The mercenary crosses his arms and stares at you. His eyes are unnaturally still, like the gaze of a predator mere moments before lunging at its prey. 
 
 “I don’t think a murderer would visit their friend’s grave the day of the murder. They would visit the day before so they can leave as quickly as possible,” the priestess comments, looking towards the mercenary. Her pretty features are pulled into a frown as she seems to note the weapons on the man.
-
-*page_break
 
 “You're right,” the man says, “A smart one would. To even plan a murder like this you would have to be very smart about it. But you? You were seen outside of the house running in. No murder would be that obvious. However, the guards don’t seem to care. They want the person they found caught and tried. ” The mercenary walks around the graves, his gait casual but his eyes never wavering.
 
@@ -326,13 +368,21 @@ You grab the bag off the ground and hold it to your chest. “What’s it to you
 
 “Now if you were to explain why you are out here so late, maybe I’ll help you get out of here.” He gets off of the wall and turns to face you once more.
 
-*page_break
+[b]What do you say to this stranger?[/b]
+*fake_choice
+    #What's it to you?
+        You grab the bag off the ground and hold it to your chest. “What’s it to you?” 
 
-“I’m just trying to get to my friend’s -” Before the lie can actually take form, the man cuts you off.
+        “Whoa now! Just asking a simple question. Not many are out this late, and honestly, carrying all that stuff makes it look like you’re skipping town.” The mercenary crosses his arms and leans against a wall.
 
-“I’m going to stop you there. You have way too much stuff in that bag to visit somebody and even if you were moving in with your friend in the middle of the night, you are too jumpy for even sneaking off to a lover’s house. Now, why are you here? Before I call that guard back over,” he said while taking a step closer to you.
+        “If you ask me, it's not really the best time to take off. Not with the murderer on the loose and the rot this close to town.” The mercenary looks off to the side, seemingly noticing something. 
 
-*page_break
+        “Now if you were to explain why you are out here so late, maybe I’ll help you get out of here.” He gets off of the wall and turns to face you once more.
+
+    #Lie.
+        “I’m just trying to get to my friend’s -” Before the lie can actually take form, the man cuts you off.
+
+        “I’m going to stop you there. You have way too much stuff in that bag to visit somebody and even if you were moving in with your friend in the middle of the night, you are too jumpy for even sneaking off to a lover’s house. Now, why are you here? Before I call that guard back over,” he says.
 
 You take a step back and sigh.
 
@@ -345,6 +395,7 @@ You take a step back and sigh.
     
 *if (option = "leave")
     “Yes, but I had nothing to do with the murder, I didn’t even know something happened. I was walking home when I heard a scream and a random person bumped into me.”
+
 *page_break
 
 *image images/Cel_Storm.webp
@@ -382,8 +433,6 @@ You are almost there when -
 
 [b]“STOP!”[/b]
 
-*page_break
-
 A loud shout freezes you in your place. You turn to see a guard, their bow drawn and aimed at you. You’ve been caught.
 
 “Put your stuff on the ground and put your hands up!”
@@ -404,15 +453,25 @@ You find the best looking corner and sit in it, questioning how this all happene
 
 “Hey, what are you in for?” A man you didn’t notice before walks up to the bars from a doorway. The room behind him sort of looks like an office. He doesn’t look like any guard you know. He has a dark green cloak on, but none of the guards wear a cloak like that. As he walks closer, you can see that he has a sword on his back and a dagger in his belt, along with some other shiny things across his clothing. None of the guards look like this, so he must be a mercenary passing though.
 
-“I got caught up in a misunderstanding. They think I murdered Lord Odel when all I was doing was trying to get home,” you explain, putting your head in your knees.
+[b]What do you say?[/b]
+*fake_choice
+    #I'm innocent!
+        “I got caught up in a misunderstanding. They think I murdered Lord Odel when all I was doing was trying to get home,” you explain, putting your head in your knees.
 
-*page_break
+        “Sounds rough. I heard about Lord Odel, and checked out his body myself.” He gives you a once over before leaning against a nearby wall. “You don’t seem bloody enough to have done it. He had multiple stab wounds, and that would have made quite the mess.” 
 
-“Sounds rough. I heard about Lord Odel, and checked out his body myself.” He gives you a once over before leaning against a nearby wall. “You don’t seem bloody enough to have done it. He had multiple stab wounds, and that would have made quite the mess.” 
+        “The murder was also too well planned out for someone like you to be caught. Seems like they got a scapegoat.” He crosses his arms.
 
-“The murder was also too well planned out for someone like you to be caught. Seems like they got a scapegoat.” He crosses his arms.
+        “Guess so. All I wanted to do was go home and put away my ${bought}. Instead I get sent to prison for a crime I didn’t commit.” You sigh. The reality of what's happened begins to settle over you. All the plans you had for your life have suddenly been ripped away in one afternoon.
 
-“Guess so. All I wanted to do was go home and put away my ${bought}. Instead I get sent to prison for a crime I didn’t commit.” You sigh. The reality of what's happened begins to settle over you. All the plans you had for your life have suddenly been ripped away in one afternoon.
+    #I've been through a lot.
+        This last day has been a bumpy ride and a half for me. All I wanted to do was go to the market and buy something with the money I just got, but I’ve been framed for a murder instead.
+
+        “Sounds rough. I heard about Lord Odel, and checked out his body myself.” He gives you a once over before leaning against a nearby wall. “You don’t seem bloody enough to have done it. He had multiple stab wounds, and that would have made quite the mess.” 
+
+        “The murder was also too well planned out for someone like you to be caught. Seems like they got a scapegoat.” He crosses his arms.
+
+        “Guess so.” You sigh. The reality of what's happened begins to settle over you. All the plans you had for your life have suddenly been ripped away in one afternoon.
 
 *page_break
 
@@ -430,7 +489,12 @@ You find the best looking corner and sit in it, questioning how this all happene
 
 “To counter his offer, I can take you to our temple. We can protect you from the town and anyone who comes after you, as long as you follow our rules and help out where you can,” she offers.
 
-You give her a questioning look.
+*fake_choice
+    #Who is she?
+        Who is this mysterious person? And who let her in to visit you? You give her a questioning look.
+
+    #Why have you been getting so many visits?
+        Just how commonly do people get visits in prison? You’d think the place would be more secure if this many people have been sneaking in. You give her a questioning look.
 
 “Oh, my apologies, I am a priestess of the Flames of Sigel. We protect towns from the upcoming darkness and house those in trouble,” she explains, “But I imagine you have a lot to think about. I’ll come back tonight and you can make your decision then.” With that, she leaves the room.
 
@@ -443,7 +507,6 @@ Later that same night, the priestess walks in through the main door and the merc
 “Yes, well, I can’t just let ${pronoun_them} be hanged if there is a chance they are innocent,” the priestess responds. They almost seem to be familiar with each other, but you don’t have time to really think about that. Both of them are looking at you, expectantly.
 
 “Now, have you made your choice?”
-
 
 *label CH4_Final_Choice
 *choice
