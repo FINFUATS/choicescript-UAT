@@ -52,7 +52,7 @@ Cel pauses for a few seconds, and then puts on a reassuring look.
         *gosub_scene general UpdateReactionCel
         *gosub_scene general UpdateRelValCel
         
-        *if CH4_isCaught
+        *if (CH4_isCaught)
             “Of course. Those men had no right, putting you in a cell like that…”
         
         *else
