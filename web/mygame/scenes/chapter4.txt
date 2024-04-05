@@ -133,6 +133,7 @@ A loud, anguished scream comes out of the house you are passing. The sudden soun
         “You are under arrest for the murder of [codex:codex_hl_Lord_Odel]Lord Odel[/codex]!”
         *set isOdelDiscovered true
         *set item "bloody dagger"
+        *set CH4_murderer "ignored"
         *set option "leave"
         *page_break
         *goto guard
@@ -494,7 +495,7 @@ You find the best looking corner and sit in it, questioning how this all happene
         Who is this mysterious person? And who let her in to visit you? You give her a questioning look.
 
     #Why have you been getting so many visits?
-        Just how commonly do people get visits in prison? You’d think the place would be more secure if this many people have been sneaking in. You give her a questioning look.
+        Just how common is it for strangers to visit prisons? You’d think the place would be more secure if it were holding someone accused for murder. You give her a questioning look.
 
 “Oh, my apologies, I am a priestess of the Flames of Sigel. We protect towns from the upcoming darkness and house those in trouble,” she explains, “But I imagine you have a lot to think about. I’ll come back tonight and you can make your decision then.” With that, she leaves the room.
 
