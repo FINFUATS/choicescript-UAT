@@ -14,6 +14,7 @@
     chapter9
     chapter10
     chapter11
+    chapter12
     divine-chapter5
     divine-chapter6
     divine-chapter7
@@ -113,6 +114,8 @@
 *create CH5d_injured "Ivy"
 *create CH8d_CelPath "went"
 *create CH10_ending "shack"
+*create CH12_mercBadEnd false
+*create CH12_divineBadEnd false
 *create cel_path "good"
 *comment Phase2
 *create P2_branch 0
@@ -435,6 +438,9 @@ What chapter?
           #Chapter 11
               *set faction "divine"
               *goto_scene chapter11
+          #Chapter 12
+              *set faction "divine"
+              *goto_scene chapter12
           #Back
               *goto GAMESTART
       
