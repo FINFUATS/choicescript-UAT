@@ -238,7 +238,7 @@ Leon tosses it between his hands a bit, checking the sharpness of the blade as w
         “Weapons are our best friends, but only if they aren’t our worst enemies. Keep that in mind.”
         *goto CH6M_ContinueLeon
 
-    #I'd perfer not to use this.
+    #I'd prefer not to use this.
         Reliving the shock of finding the blade in your pocket, you’d prefer not to use it. “Honestly, I don’t feel comfortable using the blade of the person who murdered someone and pinned it on me. Just doesn't feel right.”
 
         “Understandable. I might have an alternative.”
