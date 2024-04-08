@@ -252,7 +252,7 @@ Would you like to talk about it? Well…
 
     #Yes
         
-        *if CH4_murderer = "caught" 
+        *if CH4_murderer = "chase"
             
             “Well… there isn’t much to say. I heard a scream, I went inside, and I chased the man responsible.” you tell her
             

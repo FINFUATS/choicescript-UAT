@@ -46,8 +46,6 @@ The tent is warm when ${P2M_roommate} shakes you awake.
 
 “C’mon. Time to pack up.” You look to see ${P2M_roommate} is nearly done with packing away all their gear. You rub the sleep from your eyes and begin rolling up your bedroll.
 
-*page_break
-
 Outside is abuzz as the rest of the Wolves of Davenport are busy taking down tents and tarps, smothering the lingering hot coals from last night's fire and filling canteens with water from the nearby stream. Everyone seems to work together smoothly with little to no direction. It’s clear just from watching that this group has been traveling together a long time. 
 
 You help ${P2M_roommate} take down the tent, only getting tangled in the ropes once, and then are tasked with filling up both your canteens. On your way back, you spot Rip securing the last of his gear on the back of his horse. 
@@ -59,13 +57,50 @@ You help ${P2M_roommate} take down the tent, only getting tangled in the ropes o
 *if P2M_roommate = "Gwyn"
     *comment If your roommate is GYWN
     “Gywn snores like a bear with congestion on the best nights. Woke up once to him snoring and thought we were in the middle of a thunderstorm once.” Rip gives an amused smile.
+    *fake_choice
+        #Lie, but be polite about it.
+            *set cur_behavior_tag tag_Nice
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionGwyn
+            *gosub_scene general UpdateRelValGwyn
+
+            You stifle a chuckle and shake your head. "No, nothing like that. I think I was too tired to notice anything. Um, by the way, where are we going, exactly?
+
+        #Make a joke about it.
+            *set cur_behavior_tag tag_Nice
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionRip
+            *gosub_scene general UpdateRelValRip
+            You stifle a chuckle and shake your head. "I would argue it sounds more liek a crew sawing through lumber. There's a rhythm to it, It's honestly quite soothing.
+
+            Rip gives a hearty laugh. Hopefully it's not loud enough to warrant suspicion.
+
+            "Um, by the way, where are we going, exactly?"
+
 *else
     *comment If your roommate is ELENA 
     “Elena can be a bit of an insomniac when something catches her attention. I’ve caught her researching the most random things in the middle of the night more than once.” Rip gives an amused smile.
-    
-*page_break
 
-You stifle a chuckle and shake your head. “No, nothing like that. I think I was too tired to notice anything. Um, by the way, where are we going exactly?” 
+    *fake_choice
+        #Lie, but be polite about it.
+            *set cur_behavior_tag tag_Nice
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionElena
+            *gosub_scene general UpdateRelValElena
+
+            You stifle a chuckle and shake your head. "No, nothing like that. I think I was too tired to notice anything. Um, by the way, where are we going, exactly?
+        
+        #Make a joke about it.
+            *set cur_behavior_tag tag_Nice
+            *set cur_severity_multiplier multiplier_minor
+            *gosub_scene general UpdateReactionRip
+            *gosub_scene general UpdateRelValRip
+
+            You stifle a chuckle and shake your head. "When I was heading to bed, I think I caught her dissecting a mushroom. I woke up a few hours later, since I was going to leave the tent to relieve myself, and I noticed her furiously jotting notes next to a whole pile of them!"
+
+            Rip gives a hearty laugh. Hopefully it's not loud enough to warrant suspicion.
+
+            "Um, by the way, where are we going exactly?"
 
 “I was just about to announce that.” Rip turned slightly and clapped his hands once, drawing everyone’s attention. “Listen up! We’re heading back home to Davenport, but before that we’ve got to make a quick stop at Stormdenn. Got word that another pack might need our help with a little something.”
 
@@ -81,8 +116,6 @@ With all the gear packed and ready to go, you head out on the road with the Wolv
 You always thought that when you left home, it would be for some grand adventure or after you gained a great fortune. Reality is so much different. Instead, you're running away from a false accusation and a prison sentence. Still, meeting Rip and everyone else gives you a little hope. Maybe you will have that adventure you always dreamed of. 
 
 As you get further and further away from town, you find yourself murmuring a little goodbye to the life you had there. It wasn’t much, nothing that made it in the storybooks, but it was a good life filled with possibilities. You turn back to the road before homesickness can creep up on you. 
-
-*page_break
 
 The road to Stormdenn is an easy one. It's well traveled enough that getting lost would truly take some skill and the consistent flow of people means the guards keep it safe from bandits and wildlife alike. It's also a long road, just about two weeks of travel. You’re incredibly grateful that there was a spare horse to ride.
 
@@ -108,7 +141,19 @@ A figure stands as you approach, a woman with broad shoulders and a thin scar ru
 
 Viper’s eyes immediately turn to you. “ Picking up strays again?” 
 
-“Guess so. This is ${name}. They ran into some trouble and you know how lazy the law can be about certain things.” 
+*fake_choice
+    #Introduce yourself.
+        "The name's ${name}. It seems I won't be leaving the Wolves anytime soon."
+
+        Viper raises an eyebrow. "Why's that?"
+
+        "I've been framed for murder, so it seems I can't go anywhere on my own nowadays."
+    
+    #Defend yourself.
+        "Just because I'm framed for murder and can't go back to my hometown doesn't mean I'm incapable.
+    
+    #Let Rip do the talking.
+        “Guess so. This is ${name}. ${pronoun_they} ran into some trouble and you know how lazy the law can be about certain things.” 
 
 You watch Viper’s intense gaze change every so slightly. 
 
@@ -128,37 +173,117 @@ Rip doesn’t hesitate. “Of course we are. Wouldn’t have wasted your time ot
 “You got it boss.” Leon rises from the table, tugging on your arm as he does. You go to follow him as he leads you up the stairs of the tavern where the Wolves of Davenport have a few rooms reserved for whenever they’re in town.
 *page_break
 
-Leon asked if you have a weapon. 
+Leon asks if you have a weapon. 
 
 *if item = "dagger"
     *comment If player bought a dagger
-    You pull out the dagger you had bought back home. At Leon’s questioning look, you hand it over for him to inspect. 
-    
-    Leon tosses it between his hands a bit, checking the sharpness of the blade as well. 
-    
-    “Not bad, ${name}. This won’t need to be sharpened, and the wrap is well done.This is a good weapon. It’ll protect you where we’re going.” 
+    *goto CH6M_HasDagger
 
-*elseif item = "murder_weapon"
+*elseif item = "bloody dagger"
     *comment If player has the dagger with a strange design
-    You hand over the dagger with the strange design. At Leon’s questioning look, you hand it over for him to inspect. 
-    
-    Leon tosses it between his hands a bit, checking the sharpness of the blade as well. He inspects the design on the blade closely. 
-    
-    “Do you recognize that design?” You ask, curious. 
-    
-    “No. Pretty fancy for a dagger, if you ask me. Anyway, it’s a good blade. It’ll protect you where we're going.” 
+    *goto CH6M_HasMurderWeapon
 *else
     *comment If player did not get a new dagger
-    You take out the dagger you’ve had for years. The handle wrap is so smooth with age it’s almost slippery and there are a few minor chips in the blade. 
-    
-    “Yeah, that definitely won’t protect you.” Leon sighs. “I might have something…”
-    
-    Leon begins digging through his pack, emptying a good portion before he finds what he’s looking for. In his hands is a sheathed dagger, wrapped in strips of cloth for extra protection. He hands it to you. 
-    
-    You take your time unwrapping it. It’s a little longer than your old one, heavier too. The handle is wrapped in fine leather and when you pull it from its sheath, the blade gleams in the firelight. You gently press your thumb against the blade. It’s sharp enough to nearly cut you. 
-    
-    “It’s a little old, but well kept. It’ll protect you where we’re going.” 
+    *goto CH6M_NoDagger
 
+*label CH6M_HasDagger
+You pull out the dagger you had bought back home. At Leon’s questioning look, you hand it over for him to inspect. 
+    
+Leon tosses it between his hands a bit, checking the sharpness of the blade as well. 
+    
+“Not bad, ${name}. This won’t need to be sharpened, and the wrap is well done.This is a good weapon. It’ll protect you where we’re going.”
+
+*fake_choice
+    #Ask for advice.
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_minor
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
+        "Got any moves you could teach me?"
+
+        Leon's eyes light up. "Plenty! We could be here all night."
+
+        You realize you need some much needed rest after a day of long travel, so you let leon know that "all night" will need to wait for another night.
+
+        "Alright, alright."
+
+    #Tell him where you got it.
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_insignificant
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
+        "I knew I had a good eye. I found this in the marketplace of the town I used to live in."
+
+        Leon's eyes are filled with curiosity. "You should take me there whenever you're pardoned for this murder! I would love to see their selection."
+
+*goto CH6M_ContinueLeon
+
+-----------------------------
+
+*label CH6M_HasMurderWeapon
+You hand over the dagger with the strange design. At Leon’s questioning look, you hand it over for him to inspect. 
+    
+Leon tosses it between his hands a bit, checking the sharpness of the blade as well. He inspects the design on the blade closely. 
+    
+“Do you recognize that design?” You ask, curious. 
+    
+“No. Pretty fancy for a dagger, if you ask me. Anyway, it’s a good blade. It’ll protect you where we're going.”
+
+*fake_choice
+    #It should be useful...
+        "I have trouble liking the blade, but it'll have to do." Even holding it sends shivers down your spine, but you know it may come in handy one day. You decide to hold onto it.
+
+        “Weapons are our best friends, but only if they aren’t our worst enemies. Keep that in mind.”
+        *goto CH6M_ContinueLeon
+
+    #I'd perfer not to use this.
+        Reliving the shock of finding the blade in your pocket, you’d prefer not to use it. “Honestly, I don’t feel comfortable using the blade of the person who murdered someone and pinned it on me. Just doesn't feel right.”
+
+        “Understandable. I might have an alternative.”
+        *goto CH6M_RouteNewDagger
+
+-----------------------------
+
+*label CH6M_NoDagger
+You take out the dagger you’ve had for years. The handle wrap is so smooth with age it’s almost slippery and there are a few minor chips in the blade. 
+    
+“Yeah, that definitely won’t protect you.” Leon sighs. “I might have something…”
+
+*label CH6M_RouteNewDagger
+Leon begins digging through his pack, emptying a good portion before he finds what he’s looking for. In his hands is a sheathed dagger, wrapped in strips of cloth for extra protection. He hands it to you. 
+    
+You take your time unwrapping it. It’s a little longer than your old one, heavier too. The handle is wrapped in fine leather and when you pull it from its sheath, the blade gleams in the firelight. You gently press your thumb against the blade. It’s sharp enough to nearly cut you. 
+    
+“It’s a little old, but well kept. It’ll protect you where we’re going.”
+*fake_choice
+    #Express your gratitude.
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_insignificant
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
+        After sheathing the blade and carefully strapping it to your side, you reach out to give Leon a handshake. "Thanks, man. I'll make good use of this blade."
+
+        Leon returns the handshake. "Ofcourse. It's been a long while since that blade has seen any light at all, so it seems fitting to hand it to you.
+
+    #Express caution.
+        *set cur_behavior_tag tag_Nice
+        *set cur_severity_multiplier multiplier_average
+        *gosub_scene general UpdateReactionLeon
+        *gosub_scene general UpdateRelValLeon
+
+        "This is a nice blade, but I should certainly be cautious around this thing."
+
+        Leon tries to stifle a smile. "What is a weapon if not to be hungry? Let the bloodshed commence!"
+
+        You can't tell whether or not he's joking, but at least he seems happy.
+*goto CH6M_ContinueLeon
+
+-----------------------------
+
+*label CH6M_ContinueLeon
 After ensuring you have a weapon to protect yourself, Leon outfits you with some protection: a very worn silk shirt to impede piercing weapons and a leather tunic to go over it to protect from being slashed. You also receive a pair of arm bracers that are a little big and a cloak with a wide hood. Everything is stained and worn from use, likely hand-me-downs from past members of the Wolves. 
     
 “That should be good to get you started. A little protection can go a long way,” Leon grins. You thank him for his help. 
@@ -177,28 +302,33 @@ The dwarf woman yells at you when you don’t cut firewood up to her standard. T
 
 “I joined up a few years back, so I’m still the new kid in the group.” Felix often guides his horse next to yours so you can chat during the day. “They all seem really intimidating, but I trust them all with my life, and they trust me. It’s what being a part of the Wolves means.”
 
-You're still so new to this whole world. 
-
+You're still so new to this whole world.
+*temp X 1
+*temp Y 1
+*temp Z 1
 [b]Maybe you can use this time to ask Felix some questions.[/b]
 
 *label CH6M_nameloop_start
 *fake_choice
-    # What are the other people in your group names?
+    *selectable_if (X = 1) # What are the other people in your group names?
         “The elves are Ailer and Edea. I’d tell you how to tell them apart, but they like to make it impossible to do that. They switch clothes, weapons, everything just to throw people off. Viper is the only one who can tell them apart at a glance.”
         
         “The dwarven woman is Thebeda. She’s pretty sweet once you get to know her, but damn it takes a while for her to warm up to you. I’m pretty sure she only really started liking me after my first year with the group. “
         
-        “You know Viper, of course. Any idea you might have of her being a hard-ass, straight forward woman is spot on. She's tough as hell, but a great leader. I don’t think any of us would say a bad word about her after everything we’ve been through.” 
-    # Why did you join the Wolves of Davenport?
+        “You know Viper, of course. Any idea you might have of her being a hard-ass, straight forward woman is spot on. She's tough as hell, but a great leader. I don’t think any of us would say a bad word about her after everything we’ve been through.”
+        *set X + 1
+    *selectable_if (Y = 1) # Why did you join the Wolves of Davenport?
         “Me? I joined up because my uncle was a member. He died helping a family out of a burning building when I was about eleven. I always thought the Wolves of Davenport were better than the heroes in stories.”
         
         “Why’s that?” you ask. 
         
         “Well, the Wolves are real. Heroes don’t really exist outside of stories.”
-    # Have you seen the rot before?
+        *set Y + 1
+    *selectable_if (Z = 1) # Have you seen the rot before?
         A somber look overcomes Felix. He pauses before he speaks. 
         
-        “Once. I wasn’t ready then. Now I am.” 
+        “Once. I wasn’t ready then. Now I am.”
+        *set Z + 1
     # Ask nothing. (End Conversation)
         *goto CH6M_nameloop_end
 *goto CH6M_nameloop_start
