@@ -798,7 +798,7 @@ As if on cue, a Jackaloid bounds toward you.
 
         It starts sprinting away from you, and you see that it is charging at Felix. Remembering your old friend's fate, you sprint after the Jackaloid.
 
-        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards and pushing its corpse off of Felix.
+        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards. You push its corpse off of Felix.
 
         You had failed to kill the Jackaloid in time.
         *page_break
@@ -811,7 +811,7 @@ As if on cue, a Jackaloid bounds toward you.
 
         It starts sprinting away from you, and you see that it is charging at Felix. Remembering your old friend's fate, you sprint after the Jackaloid.
 
-        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards and pushing its corpse off of Felix.
+        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards. You push its corpse off of Felix.
 
         You had failed to kill the Jackaloid in time.
         *page_break
@@ -824,7 +824,7 @@ As if on cue, a Jackaloid bounds toward you.
 
         It starts sprinting away from you, and you see that it is charging at Felix. Remembering your old friend's fate, you sprint after the Jackaloid.
 
-        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards and pushing its corpse off of Felix.
+        Before you can get to it, you hear the painful screams of Felix. When you reach the Jackaloid, you plunge your weapon into its back and slice upwards. You push its corpse off of Felix.
 
         You had failed to kill the Jackaloid in time.
         *page_break
