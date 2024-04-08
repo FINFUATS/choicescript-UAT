@@ -455,3 +455,5 @@ You look between the two of them,
         
         *set CH10_ending "graveyard"
         *finish
+
+*return

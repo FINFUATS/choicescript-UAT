@@ -1,13 +1,47 @@
 *label StartChapter6
 *set Success 0
 *set Failure 0
+*set fight_total 0
+*set brawn_fight_total 0
+*set agility_fight_total 0
+*set cunning_fight_total 0
+*set brawn_fight_text ""
+*set agility_fight_text ""
+*set cunning_fight_text ""
 *set win_encounter false
 *set fail_encounter false
-*set description_text ""
-*set victory_text ""
-*set failure_text ""
-[head]Chapter 6: [/head]
+*set description_text1 ""
+*set description_text2 ""
+*set description_text3 ""
+*set description_text4 ""
+*set description_text5 ""
+*set victory_text1 ""
+*set victory_text2 ""
+*set victory_text3 ""
+*set victory_text4 ""
+*set victory_text5 ""
+*set failure_text1 ""
+*set failure_text2 ""
+*set failure_text3 ""
+*set failure_text4 ""
+*set failure_text5 ""
 
+*temp b_choice_text1 "Swing your blade with might."
+*temp b_choice_text2 "Swing your blade with might."
+*temp b_choice_text3 "Swing your blade with might."
+*temp b_choice_text4 "Swing your blade with might."
+*temp b_choice_text5 "Swing your blade with might."
+*temp a_choice_text1 "Swing your blade with speed."
+*temp a_choice_text2 "Swing your blade with speed."
+*temp a_choice_text3 "Swing your blade with speed."
+*temp a_choice_text4 "Swing your blade with speed."
+*temp a_choice_text5 "Swing your blade with speed."
+*temp c_choice_text1 "Swing your blade shrewdly."
+*temp c_choice_text2 "Swing your blade shrewdly."
+*temp c_choice_text3 "Swing your blade shrewdly."
+*temp c_choice_text4 "Swing your blade shrewdly."
+*temp c_choice_text5 "Swing your blade shrewdly."
+[head]Chapter 6: [/head]
 You head to the infirmary to make sure ${CH5d_injured} is okay. Everyone told you they would be fine, but worst-case scenarios flooded your mind through the night, so you eventually decided to just go over and make sure everything was okay yourself. 
 
 *if CH5d_injured = "Riva"
@@ -501,35 +535,115 @@ Not wanting to just sit around you quickly run over and grab your sword. You swi
 *label DC6FightLoop
 *image images/Jackaloid.webp
 *gosub_scene general generate_combat_number
+*if brawn_fight_total = 0
+    *set brawn_fight_text b_choice_text1
+*elseif brawn_fight_total = 1
+    *set brawn_fight_text b_choice_text2
+*elseif brawn_fight_total = 2
+    *set brawn_fight_text b_choice_text3
+*elseif brawn_fight_total = 3
+    *set brawn_fight_text b_choice_text4
+*elseif brawn_fight_total = 4
+    *set brawn_fight_text b_choice_text5
+
+*if agility_fight_total = 0
+    *set agility_fight_text a_choice_text1
+*elseif agility_fight_total = 1
+    *set agility_fight_text a_choice_text2
+*elseif agility_fight_total = 2
+    *set agility_fight_text a_choice_text3
+*elseif agility_fight_total = 3
+    *set agility_fight_text a_choice_text4
+*elseif agility_fight_total = 4
+    *set agility_fight_text a_choice_text5
+
+*if cunning_fight_total = 0
+    *set cunning_fight_text c_choice_text1
+*elseif cunning_fight_total = 1
+    *set cunning_fight_text c_choice_text2
+*elseif cunning_fight_total = 2
+    *set cunning_fight_text c_choice_text3
+*elseif cunning_fight_total = 3
+    *set cunning_fight_text c_choice_text4
+*elseif cunning_fight_total = 4
+    *set cunning_fight_text c_choice_text5
 *fake_choice
-    # Swing your blade with might.  [b][color=${brawn_color}](Brawn)[/color][/b]
+    # ${brawn_fight_text} [b][color=${brawn_color}](Brawn)[/color][/b]
         *set attrib Strength
         *set chance_floor 60
+        *set cur_fight_choice "Brawn"
         *gosub_scene general chance_checker
 
-        *set description_text "Gripping your weapon tightly, you swing it with all your strength."
-        *set victory_text "You manage to pierce the Jackaloid, slicing through a part of its skin as it quickly pulls itself out from your blade."
-        *set failure_text "While attempting to swing with all your strength, your speed left something to be desired as you miss your strike."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "Gripping your weapon tightly, you swing it with all your strength."
+        *set description_text2 "Gripping your weapon tightly, you swing it with all your strength."
+        *set description_text3 "Gripping your weapon tightly, you swing it with all your strength."
+        *set description_text4 "Gripping your weapon tightly, you swing it with all your strength."
+        *set description_text5 "Gripping your weapon tightly, you swing it with all your strength."
+        *set victory_text1 "You manage to pierce the Jackaloid, slicing through a part of its skin as it quickly pulls itself out from your blade."
+        *set victory_text2 "You manage to pierce the Jackaloid, creating a large cut."
+        *set victory_text3 "You pierce through the Jackaloid with all your strength."
+        *set victory_text4 "The Jackaloid suffers another slash, this one more devastating than the last."
+        *set victory_text5 "Once more, you charge at the Jackaloid hoping to finish it for good this time. Your blade makes contact with it again, causing it to rethink its decisions."
+        *set failure_text1 "While attempting to swing with all your strength, your speed left something to be desired as you miss your strike."
+        *set failure_text2 "While attempting to swing with all your strength, your speed left something to be desired as you miss your strike."
+        *set failure_text3 "You run as fast as you can at it, but the creature manages to hop out of the way, nearly clawing at you as you stumble by."
+        *set failure_text4 "The creatuure manages to avoid your attack as you miss your swing."
+        *set failure_text5 "Once more, you charge at the Jackaloid hoping to finish it for good this time. However, you miss your attack and the creature appears to be attempting a counter-attack."
+
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Swing your blade with speed. [b][color=${agility_color}](Agility)[/color][/b]
+    # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
         *set attrib Agility
         *set chance_floor 75
+        *set cur_fight_choice "Agility"
         *gosub_scene general chance_checker
 
-        *set description_text "Gripping your weapon deflty, you swing as quickly as you can."
-        *set victory_text "You manage to slice it multiple times such that it needs to back off for a moment."
-        *set failure_text "Quickly slashing at the Jackaloid, you don't manage to land many hits as your accuracy becomes inconsistent. The hits that you do land only keep it at bay as it continues to attempt to claw its way towards you."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "Gripping your weapon deflty, you swing as quickly as you can."
+        *set description_text2 "Gripping your weapon deflty, you swing as quickly as you can."
+        *set description_text3 "Gripping your weapon deflty, you swing as quickly as you can."
+        *set description_text4 "Gripping your weapon deflty, you swing as quickly as you can."
+        *set description_text5 "Gripping your weapon deflty, you swing as quickly as you can."
+        *set victory_text1 "You manage to slice it multiple times such that it needs to back off for a moment."
+        *set victory_text2 "When it jumps at you, you manage to hop out of its way and retaliate with a successful strike of your own."
+        *set victory_text3 "Your erratic movement gives you the advantage and you manage to avoid the creature's attack and landing a hit."
+        *set victory_text4 "You manage to land another swift strike on the creature."
+        *set victory_text5 "Once more, you move erratically and create distance between you and the creature, hoping that you can finish it off this time. You manage to avoid the Jackaloid's attack and land a quick stab as it reprioritizes its target."
+        *set failure_text1 "Quickly slashing at the Jackaloid, you don't manage to land many hits as your accuracy becomes inconsistent. The hits that you do land only keep it at bay as it continues to attempt to claw its way towards you."
+        *set failure_text2 "The creature jumps and you attempt to dodge out of the way, but you were a little late and find yourself bumping into the creature as your both get staggered for a moment."
+        *set failure_text3 "The Jackaloid jumps at you and you manage to dodge out of the way, but miss your opening for an attack as the Jackaloid rebounds to its feet."
+        *set failure_text4 "You miss another attack as the creature outmaneuvers you."
+        *set failure_text5 "Once more, you move erratically and create distance between you and the creature, hoping that you can finish it off this time. However, your footwork fails you, which results in you missing your opportunity to attack as the Jackaloid looks ready for a counter-attack of its own."
+
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Swing your blade shrewdly. [b][color=${cunning_color}](Cunning)[/color][/b]
+    # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
         *set attrib Cunning
         *set chance_floor 50
+        *set cur_fight_choice "Cunning"
         *gosub_scene general chance_checker
 
-        *set description_text "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
-        *set victory_text "You notice wounds that looks like they had recently healed on the Jackaloid's sides. You find an opportunity to slash at it and reopen the wound, causing the Jackaloid to back off for a moment and winge in pain."
-        *set failure_text "While slashing at a noticeably large wound on the Jackaloid, you mistake part of the wound for its torso. You had not given the swing enough strength to slice into the torso as you were originally aiming for its wound. You back off, leaving only a small cut on the Jackaloid."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
+        *set description_text2 "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
+        *set description_text3 "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
+        *set description_text4 "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
+        *set description_text5 "Gripping your weapon carefully, you swing at the Jackaloid in a calculated manner."
+        *set victory_text1 "You notice wounds that look like they had recently healed on the Jackaloid's sides. You find an opportunity to slash at it and reopen the wound, causing the Jackaloid to back off for a moment and winge in pain."
+        *set victory_text2 "You land a well aimed attack and manage to hit the Jackaloid's arm with ease."
+        *set victory_text3 "Patiently, you hit the Jackaloid with a precise slice to its back."
+        *set victory_text4 "You strike the Jackaloid with precision as you hit another weak point."
+        *set victory_text5 "Hoping to end the Jackaloid, you aim for it's head. Your blade connects and the Jackaloid looks for an easier target."
+        *set failure_text1 "While slashing at a noticeably large wound on the Jackaloid, you mistake part of the wound for its torso. You had not given the swing enough strength to slice into the torso as you were originally aiming for its wound. You back off, the Jackaloid only further enraged."
+        *set failure_text2 "You miss your attack and shift your focus to evading the Jackaloid's attack."
+        *set failure_text3 "You patiently swing your blade, but its too slow and the Jackaloid evades it with ease."
+        *set failure_text4 "You miss another attack and focus on evading the Jackaloid's counter-attack."
+        *set failure_text5 "Hoping to end the Jackaloid, you aim for it's head. The Jackaloid proves to be too quick and evades your attack. It appears to be attempting a counter-attack."
+
         *gosub_scene general succeed_checker
         *gosub combat_result
 
@@ -553,21 +667,53 @@ He lifts up his sword and mutters a spell under his breath. The swing goes so fa
 *comment Subroutine for the combat result
 *label combat_result
 *if win_encounter = true
+    *if win_attrib = "Brawn"
+        With your strength, you manage to keep the Jackaloid from harming the Zealot or yourself any further. You bring the Jackaloid into a slouching position as it attempts to claw its way to you with dwindling success.
+        
+        You successfully slayed the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
 
+    *elseif win_attrib = "Agility"
+        With your speed, you manage to keep the Jackaloid from harming the Zealot or yourself any further. You manage to bring the Jackaloid into a slouching position as it attempts to claw its way to you with a large wound.
 
-    Keeping the Jackaloid from harming the Zealot or yourself any further, you manage to bring the Jackaloid into a slouching position as it attempts to claw its way to you with dwindling success.
-    
-    You successfully slayed the Jackaloid.
-    *page_break
-    *goto DC6FightBranch
+        You successfully slayed the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
+
+    *elseif win_attrib = "Cunning"
+        With your cunning, you manage to keep the Jackaloid from harming the Zealot or yourself any further. You manage to bring the Jackaloid into a slouching position as it attempts to claw its way to you with a large wound.
+
+        You successfully slayed the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
 
 *elseif fail_encounter = true
+    *if fail_attrib = "Brawn"
+        The Jackaloid's strength overpowered your own.
 
+        Barely avoiding the worst of the Jackaloid's attacks, you step aside and out of breath as the Zealot takes over and finishes the fight.
+        
+        You failed to help slay the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
 
-    Barely avoiding the worst of the Jackaloid's attacks, you step aside and out of breath as the Zealot takes over and finishes the fight.
-    
-    You failed to help slay the Jackaloid.
-    *page_break
-    *goto DC6FightBranch
+    *elseif fail_attrib = "Agility"
+        The Jackaloid's speed overpowered your own.
+
+        Barely avoiding the worst of the Jackaloid's attacks, you step aside and out of breath as the Zealot takes over and finishes the fight.
+        
+        You failed to help slay the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
+
+    *elseif fail_attrib = "Cunning"
+        The Jackaloid's cunning overpowered your own.
+
+        Barely avoiding the worst of the Jackaloid's attacks, you step aside and out of breath as the Zealot takes over and finishes the fight.
+        
+        You failed to help slay the Jackaloid.
+        *page_break
+        *goto DC6FightBranch
 
 *return

@@ -3,15 +3,65 @@
 
 *set Success 0
 *set Failure 0
+*set fight_total 0
+*set brawn_fight_total 0
+*set agility_fight_total 0
+*set cunning_fight_total 0
+*set brawn_fight_text ""
+*set agility_fight_text ""
+*set cunning_fight_text ""
 *set win_encounter false
 *set fail_encounter false
-*set description_text ""
-*set victory_text ""
-*set failure_text ""
+*set description_text1 ""
+*set description_text2 ""
+*set description_text3 ""
+*set description_text4 ""
+*set description_text5 ""
+*set victory_text1 ""
+*set victory_text2 ""
+*set victory_text3 ""
+*set victory_text4 ""
+*set victory_text5 ""
+*set failure_text1 ""
+*set failure_text2 ""
+*set failure_text3 ""
+*set failure_text4 ""
+*set failure_text5 ""
 *temp MC5B1 true
 *temp MC5B2 true
-[head]Chapter 5: Wolves of Davenport[/head]
 
+*temp MC5B1_b_choice_text1 "Charge directly at it."
+*temp MC5B1_b_choice_text2 "Attempt to slice it out of the air."
+*temp MC5B1_b_choice_text3 "Take the opportunity to strike it with a hefty swing of your blade."
+*temp MC5B1_b_choice_text4 "With great might, use the flat side of your blade to deliver a stunning blow."
+*temp MC5B1_b_choice_text5 "Attempt to finish off the Mogfish with a strong finisher attack."
+*temp MC5B1_a_choice_text1 "Attempt to dodge under its high jump and counterattack."
+*temp MC5B1_a_choice_text2 "Utilize swift footwork to get close to the Mogfish and attack."
+*temp MC5B1_a_choice_text3 "Use a hit-and-run strategy."
+*temp MC5B1_a_choice_text4 "Attempt to circle around the creature, capitalizing off its slow turning."
+*temp MC5B1_a_choice_text5 "Perform a series of rapid strikes and slices to finish off the creature."
+*temp MC5B1_c_choice_text1 "Look for something in your environment to use to your advantage."
+*temp MC5B1_c_choice_text2 "Create a trap with what’s around you."
+*temp MC5B1_c_choice_text3 "Attempt a diversion."
+*temp MC5B1_c_choice_text4 "Lure it into an ambush."
+*temp MC5B1_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+
+*temp MC5B2_b_choice_text1 "Charge directly at it."
+*temp MC5B2_b_choice_text2 "Attempt to slice it out of the air."
+*temp MC5B2_b_choice_text3 "Take the opportunity to strike it with a hefty swing of your blade."
+*temp MC5B2_b_choice_text4 "With great might, use the flat side of your blade to deliver a stunning blow."
+*temp MC5B2_b_choice_text5 "Attempt to finish off the Mogfish with a strong finisher attack."
+*temp MC5B2_a_choice_text1 "Attempt to dodge under its high jump and counterattack."
+*temp MC5B2_a_choice_text2 "Utilize swift footwork to get close to the Mogfish and attack."
+*temp MC5B2_a_choice_text3 "Use a hit-and-run strategy."
+*temp MC5B2_a_choice_text4 "Attempt to circle around the creature, capitalizing off its slow turning."
+*temp MC5B2_a_choice_text5 "Perform a series of rapid strikes and slices to finish off the creature."
+*temp MC5B2_c_choice_text1 "Look for something in your environment to use to your advantage."
+*temp MC5B2_c_choice_text2 "Create a trap with what’s around you."
+*temp MC5B2_c_choice_text3 "Attempt a diversion."
+*temp MC5B2_c_choice_text4 "Lure it into an ambush."
+*temp MC5B2_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+[head]Chapter 5: Wolves of Davenport[/head]
 “Follow me, I’ll get you to a place where the guards won’t think to look for you.” The mercenary leads you down some back alleys. You look around, trying to recognize some of the area, but none of it looks familiar. You avoided this side of town as much as you could since Reese’s death. Couldn’t bear to visit the places the two of you used to play.
 
 ‘I wonder how our old pathways look now, it has probably been destroyed by now.’ You thought soberly as you looked up at the rooftops.
@@ -570,35 +620,115 @@ You take a few steps back as it drags itself out of the mud.
 *label MC5FightBranch1
 *image images/Mogfish.webp
 *gosub_scene general generate_combat_number
+*if brawn_fight_total = 0
+    *set brawn_fight_text MC5B1_b_choice_text1
+*elseif brawn_fight_total = 1
+    *set brawn_fight_text MC5B1_b_choice_text2
+*elseif brawn_fight_total = 2
+    *set brawn_fight_text MC5B1_b_choice_text3
+*elseif brawn_fight_total = 3
+    *set brawn_fight_text MC5B1_b_choice_text4
+*elseif brawn_fight_total = 4
+    *set brawn_fight_text MC5B1_b_choice_text5
+
+*if agility_fight_total = 0
+    *set agility_fight_text MC5B1_a_choice_text1
+*elseif agility_fight_total = 1
+    *set agility_fight_text MC5B1_a_choice_text2
+*elseif agility_fight_total = 2
+    *set agility_fight_text MC5B1_a_choice_text3
+*elseif agility_fight_total = 3
+    *set agility_fight_text MC5B1_a_choice_text4
+*elseif agility_fight_total = 4
+    *set agility_fight_text MC5B1_a_choice_text5
+
+*if cunning_fight_total = 0
+    *set cunning_fight_text MC5B1_c_choice_text1
+*elseif cunning_fight_total = 1
+    *set cunning_fight_text MC5B1_c_choice_text2
+*elseif cunning_fight_total = 2
+    *set cunning_fight_text MC5B1_c_choice_text3
+*elseif cunning_fight_total = 3
+    *set cunning_fight_text MC5B1_c_choice_text4
+*elseif cunning_fight_total = 4
+    *set cunning_fight_text MC5B1_c_choice_text5
 *fake_choice
-    # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+    # ${brawn_fight_text}  [b][color=${brawn_color}](Brawn)[/color][/b]
         *set attrib Strength
         *set chance_floor 80
+        *set cur_fight_choice "Brawn"
         *gosub_scene general chance_checker
 
-        *set description_text "Gripping your weapon tightly, you charge directly at the creature."
-        *set victory_text "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
-        *set failure_text "You run as fast as you can, but the creature manages to hop out of the way."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "Gripping your weapon tightly, you charge directly at the creature."
+        *set description_text2 "Without much distance between you and the creature, the Mogfish goes in for an attack by jumping towards you."
+        *set description_text3 "The Mogfish appears to be momentarily vulnerable for an attack, and you attempt a hefty swing with your blade."
+        *set description_text4 "Seeing another opportunity for an attack, you try to stun it this time in the hopes that it may leave it vulnerable long enough to finish it off."
+        *set description_text5 "The Mogfish has taken a toll and looks weak enough to finish off. You slice at it once more with nearly all your strength with the goal of finishing off the creature."
+        *set victory_text1 "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
+        *set victory_text2 "You successfully manage to cut into it while it is air-borne, causing it to abandon its original trajectory."
+        *set victory_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. It turned out to be true, as you find yourself being able to deliver a hefty blow to it with your blade."
+        *set victory_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be strong enough of a blunt strike to leave it disoriented for a moment, which you use to stab into it as it comes to its senses and haphazardly hobbles and jumps away from you."
+        *set victory_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. Your blade cuts into the Mogfish with little resistance as it now lay nearly motionless beneath you."
+        *set failure_text1 "You run as fast as you can, but the creature manages to hop out of the way."
+        *set failure_text2 "You miss your swing as your slice at it during its jump. Fortunately, the Mogfish was caught off guard and misses its attack as well, leaving the moment in an awkward stalemate."
+        *set failure_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. However, this turned out to not be true, as your found yourself being knocked backward to the ground as it jumps into you during your attack. You scramble to bring yourself to your feet as you narrowly avoid another jumping attack."
+        *set failure_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be too weak of an attack as the Mogfish is not fazed by it. This time you retreat for a moment so as to avoid an impending counterattack."
+        *set failure_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. The Mogfish wasn’t about to let itself be done in just yet, as it avoids the bulk of your attack with a hop. It comes in for another attack."
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Attempt to dodge under its high jump and counterattack. [b][color=${agility_color}](Agility)[/color][/b]
+    # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
         *set attrib Agility
         *set chance_floor 60
+        *set cur_fight_choice "Agility"
         *gosub_scene general chance_checker
 
-        *set description_text "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
-        *set victory_text "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
-        *set failure_text "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
+        *set description_text2 "Acting quickly, you attempt to stay just out of reach of the Mogfish’s attacks while getting close enough to strike it."
+        *set description_text3 "The Mogfish occasionally finds itself distracted by your comrades who are dealing with one of their own. You take this opportunity to get a quick attack in before it can react properly."
+        *set description_text4 "You start to move around to the side of the creature as it slowly attempts to turn to face you."
+        *set description_text5 "Seeing as the Mogfish has become weakened enough by your antics, you attempt to finish it off with a series of quick slashes from your blade."
+        *set victory_text1 "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
+        *set victory_text2 "You swiftly evade the Mogfish and get close enough to strike with an equally quick attack."
+        *set victory_text3 "At the first sign of weakness, you run over to the and strike it as you run by."
+        *set victory_text4 "You pick up speed and it becomes difficult for the Mogfish to keep up. This gives the opportunity to get close enough for another attack."
+        *set victory_text5 "As it jumps near, you start quickly slashing every part of the Mogfish within reach. Not cutting too deep so as to keep your blade from getting stuck."
+        *set failure_text1 "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *set failure_text2 "You have trouble keeping up with the Mogfish’s unusual movement, and find yourself stumbling before regaining your composure."
+        *set failure_text3 "At the first sign of weakness, you run over to the Mogfish and try to strike it as you run by. However, the Mogfish refocuses its attention on you and is aware enough to hop just out of reach of your blade."
+        *set failure_text4 "You pick up speed, but the Mogfish barely turns. Whether it was smart enough to wait, or just too stupid to pay attention, it jumps forward as you underestimate its ability to turn, nearly getting squashed."
+        *set failure_text5 "As it jumps near, you try to slash at it, but it continues to jump toward you. You’re unable to land any attacks on it as causes you to retreat before becoming more injured than you already are."
+
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+    # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
         *set attrib Cunning
         *set chance_floor 50
+        *set cur_fight_choice "Cunning"
         *gosub_scene general chance_checker
 
-        *set description_text "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. Moving over to the brush, you attempt to slip between the trees as the Mogfish follows you."
-        *set victory_text "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
-        *set failure_text "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. Moving over to the brush, you attempt to slip between the trees as the Mogfish follows you."
+        *set description_text2 "Looking around, you see a nearby tree that has a series of loose branches with some kind of bug’s nest resting on them."
+        *set description_text3 "You pick up a nearby stick, hoping to create some kind of diversion with it."
+        *set description_text4 "You attempt to hide behind the brush you found earlier. Only this time, you plan to ambush it without it knowing where you are."
+        *set description_text5 "You take your time to analyze the creature’s movements for an opening as the Mogfish shambles about in between pained hops."
+        *set victory_text1 "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
+        *set victory_text2 "You try to lure the Mogfish over the loose branches. As it approaches, you cut the branch down causing the nest to fall in front of the Mogfish. They appeared to be some kind of hornet as they swarm out of the smashed nest, some of them stinging the Mogfish."
+        *set victory_text3 "The stick won’t be able to do much damage to the Mogfish, so you try throwing it past it in an attempt to occupy its attention, if only for a moment. Fortunately, it works as the Mogfish turns a bit to the side as it looks to see what flew by it. You take the opportunity to attack the Mogfish."
+        *set victory_text4 "Hiding between the trees and bramble, you make sure that you are the only one of the two of you who will know where the other is, with a clear view of the possible openings the Mogfish could approach. When it comes into view, you jump out and stab the Mogfish. It jumps off your blade, and nearly collapses in a heap on the ground after landing, clearly weakened."
+        *set victory_text5 "As the Mogfish nears, its injuries cause it to slip and fall as it lands near you. You go in for a final stab as it helplessly attempts to get up."
+        *set failure_text1 "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *set failure_text2 "You try to lure the Mogfish over the loose branches. As it approaches, you cut the branch down causing the nest to fall in front of the Mogfish. They appeared to be some kind of hornet as they swarm out of the smashed nest. The hornets didn’t appear to be take interest in the Mogfish, and realizing you could be their target, you decide to move a bit further out of reach of the nest."
+        *set failure_text3 "The stick won’t be able to do much damage to the Mogfish, so you try throwing it past it in an attempt to occupy its attention, if only for a moment. Unfortunately, the Mogfish just continues to stare directly at you."
+        *set failure_text4 "Hiding between the trees and bramble, you make sure that you are the only one of the two of you who will know where the other is, with a clear view of the possible openings the Mogfish could approach. When it comes into view, you jump out, but the Mogfish seems to catch wind of your ambush attempt as it evades your attack. It knocks you back towards the trees, which you pass through again to prevent a subsequent attack from reaching you."
+        *set failure_text5 "As the Mogfish nears, its injuries cause it to slip and fall as it lands near you. Thinking that it will be too weak to evade or counterattack, you attempt to attack it. However, it recovers quicker than you thought and knocks you to the ground before you can finish it off."
+
+
         *gosub_scene general succeed_checker
         *gosub combat_result
 
@@ -700,35 +830,115 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
 *label MC5FightBranch2
 *image images/Mogfish.webp
 *gosub_scene general generate_combat_number
+*if brawn_fight_total = 0
+    *set brawn_fight_text MC5B2_b_choice_text1
+*elseif brawn_fight_total = 1
+    *set brawn_fight_text MC5B2_b_choice_text2
+*elseif brawn_fight_total = 2
+    *set brawn_fight_text MC5B2_b_choice_text3
+*elseif brawn_fight_total = 3
+    *set brawn_fight_text MC5B2_b_choice_text4
+*elseif brawn_fight_total = 4
+    *set brawn_fight_text MC5B2_b_choice_text5
+
+*if agility_fight_total = 0
+    *set agility_fight_text MC5B2_a_choice_text1
+*elseif agility_fight_total = 1
+    *set agility_fight_text MC5B2_a_choice_text2
+*elseif agility_fight_total = 2
+    *set agility_fight_text MC5B2_a_choice_text3
+*elseif agility_fight_total = 3
+    *set agility_fight_text MC5B2_a_choice_text4
+*elseif agility_fight_total = 4
+    *set agility_fight_text MC5B2_a_choice_text5
+
+*if cunning_fight_total = 0
+    *set cunning_fight_text MC5B2_c_choice_text1
+*elseif cunning_fight_total = 1
+    *set cunning_fight_text MC5B2_c_choice_text2
+*elseif cunning_fight_total = 2
+    *set cunning_fight_text MC5B2_c_choice_text3
+*elseif cunning_fight_total = 3
+    *set cunning_fight_text MC5B2_c_choice_text4
+*elseif cunning_fight_total = 4
+    *set cunning_fight_text MC5B2_c_choice_text5
+
 *fake_choice
-    # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+    # ${brawn_fight_text}  [b][color=${brawn_color}](Brawn)[/color][/b]
         *set attrib Strength
         *set chance_floor 80
+        *set cur_fight_choice "Brawn"
         *gosub_scene general chance_checker
 
-        *set description_text "Gripping your weapon tightly, you charge directly at the creature."
-        *set victory_text "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
-        *set failure_text "You run as fast as you can, but the creature manages to hop out of the way."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "Gripping your weapon tightly, you charge directly at the creature."
+        *set description_text2 "Without much distance between you and the creature, the Mogfish goes in for an attack by jumping towards you."
+        *set description_text3 "The Mogfish appears to be momentarily vulnerable for an attack, and you attempt a hefty swing with your blade."
+        *set description_text4 "Seeing another opportunity for an attack, you try to stun it this time in the hopes that it may leave it vulnerable long enough to finish it off."
+        *set description_text5 "The Mogfish has taken a toll and looks weak enough to finish off. You slice at it once more with nearly all your strength with the goal of finishing off the creature."
+        *set victory_text1 "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
+        *set victory_text2 "You successfully manage to cut into it while it is air-borne, causing it to abandon its original trajectory."
+        *set victory_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. It turned out to be true, as you find yourself being able to deliver a hefty blow to it with your blade."
+        *set victory_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be strong enough of a blunt strike to leave it disoriented for a moment, which you use to stab into it as it comes to its senses and haphazardly hobbles and jumps away from you."
+        *set victory_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. Your blade cuts into the Mogfish with little resistance as it now lay nearly motionless beneath you."
+        *set failure_text1 "You run as fast as you can, but the creature manages to hop out of the way."
+        *set failure_text2 "You miss your swing as your slice at it during its jump. Fortunately, the Mogfish was caught off guard and misses its attack as well, leaving the moment in an awkward stalemate."
+        *set failure_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. However, this turned out to not be true, as your found yourself being knocked backward to the ground as it jumps into you during your attack. You scramble to bring yourself to your feet as you narrowly avoid another jumping attack."
+        *set failure_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be too weak of an attack as the Mogfish is not fazed by it. This time you retreat for a moment so as to avoid an impending counterattack."
+        *set failure_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. The Mogfish wasn’t about to let itself be done in just yet, as it avoids the bulk of your attack with a hop. It comes in for another attack."
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Attempt to dodge under its high jump and counterattack. [b][color=${agility_color}](Agility)[/color][/b]
+    # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
         *set attrib Agility
         *set chance_floor 60
+        *set cur_fight_choice "Agility"
         *gosub_scene general chance_checker
 
-        *set description_text "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
-        *set victory_text "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
-        *set failure_text "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "You create some additional distance between you and the creature in order to cause it to jump, briskly jogging backwards so as to keep your eyes on it."
+        *set description_text2 "Acting quickly, you attempt to stay just out of reach of the Mogfish’s attacks while getting close enough to strike it."
+        *set description_text3 "The Mogfish occasionally finds itself distracted by your comrades who are dealing with one of their own. You take this opportunity to get a quick attack in before it can react properly."
+        *set description_text4 "You start to move around to the side of the creature as it slowly attempts to turn to face you."
+        *set description_text5 "Seeing as the Mogfish has become weakened enough by your antics, you attempt to finish it off with a series of quick slashes from your blade."
+        *set victory_text1 "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
+        *set victory_text2 "You swiftly evade the Mogfish and get close enough to strike with an equally quick attack."
+        *set victory_text3 "At the first sign of weakness, you run over to the and strike it as you run by."
+        *set victory_text4 "You pick up speed and it becomes difficult for the Mogfish to keep up. This gives the opportunity to get close enough for another attack."
+        *set victory_text5 "As it jumps near, you start quickly slashing every part of the Mogfish within reach. Not cutting too deep so as to keep your blade from getting stuck."
+        *set failure_text1 "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
+        *set failure_text2 "You have trouble keeping up with the Mogfish’s unusual movement, and find yourself stumbling before regaining your composure."
+        *set failure_text3 "At the first sign of weakness, you run over to the Mogfish and try to strike it as you run by. However, the Mogfish refocuses its attention on you and is aware enough to hop just out of reach of your blade."
+        *set failure_text4 "You pick up speed, but the Mogfish barely turns. Whether it was smart enough to wait, or just too stupid to pay attention, it jumps forward as you underestimate its ability to turn, nearly getting squashed."
+        *set failure_text5 "As it jumps near, you try to slash at it, but it continues to jump toward you. You’re unable to land any attacks on it as causes you to retreat before becoming more injured than you already are."
+
         *gosub_scene general succeed_checker
         *gosub combat_result
-    # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+    # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
         *set attrib Cunning
         *set chance_floor 50
+        *set cur_fight_choice "Cunning"
         *gosub_scene general chance_checker
 
-        *set description_text "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. You move over to the brush and try to slip between the trees as the Mogfish follows you."
-        *set victory_text "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
-        *set failure_text "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *set fight_total fight_total + 1
+
+        *set description_text1 "You spot a couple of sizeable trees and some tightly packed brush nearby that create a thin opening between them that you could squeeze into. Moving over to the brush, you attempt to slip between the trees as the Mogfish follows you."
+        *set description_text2 "Looking around, you see a nearby tree that has a series of loose branches with some kind of bug’s nest resting on them."
+        *set description_text3 "You pick up a nearby stick, hoping to create some kind of diversion with it."
+        *set description_text4 "You attempt to hide behind the brush you found earlier. Only this time, you plan to ambush it without it knowing where you are."
+        *set description_text5 "You take your time to analyze the creature’s movements for an opening as the Mogfish shambles about in between pained hops."
+        *set victory_text1 "Maneuvering nimbly, you slip between the trees. The Mogfish attempts to go around them as they are too high to jump over. You take the opportunity to slip back through to the other side and slash it with your weapon while it is unaware."
+        *set victory_text2 "You try to lure the Mogfish over the loose branches. As it approaches, you cut the branch down causing the nest to fall in front of the Mogfish. They appeared to be some kind of hornet as they swarm out of the smashed nest, some of them stinging the Mogfish."
+        *set victory_text3 "The stick won’t be able to do much damage to the Mogfish, so you try throwing it past it in an attempt to occupy its attention, if only for a moment. Fortunately, it works as the Mogfish turns a bit to the side as it looks to see what flew by it. You take the opportunity to attack the Mogfish."
+        *set victory_text4 "Hiding between the trees and bramble, you make sure that you are the only one of the two of you who will know where the other is, with a clear view of the possible openings the Mogfish could approach. When it comes into view, you jump out and stab the Mogfish. It jumps off your blade, and nearly collapses in a heap on the ground after landing, clearly weakened."
+        *set victory_text5 "As the Mogfish nears, its injuries cause it to slip and fall as it lands near you. You go in for a final stab as it helplessly attempts to get up."
+        *set failure_text1 "While you try to slip through the trees, you get your foot caught in the surrounding brush and bramble. You manage to break free, but ultimately miss your opportunity to attack."
+        *set failure_text2 "You try to lure the Mogfish over the loose branches. As it approaches, you cut the branch down causing the nest to fall in front of the Mogfish. They appeared to be some kind of hornet as they swarm out of the smashed nest. The hornets didn’t appear to be take interest in the Mogfish, and realizing you could be their target, you decide to move a bit further out of reach of the nest."
+        *set failure_text3 "The stick won’t be able to do much damage to the Mogfish, so you try throwing it past it in an attempt to occupy its attention, if only for a moment. Unfortunately, the Mogfish just continues to stare directly at you."
+        *set failure_text4 "Hiding between the trees and bramble, you make sure that you are the only one of the two of you who will know where the other is, with a clear view of the possible openings the Mogfish could approach. When it comes into view, you jump out, but the Mogfish seems to catch wind of your ambush attempt as it evades your attack. It knocks you back towards the trees, which you pass through again to prevent a subsequent attack from reaching you."
+        *set failure_text5 "As the Mogfish nears, its injuries cause it to slip and fall as it lands near you. Thinking that it will be too weak to evade or counterattack, you attempt to attack it. However, it recovers quicker than you thought and knocks you to the ground before you can finish it off."
+        
         *gosub_scene general succeed_checker
         *gosub combat_result
 
@@ -786,46 +996,128 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
 *label combat_result
 *if win_encounter = true
     *if MC5B1 = true
+        *if win_attrib = "Brawn"
+            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery.
 
-        You successfully slay the mogfish.
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
-        However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch1
+        *elseif win_attrib = "Agility"
+            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery.
 
-        Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto MC5FightWinBranch1
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch1
+        *elseif win_attrib = "Cunning"
+            You successfully slay the mogfish. With one last decisive strike, you ensure that the creature is put out of its misery.
+
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch1
     *elseif MC5B2 = true
+        *if win_attrib = "Brawn"
+            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery.
 
-        You successfully slay the mogfish.
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
-        However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch2
+        *elseif win_attrib = "Agility"
+            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery.
 
-        Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto MC5FightWinBranch2
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch2
+        *elseif win_attrib = "Cunning"
+            You successfully slay the mogfish. With one last decisive strike, you ensure that the creature is put out of its misery.
+
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightWinBranch2
 
 *elseif fail_encounter = true
     *if MC5B1 = true
+        *if fail_attrib = "Brawn"
+            Your strength was overpowered by the Mogfish and you fail to slay it.
 
-        You fail to slay the mogfish.
+            As the the Mogfish attempts to pounce on you, you see a glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
+            
+            You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
 
-        The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch1
+        *elseif fail_attrib = "Agility"
+            You fail to slay the mogfish.
 
-        As the the Mogfish attempts to pounce on you, you see a glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
-        
-        You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
+            The Mogfish hops in front of you, moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
 
-        Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto MC5FightLoseBranch1
+            As the Mogfish attempts to pounce on you, you see a glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
+
+            You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
+
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch1
+        *elseif fail_attrib = "Cunning"
+            You were outwiited by the Mogfish and fail to slay it.
+
+            As the Mogfish attempts to pounce on you, you see a glint of light flicker off a speeding arrow as it hits the Mogfish in mid-air.
+
+            You look over and see Anwen reaching for another arrow. However, before you have a chance to process your near-death experience, you hear something behind you.
+
+            Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch1
     *elseif MC5B2 = true
+        *if fail_attrib = "Brawn"
+            Your strength was overpowered by the Mogfish and you fail to slay it.
 
-        The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
+            As the Mogfish attempts to pounce on you, you see Gwyn bash into the creature's head, causing it to slam into the ground.
 
-        However, before you have a chance to process your near-death experience, you hear something behind you.
+            You grab Gwyn and begin to retreat away from the Mogfish. You were foolish to think you could take it on head-to-head.
 
-        Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto MC5FightLoseBranch2
+            However, before you have a chance to process your near-death experience, you hear something behind you.
+
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch2
+        *elseif fail_attrib = "Agility"
+            You fail to slay the mogfish.
+
+            The Mogfish hops in front of you moving much faster than you expected. You are caught off guard and tumble backwards as you attempt to fervently escape the creature's impending attack.
+
+            As the Mogfish attempts to pounce on you, you see Gwyn bash into the creature's head, causing it to slam into the ground.
+
+            You grab Gwyn and begin to retreat away from the Mogfish. You were foolish to think you could take it on so quickly.
+
+            However, before you have a chance to process your near-death experience, you hear something behind you.
+
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch2
+        *elseif fail_attrib = "Cunning"
+            You were outwiited by the Mogfish and you fail to slay it.
+
+            As the Mogfish attempts to pounce on you, you see Gwyn bash into the creature's head, causing it to slam into the ground.
+
+            You grab Gwyn and begin to retreat away from the Mogfish. You were foolish to think you could take it on so cleverly.
+
+            However, before you have a chance to process your near-death experience, you hear something behind you.
+
+            Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto MC5FightLoseBranch2
 
 *return

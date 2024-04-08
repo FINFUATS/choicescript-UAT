@@ -174,11 +174,39 @@
 *create chance_floor 0
 *create did_chance_check_succeed true
 *create attrib 0
-*create description_text ""
-*create victory_text ""
-*create failure_text ""
+
+*create description_text1 ""
+*create description_text2 ""
+*create description_text3 ""
+*create description_text4 ""
+*create description_text5 ""
+
+*create victory_text1 ""
+*create victory_text2 ""
+*create victory_text3 ""
+*create victory_text4 ""
+*create victory_text5 ""
+
+*create failure_text1 ""
+*create failure_text2 ""
+*create failure_text3 ""
+*create failure_text4 ""
+*create failure_text5 ""
+
 *create win_encounter false
 *create fail_encounter false
+*create win_attrib ""
+*create fail_attrib ""
+
+*create cur_fight_choice ""
+*create fight_total 0
+*create brawn_fight_total 0
+*create agility_fight_total 0
+*create cunning_fight_total 0
+*create brawn_fight_text ""
+*create agility_fight_text ""
+*create cunning_fight_text ""
+
 
 *comment Divine Chapter 9 Character Total Globals
 *create Riva 0

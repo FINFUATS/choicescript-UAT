@@ -3,16 +3,82 @@
 
 *set Success 0
 *set Failure 0
+*set fight_total 0
+*set brawn_fight_total 0
+*set agility_fight_total 0
+*set cunning_fight_total 0
+*set brawn_fight_text ""
+*set agility_fight_text ""
+*set cunning_fight_text ""
 *set win_encounter false
 *set fail_encounter false
-*set description_text ""
-*set victory_text ""
-*set failure_text ""
+*set description_text1 ""
+*set description_text2 ""
+*set description_text3 ""
+*set description_text4 ""
+*set description_text5 ""
+*set victory_text1 ""
+*set victory_text2 ""
+*set victory_text3 ""
+*set victory_text4 ""
+*set victory_text5 ""
+*set failure_text1 ""
+*set failure_text2 ""
+*set failure_text3 ""
+*set failure_text4 ""
+*set failure_text5 ""
 *temp DC5B1 true
 *temp DC5B2 true
 *temp DC5B3 true
-[head]Chapter 5: The Flames of Sigil[/head]
 
+*temp DC5B1_b_choice_text1 "Aim for the worm's weak spot by taking it on directly."
+*temp DC5B1_b_choice_text2 "Lunge at the worm with a powerful stab."
+*temp DC5B1_b_choice_text3 "Swing your blade in wide slashes in front of you."
+*temp DC5B1_b_choice_text4 "Attempt to kick it with great force."
+*temp DC5B1_b_choice_text5 "Attempt to finish off the worm with a strong slice."
+*temp DC5B1_a_choice_text1 "Attempt to move quickly to outmaneuver the worm."
+*temp DC5B1_a_choice_text2 "Deliver a swift counter-attack."
+*temp DC5B1_a_choice_text3 "Attempt to deliver a series of rapid attacks."
+*temp DC5B1_a_choice_text4 "Use a hit-and-run strategy."
+*temp DC5B1_a_choice_text5 "Attempt to finish the worm with a quick finishing strike."
+*temp DC5B1_c_choice_text1 "Utilize the surroundings in the greenhouse to create a trap."
+*temp DC5B1_c_choice_text2 "Attempt to throw something at the worm."
+*temp DC5B1_c_choice_text3 "Create a distraction."
+*temp DC5B1_c_choice_text4 "Attempt an ambush with Riva."
+*temp DC5B1_c_choice_text5 "Attempt a decisive finishing blow with you blade."
+
+*temp DC5B2_b_choice_text1 "Charge directly at it."
+*temp DC5B2_b_choice_text2 "Attempt a powerful overhead slash."
+*temp DC5B2_b_choice_text3 "Stab at its gut."
+*temp DC5B2_b_choice_text4 "Attempt to strike its head."
+*temp DC5B2_b_choice_text5 "Attempt a strong finishing blow."
+*temp DC5B2_a_choice_text1 "Attempt to outmaneuver its attack."
+*temp DC5B2_a_choice_text2 "Seek a swift counter-attack."
+*temp DC5B2_a_choice_text3 "Use a hit-and-run strategy."
+*temp DC5B2_a_choice_text4 "Attempt to cut its legs and slow it down."
+*temp DC5B2_a_choice_text5 "Attempt a quick flurry of finishing strikes."
+*temp DC5B2_c_choice_text1 "Look for something in your environment to use to your advantage."
+*temp DC5B2_c_choice_text2 "Attempt to use the nearby rubble to your advantage again."
+*temp DC5B2_c_choice_text3 "Attack the Ogre from behind."
+*temp DC5B2_c_choice_text4 "Attempt to cut its arms and weaken its ability to attack."
+*temp DC5B2_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+
+*temp DC5B3_b_choice_text1 "Charge directly at it."
+*temp DC5B3_b_choice_text2 "Attempt a powerful overhead slash."
+*temp DC5B3_b_choice_text3 "Stab at its gut."
+*temp DC5B3_b_choice_text4 "Attempt to strike its head."
+*temp DC5B3_b_choice_text5 "Attempt a strong finishing blow."
+*temp DC5B3_a_choice_text1 "Attempt to outmaneuver its attack."
+*temp DC5B3_a_choice_text2 "Seek a swift counter-attack."
+*temp DC5B3_a_choice_text3 "Use a hit-and-run strategy."
+*temp DC5B3_a_choice_text4 "Attempt to cut its legs and slow it down."
+*temp DC5B3_a_choice_text5 "Attempt a quick flurry of finishing strikes."
+*temp DC5B3_c_choice_text1 "Look for something in your environment to use to your advantage."
+*temp DC5B3_c_choice_text2 "Attempt to use the nearby rubble to your advantage again."
+*temp DC5B3_c_choice_text3 "Attack the Ogre from behind."
+*temp DC5B3_c_choice_text4 "Attempt to cut its arms and weaken its ability to attack."
+*temp DC5B3_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+[head]Chapter 5: The Flames of Sigil[/head]
 “Come, right this way” the priestess whispers to you, hesitant to wake anyone in the dead of night.
 
 You aren’t sure how long you’ve been following her. You can tell that, for now, you’re still in town, though you couldn’t quite be sure what part. More likely than not, this is the opposite end to the one where you lived. Being on the outskirts, you certainly spent a lot more time on your side than this one.
@@ -565,10 +631,10 @@ Once you’re seated, you decide to get to know the people you’ll be living wi
         *set Z Z + 1
 
     #No one (End Questions)
-        *goto MC5StoryLoopEnd
+        *goto DC5StoryLoopEnd
     
 *goto DC5StoryLoop
-*label MC5StoryLoopEnd
+*label DC5StoryLoopEnd
 
 *page_break
 
@@ -754,35 +820,115 @@ Do you want to help Riva with her herbs?
 
         *label DC5FightBranch1
         *gosub_scene general generate_combat_number
+        *if brawn_fight_total = 0
+            *set brawn_fight_text DC5B1_b_choice_text1
+        *elseif brawn_fight_total = 1
+            *set brawn_fight_text DC5B1_b_choice_text2
+        *elseif brawn_fight_total = 2
+            *set brawn_fight_text DC5B1_b_choice_text3
+        *elseif brawn_fight_total = 3
+            *set brawn_fight_text DC5B1_b_choice_text4
+        *elseif brawn_fight_total = 4
+            *set brawn_fight_text DC5B1_b_choice_text5
+        
+        *if agility_fight_total = 0
+            *set agility_fight_text DC5B1_a_choice_text1
+        *elseif agility_fight_total = 1
+            *set agility_fight_text DC5B1_a_choice_text2
+        *elseif agility_fight_total = 2
+            *set agility_fight_text DC5B1_a_choice_text3
+        *elseif agility_fight_total = 3
+            *set agility_fight_text DC5B1_a_choice_text4
+        *elseif agility_fight_total = 4
+            *set agility_fight_text DC5B1_a_choice_text5
+        
+        *if cunning_fight_total = 0
+            *set cunning_fight_text DC5B1_c_choice_text1
+        *elseif cunning_fight_total = 1
+            *set cunning_fight_text DC5B1_c_choice_text2
+        *elseif cunning_fight_total = 2
+            *set cunning_fight_text DC5B1_c_choice_text3
+        *elseif cunning_fight_total = 3
+            *set cunning_fight_text DC5B1_c_choice_text4
+        *elseif cunning_fight_total = 4
+            *set cunning_fight_text DC5B1_c_choice_text5
         *fake_choice
-            # Aim for the worm's weak spot by taking it on directly.  [b][color=${brawn_color}](Brawn)[/color][/b]
+            # ${brawn_fight_text} [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
                 *set chance_floor 80
+                *set cur_fight_choice "Brawn"
                 *gosub_scene general chance_checker
         
-                *set description_text "You aim for the weak spot directly with your weapon."
-                *set victory_text "The blade manages to leave a gash on the creature."
-                *set failure_text "The blade misses the creature."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "You aim for the weak spot directly with your weapon."
+                *set description_text2 "Lunging forward, you take a stab at the worm."
+                *set description_text3 "You swing your blade in front of you, making wide slashes."
+                *set description_text4 "You try to kick the worm"
+                *set description_text5 "Seeing as the worm was much weaker than when it first attacked, you attempt to end the fight with one last slice."
+                *set victory_text1 "The blade manages to leave a gash on the creature."
+                *set victory_text2 "Your blade pierces into the worm for a moment before causing it to recoil away from you as it appears to have regrets in picking this fight."
+                *set victory_text3 "The tip of your blade manages to tag the creature and keep it at bay."
+                *set victory_text4 "You muster the strength to not only deliver a devastatingly painful kick, but a kick that also sends the worm into the air, landing a sizable distance away from you."
+                *set victory_text5 "You seem to have read the situation correctly as your blade cuts into the worm with little resistance."
+                *set failure_text1 "The blade misses the creature."
+                *set failure_text2 "The stab was mighty, but the worm's speed afforded it the ability to evade your attack."
+                *set failure_text3 "Your slashes do little but tire you out as the worm circles around you and comes in for another attack."
+                *set failure_text4 "Your kicking yields no success. The kick doesn't collide and the worm nearly gnashes through your leg as you pull it back as quickly as possible."
+                *set failure_text5 "You seem to have read the situation incorrectly as the worm managed to avoid your attack once more."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Attempt to move quickly outmaneuver the worm. [b][color=${agility_color}](Agility)[/color][/b]
+            # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
                 *set attrib Agility
                 *set chance_floor 60
+                *set cur_fight_choice "Agility"
                 *gosub_scene general chance_checker
         
-                *set description_text "You move quickly outmaneuver the creature."
-                *set victory_text "The worm is too slow for you, and you manage to make your mark."
-                *set failure_text "The creature manages to catch up to you with remarkably fast speed for a worm, and you miss your opportunity to attack."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "You move quickly to outmaneuver the creature."
+                *set description_text2 "You look for an opportunity to counter-attack."
+                *set description_text3 "You try to attack the worm with a series of quick attacks."
+                *set description_text4 "The worm clearly in pain, you attempt a hit-and-run attack to continue to increase that pain while minimizing yours."
+                *set description_text5 "You attempt to finish off the worm quickly as it presents a heavily weakened constitution."
+                *set victory_text1 "The worm is too slow for you, and you manage to make your mark."
+                *set victory_text2 "As the worm lunges toward you, you manage to evade the attack and quickly cut it with your blade."
+                *set victory_text3 "The worm was incapable of keeping up with your agility and found itself feeling the brunt of your feet, hands, and blade."
+                *set victory_text4 "It seems to work, as you manage to run by and cut the worm's body and causing it to flinch before it can retaliate."
+                *set victory_text5 "You seem to have read the situation correctly as you manage to run up to it and plunge your blade into it once more."
+                *set failure_text1 "The creature manages to catch up to you with remarkably fast speed for a worm, and you miss your opportunity to attack."
+                *set failure_text2 "As the worm lunges toward you, you trip over your own feet as you manage to evade the attack but fall to the ground, missing your counter-attack."
+                *set failure_text3 "Your agility seemed to be greater in your mind than in practice as your flurry of attacks devolves into imprecise swings that are easily avoided."
+                *set failure_text4 "It seems to fail, as you manage to find yourself getting tripped by the worm and tumbling over yourself."
+                *set failure_text5 "You seem to have read the situation incorrectly as the worm musters up the strength to evade your attack and quickly move make a move toward you."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Utilize the surroundings in the greenhouse to create a trap. [b][color=${cunning_color}](Cunning)[/color][/b]
+            # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
                 *set attrib Cunning
                 *set chance_floor 50
+                *set cur_fight_choice "Cunning"
                 *gosub_scene general chance_checker
         
-                *set description_text "You use your surroundings in the greenhouse to create a trap."
-                *set victory_text "The creature inches closer, but before it can lunge at you, it is ensnared for a moment by the large sticks you sharpened with your blade. Using the opportunity, you cut the creature."
-                *set failure_text "The creature avoids your trap, and you miss your opportunity to attack."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "You use your surroundings in the greenhouse to create a trap."
+                *set description_text2 "You look for something to throw at the worm that could cause damage."
+                *set description_text3 "You attempt to create a distraction."
+                *set description_text4 "You yell to Riva a plan to ambush the worm utilizing the two of you."
+                *set description_text5 "You attempt a decisive and precise finishing strike."
+                *set victory_text1 "The creature inches closer, but before it can lunge at you, it is ensnared for a moment by a crude pile of sticks and plant debris that you set up. Using the opportunity, you cut the creature."
+                *set victory_text2 "A large nearby stick catches your attention. You sharpen it with your blade as you keep some distance between you and the worm, and then throw it. It pierces the worm and causes it to jump in pain."
+                *set victory_text3 "Looking around, you grab a nearby stone lining a perimeter of plants and toss it at a plant next to the worm bearing a budding fruit. The stone manages to knock some of the fruit loose onto the worm, startling it. You take the opportunity to attack it."
+                *set victory_text4 "Riva gets closer and attempts to pull the worm's attention from you. As the worm begins to go after Riva, you manage to get behind it and attack it."
+                *set victory_text5 "The worm looks to have had enough as it begins to slow down its assault on you. Using the opportunity, the worm fails to fight back as you cut into once more."
+                *set failure_text1 "The creature avoids your trap, and you miss your opportunity to attack."
+                *set failure_text2 "A large nearby stick catches your attention. You attempt to sharpen it and throw it at the worm, but the worm began to move erratically toward you, causing you to throw the stick prematurely and miss."
+                *set failure_text3 "Looking around, you have trouble coming up with a potential distraction. During this time, the worm manages to slither up to you and nearly catch you off guard as you regain focus and dodge the attack."
+                *set failure_text4 "Riva gets closer and attempts to pull the worm's attention from you. However, the worm turns back around and chases after you again, seemingly more interested in the one who has hurt it."
+                *set failure_text5 "The worm looks to have had enough as it begins to slow down its assault on you. However, as you attempt to finish it off, its energy seems to resurge as you approach. It strikes back at you as it avoids the brunt of your finishing strike."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
         
@@ -847,35 +993,115 @@ Do you want to help Riva with her herbs?
         *label DC5FightBranch2
         *image images/Ogre-Encounter.webp
         *gosub_scene general generate_combat_number
+        *if brawn_fight_total = 0
+            *set brawn_fight_text DC5B2_b_choice_text1
+        *elseif brawn_fight_total = 1
+            *set brawn_fight_text DC5B2_b_choice_text2
+        *elseif brawn_fight_total = 2
+            *set brawn_fight_text DC5B2_b_choice_text3
+        *elseif brawn_fight_total = 3
+            *set brawn_fight_text DC5B2_b_choice_text4
+        *elseif brawn_fight_total = 4
+            *set brawn_fight_text DC5B2_b_choice_text5
+        
+        *if agility_fight_total = 0
+            *set agility_fight_text DC5B2_a_choice_text1
+        *elseif agility_fight_total = 1
+            *set agility_fight_text DC5B2_a_choice_text2
+        *elseif agility_fight_total = 2
+            *set agility_fight_text DC5B2_a_choice_text3
+        *elseif agility_fight_total = 3
+            *set agility_fight_text DC5B2_a_choice_text4
+        *elseif agility_fight_total = 4
+            *set agility_fight_text DC5B2_a_choice_text5
+        
+        *if cunning_fight_total = 0
+            *set cunning_fight_text DC5B2_c_choice_text1
+        *elseif cunning_fight_total = 1
+            *set cunning_fight_text DC5B2_c_choice_text2
+        *elseif cunning_fight_total = 2
+            *set cunning_fight_text DC5B2_c_choice_text3
+        *elseif cunning_fight_total = 3
+            *set cunning_fight_text DC5B2_c_choice_text4
+        *elseif cunning_fight_total = 4
+            *set cunning_fight_text DC5B2_c_choice_text5
         *fake_choice
-            # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+            # ${brawn_fight_text} [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
                 *set chance_floor 90
+                *set cur_fight_choice "Brawn"
                 *gosub_scene general chance_checker
         
-                *set description_text "Gripping your weapon tightly, you charge directly at the creature."
-                *set victory_text "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
-                *set failure_text "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "Gripping your weapon tightly, you charge directly at the creature."
+                *set description_text2 "With a great deal of strength, you attempt an overhead slash."
+                *set description_text3 "A prominent and relatively unguarded feature of the ogre, you attempt to stab at its stomach."
+                *set description_text4 "You try to attack the Ogre's head."
+                *set description_text5 "With the Ogre losing its strength, you attempt a strong finisher."
+                *set victory_text1 "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
+                *set victory_text2 "As you get close enough to the Ogre, its large stature makes it easy to reach with your blade as it cuts into the Ogre."
+                *set victory_text3 "You manage to pierce the gut of the Ogre, causing it to clench its stomach in pain for a moment."
+                *set victory_text4 "The Ogre slams down as it tries to crush you once again, but this time you go for its head. You manage to strike its head with your blade, causing it to back up in pain."
+                *set victory_text5 "You throw yourself at the Ogre, blade reeled back in preparation for a mighty strike. You manage to knock the Ogre over and slice into it as you slide over its body."
+                *set failure_text1 "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *set failure_text2 "You try to get close enough to the Ogre in order to unleash your overhead slash, but the Ogre manages to beat the range of your blade as it knocks you back."
+                *set failure_text3 "Your attempt to pierce the Ogre's gut gets thwarted as your misjudged stab ends up bouncing off of it instead."
+                *set failure_text4 "The Ogre slams down as it tries to crush you once again, but this time you go for its head. The Ogre stands up quicker than you could reach it as it attempts to swat you away."
+                *set failure_text5 "You throw yourself at the Ogre, blade reeled back in preparation for a mighty strike. The Ogre, however, wasn't nearly as weak as you thought it was, and you end up running into it and leaving it with a minor cut as it attempts to crush you once more."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Attempt to outmaneuver its attack. [b][color=${agility_color}](Agility)[/color][/b]
+            # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
                 *set attrib Agility
                 *set chance_floor 55
+                *set cur_fight_choice "Agility"
                 *gosub_scene general chance_checker
         
-                *set description_text "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
-                *set victory_text "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
-                *set failure_text "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed as the force of the nearby impact its fists made with the ground sends you a couple feet backwards."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
+                *set description_text2 "Moving briskly towards the creature, you attempt to evade its attack once more."
+                *set description_text3 "You attempt a hit-and-run attack."
+                *set description_text4 "Hoping to slow the Ogre even more, you attempt to cut away at its legs."
+                *set description_text5 "You attempt a quick flurry of strikes with the intent of finishing the Ogre."
+                *set victory_text1 "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
+                *set victory_text2 "You manage to dodge the attack and retaliate with a more devastating attack of your own."
+                *set victory_text3 "Moving exceptionally quickly, you manage to avoid the Ogre's attacks as you run by it and slash away at its sides."
+                *set victory_text4 "You manage to get close enough to the Ogre after another failed attack on its part, and you get a clean cut on both of its legs."
+                *set victory_text5 "Using the Ogre's slowed movements after its failed attacks, you take your turn stabbing and cutting into the Ogre after each of its missed attacks. It becomes so worn out that it begins to slump to the ground in agony."
+                *set failure_text1 "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed as the force of the nearby impact its fists made with the ground sends you a couple feet backwards."
+                *set failure_text2 "You barely the avoid the attack as you trip and scramble to your feet as the Ogre prepares another attack. You miss your opportunity to counter-attack."
+                *set failure_text3 "Moving as quickly as you can, you try to strike the Ogre as you pass it by, but the Ogre's reach keeps you from getting too close to do anything substantial."
+                *set failure_text4 "Though you tend to be faster, the Ogre is not to be underestimated as it manages to keep you at bay by kicking its legs forward while it recovers from a fist slamming attack."
+                *set failure_text5 "Using the Ogre's slowed movements after its failed attacks, you try to sneak in as many attacks of your own, but the Ogre surprises you with a quick backhanded attack. The Ogre wasn't nearly as weakened as you thought it was."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+            # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
                 *set attrib Cunning
                 *set chance_floor 75
+                *set cur_fight_choice "Cunning"
                 *gosub_scene general chance_checker
         
-                *set description_text "You spot a nearby building that was partially in ruin."
-                *set victory_text "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
-                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "You spot a nearby building that was partially in ruin."
+                *set description_text2 "You try to use the rubble to your advantage again."
+                *set description_text3 "You attempt to get behind the Ogre and attack it."
+                *set description_text4 "With the Ogre constantly swinging its arms at you, you decide to try and take them out in the hopes that it will weaken the Ogre."
+                *set description_text5 "Looking upon the weakened Ogre, you notice an opportunity to finish it off."
+                *set victory_text1 "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
+                *set victory_text2 "This time, you attempt to lead the Ogre through much of the rubble. As the Ogre follows, it trips and you go in for an attack before it can get up."
+                *set victory_text3 "While the Ogre may be strong, the same typically can't be said for its mind. You hide for a moment as it turns its attention away from where you were, and you sneak up and attack it from behind."
+                *set victory_text4 "As the Ogre swings at you again, you hop back a few steps and slice the Ogre's arms. It attempts to swing at you again, but the attack is noticeably slower."
+                *set victory_text5 "Your careful analysis of the Ogre's current state of being leads you to a precise strike to the back of its neck, causing it to fall to the ground."
+                *set failure_text1 "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *set failure_text2 "This time, you attempt to lead the Ogre through much of the rubble. As the Ogre follows, you trip and have to propel yourself forward in order to retreat and avoid the Ogre's fist slam attack."
+                *set failure_text3 "While the Ogre may be strong, the same typically can't be said for its mind. You hide for a moment in the hopes that it will forget you were there, but instead, it begins to move towards your hiding spot. Regardless of whether it knew or not, you decide to run to a safer position."
+                *set failure_text4 "As the Ogre swings at you again, you hop back a few steps and fall backwards onto your back. Another fist comes falling towards you, and you roll out of the way."
+                *set failure_text5 "You attempt to attack the Ogre based on your assessment of the Ogre's health, but it turned out to be incorrect as the Ogre manages to push you away and pursue another attack of its own."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
         
@@ -944,35 +1170,115 @@ Do you want to help Riva with her herbs?
         *label DC5FightBranch3
         *image images/Ogre-Encounter.webp
         *gosub_scene general generate_combat_number
+        *if brawn_fight_total = 0
+            *set brawn_fight_text DC5B3_b_choice_text1
+        *elseif brawn_fight_total = 1
+            *set brawn_fight_text DC5B3_b_choice_text2
+        *elseif brawn_fight_total = 2
+            *set brawn_fight_text DC5B3_b_choice_text3
+        *elseif brawn_fight_total = 3
+            *set brawn_fight_text DC5B3_b_choice_text4
+        *elseif brawn_fight_total = 4
+            *set brawn_fight_text DC5B3_b_choice_text5
+        
+        *if agility_fight_total = 0
+            *set agility_fight_text DC5B3_a_choice_text1
+        *elseif agility_fight_total = 1
+            *set agility_fight_text DC5B3_a_choice_text2
+        *elseif agility_fight_total = 2
+            *set agility_fight_text DC5B3_a_choice_text3
+        *elseif agility_fight_total = 3
+            *set agility_fight_text DC5B3_a_choice_text4
+        *elseif agility_fight_total = 4
+            *set agility_fight_text DC5B3_a_choice_text5
+        
+        *if cunning_fight_total = 0
+            *set cunning_fight_text DC5B3_c_choice_text1
+        *elseif cunning_fight_total = 1
+            *set cunning_fight_text DC5B3_c_choice_text2
+        *elseif cunning_fight_total = 2
+            *set cunning_fight_text DC5B3_c_choice_text3
+        *elseif cunning_fight_total = 3
+            *set cunning_fight_text DC5B3_c_choice_text4
+        *elseif cunning_fight_total = 4
+            *set cunning_fight_text DC5B3_c_choice_text5
         *fake_choice
-            # Charge directly at it.  [b][color=${brawn_color}](Brawn)[/color][/b]
+            # ${brawn_fight_text} [b][color=${brawn_color}](Brawn)[/color][/b]
                 *set attrib Strength
                 *set chance_floor 90
+                *set cur_fight_choice "Brawn"
                 *gosub_scene general chance_checker
         
-                *set description_text "Gripping your weapon tightly, you charge directly at the creature."
-                *set victory_text "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
-                *set failure_text "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "Gripping your weapon tightly, you charge directly at the creature."
+                *set description_text2 "With a great deal of strength, you attempt an overhead slash."
+                *set description_text3 "A prominent and relatively unguarded feature of the ogre, you attempt to stab at its stomach."
+                *set description_text4 "You try to attack the Ogre's head."
+                *set description_text5 "With the Ogre losing its strength, you attempt a strong finisher."
+                *set victory_text1 "You manage to pierce the Ogre, slicing part of it and leaving it with an open wound and various cuts as it attempts to regain its footing."
+                *set victory_text2 "As you get close enough to the Ogre, its large stature makes it easy to reach with your blade as it cuts into the Ogre."
+                *set victory_text3 "You manage to pierce the gut of the Ogre, causing it to clench its stomach in pain for a moment."
+                *set victory_text4 "The Ogre slams down as it tries to crush you once again, but this time you go for its head. You manage to strike its head with your blade, causing it to back up in pain."
+                *set victory_text5 "You throw yourself at the Ogre, blade reeled back in preparation for a mighty strike. You manage to knock the Ogre over and slice into it as you slide over its body."
+                *set failure_text1 "You run as fast as you can, but the creature manages to hit you out of the way with its hand."
+                *set failure_text2 "You try to get close enough to the Ogre in order to unleash your overhead slash, but the Ogre manages to beat the range of your blade as it knocks you back."
+                *set failure_text3 "Your attempt to pierce the Ogre's gut gets thwarted as your misjudged stab ends up bouncing off of it instead."
+                *set failure_text4 "The Ogre slams down as it tries to crush you once again, but this time you go for its head. The Ogre stands up quicker than you could reach it as it attempts to swat you away."
+                *set failure_text5 "You throw yourself at the Ogre, blade reeled back in preparation for a mighty strike. The Ogre, however, wasn't nearly as weak as you thought it was, and you end up running into it and leaving it with a minor cut as it attempts to crush you once more."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Attempt to outmaneuver its attack. [b][color=${agility_color}](Agility)[/color][/b]
+            # ${agility_fight_text} [b][color=${agility_color}](Agility)[/color][/b]
                 *set attrib Agility
                 *set chance_floor 55
+                *set cur_fight_choice "Agility"
                 *gosub_scene general chance_checker
         
-                *set description_text "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
-                *set victory_text "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
-                *set failure_text "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed as the force of the nearby impact its fists made with the ground sends you a couple feet backwards."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "Moving briskly towards the creature, you attempt to evade its attack as it swings its fists at you."
+                *set description_text2 "Moving briskly towards the creature, you attempt to evade its attack once more."
+                *set description_text3 "You attempt a hit-and-run attack."
+                *set description_text4 "Hoping to slow the Ogre even more, you attempt to cut away at its legs."
+                *set description_text5 "You attempt a quick flurry of strikes with the intent of finishing the Ogre."
+                *set victory_text1 "You manage to dodge and weave your way around the Ogre's fists and get a few strong slashes into it before hastily retreating to plan your next move."
+                *set victory_text2 "You manage to dodge the attack and retaliate with a more devastating attack of your own."
+                *set victory_text3 "Moving exceptionally quickly, you manage to avoid the Ogre's attacks as you run by it and slash away at its sides."
+                *set victory_text4 "You manage to get close enough to the Ogre after another failed attack on its part, and you get a clean cut on both of its legs."
+                *set victory_text5 "Using the Ogre's slowed movements after its failed attacks, you take your turn stabbing and cutting into the Ogre after each of its missed attacks. It becomes so worn out that it begins to slump to the ground in agony."
+                *set failure_text1 "The Ogre's swing was faster than you expected, and you just barely avoid your skull being crushed. The force of the nearby impact that the Ogre's fists made with the ground was enough to send you a couple feet backwards."
+                *set failure_text2 "You barely the avoid the attack as you trip and scramble to your feet as the Ogre prepares another attack. You miss your opportunity to counter-attack."
+                *set failure_text3 "Moving as quickly as you can, you try to strike the Ogre as you pass it by, but the Ogre's reach keeps you from getting too close to do anything substantial."
+                *set failure_text4 "Though you tend to be faster, the Ogre is not to be underestimated as it manages to keep you at bay by kicking its legs forward while it recovers from a fist slamming attack."
+                *set failure_text5 "Using the Ogre's slowed movements after its failed attacks, you try to sneak in as many attacks of your own, but the Ogre surprises you with a quick backhanded attack. The Ogre wasn't nearly as weakened as you thought it was."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
-            # Look for something in your environment to use to your advantage. [b][color=${cunning_color}](Cunning)[/color][/b]
+            # ${cunning_fight_text} [b][color=${cunning_color}](Cunning)[/color][/b]
                 *set attrib Cunning
                 *set chance_floor 75
+                *set cur_fight_choice "Cunning"
                 *gosub_scene general chance_checker
         
-                *set description_text "You spot a nearby building that was partially in ruin."
-                *set victory_text "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
-                *set failure_text "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stones. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *set fight_total fight_total + 1
+        
+                *set description_text1 "You spot a nearby building that was partially in ruin."
+                *set description_text2 "You try to use the rubble to your advantage again."
+                *set description_text3 "You attempt to get behind the Ogre and attack it."
+                *set description_text4 "With the Ogre constantly swinging its arms at you, you decide to try and take them out in the hopes that it will weaken the Ogre."
+                *set description_text5 "Looking upon the weakened Ogre, you notice an opportunity to finish it off."
+                *set victory_text1 "Getting close enough to draw the attention of the Ogre, you lead it to the building. You are able to move amongst the rubble and surprise the Ogre with an attack to its back."
+                *set victory_text2 "This time, you attempt to lead the Ogre through much of the rubble. As the Ogre follows, it trips and you go in for an attack before it can get up."
+                *set victory_text3 "While the Ogre may be strong, the same typically can't be said for its mind. You hide for a moment as it turns its attention away from where you were, and you sneak up and attack it from behind."
+                *set victory_text4 "As the Ogre swings at you again, you hop back a few steps and slice the Ogre's arms. It attempts to swing at you again, but the attack is noticeably slower."
+                *set victory_text5 "Your careful analysis of the Ogre's current state of being leads you to a precise strike to the back of its neck, causing it to fall to the ground."
+                *set failure_text1 "While maneuvering around the building and through the rubble, your leg gets caught between a couple of large stone. You manage to pull yourself out and avoid the Ogre's incoming fist, but you miss your opportunity to attack."
+                *set failure_text2 "This time, you attempt to lead the Ogre through much of the rubble. As the Ogre follows, you trip and have to propel yourself forward in order to retreat and avoid the Ogre's fist slam attack."
+                *set failure_text3 "While the Ogre may be strong, the same typically can't be said for its mind. You hide for a moment in the hopes that it will forget you were there, but instead, it begins to move towards your hiding spot. Regardless of whether it knew or not, you decide to run to a safer position."
+                *set failure_text4 "As the Ogre swings at you again, you hop back a few steps and fall backwards onto your back. Another fist comes falling towards you, and you roll out of the way."
+                *set failure_text5 "You attempt to attack the Ogre based on your assessment of the Ogre's health, but it turned out to be incorrect as the Ogre manages to push you away and pursue another attack of its own."
+
                 *gosub_scene general succeed_checker
                 *gosub combat_result
         
@@ -1086,62 +1392,174 @@ With that, she leaves the room as abruptly as she entered it.
 *label combat_result
 *if win_encounter = true
     *if DC5B1 = true
+        *if win_attrib = "Brawn"
+            You successfully slay the worm. With one final blow, you ensure that the creature is put out of its misery.
 
-        You successfully slay the worm.
+            However, before you have a chance to take a good look at your kill, you hear something behind you.
 
-        However, before you have a chance to take a good look at your kill, you hear something behind you.
+            Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightWinBranch1
+        *elseif win_attrib = "Agility"
+            You successfully slay the worm. With one last quick strike, you ensure that the creature is put out of its misery.
 
-        Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto DC5FightWinBranch1
+            However, before you have a chance to take a good look at your kill, you hear something behind you.
+
+            Ivy lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightWinBranch1
+        *elseif win_attrib = "Cunning"
+            You successfully slay the worm. With one last decisive blow, you ensure that the creature is put out of its misery.
+
+            However, before you have a chance to take a good look at your kill, you hear something behind you.
+
+            Ivy lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightWinBranch1
     *elseif DC5B2 = true
+        *if win_attrib = "Brawn"
+            You successfully slay the Ogre. With one final blow, you ensure that the creature is put out of its misery.
 
-        You successfully slay the Ogre.
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
-        However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch2
+        *elseif win_attrib = "Agility"
+            You successfully slay the Ogre. With one last quick strike, you ensure that the creature is put out of its misery.
 
-        You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground.
-        *page_break
-        *goto DC5FightWinBranch2
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch2
+        *elseif win_attrib = "Cunning"
+            You successfully slay the Ogre. With one last decisive blow, you ensure that the creature is put out of its misery.
+
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch2
     *elseif DC5B3 = true
+        *if win_attrib = "Brawn"
+            You successfully slay the Ogre. With one final blow, you ensure that the creature is put out of its misery.
 
-        You successfully slay the Ogre.
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
-        However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch3
+        *elseif win_attrib = "Agility"
+            You successfully slay the Ogre. With one last quick strike, you ensure that the creature is put out of its misery.
 
-        You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground.
-        *page_break
-        *goto DC5FightWinBranch3
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch3
+        *elseif win_attrib = "Cunning"
+            You successfully slay the Ogre. With one last decisive blow, you ensure that the creature is put out of its misery.
+
+            However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground.
+            *page_break
+            *goto DC5FightWinBranch3
 
 *elseif fail_encounter = true
     *if DC5B1 = true
+        *if fail_attrib = "Brawn"
+            You fail to slay the worm. Its strength was far too much for you.
 
-        You fail to slay the worm.
+            However, as though it were only protecting its territory, it began to dig underground.
 
-        The worm moves faster than you expected. However, as though it were only protecting its territory, it began to dig underground.
+            You're relieved that you didn't get lunged at any more, but before you can rest, you hear something behind you.
 
-        You're relieved that you didn't get lunged at any more, but before you can rest, you hear something behind you.
+            Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightLoseBranch1
+        *elseif fail_attrib = "Agility"
+            You fail to slay the worm.
 
-        Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
-        *page_break
-        *goto DC5FightLoseBranch1
+            The worm moves faster than you expected. However, as though it were only protecting its territory, it began to dig underground.
+
+            You're relieved that you didn't get lunged at any more, but before you can rest, you hear something behind you.
+
+            Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightLoseBranch1
+        *elseif fail_attrib = "Cunning"
+            You fail to slay the worm.
+
+            The worm seems to be one step ahead of you. However, as though it were only protecting its territory, it began to dig underground.
+
+            You're relieved that you didn't get lunged at any more, but before you can rest, you hear something behind you.
+
+            Riva lets out a slight cry of pain. You realize that they had gotten injured during the fight.
+            *page_break
+            *goto DC5FightLoseBranch1
     *elseif DC5B2 = true
+        *if fail_attrib = "Brawn"
+            You fail to slay the Ogre. Its strength has proven to be too much for you.
+            
+            Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
 
-        You fail to slay the Ogre. Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+            While regaining your composure, you notice something behind you.
 
-        While regaining your composure, you notice something behind you.
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch2
+        *elseif fail_attrib = "Agility"
+            You fail to slay the Ogre. Underestimating its speed, you fear that this might be the end.
+            
+            Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
 
-        You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground and unconscious.
-        *page_break
-        *goto DC5FightLoseBranch2
+            While regaining your composure, you notice something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch2
+        *elseif fail_attrib = "Cunning"
+            You fail to slay the Ogre. The Ogre seemed more capable of thwarting your plans than you thought.
+            
+            Fortunately before it has the chance you crush you, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+
+            While regaining your composure, you notice something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Cel was behind you attending to Ivy, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch2
     *elseif DC5B3 = true
+        *if fail_attrib = "Brawn"
+            You fail to slay the Ogre. Its strength has proven to be too much for you. 
+            
+            Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
 
-        You fail to slay the Ogre. Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+            While regaining your composure, you notice something behind you.
 
-        While regaining your composure, you notice something behind you.
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch3
+        *elseif fail_attrib = "Agility"
+            You fail to slay the Ogre. Underestimating its speed, you fear that this might be the end.
+            
+            Fortunately, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
 
-        You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground and unconscious.
-        *page_break
-        *goto DC5FightLoseBranch3
+            While regaining your composure, you notice something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch3
+        *elseif fail_attrib = "Cunning"
+            You fail to slay the Ogre. The Ogre seemed more capable of thwarting your plans than you thought.
+            
+            Fortunately before it has the chance you crush you, it gets distracted by a nearby civilian in the town before it has the chance you crush you.
+
+            While regaining your composure, you notice something behind you.
+
+            You were so caught up in the adrenaline of combat that you didn't realize Ivy was behind you attending to Cel, who was on the ground and unconscious.
+            *page_break
+            *goto DC5FightLoseBranch3
 
 *return

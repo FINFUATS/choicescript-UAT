@@ -152,9 +152,21 @@
 *if Chance >= chance_floor
     *set did_chance_check_succeed true
     *set Success Success + 1
+    *if cur_fight_choice = "Brawn"
+        *set brawn_fight_total brawn_fight_total + 1
+    *elseif cur_fight_choice = "Agility"
+        *set agility_fight_total agility_fight_total + 1
+    *elseif cur_fight_choice = "Cunning"
+        *set cunning_fight_total cunning_fight_total + 1
 *else
     *set did_chance_check_succeed false
     *set Failure Failure + 1
+    *if cur_fight_choice = "Brawn"
+        *set brawn_fight_total brawn_fight_total + 1
+    *elseif cur_fight_choice = "Agility"
+        *set agility_fight_total agility_fight_total + 1
+    *elseif cur_fight_choice = "Cunning"
+        *set cunning_fight_total cunning_fight_total + 1
 
 *return
 
@@ -162,19 +174,167 @@
 *label succeed_checker
 *if did_chance_check_succeed = true
     [head]Success![/head]
-    *print description_text
-    *print victory_text
+    Successes: ${Success}
+    Failures: ${Failure}
+
     
-    *if Success >= 3
+    *if cur_fight_choice = "Brawn"
+        *if brawn_fight_total = 1
+            *print description_text1
+
+            *print victory_text1
+        *elseif brawn_fight_total = 2
+            *print description_text2
+
+            *print victory_text2
+        *elseif brawn_fight_total = 3
+            *print description_text3
+
+            *print victory_text3
+        *elseif brawn_fight_total = 4
+            *print description_text4
+            
+            *print victory_text4
+        *elseif brawn_fight_total = 5
+            *print description_text5
+            *print victory_text5
+    *elseif cur_fight_choice = "Agility"
+        *if agility_fight_total = 1
+            *print description_text1
+
+            *print victory_text1
+        *elseif agility_fight_total = 2
+            *print description_text2
+            *print victory_text2
+        *elseif agility_fight_total = 3
+            *print description_text3
+
+            *print victory_text3
+        *elseif agility_fight_total = 4
+            *print description_text4
+
+            *print victory_text4
+        *elseif agility_fight_total = 5
+            *print description_text5
+
+            *print victory_text5
+    *elseif cur_fight_choice = "Cunning"
+        *if cunning_fight_total = 1
+            *print description_text1
+
+            *print victory_text1
+        *elseif cunning_fight_total = 2
+            *print description_text2
+
+            *print victory_text2
+        *elseif cunning_fight_total = 3
+            *print description_text3
+
+            *print victory_text3
+        *elseif cunning_fight_total = 4
+            *print description_text4
+
+            *print victory_text4
+        *elseif cunning_fight_total = 5
+            *print description_text5
+
+            *print victory_text5
+
+    *if (Success >= 3) and (cur_fight_choice = "Brawn")
+        TESTwin
         *set win_encounter true
+        *set win_attrib "Brawn"
+    *elseif (Success >= 3) and (cur_fight_choice = "Agility")
+        TESTwin
+        *set win_encounter true
+        *set win_attrib "Agility"
+    *elseif (Success >= 3) and (cur_fight_choice = "Cunning")
+        TESTwin
+        *set win_encounter true
+        *set win_attrib "Cunning"
         
 *else
     [head]Failure![/head]
-    *print description_text
-    *print failure_text
+    Successes: ${Success}
+    Failures: ${Failure}
 
-    *if Failure >= 3
+
+    *if cur_fight_choice = "Brawn"
+        *if brawn_fight_total = 1
+            *print description_text1
+
+            *print failure_text1
+        *elseif brawn_fight_total = 2
+            *print description_text2
+
+            *print failure_text2
+        *elseif brawn_fight_total = 3
+            *print description_text3
+
+            *print failure_text3
+        *elseif brawn_fight_total = 4
+            *print description_text4
+
+            *print failure_text4
+        *elseif brawn_fight_total = 5
+            *print description_text5
+
+            *print failure_text5
+    *elseif cur_fight_choice = "Agility"
+        *if agility_fight_total = 1
+            *print description_text1
+
+            *print failure_text1
+        *elseif agility_fight_total = 2
+            *print description_text2
+
+            *print failure_text2
+        *elseif agility_fight_total = 3
+            *print description_text3
+
+            *print failure_text3
+        *elseif agility_fight_total = 4
+            *print description_text4
+
+            *print failure_text4
+        *elseif agility_fight_total = 5
+            *print description_text5
+
+            *print failure_text5
+    *elseif cur_fight_choice = "Cunning"
+        *if cunning_fight_total = 1
+            *print description_text1
+
+            *print failure_text1
+        *elseif cunning_fight_total = 2
+            *print description_text2
+
+            *print failure_text2
+        *elseif cunning_fight_total = 3
+            *print description_text3
+
+            *print failure_text3
+        *elseif cunning_fight_total = 4
+            *print description_text4
+
+            *print failure_text4
+        *elseif cunning_fight_total = 5
+            *print description_text5
+            
+            *print failure_text5
+
+    *if (Failure >= 3) and (cur_fight_choice = "Brawn")
+        TESTfail
         *set fail_encounter true
+        *set fail_attrib "Brawn"
+    *elseif (Failure >= 3) and (cur_fight_choice = "Agility")
+        TESTfail
+        *set fail_encounter true
+        *set fail_attrib "Agility"
+    *elseif (Failure >= 3) and (cur_fight_choice = "Cunning")
+        TESTfail
+        *set fail_encounter true
+        *set fail_attrib "Cunning"
     
 *return
 
