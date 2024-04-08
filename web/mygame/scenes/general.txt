@@ -172,6 +172,7 @@
 
 *comment This subroutine does the success and failure checking
 *label succeed_checker
+[head]Success![/head]
 *if did_chance_check_succeed = true
     *if cur_fight_choice = "Brawn"
         *if brawn_fight_total = 1
