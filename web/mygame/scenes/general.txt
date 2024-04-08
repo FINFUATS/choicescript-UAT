@@ -173,11 +173,6 @@
 *comment This subroutine does the success and failure checking
 *label succeed_checker
 *if did_chance_check_succeed = true
-    [head]Success![/head]
-    Successes: ${Success}
-    Failures: ${Failure}
-
-    
     *if cur_fight_choice = "Brawn"
         *if brawn_fight_total = 1
             *print description_text1
@@ -241,24 +236,20 @@
             *print victory_text5
 
     *if (Success >= 3) and (cur_fight_choice = "Brawn")
-        TESTwin
+        [b]You won the fight![/b]
         *set win_encounter true
         *set win_attrib "Brawn"
     *elseif (Success >= 3) and (cur_fight_choice = "Agility")
-        TESTwin
+        [b]You won the fight![/b]
         *set win_encounter true
         *set win_attrib "Agility"
     *elseif (Success >= 3) and (cur_fight_choice = "Cunning")
-        TESTwin
+        [b]You won the fight![/b]
         *set win_encounter true
         *set win_attrib "Cunning"
         
 *else
     [head]Failure![/head]
-    Successes: ${Success}
-    Failures: ${Failure}
-
-
     *if cur_fight_choice = "Brawn"
         *if brawn_fight_total = 1
             *print description_text1
@@ -324,15 +315,15 @@
             *print failure_text5
 
     *if (Failure >= 3) and (cur_fight_choice = "Brawn")
-        TESTfail
+        [b]You lost the fight![/b]
         *set fail_encounter true
         *set fail_attrib "Brawn"
     *elseif (Failure >= 3) and (cur_fight_choice = "Agility")
-        TESTfail
+        [b]You lost the fight![/b]
         *set fail_encounter true
         *set fail_attrib "Agility"
     *elseif (Failure >= 3) and (cur_fight_choice = "Cunning")
-        TESTfail
+        [b]You lost the fight![/b]
         *set fail_encounter true
         *set fail_attrib "Cunning"
     
