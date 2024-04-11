@@ -41,7 +41,7 @@
 *temp c_choice_text3 "Swing your blade shrewdly."
 *temp c_choice_text4 "Swing your blade shrewdly."
 *temp c_choice_text5 "Swing your blade shrewdly."
-[head]Chapter 6: [/head]
+[head]Chapter 6: The Zealot[/head]
 You head to the infirmary to make sure ${CH5d_injured} is okay. Everyone told you they would be fine, but worst-case scenarios flooded your mind through the night, so you eventually decided to just go over and make sure everything was okay yourself. 
 
 *if CH5d_injured = "Riva"
