@@ -49,35 +49,19 @@ You head to the infirmary to make sure ${CH5d_injured} is okay. Everyone told yo
     
     “Riva, are you alright? That bite looked terrible…” Your brows furrow in concern. 
     
-    *page_break
-    
     “Yeah, I- I’m fine.” She reassures you.
     
-    “Are you sure? We had to take you to medical...”
-    
-    “I’m fine, it’s not the first time one of those worms snuck up on me. Besides, I've had worse.” Riva gives you a weak smile.
-    
-    Your brows furrow more, “Worse? Riva, you were bleeding everywhere. I thought that you were going to lose your arm.”
+    “Are you sure? You were bleeding everywhere. I thought you were going to lose your arm."
     
     *page_break
     
-    You notice that you are overwhelming Riva.“Oh, not a good time. Uhh-” You look around for something else to talk about.
+    You notice that you're overwhelming Riva.“Oh, not a good time. Uhh-” You look around for something else to talk about.
     
-    “No no no, you’re alright. It’s just that I’m not really used to people visiting me in the infirmary, let alone someone with as much energy as you.” Riva explains.
-    
-    “Not used to being visited in the infirmary? Does this happen often?”
-    
-    "Yeah, but it’s no big deal.” She says, like it’s nothing new.
-    
-    *page_break
-    
-    “No big deal? Riva…” You let out a sigh. “Are you sure you’ll be alright?”
-    
-    “I’m quite alright, nothing more than just a common mockworm. With just a little treatment I should be back on my feet in no time.” She waves her not injured hand.
+    “No no no, you’re alright. It’s just that I’m not really used to people visiting me in the infirmary, let alone someone with as much energy as you.” Riva explains. "It's nothing more than just a common mockworm. With just a little treatment I should be back on my feet in no time.” She waves her not injured hand.
     
     “Common mockworm…” You shudder. “I’ll take care of them, we can’t have you getting injured every time you tend to the garden.”
     
-    “Aw, that's sweet but I’m going to have to ask you not to do that. You see, these mockworks look like they don’t belong, but they are as important to the ecosystem as a common bee. You wouldn’t kill a spider just because it’s venomous, would you? They help us and they help the environment” She gives you a grateful smile.
+    “That's sweet, but I’m going to have to ask you not to do that. You see, these mockworks look like they don’t belong, but they are as important to the ecosystem as a common bee. You wouldn’t kill a spider just because it’s venomous, would you? They help us and they help the environment” She gives you a grateful smile.
     
     You nod your head nervously as you ponder all the spiders you have murdered in the past.
     
@@ -291,7 +275,7 @@ Who do you help?
 
         You hear some yelling in the distance, so you go and investigate. You come across Winfred who was just hyping himself up.
         
-        “Hey! ${name}!” (Windfred)
+        “Hey! ${name}!”
         
         Windfred calls you over but you freeze up, intimidated by his sheer mass. You have never seen someone as tall and strong as Winfred. Even the strongest knight in Summerlight would be towered by him.  The closer he gets the more you tense up.
         
@@ -372,15 +356,23 @@ When you get there, you find more people scrambling around to prepare for his en
 
 “Are you a new member?” He asks you.
 
-*page_break
+*fake_choice
+    #Be Cautious.
+        Despite being overwhelmed by his sheer prescence, you manage to squeak out a "Yes sir." You pray to Sigel that it's enough.
 
-You hold your breath, unsure of how to respond. Since the words get stuck in your throat, all you can do is nod.
+        "No need to be so nervous!" He puts his hand on your shoulder. "I hope to see you at the meeting."
+    
+    #Be Confident!
+        With confidence, you proclaim "Yes Sir!" You think that did the trick, but you try to hide the fact that his sheer prescence is overwhelming you.
 
-“Welcome!” He puts his hand on your shoulder. “I hope to see you at the mission meeting.” 
+        "I like your spirit!" He puts his hand on your shoulder. “I hope to see you at the mission meeting.”
+
+    #Be Safe.
+        You hold your breath, unsure of how to respond. Since the words get stuck in your throat, all you can do is nod.
+
+        “Welcome!” He puts his hand on your shoulder. “I hope to see you at the mission meeting.” 
 
 Before you can even comprehend what's happening, he walks off. This was the man from all the stories and legends, and you have no doubts now. If he’s helping you on your mission, then everything will go smoothly. You begin to feel a burst of confidence.
-
-*page_break
 
 You head into the room and take a seat at the big roundtable. Most of the people you know are there, but a few people are still wandering in. Everyone is talking and settling in when the door bursts open. The room goes quiet as The Zealot strides in and stands near the big empty chair. He smiles at everyone. You gaze at the amount of charisma and confidence he wields.
 
@@ -507,8 +499,6 @@ The next day, you all wrap up camp and march into the town. Eventually, The Zeal
 *set isSkadonDiscovered true
 
 Everyone cheers at the speech and prepares for battle.
-
-*page_break
 
 Before you know it, everyone runs into the forest.
 
