@@ -171,9 +171,15 @@ Her eyes are brimming with sadness.
             Ivy speaks up, her voice filled with determination. "We will be there for her; we are her family. She'll need us." Riva nods in agreement to support Ivy's statement.
 
         #"I can't."
+            *comment I want this to destroy the player and Cel's relationship.
+            
             *set CH8d_CelPath "didNot"
             *set cur_behavior_tag tag_Mean
             *set cur_severity_multiplier multiplier_major
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
             *gosub_scene general UpdateReactionCel
             *gosub_scene general UpdateRelValCel
             Her hope swiftly fades as you shake your head. "I don't believe I'm the most suitable person for this journey," you admit.
