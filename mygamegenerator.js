@@ -121,7 +121,7 @@ var create = /^\*create +(\w+) +(.*)/;
 var result, variable, value;
 var achievements = [];
 
-var ignoredInitialCommands = {"comment":1, "author":1, "bug": 1, "ifid": 1 };
+var ignoredInitialCommands = {"comment":1, "author":1, "bug": 1};
 
 for (var i = 0; i < lines.length; i++) {
   var line = (""+lines[i]).trim();

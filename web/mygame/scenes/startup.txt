@@ -1,5 +1,5 @@
 *comment either express or implied.
-*ifid 01ae4942-dfa9-4d82-8c63-559069463462
+
 *title Tales From Teren: The Approaching Rot
 *author Team Teren
 *scene_list

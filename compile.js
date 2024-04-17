@@ -197,18 +197,11 @@ function compile(){
       console.log("Game title set to: " + csTitle);
     }
   
-    var ifidLine = scene.lines.find(line => /^\*ifid/i.test(line));
-    if (ifidLine) {
-      var ifid = ifidLine.replace(/^\*ifid\s+/i, "").toUpperCase();
-      top = top.replace('window.storeName = null;', `window.storeName = "CS-${ifid}";`)
-      top += `<meta property="ifiction:ifid" content="${ifid}" prefix="ifiction: http://babel.ifarchive.org/protocol/iFiction/">`;
-    } else {
-      console.log("WARNING: No *ifid. Refreshing the browser tab will erase all progress.");
-      try {
-        var example = crypto.randomUUID();
-        console.log("  You can use this randomized IFID: *ifid " + example);
-      } catch (e) {}
-    }
+  var ifidLine = scene.lines.find(line => /^\*ifid/i.test(line));
+  if (ifidLine) {
+    var ifid = ifidLine.replace(/^\*ifid\s+/i, "").toUpperCase();
+    top += `<meta property="ifiction:ifid" content="${ifid}" prefix="ifiction: http://babel.ifarchive.org/protocol/iFiction/">`;
+  }
 
   //7.2 Create the allScenes object
   console.log("");
