@@ -6,7 +6,7 @@ They are traveling to Cavecross and through to the east side of Teville. You fig
 
 *page_break
 
-You are walking near the back of the caravan, there are a few scholars ahead of you along with their wagons. You can’t hear what the merchants are saying, but they seem to be in deep conversation about something. Possibly something to do with a conflict in ideology between the temples they have visited.
+You are walking near the back of the caravan. There are a few scholars ahead of you along with their wagons. You can’t hear what the merchants are saying, but they seem to be in deep conversation about something. Possibly something to do with a conflict in ideology between the temples they have visited.
 
 As you are looking around, keeping an eye on the forest, you see a deep cut in a tree. It looks like something was embedded in the tree for a period of time, the mark is deep enough that the new growth hasn’t erased the mark yet. It reminds you of the time a salesman came to Summerlight and told everyone that he hid an axe in the forest and the first person to find it gets a free weapon.
 
@@ -35,11 +35,17 @@ As if to mock you, the merchants walk up to a fork in the road and to the sign p
 
 The other scholars nod in agreement and the head of the group sighs. “Fine, I’ve been here before, we’ll want to go to the inn. The temple here can barely even be called a temple. You, traveler. You will have to pay for your own bed or find another place to stay. We do not have the coin to pay for you.”
 
-You nod, “That’s fine, I wasn’t planning on staying that long anyways. I have a place nearby I can stay at for the night. Maybe I will find you again by Cavecross.”
+*fake_choice
+    #I have somewhere else I can stay.
+        You nod, “That’s fine, I wasn’t planning on staying that long anyways. I have a place nearby I can stay at for the night. Maybe I will find you again by Cavecross.”
 
-He looks at you in confusion, but leaves it alone after seeing the confidence in your face. After gathering the rest of the scholars and explaining the plan, he starts down the path towards Summerlight.You stay at the fork in the road and watch them leave, debating on where you should go.
+        He looks at you in confusion, but leaves it alone after seeing the confidence in your face. After gathering the rest of the scholars and explaining the plan, he starts down the path towards Summerlight.You stay at the fork in the road and watch them leave, debating on where you should go.
 
-*page_break
+    #Thank you for your help.
+        You nod, “That’s quite alright, thank you for your help. It was reassuring having someone to travel with along these roads. Now’s where we’ll part ways, but I hope to find you again in Cavecross.
+
+        He looks at you in confusion, but leaves it alone after seeing the confidence in your face. “Of course. Stay safe out there, you never know what could happen.” After gathering the rest of the scholars and explaining the plan, he starts down the path towards Summerlight.You stay at the fork in the road and watch them leave, debating on where you should go.
+
 There is an old hut back down the road that your father used to take you to when the two of you traveled. However, you don’t know what state the hut is in. It has been many years since you’ve last been there. You would also have to deal with any monsters that are out at night.
 
 You could also go into the village and stay the night at the old temple. It would be safer than staying out here, but you have the chance of being caught by the guards. You would also have the chance to visit your old house and pick up some items that you may need.
@@ -57,7 +63,7 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         
         Along the gravel path you find a tree that has fallen across the entire pathway. There are overgrown bushes across the side of the path and some mockguardens along it.  You tread carefully down the path until you see what is left of the hut.
         
-        It is still standing, but it is covered in vines. The roof is caving in, and the walls have started to fall apart. However, you would rather be in there then outside at night. You can also see some destroyed furniture that you can use for quick repairs.
+        It is still standing, but it is covered in vines. The roof is caving in, and the walls have started to fall apart. However, you would rather be in there than outside at night. You can also see some destroyed furniture that you can use for quick repairs.
 
         *page_break
         You walk through the door and the inside doesn’t look much better. Furniture has been scattered about, you guess by previous occupants trying to make this place safer. A table pushed up against the broken wall, with a chair helping it stay up, none of the windows seem broken, and the door closes.Lastly, it does not seem like much of the roof has caved in, only a small section. The fireplace also seems to be in one piece. Overall, a fairly safe place to stay in.
@@ -66,7 +72,7 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         
         While you are cleaning up you remember all the times you’ve been here with your father. He passed a few years back and you don’t have anything with you left to remember him by. Everything is still in your old house.
         
-        As you threw in the last piece of wood into the fire, you hear a knock at the door
+        As you threw in the last piece of wood into the fire, you hear a knock at the door.
         *if (cel_path = "good")
             *goto Hut_Cel
         
@@ -82,16 +88,23 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         
         Before you are seen, you walk slightly into the forest and start searching for a hiding spot. Some place to stay before dark.
         
+        *page_break
+        
         You find a tree that has fallen onto another tree. It seems like the weight of the second tree knocked them both to the ground.
         
         You hide behind it and wait for it to be dark. You look off into the forest and reminisce with the memories of playing with Reese in these forests. Playing with swords as knights or mercenaries, there was never a dull day. After Reese passed, you made some new friends, but they were never as close to you as Reese was. They always looked at you with pity, even when they didn’t mean to.
         
-        *page_break
         Shaking your head, you look over at the gate and the scholars are gone. Even the guards seem to be missing. You use this moment to run towards the wall and walk down the path beside it.
         
-        While you are walking the path, you find an abandoned cart. Curios, you walk up to it as it seems to have been there for a few days. It seems to be empty with very little damage done to it, only a few scratches on the side of it.The most unusual thing about it is the broken crates inside.
-        
-        Deciding that it is none of your business, you leave it alone and continue down the path.
+        While you are walking the path, you find an abandoned cart. What do you do?
+        *fake_choice
+            #Check it out.
+                Curios, you walk up to it as it seems to have been there for a few days. It seems to be empty with very little damage done to it, only a few scratches on the side of it.The most unusual thing about it is the broken crates inside.
+
+                Deciding that it is none of your business, you leave it alone and continue down the path.
+
+            #Play it safe.
+                Deciding that it’s none of your business, and could be potentially dangerous, you decide to leave it alone and continue down the path. You don’t know if that was the right decision, but at least you’re safe.
         
         There are some nicely trimmed bushes along the side of the wall as well as some flowers in the grass. You are looking for a break in the bushes and some trampled flowers.
         
@@ -209,18 +222,34 @@ You continue walking down the alleys, you decide to-
             
         “[codex:codex_hl_Rip_Daring]Rip Daring[/codex] and you are ${name}, the person wanted for murder of Lord Odel.” He explains nonchalantly.
         *set isRipDiscovered true
-            
-        You take a step back. “What do you want from me?”
-            
-        “You, nothing. You were framed for a murder you didn’t commit. Though, I would suggest leaving soon. The guards don’t think the same.” He explains.
-            
-        You look around, “were you the one who made sure that no one was here?”
-            
-        “Yep, and I made sure you never got caught in the city. I don’t know what you were thinking about coming back to town and all.” Rip scolds slightly. “I thought you left for the Flames of Sigel?”
-            
-        *page_break
+        
+        How do you respond?
+        *fake_choice
+            #I remember you.
+                You take a step back. "I remember you. You were there the night I had to flee from this town."
 
-        “Things didn’t work out and I left. I didn’t know that the scholars I was traveling with were going to stop here and split up with them.” You explain. “I’ll be leaving soon, I just wanted to say my last goodbyes before leaving.”
+                "That's quite right, but you decided to go with the Flames instead of the Wolves. Quite a shame, really. I can tell you have a lot of talent.
+
+                "Yeah, well things didn't work out and I left. I didn't know that the group of scholares I was traveling with were going to stop here, so I split up with them." You explain. "I'll be going soon, I just wanted to say my last goodbyes before leaving."
+
+            #What do you want from me?
+                You take a step back. "What do you want from me?"
+
+                "You, nothing. You were framed for a murder you didn't commit. Though, I would suggest leaving soon. The guards don't think the same." He explains.
+
+                You look around. "Were you the one who made sure that no one was here?"
+
+                "Yep, and I made sure you never got caught in the city. I don't know what you were thinking about coming back to this town at all." Rip scolds slightly. "I thought you left for the Flames of Sigel?"
+
+                "Things didn't work out and I left. I didn't know that the group of scholars I was traveling with were going to stop here, so I split up with them." You explain. "I'll be leaving soon, I just wanted to say my last goodbyes before leaving."
+
+            #I didn't do it.
+                You take a step back. "I was framed for the murder, I had nothing to do with it."
+
+                "I'm well aware, but the guards still think you did it. I don't know what you were thinking coming back to town and all." Rip scolds slightly. "I thought you left for the Flames of Sigel?"
+
+                "Things didn't work out and I left. I didn't know that the group of scholars I was traveling with were going to stop here so Isplit up wtih them." You explain. "I'll be leaving soon, I just wanted to say my last goodbyes before leaving."
+
         
         “It’s a little late to leave now, who knows what monsters are lurking out there. I can take you to an abandoned house to stay the night and then you can decide what you are doing in the morning.” Rip offers
         
@@ -231,11 +260,26 @@ You continue walking down the alleys, you decide to-
             *goto Cemetary_Ivy
         
 *label Hut_Cel
-You freeze and stare at the door. After a few seconds there was another knock at the door. You slowly walk towards the door and grab a dagger out of your bag.
+You freeze and stare at the door. After a few seconds, there's another knock. What do you do?
+*fake_choice
+    #Ask who's there.
+        “Who’s there?” You say, hoping that was loud enough to sound threatening.
 
-When you reach the door and look outside through one of the holes in the wall, you see Cel.
+        “I knew you’d be here.” It’s a familiar voice. You walk to the door and open it to see Cel, waiting alone in the dark night.
 
-You relax and slowly open the door.
+    #Peep through a hole in the wall.
+        You slowly walk towards the door and grab a dagger out of your bag.
+
+        When you reach the door and look outside through one of the holes in the wall, you see Cel.
+
+        You relax and slowly open the door.
+
+    #Do nothing.
+        Hoping to avoid any dangerous situations, you decide to stay quiet as the knocking persists. Eventually, the knocking ceases.
+
+        “Hello? If you’re in there, ${name}, I would like to talk.” The voice sounds familiar. It’s comforting, in a way. Deciding that more trouble will come out of doing nothing, you decide to go to the door and open it.
+
+        Upon doing so, you find Cel, standing quietly in the dark of night. She turns to you, saying “I knew you’d be here. You should have answered sooner.”
 
 “How did you find me?” You ask her.
 
@@ -257,7 +301,6 @@ You take a good look at her this time. Her face looks soft and you notice some t
 
 You,
 *fake_choice
-
     #Agree to follow her
         
         *set CH10_ending "shack"
@@ -289,11 +332,26 @@ You,
         *finish
 
 *label Hut_Ivy
-You freeze and stare at the door. After a few seconds there was another knock at the door. You slowly walk towards the door and grab a dagger out of your bag.
+You freeze and stare at the door. After a few seconds there’s another knock. What do you do?
+*fake_choice
+    #Ask who's there.
+        “Who’s there?” You say, hoping that was loud enough to sound threatening.
 
-When you reach the door and look outside through one of the holes in the wall, you see Ivy.
+        You hear a chuckle. “I knew you’d be here, goofball.” It’s a familiar voice. You walk to the door and open it to see Ivy, waiting alone in the dark night.
 
-You relax slightly and slowly open the door.
+    #Peek through a hole in the wall.
+        You slowly walk towards the door and grab a dagger out of your bag.
+
+        When you reach the door and look outside through one of the holes in the wall, you see Ivy.
+
+        You relax and slowly open the door.
+
+    #Do nothing.
+        Hoping to avoid any dangerous situations, you decide to stay quiet as the knocking persists. Eventually, the knocking ceases.
+
+        “Hello? If you’re in there, ${name}, I would like to talk.” The voice sounds familiar. It’s comforting, in a way. Deciding that more trouble will come out of doing nothing, you decide to go to the door and open it.
+
+        Upon doing so, you find Ivy, standing quietly in the dark of night. She turns to you, saying “I knew you’d be here you idiot. You should have answered sooner.”
 
 “How did you find me?” You ask her.
 
