@@ -314,7 +314,7 @@ You,
         Both you and Cel look towards the village when another explosion is heard. A fire is seen at the top of one of the towers and you look at Cel. Cel has this horrified expression and runs towards the town.
         
         You quickly grab your bag and follow her.
-        *finish
+        *return
     
     #Decline her invitation
         
@@ -329,7 +329,7 @@ You,
         Both you and Cel look towards the village when another explosion is heard. A fire is seen at the top of one of the towers and you look at Cel. Cel has this horrified expression and runs towards the town.
         
         You quickly grab your bag and follow her.
-        *finish
+        *return
 
 *label Hut_Ivy
 You freeze and stare at the door. After a few seconds there’s another knock. What do you do?
@@ -385,7 +385,7 @@ You look at Ivy’s solemn expression and decide to,
         Before you can respond you hear an explosion outside. You and Ivy look at the door and then each other before running outside.
         
         Outside you can see smoke coming from the village. You stare at it for a second before another explosion goes off. One of the towers catches on fire. Both you and Ivy run towards the town
-        *finish
+        *return
     #Stay
         
         *set CH10_ending "shack"
@@ -397,7 +397,7 @@ You look at Ivy’s solemn expression and decide to,
         Before she could reach it you hear an explosion outside. You and Ivy look at the door and then each other before running outside.
         
         Outside you can see smoke coming from the village. You stare at it for a second before another explosion goes off. One of the towers catches on fire. Both you and Ivy run towards the town
-        *finish
+        *return
 
 *label Cemetary_Cel
 Before you make a decision, Cel walks down the path to the graveyard.
@@ -436,7 +436,7 @@ You look between the both of them and decide,
         An explosion came from the center of town. You look over at Cel who has a horrified expression. Just as you were about to start running towards the town, Rip runs on by you two.
         
         Both you and Cel run after him just as another explosion sounds. You can already see that some of the buildings are on fire.
-        *finish
+        *return
 
     #To follow Rip
         
@@ -453,7 +453,7 @@ You look between the both of them and decide,
         You don’t get long to contemplate your decisions before a loud explosion comes from the center of town. You look over at Rip before running up the path.
         
         You pass Cel and see her horrified expression before she follows you and you notice Rip not that far behind you. The three of you just pass the gate before another explosion is heard.
-        *finish
+        *return
 
 *label Cemetary_Ivy
 Rip then snaps his head up at the forest. He gives you the motion to stay quiet when-
@@ -496,7 +496,7 @@ You look between the two of them,
         
         An explosion came from the center of town. You look over at Ivy who has a confused expression. Just as you were about to start running towards the town, Rip runs on by you two.
         Both you and Ivyl run after him just as another explosion sounds. You can already see that some of the buildings are on fire.
-        *finish
+        *return
 
     #You follow Rip
         You look between Rip and Ivy before saying, “I’m sorry Ivy, but I don’t think I could do much. This all happened because of our argument and I might make it worse”
@@ -512,6 +512,6 @@ You look between the two of them,
         You pass Ivy and see her confused expression before she follows you and you notice Rip not that far behind you. The three of you just pass the gate before another explosion is heard.
         
         *set CH10_ending "graveyard"
-        *finish
+        *return
 
 *return
