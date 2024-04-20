@@ -958,7 +958,7 @@ Do you want to help Riva with her herbs?
         
         *goto CLC
 
-    *if not (item = "book") #You’ll fight the ogre too. You can’t just sit back, can you?
+    *if (item != "book") #You’ll fight the ogre too. You can’t just sit back, can you?
         *set cur_behavior_tag tag_f_Helping
         *set cur_severity_multiplier multiplier_average
         *set cur_f_severity_value f_severity_average
