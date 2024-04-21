@@ -260,8 +260,6 @@ Would you like to talk about it? Well…
             
             “Yes, I saw him.”
             
-            *page_break
-            
             Cel is quiet for a minute, turning the thought over in her head. Left in anticipation, you await her thoughts.
             
             “Did you see his face?”
@@ -369,7 +367,6 @@ One of them, a fellow on the much, much older side, gives you a bow.
         
         Well, you didn’t have any intentions of fitting in here, did you?
 
-*page_break
 Cel gets off the carriage from behind you, and walks in front of you.
 
 “Everyone, I’ve brought back someone new to join our family” Cel says, addressing the four other people outside of the temple
@@ -379,6 +376,7 @@ Cel turns back to you, and gestures at you,
 “This is ${name}. ${name}, let me introduce you to…”
 
 *page_break
+*image images/berthold.webp
 
 “That’s [codex:codex_hl_Berthold]Berthold[/codex]; he’s been around even longer than me. He won’t usually say a whole lot, but if you ever need any advice, he has decades of wisdom to offer.”
 *set isBertholdDiscovered true
@@ -388,6 +386,7 @@ He does another bow. You respond just as you did the first time.
 You watch Cel point at the largest man in the group; he looks older than you, and probably a little older than Cel, but not anywhere near the age of Berthold… or should you call him Klepper? He is your elder…
 
 *page_break
+*image images/winfred.webp
 
 “That’s [codex:codex_hl_Winfred]Winfred[/codex]; he’s been a great help with heavy lifting, and a pleasure to have around!”
 *set isWinfredDiscovered true
@@ -397,6 +396,7 @@ You watch Cel point at the largest man in the group; he looks older than you, an
 You can’t get over how tall and wide he is. Everyone in town told you to eat your vegetables, but… Well, if this man told you, maybe you would’ve listened. He’d obviously know from experience.
 
 *page_break
+*image images/ivy.webp
 
 Cel moves her arm over to the next person in your field of view. Somehow, she stands out even more than Berthold, in that she doesn’t look like she belongs here at all. In fact, she looks more like the other man who tried to help you that day; the mercenary,
 “That’s [codex:codex_hl_Ivy]Ivy[/codex]; she grew up here, just like I did.”
@@ -422,6 +422,7 @@ The girl, Ivy, reluctantly lets out a chuckle.
 Cel sighs. You can tell it takes all her strength to hold back a “well, that’s because” statement. That’s your guess, anywho. You think they act kind of related, despite them not really looking alike in the slightest.
 
 *page_break
+*image images/riva.webp
 
 Cel puts back on her joyful demeanor, and points at the next member. You actually didn’t notice her until Cel pointed. She’s a wood elf, maybe a couple of years older than you. Her entire posture seems to be doubled in on itself, like she’s scared to be seen. You can see a couple leaves in her hair, though none on her clothing.
 
@@ -957,7 +958,7 @@ Do you want to help Riva with her herbs?
         
         *goto CLC
 
-    #You’ll fight the ogre too. You can’t just sit back, can you?
+    *if (item != "book") #You’ll fight the ogre too. You can’t just sit back, can you?
         *set cur_behavior_tag tag_f_Helping
         *set cur_severity_multiplier multiplier_average
         *set cur_f_severity_value f_severity_average

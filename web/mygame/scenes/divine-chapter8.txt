@@ -16,6 +16,7 @@ Her eyes are brimming with sadness.
 
     #"Can't Sleep?"
         *set CH8d_question "Can't sleep?"
+
 *if (rel_val_Cel > 0)
     Being curious, you ask, “${CH8d_question}” The question has a hint of worry along with a bit of irritation from your lack of much needed sleep.
 
@@ -73,7 +74,14 @@ Her eyes are brimming with sadness.
 
     "That's all I can remember. Every night, I have to relive it in my nightmares. I wish I could figure out what happened. I wish I knew more; if only I could remember more." Cel looks at you with tears in her eyes. It’s obviously a story that hasn’t been talked about in a very long time. You consider what to say to your friend, who had clearly just reopened an old wound.
 
-    Cel’s cry for help tugs at your heartstrings. This reaction prompts you to walk over to Cel and embrace her tightly, reassuring her of your support. Cel returns the hug, taking a deep breath to calm herself from that painful memory.
+    *fake_choice
+        #Comfort Her.
+            Cel’s cry for help tugs at your heartstrings. This reaction prompts you to walk over to Cel and embrace her tightly, reassuring her of your support. Cel returns the hug, taking a deep breath to calm herself from that painful memory.
+
+        #Reassure Her.
+            Cel’s cry for help tugs at your heartstrings. This reaction prompts you to walk over to Cel and put your arm on her shoulder. "You'll remember it eventually, I'm sure of it. Just give it some time."
+
+            She looks up and smiles through the tears. "Thank you, ${name}. That means a lot."
 
     An idea pops into your mind. You softly suggest to Cel, "Why don't you go to the village and try to uncover what happened? Maybe being in the village again will trigger more of your memories." The idea poses a risk to Cel, but you genuinely want to help her find peace and learn more about her past.
 
@@ -82,6 +90,10 @@ Her eyes are brimming with sadness.
     *fake_choice
         #"Of course."
             *set CH8d_CelPath "went"
+            *set cur_behavior_tag tag_Nice
+            *set cur_severity_multiplier multiplier_major
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
             The next day, the two of you leave for Cel’s old burned down village.
 
             As you walk through the remnants of Cel's old village, a sense of desolation and sorrow hangs in the air. The charred ruins of what used to be homes and shops serves as a grim reminder of the tragic events that had transpired there. Cel clings tightly to your hand, seeking comfort in your presence. You gaze at what used to be Cel's village, your heart heavy with the weight of the past. You continue walking until you reach a place that seems familiar to Cel. "This was my home," she whispers, her voice filled with a mix of sadness and nostalgia.
@@ -159,32 +171,65 @@ Her eyes are brimming with sadness.
             Ivy speaks up, her voice filled with determination. "We will be there for her; we are her family. She'll need us." Riva nods in agreement to support Ivy's statement.
 
         #"I can't."
+            *comment I want this to destroy the player and Cel's relationship.
+            
             *set CH8d_CelPath "didNot"
+            *set cur_behavior_tag tag_Mean
+            *set cur_severity_multiplier multiplier_major
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
+            *gosub_scene general UpdateReactionCel
+            *gosub_scene general UpdateRelValCel
             Her hope swiftly fades as you shake your head. "I don't believe I'm the most suitable person for this journey," you admit.
 
             Despite Cel's disagreement with your statement, you resolutely stand your ground. Cel can’t help but feel a twinge of disappointment, recognizing that you’re the crucial person she needs on this journey. If she were to disclose her plans to the others, they would undoubtedly plead with her not to embark on this trip. She respects your choice and nods.
 
             After concluding the evening conversation, you retire to bed. The following morning, as you prepare for your daily chores, you make their way to the dining hall to retrieve your task list. However, upon scanning the room, a conspicuous absence catches your attention—Cel is nowhere to be found. Murmurs among others hint at her mysterious disappearance. Concerned, you hasten to Cel's room, discovering the door ajar and the bed untouched. She never returned last night. A search of the garden yields no trace of her presence. 
-        
-            *page_break
 
-            Realization dawns on you, prompting a swift return indoors to seek answers from Ivy and Riva.."Did you catch sight of Cel this morning?" 
+            Realization dawns on you, prompting a swift return indoors to seek answers from Ivy and Riva.. "Did you catch sight of Cel this morning?" 
 
             Riva and Ivy exchange glances, both shaking their heads. "Not at all," Riva replies. "Have you?" 
 
-            You hesitate for a moment, then take a deep breath before responding. "Only last night, during a bout of insomnia. She opened up about her past, and I may have suggested she visit the village to uncover the truth about her parents." Shock registers on both Ivy and Riva's faces.
+            *fake_choice
+                #Tell the truth.
+                    *set cur_behavior_tag tag_Nice
+                    *set cur_severity_multiplier multiplier_insignificant
+                    *gosub_scene general UpdateReactionRiva
+                    *gosub_scene general UpdateRelValRiva
+                    *gosub_scene general UpdateReactionIvy
+                    *gosub_scene general UpdateRelValIvy
 
-            "What?! Why would you suggest that?" Ivy exclaims, a growing sense of worry casting its shadow over her expression.
+                    You hesitate for a moment, then take a deep breath before responding. "Only last night, during a bout of insomnia. She opened up about her past, and I may have suggested she visit the village to uncover the truth about her parents." Shock registers on both Ivy and Riva's faces.
 
-            "It appeared as though she carried a considerable burden of unresolved trauma. At that moment, the suggestion seemed reasonable, and she earnestly wanted me to accompany her, but I hesitated and declined." Your countenance betrays a sense of regret as you acknowledge leaving your friend alone. Ivy can’t help but facepalm in response to your seemingly thoughtless decision.
+                    "What?! Why would you suggest that?" Ivy exclaims, a growing sense of worry casting its shadow over her expression.
 
-            "Alright, she's gone now. When she returns, we'll address the situation. For the time being, let's hope she comes back," Riva remarks calmly. She’s puzzled by your choice not to join Cel on this crucial quest, but opts to let it go for now.
+                    "It appeared as though she carried a considerable burden of unresolved trauma. At that moment, the suggestion seemed reasonable, and she earnestly wanted me to accompany her, but I hesitated and declined." Your countenance betrays a sense of regret as you acknowledge leaving your friend alone. Ivy can’t help but facepalm in response to your seemingly thoughtless decision.
+
+                    "Alright, she's gone now. When she returns, we'll address the situation. For the time being, let's hope she comes back," Riva remarks calmly. She’s puzzled by your choice not to join Cel on this crucial quest, but opts to let it go for now.
+
+                #Lie.
+                    *set cur_behavior_tag tag_Mean
+                    *set cur_severity_multiplier multiplier_average
+                    *gosub_scene general UpdateReactionRiva
+                    *gosub_scene general UpdateRelValRiva
+                    *gosub_scene general UpdateReactionIvy
+                    *gosub_scene general UpdateRelValIvy
+
+                    You hesitate for a moment, thinking of whether or not you should cover your ignorance, before responding. "Only last night, during a bout of insomnia, she opened up about her past. She's been having nightmares about an incident that happened long ago. After she shared her story, I bid her goodnight and went off to bed. She might have whispered something about traveling, but I didn't catch it."
+
+                    "What?! Why would you leave her there?" Ivy exclaims, a growing sense of worry casting its shadow over her expression. "This could be really bad!"
+
+                    "I made sure to ask if she was going to bed soon, and she said that she was. Plus, I was tired! I should have paid more attention."
+
+                    Ivy rolls her eyes, and Riva facepalms. "Alright, she's gone now. When she returns, we'll address the situation. For the time being, let's hope she comes back," Riva remarks calmly. She’s puzzled by your choice not to join Cel on this crucial quest, but opts to let it go for now.
 
             *page_break
 
             Several days drift by when Cel, wearied and disheveled from her journey, enters the temple once more. Her eyes, once filled with light and life, now seem dimmed. As she passes your group, anticipation for your lively friend to update everyone on her quest turns to concern. The absence of the expected briefing hints at something gravely amiss. Ivy trails behind Cel, only to find a firmly closed door barring her entry into Cel's room. Shock momentarily holds Ivy in its grip, but she quickly composes herself.
 
-            "Cel?" she utters softly, her worry palpable. "Are you okay?" The question hangs in the air, met with an unsettling silence. Ivy attempts the doorknob, only to discover it unexpectedly locked. Turning away, she joins the others—you and Riva—engaged in your daily tasks.
+            "Cel?" she utters softly, her worry palpable. "Are you okay?" The question hangs in the air, met with an unsettling silence. Ivy attempts the doorknob, only to discover it unexpectedly locked. Turning away, she joins the others — you and Riva — engaged in your daily tasks.
 
             "She locked her door," Ivy shares with a hint of concern, her fingers nervously finding refuge in her mouth.
 

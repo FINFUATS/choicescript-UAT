@@ -383,7 +383,7 @@ How do you tell the story?
 
 *fake_choice
     # “I happened to be at the wrong place at the wrong time…” 
-        *set cur_behavior_tag tag_Selfish
+        *set cur_behavior_tag tag_Nice
         *set cur_severity_multiplier multiplier_average
         *gosub_scene general UpdateReactionAnwen
         *gosub_scene general UpdateRelValAnwen
@@ -402,7 +402,7 @@ How do you tell the story?
 
     # “I was on my way home when a murder got pinned on me!” 
         *set cur_behavior_tag tag_Selfish
-        *set cur_severity_multiplier multiplier_average
+        *set cur_severity_multiplier multiplier_minor
         *gosub_scene general UpdateReactionRip
         *gosub_scene general UpdateRelValRip
         *gosub_scene general UpdateReactionAnwen
