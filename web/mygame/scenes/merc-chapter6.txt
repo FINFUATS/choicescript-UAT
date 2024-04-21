@@ -41,6 +41,10 @@
 *temp c_choice_text3 "Look for something in your environment to use to your advantage."
 *temp c_choice_text4 "Swing your blade shrewdly."
 *temp c_choice_text5 "Swing your blade shrewdly."
+
+*if debug_MC6 = true
+    *goto TEMP_MC6_combat
+
 [head]Chapter 6: First Mission[/head]
 The tent is warm when ${P2M_roommate} shakes you awake. 
 
@@ -559,6 +563,7 @@ You gasp, your mind slamming back to the present. Anwen is staring at you, a mix
 She gives you her handheld catapult. “Shoot anything that attacks us!”
 
 *page_break
+*label TEMP_MC6_combat
 
 As if on cue, a Jackaloid bounds toward you.
 
@@ -679,6 +684,15 @@ As if on cue, a Jackaloid bounds toward you.
 
 *goto MC6FightLoop
 *label MC6FightBranch
+*if debug = true
+    *choice
+        #Replay Fight
+            *goto StartChapter6
+        #Quit Debug
+            *set debug false
+            *set debug_MC6 false
+            *goto_scene startup
+
 *if win_encounter = true
     *comment Battle is won.
     You stare down at the body of the jackaloid. They look so much smaller now that you’ve grown. 

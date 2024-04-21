@@ -1,7 +1,7 @@
 *label chapter1
 [head]Chapter 1: Who Are You?[/head]
 *comment *goto Player_Init
-    
+
 *goto PI_GetName
 
 *label StartChapterOne

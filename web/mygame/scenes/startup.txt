@@ -384,6 +384,18 @@
 *create cur_affinity_effect_Wolves 0
 
 
+*comment DEBUG GLOBALS
+*create debug false
+*create debug_reallocation false
+
+*create debug_MC5B1 false
+*create debug_MC5B2 false
+*create debug_DC5B1 false
+*create debug_DC5B2 false
+*create debug_DC5B3 false
+
+*create debug_MC6 false
+*create debug_DC6 false
 
 *comment -----------------------------------------------------------------------
 
@@ -398,6 +410,8 @@ WIP build for the UAT production studio milestone review
 
 What chapter?
 *fake_choice
+  # Start Game
+     *goto_scene chapter1
   #Phase 1
      *choice
        #Chapter 1 
@@ -507,4 +521,54 @@ What chapter?
               *goto_scene chapter11
           #Back
               *goto GAMESTART
+  #Debug/Playtest Implemented Features
+     To test relationship and faction reputation values and their effect on their respective meters, you can go to the stat page.
+     
+     It is recommended that you restart the game after finishing the intended test, as continuing may result in issues that would not be seen during normal gameplay.
+     *choice
+         # Stat Designation Page
+            *set debug_reallocation true
+            *goto_scene chapter4
+         # Chapter 5 Combat
+            *choice
+                # Chapter 5 Mercenary Combat
+                    *choice
+                        # Branch Combat 1
+                            *set debug true
+                            *set debug_MC5B1 true
+                            *goto_scene merc-chapter5 StartChapter5
+                        # Branch Combat 2
+                            *set debug true
+                            *set debug_MC5B2 true
+                            *goto_scene merc-chapter5 StartChapter5
+                        # Back
+                            *goto GAMESTART
+                # Chapter 5 Divine Combat
+                    *choice
+                        # Branch Combat 1
+                            *set debug true
+                            *set debug_DC5B1 true
+                            *goto_scene divine-chapter5 StartChapter5
+                        # Branch Combat 2
+                            *set debug true
+                            *set debug_DC5B2 true
+                            *goto_scene divine-chapter5 StartChapter5
+                        # Branch Combat 3
+                            *set debug true
+                            *set debug_DC5B3 true
+                            *goto_scene divine-chapter5 StartChapter5
+         # Chapter 6 Combat
+            *choice
+                # Chapter 6 Mercenary Combat
+                    *set debug true
+                    *set debug_MC6 true
+                    *goto_scene merc-chapter6 StartChapter6
+                # Chapter 6 Divine Combat
+                    *set debug true
+                    *set debug_DC6 true
+                    *goto_scene divine-chapter6 StartChapter6
+                # Back
+                    *goto GAMESTART
+         # Back
+            *goto GAMESTART
       

@@ -41,6 +41,10 @@
 *temp c_choice_text3 "Swing your blade shrewdly."
 *temp c_choice_text4 "Swing your blade shrewdly."
 *temp c_choice_text5 "Swing your blade shrewdly."
+
+*if debug_DC6 = true
+    *goto TEMP_DC6_combat
+
 [head]Chapter 6: The Zealot[/head]
 You head to the infirmary to make sure ${CH5d_injured} is okay. Everyone told you they would be fine, but worst-case scenarios flooded your mind through the night, so you eventually decided to just go over and make sure everything was okay yourself. 
 
@@ -515,6 +519,7 @@ The civilian quickly runs away and gets to safety. You breathe a sigh of relief,
 You begin to panic. You’ve never had to deal with this many before, but you keep fighting. Your sword gets knocked out of your hand. You back up and try to look for a way out of this. A stick, a rock, something.
 
 *page_break
+*label TEMP_DC6_combat
 
 However, you find nothing. You take another step back, only to hit a tree. You have nowhere to go.You close your eyes. If you don’t watch it happen, maybe it will hurt less. However, you are suddenly pushed out of the way. The Zealot is there, and takes the hit instead. It looks really bad. You think of how Reese looked when he got hit and begin to get worried. Despite the injury, The Zealot continues to fight.
 
@@ -639,7 +644,14 @@ Not wanting to just sit around you quickly run over and grab your sword. You swi
 
 *goto DC6FightLoop
 *label DC6FightBranch
-
+*if debug = true
+    *choice
+        #Replay Fight
+            *goto StartChapter6
+        #Quit Debug
+            *set debug false
+            *set debug_DC6 false
+            *goto_scene startup
 *page_break
 
 With one final slash, the jackaloid falls to the floor. Before you can celebrate your victory, The Zealot falls to his knees. You run over to him. 

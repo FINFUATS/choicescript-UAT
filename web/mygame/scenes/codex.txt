@@ -359,6 +359,7 @@ Who do you want to know about?
                 Leediel Esheer has not been seen since his escape from the Flames of Sigel when he was young. He is presumed dead.
                 
                 *if murdererKnown
+                    *image images/murderer.webp
                     Leediel Esheer Joined the Mockguarden Patch in his mid teens after escaping from the Flames of Sigel. Having learned the ways of the blade, he has become the second best assassin known in the lands. Just behind the Silent Night, the most feared assassin by the ones who have heard of him.
                     
                     He got the scar across his face from a botched assassination in his early years and now wears it with pride to show how no one can stop him.  His last hit was lord Odel, a politician he had been hunting down for years and he finally got an opening. However, he was betrayed and had to pin the murder on an unsuspecting local. Now he is hunting down his betrayer to prove that no one messes with him and lives.

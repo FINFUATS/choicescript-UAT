@@ -8,6 +8,9 @@
 *temp Increase_Attr false
 
 *set coin 5
+
+*if debug_reallocation = true
+    *goto CH4_Reallocate_Menu
 [head]Chapter 4: The Mix-up[/head]
 The charming hustle and bustle of the town market reaches your ears long before you enter the busy street. There are multiple shops around you, each bursting with different items for sale and customers hovering in and out of open doorways. It’s been a few years since the incident with the druids and the giant mockguarden. Now, your job has just finished a huge order and the coin just came in. With your pockets now heavy with silver, you decided that you were going to spoil yourself today for all of your hard work. There are some items you have had your eye on and now is as good a time as any to purchase something new.
 
@@ -596,6 +599,16 @@ You currently have ${Attr_PNT_Total} unused attribute points.
             *set Cunning Cunning + 1
             *goto CH4_Reallocate_Menu
 
+    #TEMP: Gain 10 Attribute Points
+        *set Attr_PNT_Total Attr_PNT_Total + 10
+        *set Stored_Attr_Total Attr_PNT_Total
+        *goto CH4_Reallocate_Menu
+
+    #TEMP: Remove all Attribute Points
+        *set Attr_PNT_Total 0
+        *set Stored_Attr_Total Attr_PNT_Total
+        *goto CH4_Reallocate_Menu
+
     #Finish Reallocation
         *if Attr_PNT_Total > 0
             You have unallocated attribute points. This is your last chance to use them.
@@ -603,6 +616,9 @@ You currently have ${Attr_PNT_Total} unused attribute points.
                 #Use Remaining Points
                     *goto CH4_Reallocate_Menu
                 #Continue
+                    *if debug_reallocation = true
+                        *set debug_reallocation false
+                        *goto_scene startup
                     *goto CH4_Final_Choice
         *else
             *goto CH4_Final_Choice

@@ -61,6 +61,11 @@
 *temp MC5B2_c_choice_text3 "Attempt a diversion."
 *temp MC5B2_c_choice_text4 "Lure it into an ambush."
 *temp MC5B2_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+
+*if debug_MC5B1 = true
+    *goto TEMP_MC5B1_combat
+*elseif debug_MC5B2 = true
+    *goto TEMP_MC5B2_combat
 [head]Chapter 5: Wolves of Davenport[/head]
 “Follow me, I’ll get you to a place where the guards won’t think to look for you.” The mercenary leads you down some back alleys. You look around, trying to recognize some of the area, but none of it looks familiar. You avoided this side of town as much as you could since Reese’s death. Couldn’t bear to visit the places the two of you used to play.
 
@@ -610,7 +615,7 @@ The [codex:codex_hl_Mogfish]mogfish[/codex] slowly pulled itself up from the gro
 *image images/Mogfish.webp
 *set isMogfishDiscovered true
 *page_break
-
+*label TEMP_MC5B1_combat
 Rip and Leon brought out their swords and Anwen grabbed her bow. Elena stayed back, but kept an eye on them. You move towards a tree to lean your stick against it, when another mogfish tries to eat it. Jumping back, you let go of the stick and take out your dagger. 
 
 The creature looks worse up close, with a huge mouth and emotionless eyes. This creature is nothing like what you had expected.
@@ -691,11 +696,11 @@ You take a few steps back as it drags itself out of the mud.
         *set description_text3 "The Mogfish occasionally finds itself distracted by your comrades who are dealing with one of their own. You take this opportunity to get a quick attack in before it can react properly."
         *set description_text4 "You start to move around to the side of the creature as it slowly attempts to turn to face you."
         *set description_text5 "Seeing as the Mogfish has become weakened enough by your antics, you attempt to finish it off with a series of quick slashes from your blade."
-        *set victory_text1 "As soon as it launches itself into the air to catch up to you, you start running towards it to slip under it. It has trouble slowly turning around as you make your mark on the Mogfish with your weapon."
-        *set victory_text2 "You swiftly evade the Mogfish and get close enough to strike with an equally quick attack."
-        *set victory_text3 "At the first sign of weakness, you run over to the and strike it as you run by."
-        *set victory_text4 "You pick up speed and it becomes difficult for the Mogfish to keep up. This gives the opportunity to get close enough for another attack."
-        *set victory_text5 "As it jumps near, you start quickly slashing every part of the Mogfish within reach. Not cutting too deep so as to keep your blade from getting stuck."
+        *set victory_text1 "You manage to pierce the Mogfish, slicing into its side and leaving it with an open wound and various cuts on its leg as it tries to jump out of your attack."
+        *set victory_text2 "You successfully manage to cut into it while it is airborne, causing it to abandon its original trajectory and nearly tumble over itself when it lands."
+        *set victory_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. It turned out to be true, as you find yourself being able to deliver a vicious stab to it with your blade before it can react."
+        *set victory_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be strong enough of a blunt strike to leave it disoriented for a moment, which you use to stab into it as it comes to its senses and haphazardly hobbles and hops away from you."
+        *set victory_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. Your blade cuts into the Mogfish with little resistance as it now lay nearly motionless beneath you."
         *set failure_text1 "The creature jumps and you attempt to run under the creature's legs, but you were a little late and find yourself stumbling barely out of range of its pounce."
         *set failure_text2 "You have trouble keeping up with the Mogfish’s unusual movement, and find yourself stumbling before regaining your composure."
         *set failure_text3 "At the first sign of weakness, you run over to the Mogfish and try to strike it as you run by. However, the Mogfish refocuses its attention on you and is aware enough to hop just out of reach of your blade."
@@ -735,6 +740,15 @@ You take a few steps back as it drags itself out of the mud.
 *goto MC5FightBranch1
 *label MC5FightWinBranch1
 *label MC5FightLoseBranch1
+
+*if debug = true
+    *choice
+        #Replay Fight
+            *goto StartChapter5
+        #Quit Debug
+            *set debug false
+            *set debug_MC5B1 false
+            *goto_scene startup
 *page_break
 
 Anwen and Leon quickly run over to Elena and help her up. Leon holds her up and begins to slowly walk her back to camp. You stare at her, horrified over what had happened.
@@ -820,6 +834,7 @@ You turn around and see what you assume is a [codex:codex_hl_Mogfish]mogfish[/co
 *image images/Mogfish.webp
 *set isMogfishDiscovered true
 *page_break
+*label TEMP_MC5B2_combat
 
 The two of you run towards camp when you trip. While Gwyn is helping you get up, you hear a loud THUMP
 
@@ -877,10 +892,10 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
         *set description_text3 "The Mogfish appears to be momentarily vulnerable for an attack, and you attempt a hefty swing with your blade."
         *set description_text4 "Seeing another opportunity for an attack, you try to stun it this time in the hopes that it may leave it vulnerable long enough to finish it off."
         *set description_text5 "The Mogfish has taken a toll and looks weak enough to finish off. You slice at it once more with nearly all your strength with the goal of finishing off the creature."
-        *set victory_text1 "You manage to pierce the Mogfish, slicing part of it and leaving it with an open wound and various cuts as it tries to jump out of your attack."
-        *set victory_text2 "You successfully manage to cut into it while it is air-borne, causing it to abandon its original trajectory."
-        *set victory_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. It turned out to be true, as you find yourself being able to deliver a hefty blow to it with your blade."
-        *set victory_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be strong enough of a blunt strike to leave it disoriented for a moment, which you use to stab into it as it comes to its senses and haphazardly hobbles and jumps away from you."
+        *set victory_text1 "You manage to pierce the Mogfish, slicing into its side and leaving it with an open wound and various cuts on its leg as it tries to jump out of your attack."
+        *set victory_text2 "You successfully manage to cut into it while it is airborne, causing it to abandon its original trajectory and nearly tumble over itself when it lands."
+        *set victory_text3 "Your last attempt to attack it appeared to leave it momentarily vulnerable. It turned out to be true, as you find yourself being able to deliver a vicious stab to it with your blade before it can react."
+        *set victory_text4 "Looking for a better opportunity to attack, you slam down on the Mogfish with the side of your blade as opposed to the sharp edge. It appeared to be strong enough of a blunt strike to leave it disoriented for a moment, which you use to stab into it as it comes to its senses and haphazardly hobbles and hops away from you."
         *set victory_text5 "Seeing the weakened Mogfish, you realize that one more strong attack will likely put it down for good. You charge once more at it and put all your strength into a final swing of your blade. Your blade cuts into the Mogfish with little resistance as it now lay nearly motionless beneath you."
         *set failure_text1 "You run as fast as you can, but the creature manages to hop out of the way."
         *set failure_text2 "You miss your swing as your slice at it during its jump. Fortunately, the Mogfish was caught off guard and misses its attack as well, leaving the moment in an awkward stalemate."
@@ -946,6 +961,14 @@ The mogfish landed right next to you. You quickly grab your dagger and stand wit
 *label MC5FightWinBranch2
 *label MC5FightLoseBranch2
 
+*if debug = true
+    *choice
+        #Replay Fight
+            *goto StartChapter5
+        #Quit Debug
+            *set debug false
+            *set debug_MC5B2 false
+            *goto_scene startup
 *page_break
 
 You help Gwyn up and let him lean against you. For a second you see Reese beside you, giving you a weak smile before you shake your head and begin walking. 
@@ -997,7 +1020,7 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
 *if win_encounter = true
     *if MC5B1 = true
         *if win_attrib = "Brawn"
-            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery.
+            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery. Your brawn proved to be more than the Mogfish was capable of withstanding.
 
             However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
@@ -1005,7 +1028,7 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
             *page_break
             *goto MC5FightWinBranch1
         *elseif win_attrib = "Agility"
-            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery.
+            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery. Your agility proved to be more than the Mogfish was capable of withstanding.
 
             However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
@@ -1015,14 +1038,14 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
         *elseif win_attrib = "Cunning"
             You successfully slay the mogfish. With one last decisive strike, you ensure that the creature is put out of its misery.
 
-            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you. Your cunning proved to be more than the Mogfish was capable of withstanding.
 
             Elena lets out a slight cry of pain. You realize that they had gotten injured during the fight.
             *page_break
             *goto MC5FightWinBranch1
     *elseif MC5B2 = true
         *if win_attrib = "Brawn"
-            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery.
+            You successfully slay the mogfish. With one final blow, you ensure that the creature is put out of its misery. Your brawn proved to be more than the Mogfish was capable of withstanding.
 
             However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
@@ -1030,7 +1053,7 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
             *page_break
             *goto MC5FightWinBranch2
         *elseif win_attrib = "Agility"
-            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery.
+            You successfully slay the mogfish. With a flurry of blows, you ensure that the creature is put out of its misery. Your agility proved to be more than the Mogfish was capable of withstanding.
 
             However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
 
@@ -1040,7 +1063,7 @@ When you look up you see Elena and Leon walking out of the tent. They are talkin
         *elseif win_attrib = "Cunning"
             You successfully slay the mogfish. With one last decisive strike, you ensure that the creature is put out of its misery.
 
-            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you.
+            However, before you have a chance to take in the pride of vanquishing the creature, you hear something behind you. Your cunning proved to be more than the Mogfish was capable of withstanding.
 
             Gwyn lets out an audible grunt of pain. You realize that they had gotten injured during the fight.
             *page_break

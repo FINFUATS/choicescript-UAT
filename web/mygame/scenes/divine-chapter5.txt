@@ -78,6 +78,14 @@
 *temp DC5B3_c_choice_text3 "Attack the Ogre from behind."
 *temp DC5B3_c_choice_text4 "Attempt to cut its arms and weaken its ability to attack."
 *temp DC5B3_c_choice_text5 "Attempt a decisive finishing blow with your blade."
+
+*if debug_DC5B1 = true
+    *goto TEMP_DC5B1_combat
+*elseif debug_DC5B2 = true
+    *goto TEMP_DC5B2_combat
+*elseif debug_DC5B3 = true
+    *goto TEMP_DC5B3_combat
+
 [head]Chapter 5: The Flames of Sigil[/head]
 “Come, right this way” the priestess whispers to you, hesitant to wake anyone in the dead of night.
 
@@ -814,7 +822,8 @@ Do you want to help Riva with her herbs?
         Riva applies pressure in just the right spot before…
         
         *page_break
-        
+        *label TEMP_DC5B1_combat
+
         A large worm appeared! While hacking away at the herbs, it had quickly sprung out of the ground.
 
         It doesn't appear to come in peace as it violently lashes out around itself and inches toward you two.
@@ -936,8 +945,15 @@ Do you want to help Riva with her herbs?
         *goto DC5FightBranch1
         *label DC5FightWinBranch1
         *label DC5FightLoseBranch1
-
         
+        *if debug = true
+            *choice
+                #Replay Fight
+                    *goto StartChapter5
+                #Quit Debug
+                    *set debug false
+                    *set debug_DC5B1 false
+                    *goto_scene startup
         *page_break
         
         Riva was the one who took the brunt of the initial attack. She’s bleeding more than you would’ve expected from something so small. You weren’t exactly a farmer, so you never dealt with those things…
@@ -976,6 +992,8 @@ Do you want to help Riva with her herbs?
         *set DC5B3 false
 
         *set CH5d_injured "Cel"
+
+        *label TEMP_DC5B2_combat
         As soon as the four of you arrive at the town, it becomes clear that something just isn’t right. Everything’s so silent. Of course, you quickly realize that the silence is more a symptom of the people hiding than the ogres themselves. Actually…
         
         “How many are there…?” you ask.
@@ -1110,7 +1128,14 @@ Do you want to help Riva with her herbs?
         *label DC5FightWinBranch2
         *label DC5FightLoseBranch2
 
-        
+        *if debug = true
+            *choice
+                #Replay Fight
+                    *goto StartChapter5
+                #Quit Debug
+                    *set debug false
+                    *set debug_DC5B2 false
+                    *goto_scene startup
         *page_break
         
         The initial club that was thrown hit Cel. That was likely pure luck on the ogre’s part that it accidentally knocked out the healer of the group.
@@ -1158,7 +1183,7 @@ Do you want to help Riva with her herbs?
         
         *page_break
         
-
+        *label TEMP_DC5B3_combat
         
         Ivy doesn’t seem to understand, though, because she shoves your arm away and keeps going.
         
@@ -1287,7 +1312,14 @@ Do you want to help Riva with her herbs?
         *label DC5FightWinBranch3
         *label DC5FightLoseBranch3
 
-        
+        *if debug = true
+            *choice
+                #Replay Fight
+                    *goto StartChapter5
+                #Quit Debug
+                    *set debug false
+                    *set debug_DC5B3 false
+                    *goto_scene startup
         *page_break
         
         The initial club that was thrown hit Ivy. You can’t help but feel completely responsible… If you hadn’t tried to stop her, she might not have attracted that much attention.
@@ -1394,7 +1426,7 @@ With that, she leaves the room as abruptly as she entered it.
 *if win_encounter = true
     *if DC5B1 = true
         *if win_attrib = "Brawn"
-            You successfully slay the worm. With one final blow, you ensure that the creature is put out of its misery.
+            You successfully slay the worm. Its brawn was no match for your own. With one final blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take a good look at your kill, you hear something behind you.
 
@@ -1402,7 +1434,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch1
         *elseif win_attrib = "Agility"
-            You successfully slay the worm. With one last quick strike, you ensure that the creature is put out of its misery.
+            You successfully slay the worm. Its agility was no match for your own. With one last quick strike, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take a good look at your kill, you hear something behind you.
 
@@ -1410,7 +1442,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch1
         *elseif win_attrib = "Cunning"
-            You successfully slay the worm. With one last decisive blow, you ensure that the creature is put out of its misery.
+            You successfully slay the worm. Its cunning was no match for your own. With one last decisive blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take a good look at your kill, you hear something behind you.
 
@@ -1419,7 +1451,7 @@ With that, she leaves the room as abruptly as she entered it.
             *goto DC5FightWinBranch1
     *elseif DC5B2 = true
         *if win_attrib = "Brawn"
-            You successfully slay the Ogre. With one final blow, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its brawn was no match for your own. With one final blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
@@ -1427,7 +1459,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch2
         *elseif win_attrib = "Agility"
-            You successfully slay the Ogre. With one last quick strike, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its agility was no match for your own. With one last quick strike, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
@@ -1435,7 +1467,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch2
         *elseif win_attrib = "Cunning"
-            You successfully slay the Ogre. With one last decisive blow, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its cunning was no match for your own. With one last decisive blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
@@ -1444,7 +1476,7 @@ With that, she leaves the room as abruptly as she entered it.
             *goto DC5FightWinBranch2
     *elseif DC5B3 = true
         *if win_attrib = "Brawn"
-            You successfully slay the Ogre. With one final blow, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its brawn was no match for your own. With one final blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
@@ -1452,7 +1484,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch3
         *elseif win_attrib = "Agility"
-            You successfully slay the Ogre. With one last quick strike, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its agility was no match for your own. With one last quick strike, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
@@ -1460,7 +1492,7 @@ With that, she leaves the room as abruptly as she entered it.
             *page_break
             *goto DC5FightWinBranch3
         *elseif win_attrib = "Cunning"
-            You successfully slay the Ogre. With one last decisive blow, you ensure that the creature is put out of its misery.
+            You successfully slay the Ogre. Its cunning was no match for your own. With one last decisive blow, you ensure that the creature is put out of its misery.
 
             However, before you have a chance to take in the pride of vanquishing such a large creature, you hear something behind you.
 
