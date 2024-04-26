@@ -78,7 +78,11 @@
 *temp rng 0
 *rand rng 0 100
 
-*set returnData (attr + succPercent) >= rng
+*if (attr + succPercent) >= rng
+    *set returnData true
+*else
+    *set returnData false
+*comment *set returnData (attr + succPercent) >= rng
 
 *return
 

@@ -1,0 +1,485 @@
+*label StartChapter14
+
+*temp is_reunion_good false
+[head]Chapter 14: WIP[/head]
+The afternoon sun beat down on you as you made your way through Davenport. You decided to head to the local marketplace to try to get information on the Flames whereabouts. It had been 2 days since the Wolves decided to search for the Zealot and you were not any closer to knowing where you might find a member of the Flames. You walk up to one of the stalls, there stands a man built like a castle with a beard the color of rusted iron.
+
+"Excuse me sir,” you say.
+
+“Whaddya want? No hagglin’ my prices are final” he grunts.
+
+“No, I'm looking for information. Would you happen to have seen any members of the Flames of Sigel? I need to speak with them immediately” you explain.
+
+“Maybe I have,” he senses the excitement that shoots through your body, “What’s that information worth to you?” 
+*set GP_arg0 Brawn
+*set GP_arg1 "simple"
+*gosub_scene general AttributeSkillCheck
+*temp CH14_Brawn_bool returnData
+
+*set GP_arg0 Cunning
+*set GP_arg1 "simple"
+*gosub_scene general AttributeSkillCheck
+*temp CH14_Cunning_bool returnData
+
+*fake_choice
+    # Intimidate
+        *if CH14_Brawn_bool
+            *page_break
+            “Look, I may not look it but I’m a member of the Wolves of Davenport,” you slam your Wolves sigil on the rickety stall, your dagger lying suggestively between your hand and the sigil, “I would appreciate your cooperation.” 
+
+            “Tch alright don’t get too excited” he tries to hide his apprehension behind bravado, “I don’t know where they were headed but I saw wagon heading east few moons back, the driver had red robes on. Could be the ones you're' after.” 
+
+            “Much obliged”, you stow your sigil and dagger and make your way back to the inn to let the others know what you discovered. 
+            *page_break
+        *else
+            *page_break
+            You reach into your bag to grab your Wolves sigil but before you can even get your hand on it the shopkeeper gently rests his hand on the hilt of his sword. 
+
+            “I don’t know what you’re diggin’ around for but you best make you next move carefully.” 
+            *fake_choice
+                *selectable_if (coin >= 5) # Bribe (Requires 5 Coins)
+                    *page_break
+                    “Its not like that, I was just searching for my coin. Id be more than happy to pay you for the information.” 
+
+                    The shopkeeper relaxes his hand, “5 silver” he demands, “and you’ll get your information.” 
+
+                    You reluctantly grab the coins from your purse and place them on the rickety stall. 
+                    *page_break
+
+                    The shopkeeper picks them up and stows them in his pocket, “I don’t know where they were headed but I saw a wagon heading east few moons back, the driver had red robes on. Could be the ones you’re after.” 
+
+                    “Much obliged” you say. 
+
+                    “Hahaha come back any time little mouse” he goads. 
+
+                    You walk away timidly and make your way back to the inn to let the others know what you discovered. 
+                    *page_break
+                # Beg
+                    *page_break
+                    "Its not like that, I'm just nervous. He raises his eyebrow as though he can see through you. "I just really need to speak to a member from the Flames of Sigel."
+
+                    "Could you please spare me at least some kind of lead on where I might be able to find one." You finish your plea as the shopkeeper looks you over before opening his mouth.
+
+                    "You look like you've been through a lot, perhaps I can tell you something. I don’t know where they were headed but I saw a wagon heading east few moons back, the driver had red robes on. Could be the ones you’re after.” 
+
+                    "Thank you, that should be more than enough information," you respond before quickly making your way out of the shop. 
+                    *page_break
+    # Trick
+        *if CH14_Cunning_bool
+            *page_break
+            “I think the better question is what’s the information worth to you?”, they ask. You take 5 silver pieces out of your pocket but keep them tightly clenched in your hand, “which would you rather have? The coin in my hand or this?” You then drop your coin purse on the counter. The shopkeeper’s eyes widen slightly as the bag hits the counter. He takes a few moments to think it over before quickly snatching the purse, not knowing it contained all bronze coins. 
+
+            “I don’t know where they were headed but I saw wagon heading east few moons back, the driver had red robes on. Could be the ones you’re after” 
+
+            “Much obliged” you turn away hiding a sly smile and make your way back to the inn to let the others know what you discovered 
+            *page_break
+        *else
+            *page_break
+
+            You take a moment to come up with a lie. "I heard they recently got a hold of a treasure that would fit your shop here nicely. Perhaps if you help me get in touch with them, I can get you that treasure as payment?"
+
+            They seemed to be desperate, or greedy, as they immediately grinned at you before saying, "I don’t know where they were headed but I saw wagon heading east few moons back, the driver had red robes on. Could be the ones you’re after.”
+
+            "Thank you, that should be more than enough information," you respond before quickly making your way out of the shop.
+            *page_break
+
+You make your way back to the inn, eager to let the Wolves know what you've discovered. Upon walking into the inn your good news lifts your spirits further as it appears no one else had much luck. 
+
+“I’ve got something,” you announce, “a shop keeper said he saw a wagon carrying people east a few moons back. The driver was wearing red robes.” 
+
+“Well, that’s fortuitous,” Rip says placing a hand on your shoulder, “Seems Viper and her band are holed up in Stormdenn so we can stop and see if they have any information as well.” 
+*page_break
+
+Your heart sinks slightly. Viper already didn’t like you and if she found out about how you ran from Silvervein, you quickly stop thinking about it and turn your focus back to the Wolves. 
+
+“Now that we have a destination everyone pack up and meet at the front gate as quickly as possible.” 
+
+Everyone acknowledged the order and made their way to collect their belongings. 
+
+Soon the group was assembled at the front gate and making their way to Stormdenn. 
+*page_break
+
+It was just past nightfall when you arrived at the town just outside Davenport. 
+
+“Let’s make for the inn, hopefully Viper is still here or we can at least get some information about where they might be headed” Rip suggested. 
+
+As the group marched onward a familiar face caught your eye, Thebeda, the dwarven women from Vipers pack. She spots Rip and calls out, “Rip!” 
+
+He turns his attention towards where the call came from and spots her. 
+
+“Good, looks like they’re still here.” 
+
+He makes his way over to Thebeda and begins talking to her. After a few minutes he turns to the group and says, 
+
+“Were in luck. Viper and the rest of her pack are at the inn. Lets go say hello and fill them in.”
+*page_break
+
+*if CH6m_fight_outcome = "win"
+    *set is_reunion_good true
+    As soon as you enter the inn, you see the twin elves sitting at a table in the corner, and Felix is making his way there too. He spots you and changes course to meet you and the rest of the Wolves. He shakes Rips hand and greets the rest of the Wolves before coming to you.
+
+    “${name} how have you been? Its been a while!” Felix exclaimed.
+
+    “I’ve been good Felix. Its nice to see you again,” you reply.
+
+    “Agreed” he says with a smile, “Come, sit. We were just waiting for Thebeda to get back with the food.” 
+    *page_break
+
+    You follow Felix to another table and sit down. 
+
+    “So? How have you been?” Felix asks.
+
+    “It’s been rough. I went through some things and even left the Wolves or a bit,” you meekly reply. 
+
+    “Oh man, I’m sorry to hear that. Viper had mentioned something about Rip losing a pup and how we should report anything we hear back to her.” 
+
+    You were taken aback by this.
+
+    “Viper said that?” you asked incredulously.
+
+    “Mhm, you really won her over when you saved me.”
+
+    You smile thoughtfully. At the time it seemed like Viper was just grateful you saved one of her pack, but she genuinely changed her perception of you.
+    *page_break
+
+*else
+    *set is_reunion_good false
+    Even though you weren’t exactly thrilled to see Viper and her pack, at least you would get to the chance to apologize to Felix for what happened in Lindow. 
+
+    As soon as you enter the inn, you see the twin elves sitting at a table in the corner, and Felix is making his way there too. He spots your group and changes course to meet you and the rest of the Wolves. He shakes Rips hand and greets the rest of the Wolves before coming to you. You immediately notice something is off, Felix seems weaker and his moving at a speed that suggests his trying to avoid pain. It’s not long before your face to face and the guilt sets in. You did this.
+    *page_break
+
+    “${name} how have you been? It’s been a while!” Felix exclaimed.
+
+    “Felix… I’m sorry,” you blurt out, trying to hide the guilt in your voice.
+
+    He stops for second before saying anything.
+
+    “Don’t apologize. You did what you could.”
+
+    There’s that sentence again. You did what you could. Taunting you but you wouldn’t let it have power over you anymore.
+    *page_break
+
+    “No. I messed up and you got hurt,” you reply.
+
+    “Look, I appreciate the sentiment but I’m alive. It could have been much worse but with some training and rest the strength in my arm will come back. Seriously let’s put this behind us.” he asserts.
+
+    You reluctantly nod.
+
+    “C’mon let’s sit, we were just waiting for Thebeda to get back with the food.”
+
+    You follow Felix to a nearby table and sit down.
+    *page_break
+
+    “So how have you been? We didn’t get to talk after that battle,” he asks.
+
+    “Things have been OK, just taking it day by day” you reply.
+
+    “Thats good to hear, I was worried when Viper was talking about Rip losing a pup.” 
+
+    Your heart sank but you tried not to let it show on your face.
+
+    “Oh... she must have been talking about ${puppy_name},” you point to ${puppy_name} sitting next Tyr and the others.
+
+    “Oh, wow you got a direwolf pup! Yeah, that must have been what she was talking about,” he tries to reassure you, but you can see he doesn’t whole-heartedly believe it.
+    *page_break
+
+    Before you could continue the conversation, the door to the inn opened and Viper walked in. Seeing Rip and the Wolves sitting with her pack she made a direct line to Rip and started talking to him, moments later he motioned for you to join them at the table. You sit down next to Rip. 
+
+    Rip explains, “I’ve filled Viper in on as much as I can but she wanted to hear what you had to say.” 
+
+    You swallow your nerve, look Viper in the eye, and explain everything.
+    *page_break
+
+*if is_reunion_good
+    “Hmm seems your pup is growing into their fangs Rip, he could barely speak a word around us last we saw,” Viper jests. 
+
+    Rip smiled at the compliment.
+
+    “So what do you think?” Rip asks.
+
+    “I don't think it's a coincidence. You caught us on our way to push back some rot in Pinehelm. First Lindow, then Summerlight, now Pinehelm,” Viper responds. 
+
+    Rip nods agreeing with the conclusion. 
+    *page_break
+
+*else
+    Viper just sat silently. Staring.
+
+    “Rip, do you trust him?” she asked sternly.
+
+    Without skipping a beat Rip answered, “Yes”.
+
+    “If Rip trusts you, you can’t be all bad. BUT. If another member of my pack gets hurt because of you, we're going to settle things one on one.”
+
+    You couldn’t do anything but nod. 
+
+    “So what do you think?” Rip asks. 
+
+    “I don't think it's a coincidence. You caught us on our way to push back some rot in Pinehelm. First Lindow, then Summerlight, now Pinehelm,” Viper responds. 
+
+    Rip nods agreeing with the conclusion. 
+    *page_break
+
+“Well, if you wouldn’t mind the company, we can accompany you to Pinehelm and figure this out together,” Rip suggested. 
+
+“Yeah, I think that would be best. Safety in numbers and all that,” Viper responded before suddenly standing from the table and addressing the group. “Alright listen up, Rip and I have been talking and they’re going to be joining us on the journey to Pinehelm. There’s something bigger going on and we may need their assistance. Everyone finish eating and turn in, we leave at first light.” 
+
+“Same for all of you” Rip announced 
+
+Everyone acknowledged and quickly finished their food and made their way to their rooms. 
+*page_break
+
+Everyone gathered the following morning. After preparing for the journey, they set off towards Pinehelm. The journey was long and arduous, but the time passed quicker while playing with ${puppy_name} and talking with Felix and the other Wolves of Davenport. 
+
+It wasn't until they had passed Greenpeak that they began to realize just how dire the situation was. A strange stench hung heavy in the air as they crested a hill overlooking Pinehelm. 
+
+Where once verdant fields stretched towards the horizon, there was now a wasteland of blackened stalks and skeletal trees. Their branches withered and crumbled. The descent into the blighted valley was met with an unsettling silence. No birdsong, no rustle of wind through leaves. Just the oppressive quiet and the ever-present smell of decay. 
+
+As they neared the town proper, the first signs of life emerged – hunched figures huddled in doorways, their faces etched with despair. 
+*page_break
+
+“Were too late...” Viper said in barely more than a whisper, “Rip, have you ever seen this kind of damage from the rot?” 
+
+“No... I haven’t,” Rip said in disbelief. 
+
+The group made their way to a local Tavern to see if they could get more information about what had happened here. At the deserted tavern, they found the mayor, a portly man with worry lines etched deep into his brow.  
+
+“Thank the gods you've come," he rasped, his voice hoarse. "The blight… it's taken everything. Our crops, our livestock… even the well water is tainted." 
+
+The group gathered at a long table in the middle of the inn and they learned the town's plight. The blight had arrived seemingly overnight, a swirling vortex of unnatural darkness that had choked the life out of the land. The townsfolk were at their wit's end, resorting to desperate measures to survive. 
+*page_break
+
+“The citizens have begun to lose hope. Some are even beginning to go mad, clamoring on about the “death knight” which was seen at the onset of the rot,” explained the mayor. 
+
+This detail immediately caught everyone’s attention. 
+
+“What do you mean death knight?” you blurt out. 
+
+“Theres was talk of a what looked like a paladin stumbling around the outskirts of town near the Frontierwoods right before the rot hit,” the mayor explained. 
+
+[b]What will you do?[/b]
+*choice
+    # Stay and learn more from the mayor
+        *page_break
+
+        For a split second you think about heading to the woods and investigating but you dismiss the idea. If the Zealot really was sighted there and was still around, you wouldn’t make it out of the encounter alive. You decide to stay with the others and gather more information about what happened. 
+
+        “Please sir can you tell us anything else about what happened here,” you plead. 
+
+        “I'm afraid I don't know what more I can say. The rot came in, quick as the wind and decimated the town in a matter of days, it was completely unlike anything we had heard about before. We were completely unprepared, we managed to evacuate to Greenpeak and wait it out.” 
+        *page_break
+
+        Everyone exchanged disappointed looks at this information. 
+
+        “Alright, since we don't have any more information to go on, everyone settle in and we can start investigating after we rest a bit,” said Rip. 
+
+        “Oh, please if you can help us, your room and board is free of charge!” the mayor added. 
+
+        “Leave it to us sir, well get to the bottom of it!” Viper said confidently. 
+
+        You take one of the keys that the mayor hands to you and proceed to your room. Once inside, you set your bag down, take out a bowl and get some water for Reese. You sit on the bed and lie back, stretching, weary from the journey. You're trying to compile your thoughts into a coherent image when there's suddenly a knock at your door. You get up and open it to see Rip standing there. 
+        *page_break
+
+        Rip explains, “Everyone is going to split into teams and take a different position around the outskirts of town. Why don't you take ${puppy_name}, Leon, and Felix and check the woods to the South.”  
+
+        “Yeah, that sounds good. I'll be ready in a few minutes,” you reply. 
+
+        You close the door, turn around, and retrieve your dagger from your pack. You look at ${puppy_name} and call to him as you open the door and make your way back outside. 
+
+        Leon and Felix are already waiting for you outside the inn. The four of you begin making your way towards the forest. As you approach the edge of the forest, ${puppy_name} suddenly jumps in front of you, bearing his fangs and growling. 
+
+        You try and discern what suddenly set him on alert, but you don't see anything. There is a very strange feeling that you're being watched but you reassure ${puppy_name} that everything is OK and begin making your way around the forest, trying to figure out exactly what happened here and why the rot was moving much faster than it did before. 
+
+        While investigating an area that seemed to not have been affected by the rot, you notice a deer staring at you intently. You get a familiar feeling, but don't know exactly where it's coming from. After a few moments of staring at the deer, it slowly begins to make its way towards you. As it gets closer, its front two legs slowly come off the ground and the deer rises up onto its hind legs, slowly shrinking down into the form of a woman. It's Milva!  
+        
+        “Milva!”, you exclaim. 
+        *page_break
+        *if CH3_ending = "good"
+            “It's good to see you ${name}!" Milva exclaims. "Tell me, what are you doing in the Frontier Woods? It's not safe here.”  
+
+            “We're investigating what happened. The mayor of Pine Helm has asked us to look into it.”  
+            
+            “Ah, you must be talking about the rot.” 
+
+            “Yes, thankfully it doesn't seem to have spread to the frontier woods. Did you happen to see anything out of the ordinary lately? There's talk of a paladin that may have been in the area, possibly a member of the Flames of Sigel.”  
+            *page_break
+
+            Milva’s ears perk up slightly at the mention of the Flames. 
+
+            “You seek the Flames of Sigel? I may be able to-”  
+
+            Just then Leon and Felix approach you. 
+
+            “Hey ${name}, who's this?” Leon asks. 
+
+            “Oh, Leon, Felix, this is Milva,” you explain. 
+
+            “Hello.” Felix responds. 
+
+            “Nice to meet you!” replies Leon. 
+            *page_break
+
+            “Milva what were you saying about the Flames?” you ask. 
+
+            “Yes, I was saying that we may know where you can find one of their groups. You see, we had one of our own leave us to go join them. In her attempt to assure us that she would be taken care of she mentioned Cavecross, in the mountains to the east. 
+
+            “Cavecross? Hmm, well its worth investigating. Cmon we should get back and let Rip know what we’ve found,” you tell Leon and Felix. 
+
+            “Wait, ${name} is Riva in some kind of danger?” Milva worriedly asked. 
+
+            “I can’t say for sure but its possible someone within the Flames is responsible for the rot.” 
+            *page_break
+
+            Milva's face grew worried. 
+
+            “(Player_Name) you say your party is in Pinehelm correct? Please allow some of us to accompany you on your journey. We must ensure the safety of one of our own.” Milva pleads.
+
+            You look at Leon. 
+
+            “I’m sure Rip won’t mind if we explain the situation,” You turn back to Milva and continue, “Ok Milva, meet us at the tavern in Pinehelm and we can go from there.” 
+
+        *else
+            “${name}. What are you doing in the Frontier Woods? It's not safe here.”
+            
+            “We're investigating what happened. The mayor of Pine Helm has asked us to look into it.”  
+
+            “Still trying to help those in need I see.” She clearly remembers the mockguarden. 
+
+            “Yes, doing what I can. Tell me, have you happened to see anything out of the ordinary lately? There's talk of a paladin that may have been in the area, possibly a member of the Flames of Sigel.”  
+            *page_break
+
+            Milva’s ears perk up slightly at the mention of the Flames. 
+
+            “You seek the Flames of Sigel? I may be able to-”  
+
+            Just then Leon and Felix approach you. 
+
+            “Hey ${name}, who's this?” Leon asks. 
+
+            “Oh, Leon, Felix, this is Milva,” you explain. 
+
+            “Hello.” Felix responds. 
+
+            “Nice to meet you!” replies Leon. 
+
+            “Milva what were you saying about the Flames?” you ask. 
+
+            “Yes, I was saying that we may know where you can find one of their groups. You see we had one of our own leave us to go join them. In her attempt to assure us that she would be taken care of she mentioned Cavecross, in the mountains to the east.”
+
+            “Cavecross? Hmm well its worth investigating. Cmon we should get back and let Rip know what we’ve found,” you tell Leon and Felix. 
+            *page_break
+
+            “Wait, ${name} is Riva in some kind of danger?” Milva worriedly asked. 
+
+            “I can’t say for sure, but its possible someone within the Flames is responsible for the rot.” 
+
+            Milvas face grew worried. 
+
+            “${name} you say your party is in Pinehelm correct? Please allow some of us to accompany you on your journey. We must ensure the safety of one of our own.” Milva pleads. 
+
+            You look at Leon. 
+
+            “I’m sure Rip won’t mind if we explain the situation,” You turn back to Milva and continue, “Ok Milva, meet us at the tavern in Pinehelm and we can go from there.” 
+
+    # Volunteer to go check it out
+        *page_break
+
+        The Frontierwoods! Rip sees the determination on your face. 
+
+        “Go!” he says. 
+
+        You drop your back, retrieve your dagger and call ${puppy_name} as you head out the door. As you approach the edge of the forest, ${puppy_name} suddenly jumps in front of you, bearing his fangs and growling. You try and discern what suddenly set him on alert, but you don't see anything. There is a very strange feeling that you're being watched but you reassure ${puppy_name} that everything is OK and begin making your way around the forest, trying to figure out exactly what happened here and why the rot was moving much faster than it did before. 
+
+        While investigating an area that seemed to not have been affected by the rot, you notice a deer staring at you intently. You get a familiar feeling, but don't know exactly where it's coming from. After a few moments of staring at the deer, it slowly begins to make its way towards you. As it gets closer, Its front two legs slowly come off the ground and the deer rises up onto its hind legs, slowly shrinking down into the form of a woman. It's Milva!  
+
+        “Milva!” you exclaim. 
+        *page_break
+        *if CH3_ending = "good"
+            “It's good to see you ${name}!" Milva exclaims. "Tell me, what are you doing in the Frontier Woods? It's not safe here.”  
+
+            “We're investigating what happened. The mayor of Pine Helm has asked us to look into it.”  
+            
+            “Ah, you must be talking about the rot.” 
+
+            “Yes, thankfully it doesn't seem to have spread to the frontier woods. Did you happen to see anything out of the ordinary lately? There's talk of a paladin that may have been in the area, possibly a member of the Flames of Sigel.”  
+            *page_break
+
+            Milva’s ears perk up slightly at the mention of the Flames. 
+
+            “You seek the Flames of Sigel? I may be able to-”  
+
+            Just then Leon and Felix approach you. 
+
+            “Hey ${name}, who's this?” Leon asks. 
+
+            “Oh, Leon, Felix, this is Milva,” you explain. 
+
+            “Hello.” Felix responds. 
+
+            “Nice to meet you!” replies Leon. 
+            *page_break
+
+            “Milva what were you saying about the Flames?” you ask. 
+
+            “Yes, I was saying that we may know where you can find one of their groups. You see, we had one of our own leave us to go join them. In her attempt to assure us that she would be taken care of she mentioned Cavecross, in the mountains to the east. 
+
+            “Cavecross? Hmm, well its worth investigating. Cmon we should get back and let Rip know what we’ve found,” you tell Leon and Felix. 
+
+            “Wait, ${name} is Riva in some kind of danger?” Milva worriedly asked. 
+
+            “I can’t say for sure but its possible someone within the Flames is responsible for the rot.” 
+            *page_break
+
+            Milva's face grew worried. 
+
+            “(Player_Name) you say your party is in Pinehelm correct? Please allow some of us to accompany you on your journey. We must ensure the safety of one of our own.” Milva pleads.
+
+            You look at Leon. 
+
+            “I’m sure Rip won’t mind if we explain the situation,” You turn back to Milva and continue, “Ok Milva, meet us at the tavern in Pinehelm and we can go from there.” 
+
+        *else
+            “${name}. What are you doing in the Frontier Woods? It's not safe here.”
+            
+            “We're investigating what happened. The mayor of Pine Helm has asked us to look into it.”  
+
+            “Still trying to help those in need I see.” She clearly remembers the mockguarden. 
+
+            “Yes, doing what I can. Tell me, have you happened to see anything out of the ordinary lately? There's talk of a paladin that may have been in the area, possibly a member of the Flames of Sigel.”  
+            *page_break
+
+            Milva’s ears perk up slightly at the mention of the Flames. 
+
+            “You seek the Flames of Sigel? I may be able to-”  
+
+            Just then Leon and Felix approach you. 
+
+            “Hey ${name}, who's this?” Leon asks. 
+
+            “Oh, Leon, Felix, this is Milva,” you explain. 
+
+            “Hello.” Felix responds. 
+
+            “Nice to meet you!” replies Leon. 
+
+            “Milva what were you saying about the Flames?” you ask. 
+
+            “Yes, I was saying that we may know where you can find one of their groups. You see we had one of our own leave us to go join them. In her attempt to assure us that she would be taken care of she mentioned Cavecross, in the mountains to the east.”
+
+            “Cavecross? Hmm well its worth investigating. Cmon we should get back and let Rip know what we’ve found,” you tell Leon and Felix. 
+            *page_break
+
+            “Wait, ${name} is Riva in some kind of danger?” Milva worriedly asked. 
+
+            “I can’t say for sure, but its possible someone within the Flames is responsible for the rot.” 
+
+            Milvas face grew worried. 
+
+            “${name} you say your party is in Pinehelm correct? Please allow some of us to accompany you on your journey. We must ensure the safety of one of our own.” Milva pleads. 
+
+            You look at Leon. 
+
+            “I’m sure Rip won’t mind if we explain the situation,” You turn back to Milva and continue, “Ok Milva, meet us at the tavern in Pinehelm and we can go from there.” 
+
+*return

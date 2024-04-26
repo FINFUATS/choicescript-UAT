@@ -293,6 +293,14 @@ Who do you want to know about?
 
         Which God would you like to learn about?
         *fake_choice
+            #Glador
+                *label codex_hl_Glador
+                [head]Glador[/head]
+                *image images/Glador.webp
+                TODO:!!!
+                *line_break
+                *goto chargroup_Gods
+
             *selectable_if (isSigelDiscovered) #Sigel
                 *label codex_hl_Sigel
                 [head]Sigel[/head]
@@ -342,14 +350,6 @@ Who do you want to know about?
                 When he brought Cel in, he treated her like his own. The priests thinks she reminded him of his wife. He helped her get accommodated to the temple and got her a private tutor to help her along. Cel grew to look up to him and did her best to make him proud. In return, Dustin tried to be the kind of role model she needed. 
                 
                 Dustin died to a direwolf attack when he was patrolling the towns along the rot border. The direwolves got pushed out of their territory by the rot and attacked a nearby town. From what Cel said, he was protecting a family when the direwolves got him.
-                *line_break
-                *goto chargroup_Other
-
-            #Glador
-                *label codex_hl_Glador
-                [head]Glador[/head]
-                *image images/Glador.webp
-                TODO:!!!
                 *line_break
                 *goto chargroup_Other
 

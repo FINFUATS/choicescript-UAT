@@ -2,6 +2,7 @@
 *comment temporary variables
 *temp option
 *temp bought
+*temp cur_final_choice ""
 *comment Temp variables for Stat Designation Page
 *temp Attr_PNT_Total 0
 *temp Stored_Attr_Total 0
@@ -320,6 +321,8 @@ Before you have the chance to decide, a new voice cuts through the darkness.
 “All the more reason for me to leave. Now, if you’ll excuse me,“ you say as you creep towards the gate.
 
 *page_break
+*set cur_final_choice "CH_Final_Choice_1"
+*label CH4_Final_Choice_1
 
 “You won’t make it far without help.” The priestess steps forward. “There are dangerous creatures outside. I could take you to the temple and protect you from the town’s ire.” 
 
@@ -329,12 +332,18 @@ The mercenary and priestess glare at each other before suddenly turning their at
 
 *choice
     #"I choose to go with the priestess and stay at the temple."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "Welcome to the Flames of Sigel. I'm sure your friend would be proud of you. Come along. We'll head to the temple when we are done here." The priestess leads you to the local church.
         
         *set faction "divine"
         *finish
 
     #"I choose to go with the mercenary and find out who did this."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "We'll find who did this, now we need to get you out of here. Thankfully I know some people nearby and you can stay there for the time being." The mercenary takes you into a building.
         
         *set faction "merc"
@@ -403,6 +412,8 @@ You take a step back and sigh.
 *page_break
 
 *image images/Cel_Storm.webp
+*set cur_final_choice "CH_Final_Choice_2"
+*label CH4_Final_Choice_2
 
 “You would have packed your bags and left a long time ago if you were truly responsible for the murder.” The priestess walks to the other wall in the alley, pulling her dark colored cloak closer.
 
@@ -414,12 +425,18 @@ You take a step back and sigh.
 
 *choice
     #"I choose to go with the priestess and stay at the temple."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "Welcome to the Flames of Sigel. I'm sure your friend would be proud of you. Come along. We'll head to the temple when we are done here." The priestess leads you to the local church.
         
         *set faction "divine"
         *finish
 
     #"I choose to go with the mercenary and find out who did this."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "We'll find who did this, now we need to get you out of here. Thankfully I know some people nearby and you can stay there for the time being." The mercenary takes you into a building.
         
         *set faction "merc"
@@ -503,6 +520,8 @@ You find the best looking corner and sit in it, questioning how this all happene
 “Oh, my apologies, I am a priestess of the Flames of Sigel. We protect towns from the upcoming darkness and house those in trouble,” she explains, “But I imagine you have a lot to think about. I’ll come back tonight and you can make your decision then.” With that, she leaves the room.
 
 *page_break
+*set cur_final_choice "CH_Final_Choice_3"
+*label CH4_Final_Choice_3
 
 Later that same night, the priestess walks in through the main door and the mercenary walks in through the office. The whole time you’ve been here, you’ve seen guards walk in and out of that room, but you never saw him leave it. He doesn’t seem particularly welcome here, either. Otherwise, why would he sneak around so much?
 
@@ -512,9 +531,11 @@ Later that same night, the priestess walks in through the main door and the merc
 
 “Now, have you made your choice?”
 
-*label CH4_Final_Choice
 *choice
     #"I choose to go with the priestess and stay at the temple."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "I'll talk with the captain and get you released into my custody." The priestess walks out of the room. When you look over at the mercenary, he is gone.
         
         She comes back with the captain and he unlocks the gate.
@@ -526,6 +547,9 @@ Later that same night, the priestess walks in through the main door and the merc
         *comment *goto_scene Divine
         
     #"I choose to go with the mercenary and find out who did this."
+        *if debug_reallocation = true
+            *set debug_reallocation false
+            *goto_scene startup
         "I'll make sure we get them and clear your name. Until then you'll be under my custody." The mercenary grabs a key from his pocket.
         
         "You probably won't be allowed back into this town no matter what you choose. However, we'll make sure to keep you safe. Oh, and before I forget. While I couldn't get you your ${bought} back, I was able to snatch the dagger. We'll get it cleaned up for you."
@@ -619,6 +643,18 @@ You currently have ${Attr_PNT_Total} unused attribute points.
                     *if debug_reallocation = true
                         *set debug_reallocation false
                         *goto_scene startup
-                    *goto CH4_Final_Choice
+                    *if cur_final_choice = "CH_Final_Choice_1"
+                        *goto CH4_Final_Choice_1
+                    *elseif cur_final_choice = "CH_Final_Choice_2"
+                        *goto CH4_Final_Choice_2
+                    *elseif cur_final_choice = "CH_Final_Choice_3"
+                        *goto CH4_Final_Choice_3
         *else
-            *goto CH4_Final_Choice
+            *if cur_final_choice = "CH_Final_Choice_1"
+                *goto CH4_Final_Choice_1
+            *elseif cur_final_choice = "CH_Final_Choice_2"
+                *goto CH4_Final_Choice_2
+            *elseif cur_final_choice = "CH_Final_Choice_3"
+                *goto CH4_Final_Choice_3
+            *else
+                *goto CH4_Final_Choice_1

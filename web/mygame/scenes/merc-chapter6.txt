@@ -694,6 +694,7 @@ As if on cue, a Jackaloid bounds toward you.
             *goto_scene startup
 
 *if win_encounter = true
+    *set CH6m_fight_outcome "win"
     *comment Battle is won.
     You stare down at the body of the jackaloid. They look so much smaller now that you’ve grown. 
     
@@ -733,6 +734,7 @@ As if on cue, a Jackaloid bounds toward you.
     
     Your attention is quickly pulled away by Felix clapping you on the shoulder as you all make your way back into town. 
 *elseif fail_encounter = true
+    *set CH6m_fight_outcome "fail"
     *comment Battle is lost.
     You stare down at the body of the jackaloid, and next to it, Felix covered in blood. The jackaloid looks so much smaller now that you’ve grown, but the terror you feel is just like before. 
     

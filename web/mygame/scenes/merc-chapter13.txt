@@ -1,0 +1,226 @@
+*label StartChapter13
+[head]Chapter 13: WIP[/head]
+It has been about 2 days since you passed through Stormdenn and as you were making your way to Davenport you began to think about what you would say to the Wolves when you found them. Would they accept your apology? Even if they did, there's no way things would just go back to how they were. The laughing and joking around wouldnt return for a while, at least not in earnest. But you had to take responsibility for what happened.
+
+Even though it had been weeks since you last saw the Wolves. The feelings of fear and uncertainty that you felt that day were a haunting reminder of what had happened. The memory of that day haunting you, the echoes of your footsteps still ringing in your ears. You had left them behind, abandoning them in the middle of a battle.
+
+Those feelings intensified as the bridge to Davenport came into view.
+*page_break
+
+After asking around about the Wolves whereabouts, and using the Wolves amulet Rip had given you to loosen the lips of those who were reluctant to give you that information, you find out that the Wolves are at Ainslee Inn/Pub. Making your way to the inn/pub you arrive and stand outside for a moment, hesitant to go inside. But you focus on why you're here and what you came to do. 
+
+You open the door and head inside. 
+
+Tyr is the first to notice you, his head perks up almost immediately. ${puppy_name} is still sleeping at his paws. Leon notices this and looks in your direction.
+
+“${name}!”
+
+Everyone else immediately follows Leons gaze.
+*page_break
+
+*if (rep_status_Wolves = rep_status_1) or (rep_status_Wolves = rep_status_0)
+    You’re immediately swarmed by the Wolves, with Leon reaching you first and bear hugging you before releasing and letting the others get their welcomes in. 
+    
+    You all return to the table and sit down. Drinks were passed out and everyone just continued on like nothing had changed, even though he hadn’t moved a muscle you could see Rip grinning out of the corner of your eye. As the night wore on and stories were told, you decided to use the moment to explain yourself. With a heavy heart, you clear your throat, drawing the attention of the Wolves.
+    *page_break
+
+    "I... I have something I need to tell you all," you manage to squeak out, barely above a whisper. Everyone turns, their expressions a mixture of concern and curiosity.
+
+    "I... I ran away," you confess, the words coming out in a rush. "At Silvervein, I was scared, and I... I couldn't stay. I left you all behind, and I'm so sorry."
+
+    Silence descended upon the group, broken only by the various noises around them. Your heart pounded in your chest, waiting for their response, unsure of what to expect.
+    *page_break
+
+    But your words weren’t met with anger or disappointment. Instead, they exchanged knowing glances, their expressions softening with understanding.
+
+    "We know" Gwyn said gently, placing a reassuring hand on your shoulder. 
+
+    "We knew you were struggling, and that you must have had your reasons, we're just glad you're safe.", added Leon.
+
+    Your eyes welled with tears realizing the depths of your friends' forgiveness. In that moment, the weight of guilt that had been pressing down on you was lifted, replaced by a sense of relief and gratitude.
+    *page_break
+
+    As everyone else was drinking and talking amongst each other Rip approached you and asked if you would come with him to his room.
+
+    Following Rip you close the door to his room and sit in a chair in the corner.
+
+    “${name} what happened to you in Summerlight?”
+
+    You knew this was coming but you still weren't prepared for the question.
+
+    “Maybe I should start from the beginning.”
+    *page_break
+
+    You explain everything. What happened to Reese and the effect that it had on you, what happened in Silvervein, the paladin and people in Summerlight, and the rot.
+
+    “Man, I’m sorry about your friend. Guess this whole situation makes more sense now though. We need to let the others know about what happened in Summerlight.”
+
+    You agree with Rip and follow him back to the others.
+
+    “Everyone, listen up. There’s something we need to talk about”
+
+    Everyone is looking at you and Rip now, with slightly worried expressions on their face. You tell everyone everything you just told Rip. Anwen is the first to say something.
+
+    “Is that the reason you ran from Silvervein?” she asks.
+
+    You nod solemnly.
+
+    “What are we going to do about the rot?” asks Leon.
+
+    “I dont know” Rip replies, “but I do know that it’s getting late and this is a problem best tackled with a clear mind. Let’s all get some sleep and we can discuss it in the morning.”
+    
+    Everyone nods in agreement and begins to head their separate ways.
+    *page_break
+
+    “${name} ive got an extra bed. C’mon lets get some rest.”
+
+    You follow Rip back to his room and he motions to a cot next to the window.
+
+    As soon as you sit down the direwolf pup jumps into your lap.
+
+    *comment NOTE: There is an input to name the direwolf pup in chapter 8M. The following text is from chapter 8M and mentions naming the pup again.
+    *comment “You know, he still needs a name” Rip says.
+
+    *comment You look down at the direwolf pup in your lap and without thinking you say, “Reese. I want to name him Reese”
+
+    *comment “Well I think thats a fine name” Rip says smiling, “What about you Reese? What do you think?”
+
+    *comment Reese barks in seeming agreement.
+    *comment *page_break
+
+    “Hey its getting late and im sure youre tired from your journey. Lets get some rest and we can talk about what to do in the morning.”
+
+    No sooner than you laid your head on the cot did you fall asleep with Reese curled up against you.
+
+*elseif (rep_status_Wolves = rep_status_2) or ((rep_status_Wolves = rep_status_3) or (rep_status_Wolves = rep_status_4))
+    A hushed tension descended on the inn/pub. Leon makes his way to you.
+
+    “${name}, where have you been? Are you alright?”
+
+    “Yeah I'm fine. I just needed some time away. Some time to think. Is Rip around?”
+
+    “Yeah, wait here. I'll go get him.”
+    *page_break
+
+    Leon leaves you standing near a corner of the inn/pub. Everyone turns back to their drinks and continues talking, albeit much more quietly.
+
+    Leon reappears with Rip and he makes his way over to you,
+
+    “Lets talk in my room”
+
+    Following Rip you close the door to his room and sit in a chair in the corner.
+    *page_break
+
+    “${name} what happened to you in Summerlight?”
+
+    You knew this was coming but you still weren’t prepared for the question.
+
+    “Maybe I should start from the beginning.”
+
+    You explain everything. What happened to Reese and the effect that it had on you, what happened in Silvervein, the paladin and people in Summerlight, and the rot.
+    *page_break
+
+    “Man, im sorry about your friend. Guess this whole situation makes more sense now though. C’mon, you deserve a chance to explain yourself” Rip gets up and opens the door.
+
+    You walk back to where everyone is sitting, the awkward feeling still hanging over the room.
+
+    “Alright everyone,” the Wolves look at Rip, “${name} has something to say to you and I think you all should hear ‘em out.”
+    *page_break
+
+    With your heart heavy with regret, and your spirit burdened by shame. You knew you had abandoned your friends in their hour of need, driven by fear and uncertainty. Yet, despite your remorse, you were resolved to seek forgiveness and redemption.
+
+    "I... I owe you all an explanation," you begin, your words faltering. "I... I ran away at Silvervein. I was scared, and I... I couldn't stay. I know I let you down, and I'm sorry."
+
+    The Wolves exchanged uneasy glances, their expressions a mixture of empathy and skepticism.
+    *page_break
+
+    “You must have had your reasons" Gwyn said, his voice tinged with sadness. "But what happened in Summerlight? How can we trust that you won't run again when things get tough?"
+
+    Your heart sank at his words, the weight of your mistakes pressing down like a leaden cloak. You had hoped for forgiveness, but you had to earn it. Rip puts his hand on your shoulder as if to say, “Tell them everything.” 
+
+    "I know I don't deserve your trust," you say while choking back tears, "But I came back to explain. I want to make things right."
+
+    You explain everything. What happened to Reese and the effect that it had on you, what happened in Silvervein, the paladin and people in Summerlight, and the rot.
+    *page_break
+
+    The Wolves remained silent. You could feel a knot forming in your stomach, the fear of rejection clawing at your insides. But then, to your surprise, Leon spoke up.
+
+    "We want to believe you ${name}" he said, his voice soft but resolute. "But actions speak louder than words. We need to see that you're committed to standing by us, no matter what."
+
+    “I am! Thats why I came back” you exclaimed, a newfound determination inside.
+
+    You knew you’d have to prove yourself, not just with words, but with deeds. Another surprise came in the form of Anwen sliding a mug towards you.
+
+    “Sit,” she commands “Tell us more about Summerlight.”
+    *page_break
+
+    Taking your seat, you explain in more detail about what happened. As the night wore on and everyone listened to your story, you vow to earn back the trust of the Wolves, no matter what it took.
+
+    “Alright, it’s getting late. Everyone, go get some rest and we can talk about what to do in the morning.” Rip ordered.
+
+    While everyone gets up to go their separate ways, Leon comes up to you.
+
+    “Hey, ive got an extra bed in my room. C’mon you must be tired from your journey.”
+
+    Noticing that everyone else had already left, you thank Leon and follow him to his room.
+    *page_break
+
+    “Here, this one’s free.” Leon gestures to a cot just inside his room.
+
+    You notice the pup sleeping at the head of the cot and slowly lie down, trying not to wake him.
+
+    *comment NOTE: There is an input to name the direwolf pup in chapter 8M.
+    *comment “You know, he still needs a name.”
+
+    *comment You look down at the direwolf pup sleeping on the floor.
+
+    *comment NOTE: This mention of naming the pup included a limited choice as opposed to an input, for how I am just substituting the inputted name.
+
+    You reach down and gently pat ${puppy_name} on the head before rolling onto your back.
+
+    In that moment, as you begin to slip into your dreams, you make a vow to not let fear dictate your actions any longer. To face whatever challenges may lie ahead with courage and determination.
+    *page_break
+
+    You’re awoken by the sounds of ${puppy_name} scratching at the door. You sit up and groggily look around. You’re alone. You get up and make your way to the door letting ${puppy_name} out and walking back to where everyone had been sitting the night before. The Wolves are gathered at a table talking.
+
+    “Ah hes alive” jokes Leon
+
+    You take an empty seat at the table and quickly realize the subject of the conversation was the rot.
+    *page_break
+
+    “${name}, you said you saw someone at Summerlight, covered in black goo?”
+
+    You nod to affirm.
+
+    “Can you remember anything about what he looked like? Anything that might give us a place to start looking?” Rip asked.
+
+    “Well… I'm not 100% sure but,” you paused for second before answering, “it looked like the paladin we saw in Lindow.” you reply.
+
+    “Hmm, I remember that man. Fancy looking armor. He gave a speech right before the mission.”
+
+    “Yeah, that’s the one,” you confirm.
+
+    “What were they calling him again?” Leon questions.
+
+    “The Zealot” replied Elena.
+
+    “Thats right! Man, what a name” Leon commented.
+
+    “Do we know anything else about him?” Anwen asked.
+
+    Everyone exchanged confused glances before you remember something.
+    *page_break
+
+    “He had a red cape!”, you blurt out, “At Lindow when he was marching out with the people, he brought with him he had this red cape on.”
+
+    Rip face becomes contemplative. Leon notices this and asks,
+
+    “What is it Rip?”
+    
+    “Could be the Flames,” Rip responds.
+
+    Everyone seems to agree with this assumption.
+
+    “Well I think the next step is obvious then, we need to find a member of the Flames and get some more information.” Rip states with a matter of fact tone.
+
+*return

@@ -1,6 +1,7 @@
 This is a stats screen!
 *temp isShowingStatBar false
 *label screen
+
 *stat_chart
     text Name
     text Gender
@@ -42,7 +43,6 @@ This is a stats screen!
         text rel_status_Winfred Affinity Status with Winfred
         percent relationship_Winfred_percentage Current ${trend_Winfred} Affinity Progress
     *line_break
-
     *stat_chart
         text rel_status_Rip Affinity Status with Rip
         percent relationship_Rip_percentage Current ${trend_Rip} Affinity Progress
@@ -63,7 +63,6 @@ This is a stats screen!
         text rel_status_Leon Affinity Status with Leon
         percent relationship_Leon_percentage Current ${trend_Leon} Affinity Progress
     *line_break
-
     *stat_chart
         text rep_status_Flames Reputation Status with Flames of Sigel
         percent reputation_Flames_percentage Current ${trend_Flames} Reputation Progress
