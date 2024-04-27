@@ -99,7 +99,7 @@ You are pacing around, trying to make a decision. The light is fading fast and t
         While you are walking the path, you find an abandoned cart. What do you do?
         *fake_choice
             #Check it out.
-                Curios, you walk up to it as it seems to have been there for a few days. It seems to be empty with very little damage done to it, only a few scratches on the side of it.The most unusual thing about it is the broken crates inside.
+                Curious, you walk up to it as it seems to have been there for a few days. It seems to be empty with very little damage done to it, only a few scratches on the side of it.The most unusual thing about it is the broken crates inside.
 
                 Deciding that it is none of your business, you leave it alone and continue down the path.
 
@@ -263,7 +263,7 @@ You continue walking down the alleys, you decide to-
 You freeze and stare at the door. After a few seconds, there's another knock. What do you do?
 *fake_choice
     #Ask who's there.
-        “Who’s there?” You say, hoping that was loud enough to sound threatening.
+        “Who’s there?” You say, hoping that your voice was loud enough to sound threatening.
 
         “I knew you’d be here.” It’s a familiar voice. You walk to the door and open it to see Cel, waiting alone in the dark night.
 
@@ -335,7 +335,7 @@ You,
 You freeze and stare at the door. After a few seconds there’s another knock. What do you do?
 *fake_choice
     #Ask who's there.
-        “Who’s there?” You say, hoping that was loud enough to sound threatening.
+        “Who’s there?” you say, hoping your voice was loud enough to sound threatening.
 
         You hear a chuckle. “I knew you’d be here, goofball.” It’s a familiar voice. You walk to the door and open it to see Ivy, waiting alone in the dark night.
 

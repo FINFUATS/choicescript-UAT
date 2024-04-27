@@ -385,6 +385,8 @@ Your heart sinks. It’s true, then; forests are cursed! There’s no fighting t
 
 Milva gives you a look of pity. She doesn’t seem particularly cross with you. Maybe she’s as accepting of the natural condition as you’re feeling right about now?
 
+*page_break
+
 “This isn’t your first time, is it?” 
 
 You give her a curious look. 

@@ -21,7 +21,7 @@
     
     *page_break
     
-    [b] BOOM [\b]
+    [b]BOOM[/b]
     
     *page_break
     

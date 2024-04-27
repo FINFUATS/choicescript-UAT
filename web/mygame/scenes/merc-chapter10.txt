@@ -31,17 +31,21 @@ You and Reese used to play by that log. It was the farthest either of you would 
 As if to mock you, the merchants walk up to a fork in the road and to the sign pointing left says ‘Summerlight’. The merchants are heading down that path.
 
 You hurry  up to the head of the caravan and find the merchant leading it.
-*page_break
 
 “This is where I depart. It’s been a pleasure traveling with you.” You tell the merchant.
 
 “So soon? Come on, it’s nearly dark. Join us in town and stay the night, then when it’s morning you can leave.” The merchant advises.
 
-“Sadly, I can’t. I must get to the next town as quickly as possible and I know the way. I know a safe place down the path where I can stay the night.” You explain.
+*fake_choice
+    #I have somewhere else I can stay.
+        “Sadly, I can’t. I must get to the next town as quickly as possible and I know the way. I know a safe place down the path where I can stay the night.” You explain.
 
-He takes a look at you before sighing. “I cannot understand why you would risk so much just to get to the next town a few hours faster. However, you seem determined and nothing I say  will convince you. Be safe and get to that  hideout as quickly as possible.”
+        He takes a look at you before sighing. “I cannot understand why you would risk so much just to get to the next town a few hours faster. However, you seem determined and nothing I say  will convince you. Be safe and get to that  hideout as quickly as possible.”
 
-“Thank you, it’s been a pleasure traveling with you.” You give him a small smile and go back down the path to the fork. Everyone looks at you strangely when they notice you are leaving. Some even give you concerned looks.
+        "You stay safe as well. It’s been a pleasure traveling with you!” You give him a small smile and go back down the path to the fork. Everyone looks at you strangely when they notice you are leaving. Some even give you concerned looks.
+
+    #Thank you for your help.
+        “Thank you, it’s been a pleasure traveling with you.” You give him a small smile and go back down the path to the fork. Everyone looks at you strangely when they notice you are leaving. Some even give you concerned looks.
 
 When you reach the fork, you go down the other road towards Greenpeak, before stopping. You weren’t lying, you did know of a safe location down this path. There is a small hut just a little ways down and into the forest, you and your father used to stay in it while traveling. 
 
@@ -69,14 +73,26 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
         While you are cleaning up you remember all the times you’ve been here with your father. He passed a few years back and you don’t have anything with you left to remember him by. Everything is still in your old house.
 
-        Right as you threw the last loose piece into the fireplace, there was a knock at the door.
+        Right as you throw the last loose piece into the fireplace, a knock sounds at the door.
 
         You freeze,  nobody knows where this place is, no one should be at the door.
 
-        You stay extremely still and quiet in a hope they would go away when-
-        *page_break
+        [b]What do you do?[/b]
+        *fake_choice
+            #Ask who's there.
+                “Who’s there?” you say, hoping your voice was loud enough to sound threatening.
 
-        “I know you’re in there, would you let me in?” A familiar voice called out. Rip’s voice, how did Rip know that you are here?
+                "It's Rip. Will you let me in? I'd like to talk, if you're alright with that." How did he know you'd be here?
+
+            #Peek through a hole in the wall.
+                You slowly walk towards the door and grab a dagger out of your bag.
+
+                When you reach the door and look outside through one of the holes in the wall, you see Rip, standing alone in the dark.
+
+            #Do nothing.
+                You stay extremely still and quiet in hopes that they will go away when-
+
+                “I know you’re in there, ${name}. Will you let me in?” A familiar voice calls out. Rip’s voice. How did he know you'd be here?
 
         You consider not answering for a moment, but you better. Rip isn’t the type of man to just walk away. You walk up to the door and open it. 
 
@@ -84,7 +100,9 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
         “You aren’t as good at covering your tracks as you may think.” He explained. “I followed you here. Can’t have a loose pup running around with no way to defend themselves.”
         
-        You glared at him.
+        You glare at him.
+
+        *page_break
 
         *if (((rel_status_Rip = rel_status_3) or (rel_status_Rip = rel_status_2)) or ((rel_status_Rip = rel_status_1) or (rel_status_Rip = rel_status_0))) and (((rel_status_Anwen = rel_status_3) or (rel_status_Anwen = rel_status_2)) or ((rel_status_Anwen = rel_status_1) or (rel_status_Anwen = rel_status_0)))
             *comment If the party likes the player
@@ -98,11 +116,12 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
         “Direwolves are fiercely loyal. Treat them well and you have a friend for life. You saved that  pup’s life and he won’t forget that. Don’t waste that on something as trivial as a disagreement.” Rip replies sharply. 
         
         [i][b]***Argument about chapter 9***[/b][/i]
+        
         *page_break
 
         [b]BOOM[/b]
         
-        There was an explosion outside, it sounded close. Both you and Rip look at each other before running outside. You grab a dagger from your bag as you pass the door.
+        You hear a loud explosion coming from the center of town.You and Rip look at each other before running outside. You grab a dagger from your bag as you pass the door.
 
         You can see a bright fire and smoke coming from deep in the forest. Growing up in this area, you instantly realize that it’s in the direction of Summerlight. 
 
@@ -138,12 +157,15 @@ Camping at the hut, you wouldn't have to worry about getting caught by the guard
 
         Taking this chance, you run towards the left side of the wall and walk down the path beside it.
 
-        Following the path, you stumble upon an abandoned cart. It seems to have been there for a few days and you’re not sure how it got there. The cart is empty, but doesn’t seem to have any damage on it aside from the small scratches on the side of it.
+        Following the path, you stumble upon an abandoned cart. What do you do?
+        *fake_choice
+            #Check it out.
+                You walk up to it, but nothing seems out of the ordinary in the already strange situation.. There are some destroyed crates and a pile of leaves, noting that would indicate what happened or why it was left here.
 
-        You walk up to it, but nothing seems out of the ordinary in the already strange situation.. There are some destroyed crates and a pile of leaves, noting that would indicate what happened or why it was left here.
-        *page_break
+                Deciding that it is none of your business, you leave it alone and continue down the path.
 
-        You decide it is none of your business and continue down the path. 
+            #Play it safe.
+                Deciding that it’s none of your business, and could be potentially dangerous, you decide to leave it alone and continue down the path. You don’t know if that was the right decision, but at least you’re safe.
 
         Along the path there is a row of well kept bushes. You are looking for a break in the bushes, a crack that is just big enough for a person to squeeze through.
 

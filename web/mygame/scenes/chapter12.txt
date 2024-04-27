@@ -3,36 +3,40 @@
 
 In the heart of a dense forest, where the canopy weaves a tapestry of green above, you walk. Your mind is still reeling from the events of the last few hours as you absently wander down a path recalling the carnage. A thick fog rolls through, seemingly like the forest is sensing your thoughts. However, it is nothing compared to the fog in your thoughts.  
 
-Brief flashes of the destruction danced in your mind like shadows cast from a flame. What was going on? Why was the Zealot at the scene of two of the biggest massacres you've ever seen? But most importantly, were your comrades ok? For the second time now it feels as if you've been completely useless. 
+Brief flashes of the destruction danced in your mind like shadows cast from a flame. What was going on? Why was the Zealot at the scene of two of the biggest massacres you've ever seen? But most importantly, were your comrades ok? For the second time now it feels as if you've been completely useless.
 
 As the thought crosses your mind you can't help but think of all you've been through with...
+*page_break
 
 *if (faction = "merc")
-    Rip and everyone else. You remember that first night with the Wolves. Sitting around the fire listening to Leon tell his boisterous stories, Elena quietly reading, Anwen tending to the horses, and Gwyn prepping for the upcoming mission. Thinking back on it brings a slight smile to your face but it immediately subsides because the following thought was how you let them all down. Rip took a chance on you, took you in when you had nothing, a fugitive from unbelievable circumstances, and you couldn't repay their kindness.
+    Rip and everyone else. You remember that first night with the Wolves. Sitting around the fire listening to Leon tell his boisterous stories, Elena quietly reading, Anwen tending to the horses, and Gwyn prepping for the upcoming mission. Thinking back on it brings a slight smile to your face but it immediately subsides because the following thought was how you let them all down. Rip took a chance on you, took you in when you had nothing, a fugitive from unbelievable circumstances, and you couldn't repay their kindness.  
 
     In fact, he even went so far as to make sure you were ok after you abandoned them, the thought made your stomach churn. The guilt was eating away at you. 
 
     Quickly checking your surroundings, you take a minute to sit at the base of a tree. 
 
-    This onset of self pity is made slightly worse by the fleeting thought of Cel. You remember watching as she was attacked by the Ichorswogs and the tiniest fraction of envy crept in with this memory. She got back up and continued fighting, while you ran. You wondered how she would react if she knew you saw this.
+    This onset of self pity is made slightly worse by the fleeting thought of Cel. You remember watching as she was attacked by the Ichorswogs and the tiniest fraction of envy crept in with this memory. She got back up and continued fighting, while you ran. You wondered how she would react if she knew you saw this. 
 
-    You decide it's time to keep moving. Wandering deeper into the forest, the weight of decision pressing on your shoulders like the heavy boughs of an oak tree. On one hand, there was the loyalty you felt the Wolves deserved, who had been steadfast guardians and mentors. On the other hand, how could you face them now with having been such a coward.
+    *page_break
 
-    The forest whispered its secrets as you traversed its moss-covered trails, each rustle of leaves and chirp of birdsong offering counsel in its own cryptic language. Amidst the dappled sunlight filtering through the foliage, you found a secluded clearing, a sanctuary of peace amidst the chaos you've once again been thrust into.
+    You decide it's time to keep moving. Wandering deeper into the forest, the weight of decision pressing on your shoulders like the heavy boughs of an oak tree. On one hand, there was the loyalty you felt the Wolves deserved, who had been steadfast guardians and mentors. On the other hand, how could you face them now with having been such a coward. 
 
-    As the day turns into dusk, you sit in quiet contemplation, the soft murmur of a nearby stream providing a soothing backdrop to your thoughts. In the stillness of that moment, clarity descended like a gentle mist, lifting the veil of uncertainty that had shrouded your heart. You knew what you had to do.
+    The forest whispered its secrets as you traversed its moss-covered trails, each rustle of leaves and chirp of birdsong offering counsel in its own cryptic language. Amidst the dappled sunlight filtering through the foliage, you found a secluded clearing, a sanctuary of peace amidst the chaos you've once again been thrust into. 
+
+    As the day turns into dusk, you sit in quiet contemplation, the soft murmur of a nearby stream providing a soothing backdrop to your thoughts. In the stillness of that moment, clarity descended like a gentle mist, lifting the veil of uncertainty that had shrouded your heart. You knew what you had to do. 
+
     *if (rep_val_Wolves > 0)
-        With resolve born of conviction, you rise from your meditative repose and turn back towards the heart of the forest. You knew now what you needed to do. The values and principles that had guided them through the labyrinth of life this far would not let you turn your back on a friend.
+        With resolve born of conviction, you rise from your meditative repose and turn back towards the heart of the forest. You knew now what you needed to do. The values and principles that had guided them through the labyrinth of life this far would not let you turn your back on a friend. 
 
         With each step, you begin to find a newfound sense of purpose, your allegiance not just to the Wolves, but to the journey itself. With this renewed determination, you run towards the unknown, ready to embrace whatever adventures awaited. 
     
     *else
         *set CH12_mercBadEnd true
-        The Wolves deserved an explanation. You owed them that much. You swallow your shame, stand up, and hesitantly take that first step towards what is sure to be an extremely unpleasant reunion.
+        The Wolves deserved an explanation. You owed them that much. You swallow your shame, stand up, and hesitantly take that first step towards what is sure to be an extremely unpleasant reunion. 
 
 
 *elseif (faction = "divine")
-    Cel. She had extended her hand in welcome when the world seemed cold and unforgiving. The Flames even brought you solace, purpose, and a sense of belonging that had long eluded you, for a time. Berthold, Ivy, Riva, Winfred all made you feel welcomed, in their own way, when you first arrived at the temple. 
+    Cel. She had extended her hand in welcome when the world seemed cold and unforgiving. The Flames even brought you solace, purpose, and a sense of belonging that had long eluded you, for a time. Berthold, Ivy, Riva, Winfred all made you feel welcomed, in their own way, when you first arrived at the temple.  
 
     Quickly checking your surroundings, you take a minute to sit at the base of a tree. 
 
@@ -42,6 +46,8 @@ As the thought crosses your mind you can't help but think of all you've been thr
 
     The forest whispered its secrets as you traversed its moss-covered trails, each rustle of leaves and chirp of birdsong offering counsel in its own cryptic language. Amidst the dappled sunlight filtering through the foliage, you found a secluded clearing, a sanctuary of peace amidst the chaos you've once again been thrust into.
 
+    *page_break
+    
     As the day wanes into dusk, you sit in quiet contemplation, the soft murmur of a nearby stream providing a soothing backdrop to your thoughts. In the stillness of that moment, clarity descended like a gentle mist, lifting the veil of uncertainty that had shrouded your heart. You knew what you had to do.
 
     *if (rep_val_Flames > 0)

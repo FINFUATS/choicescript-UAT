@@ -1,1 +1,193 @@
+*label chapter15
+[head]Chapter 15: WIP[/head]
+
+The outcome of what is to come weighs heavy on your mind. What will you find once you find The Zealot? Will they resist? Will you have to kill people? Your thoughts are interrupted by a sudden hand on your shoulder. It's Felix. 
+
+“You ok? You look pretty lost in thought,” he asks.
+
+“Yeah just thinking about this whole situation,” you respond.
+
+"Ok. Everyone’s waiting, you ready?"
+
+"Yeah, let's go”
+
+You stand up and grab your pack off the bench beside you. You walk outside to see the Wolves and Viper’s pack already preparing to make the journey. Milva and a few druids you don't know but recognize from the camp are also waiting patiently. With a quick affirmation that everyone is ready, the group steps off and begins the journey to Cavecross.
+
+*temp Z
+*temp Y 
+*temp X
+*temp W
+*temp V
+*temp U
+*label CH_15Loop
+[b]You figure you'll pass the time by talking with your companions. Who do you talk to? [/b]
+*fake_choice
+    *selectable_if (Z = 1) #Rip
+        “Hey Rip” you call out.
+	    
+        “Hey ${name}, something on your mind?”
+
+        “Yeah, I was just thinking about this whole situation. What do you think we're going to find at Cavecross?”
+        
+        “Honestly. I have no idea. This whole situation is foreign. We've never really had much information about the rot and its origin, now there's someone who may have survived being infected. It's a lot.
+
+        *set Z Z + 1
+        *goto CH_15Loop
+
+    *selectable_if (Y = 1) #Leon
+        "Hey Leon” you call out.
+
+        What's up, ${name}. How are you doing?”
+
+        “Good. I was just thinking about this whole situation. What do you think we're going to find at Cavecross?”
+
+        “That's a good question. Could be any number of things. We may be walking into a trap and have to fight our way out against the Flames” he quickly poses like he’s about to launch an attack then smiles and laughs, “or The Zealot could be long dead from the rot. There's just too much that we don't have information on, but as long as we stick together, we should be fine.”
+
+        He pats you on the shoulder and winks.
+
+        *set Y Y + 1
+        *goto CH_15Loop
+
+    *selectable_if (X = 1) #Felix
+        “Felix,” you turn and face Felix, who is walking behind you.
+
+        “Hey ${name}, everything ok?”
+        
+        “Yeah, I was just thinking about this whole situation. What do you think we're going to find at Cavecross?”
+        
+        “I'm not entirely sure. From what I've seen of the rot in person, it's hard for me to even imagine there would be a survivor. I'm hoping we’re not too late and maybe we can get some answers about this whole rot situation.
+
+        *set X X + 1
+        *goto CH_15Loop
+
+    *selectable_if (W = 1) #Milva
+        “Milva” you drop back to speak with Milva who was bringing up the rear of the group
+	    
+        “Hello ${name}”
+        
+        “How are you holding up? I mean with seeing Riva again and everything”
+        
+        “While we are happy to be able to see her again, the circumstances have certainly soured the joy a little.”
+        
+        “So how did she end up with the Flames?” you ask.
+        
+        “Ah yes, a somber tale. Riva was a clumsy child and would often venture off on her own. One day she got lost and ended up in the care of a priestess who nurtured her back to health and saw her returned to us. We only briefly saw the red capes as they departed and Riva returned home. That is when we learned of the Flames of Sigil. Riva fell into their care two more times, the second time she told us of Cavecross where she was treated and cared for, the third, unfortunately, is when she didn't return.” she dropped her ahead a bit with the last sentence, “it's for this reason we are accompanying you, to ensure she is still safe.”
+
+        *set W W + 1
+        *goto CH_15Loop
+
+    *selectable_if (V = 1) #Anwen
+        “Anwen?”
+
+        She doesn't respond, deeply focused on an arrow she is holding.
+	    
+        You tap her on the shoulder, “Anwen”.
+        
+        “Oh ${name}, my apologies. Is there something wrong?” she asks.
+        
+        “No, not at all. I just wanted to ask about what you thought of what is happening,” you explain.
+
+        “Ah yes, quite the situation we have here.” she returns to her arrow.
+
+        “Uhh yeah...”
+
+        *set V V + 1
+        *goto CH_15Loop
+
+    *selectable_if (U = 1) #Gwyn
+        “Hey Gwyn” you tap him on his shoulder.
+	    
+        “Hey ${name}, something on your mind?”
+        
+        “Yeah, I was just thinking about this whole situation. What do you think we're going to find at Cavecross?”
+        
+        “Not sure actually. Given what we've seen of the rot, I don't think it's possible The Zealot survived infection. All I can say is if there is a battle I hope it's short. I don't think I have enough medicine to help everyone if it gets dragged on too long.”
+        
+        “Oh,” you say, taken aback by this perspective.
+
+        *set U U + 1
+        *goto CH_15Loop
+
+    #Elena (End Loop)
+        “Elena?”
+        
+        “Yes?” she responds not looking up from her book.
+
+        “Yeah, I was just thinking about this whole situation. What do you think we're going to find at Cavecross?”
+
+        “Well given what I've seen of the rot and those suffering its effects I can determine one of two things for sure. Either The Zealot has succumbed to his infection and we likely won't receive any information or he survived but given the amount of time that's passed he's probably in no shape to be answering questions.
+
+        “So you think this is a waste of time?”
+
+        “Not necessarily, if the latter is true then we could have Gwyn try to help with the infection and potentially get answers that way, and even if he can't help the information we get from studying someone that's been infected for this long would still be invaluable.”
+
+        You just stare at her, impressed with how calm and analytical she's being.
+
+*page_break
+
+After some time, Summerlight slowly begins to come into view. There's almost nothing left. What the fire didn't destroy, the rot had. You decide that it's better not to think about it and keep walking, but just then Milva speaks up.
+
+“Has anyone ever seen anything like that before?”
+
+Looking at where she's' pointing, you realize why she was asking. In the middle of an area that had been laid to waste by the rot, there's a solitary spot that is unharmed. It's like the rot is emanating from that spot. As the group approaches the spot to investigate, you have a sudden realization that it's the area you saw The Zealot stumble out of. You bring this to the attention of the group, and everyone seems to have the same thought at the same time. The Zealot must somehow be able to control or produce the rot. But if that's the case, why wasn't he stopping the spread of the rot? Why did it seem like he was furthering its claim over these lands? Surely answers will be found in Cavecross, so without a word from anyone, the group presses on.
+
+Only hours later, with the sun barely beginning to dip into the horizon, Cavecross comes into view. It isn't a large castle by any means; rather, it is small. Banners representing The Flames of Sigel hang prominently on the buttresses flanking the main gate.
+
+As you approach the towering walls of the stronghold, a sense of unease settles in the pit of your stomach. The air crackles with an unnatural energy, and it seems everyone can sense the darkness that lurks within. There's no stopping now. With Viper and her pack and the druids at your side, your will face whatever awaits you within the walls of the stronghold.
+
+Rip turns to face everyone.
+
+“OK, I know we all felt how heavy the air got as soon as we got close to the castle, but that's no reason to stop now. We must keep going, not just for these lands, but for any lands that could potentially be affected if we don’t.”
+
+The spirit of the group strengthens at these words and everyone begins to make preparations for what may be awaiting them inside the castle. Weapons are drawn and casters mentally prepare themselves.
+
+*page_break
+
+The group approaches the gate and pushes the doors with everything they have, but they swing open easily. This is Already a bad sign. In the heart of the courtyard are the guards. Their bodies are blackened like they're burned, but there's no fire in sight. You remember the way the other person you saw who had been infected looked. The grey skin, that feral look in their eyes. These corpses look as if they were entirely drained of life. Then you hear a voice.
+
+“Do not weep for them” the voice says.
+
+You look up and see him, The Zealot, corrupted by a power beyond comprehension. The once noble knight stands on a walkway above the courtyard, looking like a twisted husk of his former self. His once-shining armor is tarnished, and his eyes glow with an eerie light as he stands amidst the fallen members of the order who had sought to stop him. His skin is completely grey like the infected person in Summerlight. You notice the arm he had lost in Summerlight is back, and there isn't even a scar from where it was missing previously. 
+
+As the group approaches, they're met with a chilling sight. The bodies of the order lay obscured from view, but what is at least 10 people wearing red robes lay at the base of the walkway that The Zealot stands on. 
+
+*page_break
+
+Everyone knows what's'about to happen, but the speed at which it starts is almost unbelievable. With a roar, The Zealot charges forward, his sword slashing through the air with unnatural speed.
+
+The mercenaries and druids fight valiantly; their skills being tested to the limit against the corrupted paladin. Rip and Viper lead the mercenaries with precision and skill, but the supernatural strength and speed The Zealot is exhibiting is unreal. Milva and her companions try to slow The Zealot down by summoning vines to ensnare the him. He manages to dodge some and is briefly trapped, but their worst fear was confirmed. He reaches down and grabs the vines. The second his grip is tight around the plants, they began to wither and die. He can wield the rot. 
+
+“I have an idea” Milva shouts.
+
+Leon and Viper rush The Zealot while Rip falls back to Milva. They converse very quickly before Rip runs to Anwen, Milva, Ailer and Edea, who are behind a wagon in the far corner.
+
+[b]You feel that familiar sensation of flight creeping into your bones, but you fight against it. Who do you run to?[/b]
+*fake_choice
+    #Rip and Anwen.
+        You lock eyes with Rip and immediately make a beeline straight for his position. Once you get there, he pulls you in close and says, “OK, here's what we're going to do. Anwen is going to lay down some cover fire and you, Leon, Viper, and I are going to distract him while Milva, Ailer, and Edea try to pin him down.”  
+
+        This is no time to be asking questions, so you nod fervently and follow Rip's lead. As soon as Anwen starts her barrage of arrows, you and Rip rush out to help Leon and Viper.
+        
+        TODO: **Choose how to attack agility, dodge in and out trying to get your dagger to land this** 
+        
+        TODO: **Strength take longer pauses but thrust to try to pierce the leather between the armor** 
+
+        Just then, you almost lose your footing as the ground softens beneath your step. You realize that it's turning into mud. You look up and see the druids who accompanied Milva are hiding and chanting. Suddenly, vines grow out of the mud and wrap around The Zealot's hands. He attempts to grab them in order to use the rot, but Milva manages to pin his hands to his sides. At that moment, Ailer and Edea grab each other's hands and begin their binding magic. Moments later, The Zealot is surrounded by an ethereal blue light, and his movements are slowed. It works. Everyone immediately recognizes the opening and takes their chance to strike. It's over in a flash.
+
+    #Milva, Ailer, and Edea.
+
+        “${name}!” Milva calls to you.
+
+        You wait until The Zealot is busy with Leon and Viper before rushing to Milva. As soon as you reach her side, she pulls you in close and says, “I have a plan. We will try to slow The Zealot down with our magic long enough for Ailer and Daya to bind him with magic, I don't think the rot will work on magic.” she explains, “Please help to distract him so we can focus on our magic.” 
+
+        This is no time to be asking questions, so you nod fervently and follow Rip's lead. As soon as Anwen starts her barrage of arrows, you and Rip rush out to help Leon and Viper.
+
+        TODO: **Choose how to attack agility, dodge in and out trying to get your dagger to land this** 
+
+        TODO: **Strength take longer pauses but thrust to try to pierce the leather between the armor**
+
+        Just then, you almost lose your footing as the ground softens beneath your step, and you realize that it's turning into mud. You look up and see the druids who accompanied Milva hiding and chanting. Suddenly, vines grow out of the mud and wrap around The Zealot's hands. He attempts to grab them in order to use the rot, but Milva manages pin his hands at his sides. At that moment, Ailer and Edea grab each other's hands and begin their binding magic. Moments later The Zealot is surrounded by an ethereal blue light and his movements are slowed. It worked. Everyone immediately recognizes the opening and takes their chance to strike. It's over in a flash. 
+
+        With a cry of anguish, The Zealot falls to his knees. His armor crumbles away as the dark power within him dissipates. As the light returns to his eyes, he looks upon the devastation he had wrought and realizes the truth of his actions. 
+
 *ending
